@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Experiment outputs (regenerable)
+experiments/*/*/outputs/
+experiments/*/*/figures/
+
+# Session scratch (local-only)
+handoff.md
+
+# uv boilerplate
+main.py
+
+# OS
+.DS_Store

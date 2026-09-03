@@ -1,0 +1,23 @@
+[project]
+name = "canary-stis"
+version = "0.1.0"
+description = "Pathway analysis and calibration harness for HIV prevention impact of POC STI diagnostics"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scipy",
+    "sciris",
+    "starsim",
+    "stisim",
+    "parsimmon",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+starsim   = { git = "ssh://git@github.com/starsimhub/starsim.git" }
+stisim    = { git = "ssh://git@github.com/starsimhub/stisim.git" }
+parsimmon = { git = "ssh://git@github.com/InstituteforDiseaseModeling/parsimmon.git" }
