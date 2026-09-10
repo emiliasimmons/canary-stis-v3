@@ -1,0 +1,11 @@
+P,,0.99,,0.93,0.01,0.47,,,0.15,0.30,0.00,,0.00,,,0.87,,0.56,0.35 0.11,
+%,,,,,,,,,,,,,,,,,,,,
+row,54,54,54,59,,56,53,,57,52,58,53,,54 77,32,41 54,(50),56,46,(100)
+column %,100,(22-30) 33,48,39,35,,65,(14-29),44,36,90,,1,76 22,7,3 28,(4),25,7,(12)
+N,646,26 216,313,254,225,,421,21,285,230,582,8,,444 130,42,22 182,24,161,45,75
+row %,46,46,46,41,44,47,,,43,48,42,47,,46 23,68,59 46,(50),43,54,
+column %,100,(22-31) 33,49,32,33,67,,(15-32),40,39,78,,2,89 9,16,6 28,(4),23,9,
+N,548,27 183,267,174,180,368,,22,219,211,427,,7,382 38,89,32 152,24,124,52,N/A
+column %,100 (22-31),(33),(49),(36),(34),(66),,(15-31),(42),(37),(85),,(1),(82) (17),(11),(5) (28),(4),24,8,(6)
+N,1194,26 399,580,428,405,,789,21,504,441,1009,,15,826 168,131,54 334,48,285,97,75
+Total,Maternal age (years),"Median, IQR <24",Education < grade 12,Employed,Gravidity Primigravida,Multigravida,Gestational age (weeks),Median (IQR),<20,Cohabiting with partner,Initiated PrEP at baseline Confirmed PrEP uptake following prescription † (n=1009),,No,Yes Unconfirmed/ lost-to-follow-up,Never initiated PrEP,Initiated PrEP at a follow-up visit Any STI diagnosis (CT and/or NG),CT and NG co-infection,diagnosis,CT NG diagnosis,TV diagnosis ††

@@ -1,0 +1,8 @@
+Test Name,Manufacturer,Commercially available,Sensitivity (%),Specificity (%),Reference Test,Sample type
+ACON CT/NG Duo [71] ACON NG [71],ACON,No,12.5 Not,99.8 97.2 93,NAAT (Roche Cobas) NAAT (Roche Cobas) NAAT (Hologic Culture NAAT (Roche NAAT (Roche Amplicor) Culture Culture,Endocervical swab Endocervical swab (males)
+,ACON,No,quantified,,,
+BioStar Optical ImmunoAssay [72],Thermo Biostar,No,100 a,,Aptima),Urine
+GC-Check [73],PATH,No,30 to 60 70 54.1,60 to 90 97.2 98.2,Amplicor),Endocervical swab Endocervical swab Vaginal swab
+OneStep Gonorrhea RapidCard Insta Test [74],Cortez Diagnostics,No,64 to 94,67 to 97,,Endocervical swab
+GC RapidResponse,BTNX,Yes,61 to 91 64 to 94 61 to 91,67 to 97 67 to 97 67 to 97,Culture Culture,Urethral swab (male) Endocervical swab Urethral swab (male)
+GC One-step test,Novamed,Yes,68 to 98,68 to 98,Culture,Vaginal swab/Urethral swab (male)

@@ -1,0 +1,18 @@
+COVARIATE..Serum HIV-1 RNA level in HIV-1-positive,RISK OF TRANSMISSION AMONG HIV-1-POSITIVE PARTNERS.adjusted rate ratio (95% CI).,RISK OF ACQUISITION AMONG HIV-1-NEGATIVE PARTNERS.adjusted rate ratio (95% CI).
+"partners <3500 copies/ml† 3500-9999 copies/ml 10,000-49,999 copies/ml »50,000 copies/ml Level (per log increment)‡ Age",1.0 5.80 (2.26-17.80) 6.91 (2.96-20.15) 11.87 (5.02-34.88) 2.45 (1.85-3.26),1.0 5.81 (2.25-17.91) 6.84 (2.93-19.97) 12.55 (5.28-36.99) 2.45 (1.86-3.26)
+15-19 yr† 20-29 yr 30-39 yr,1.0 0.68 (0.32-1.61),1.0 0.69 (0.36-1.42) 0.38 (1.17-0.86)
+40-59 yr Female HIV-1-positive partner Circumcision§,0.32 (0.14-0.84) 0.27 (0.10-0.81) 0.76 (0.46-1.26),0.38 (0.17-0.88) 0.77 (0.50-1.21)
+»2 sexual partners in past yr (vs. 1),0.72 (0.34-1.32) 1.17 (0.23-3.83),
+Chlamydia¶,0.22 (0.01-0.97),
+,,-
+Gonorrhea¶,,-
+Genital ulcer disease Genital discharge,0.41 (0.10-1.14) 1.16 (0.71-1.85),0.69 (0.36-1.27)
+,,0.77 (0.33-1.60)
+,0.93 (0.48-1.66),
+,,1.26 (0.51-2.79)
+Dysuria Syphilis,1.78 (0.86-3.45),0.73 (0.31-1.49) 1.20 (0.59-2.23)
+,1.08 (0.53-2.05),
+,,1.01 (0.86-1.19)
+Trichomonas¿,1.84 (0.84-3.89),1.27 (0.65-2.35)
+,,0.77 (0.44-1.36)
+Bacterial vaginosis¿,0.91 (0.45-1.80),

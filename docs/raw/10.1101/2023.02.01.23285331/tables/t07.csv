@@ -1,0 +1,4 @@
+Gender,Treatment location,Any curable STI.No N=657,Any curable STI.Yes N=299,Crude PRR (95% CI)
+Males (N=288),No clinic Clinic,111/152 (73%) 91/136 (67%),41/152 (27%) 45/136 (33%),REF 1.23 (0.86-1.75)
+Females (N=668),No clinic Clinic,232/347 (67%) 223/321 (69%),115/347 (33%) 98/321 (31%),REF 0.92 (0.74-1.15)
+"*** p ≤ 0.01, ** p ≤ 0.05, *",p ≤ 0.1,,,

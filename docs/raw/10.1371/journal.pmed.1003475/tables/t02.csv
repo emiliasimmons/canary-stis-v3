@@ -1,0 +1,5 @@
+Outcome.,Mid-study survey.N,Mid-study survey.Intervention,Mid-study survey.Control,Mid-study survey.PRR (95% CI),Mid-study survey.p -Value,End-study survey.N,End-study survey.Intervention,End-study survey.Control,End-study survey.PRR (95% CI),End-study survey.p -Value
+HIV care coverage,913,393/466 (84.3%),381/447 (85.2%),0.99 (0.92- 1.06),0.79,679,327/350 (93.4%),290/329 (88.2%),1.06 (1.01- 1.10),0.011
+ART coverage,913,382/466 (82.0%),362/447 (81.0%),1.01 (0.94- 1.09),0.70,679,323/350 (92.3%),288/329 (87.5%),1.05 (1.01- 1.10),0.028
+HIV viral suppression,901,363/460 (78.9%),336/441 (76.4%),1.03 (0.96- 1.11),0.38,656,300/338 (88.8%),269/318 (84.6%),1.04 (0.98- 1.12),0.20
+Male circumcision coverage,1396,444/685 (64.8%),474/711 (66.7%),0.96 (0.87- 1.07),0.47,1032,340/494 (68.9%),354/538 (65.8%),1.05 (0.96- 1.14),0.31

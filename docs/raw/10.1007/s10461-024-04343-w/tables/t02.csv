@@ -1,0 +1,10 @@
+,Hyperparameters,Benchmark model,Alternative scenarios
+1,Number of imputation sets,5 sets,"10, 20, 50 sets"
+2,Imputation algorithms,Predictive mean matching,"Random sample, classification and regression trees, Bayesian linear regression"
+3,Inclusion of young adolescents (10-14 years),Included,Excluded
+4,Cutoff age for early sexual debut,18 years,"16, 17 years"
+5,Gender-specific models,Males and females combined,Males and females separately
+6,Interaction between gender and early sexual debut,Not included,Included
+7,Country-level HIV prevalence as covariate,Not included,Included (drop country variable)
+8,Handling censoring,Included,Excluded
+9,Imputation methods,MICE,Amelia

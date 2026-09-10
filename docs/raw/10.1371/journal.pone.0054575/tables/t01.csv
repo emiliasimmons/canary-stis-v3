@@ -1,0 +1,18 @@
+Assumption,Parameter value,Sources
+Demography and sexual behaviour,,
+Average sexual life span,35 years,Representative of adult population of age (15-49)
+Number of unprotected sexual acts per partnership in a partnership with low sexual activity individual,100,Based on estimated frequency of sex in marital relationships in South Africa [ 73 ]
+Otherwise,2,
+HIV pathogenesis,,
+Mean duration of infection (untreated HIV),11.0 years,"[ 30,74-76 ]"
+Excessive mortality (when initiating ART at CD4 . 200) compared to non- infected persons,5.0 per 100 person-years,[ 77 ]
+Excessive mortality (when initiating ART at CD4 # 200) compared to non- infected persons,8.0 per 100 person-years,"Representative for heightened morbidity in patients receiving ART at CD4 , 200 compared to patients starting ART at CD4 . 200 [ 78,79 ]"
+Multiplicative factor change in baseline HIV transmission probability,,
+From population with acute infection,27,[ 75 ]
+From females relative to from males,0.5,"[ 80,81 ]"
+From HIV infected individuals at risk of opportunistic infections and heightened viremia in late symptomatic infection stages,7,[ 75 ]
+From individuals with AIDS,0,Estimated
+From circumcised men,1,No effect
+From individuals on ART,0.08,"ART efficacy of reducing onward transmission for persons on ART versus persons not on ART [ 5,6 ]"
+To circumcised men,0.4,[ 1-4 ]
+Condoms both ways,0.1,[ 82 ]

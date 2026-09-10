@@ -15,3 +15,8 @@ main.py
 
 # OS
 .DS_Store
+
+# docs
+*.pdf
+*.docx
+

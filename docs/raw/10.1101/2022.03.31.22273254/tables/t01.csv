@@ -1,0 +1,44 @@
+,Inland.N (%),Fishing.N (%),p-value*.
+Overall,919,906,
+Sex,522 (56.8),,p=0.0009
+Female Male,397 (43.2),443 (48.9) 463 (51.1),
+Age,,,
+15-19,262 (28.6),177 (19.5),p=0.0001
+25-29,156 (17.0),192 (21.2),
+30-34,136 (14.8),169 (18.7),
+35-39,162 (17.6),170 (18.8),
+40-44,123 (13.4),131 (14.5),
+45-49,80 (8.7),67 (7.4),
+Marital Status,,,
+Currently married,605 (65.8),595 (65.7),p<0.0001
+Never married,169 (18.4),93 (10.3),
+Previously married,145 (15.8),218 (24.1),
+Education,,,
+None,36 (3.9),97 (10.7),p<0.0001
+Primary,537 (58.4),607 (67.0),
+Secondary,251 (27.3),154 (17.0),
+Tertiary/Trade School,95 (10.3),48 (5.3),
+Occupation,,,p<0.0001
+Agriculture,482 (52.3),35 (3.9),
+Transport,31 (3.4),23 (2.5),
+Fishing,4 (0.4),285 (31.5),
+Government/clerical/teaching,60 (6.5),11 (1.2),
+Hair dresser,34 (3.7),19 (2.1),
+Housework,22 (2.4),89 (9.8),
+Student,44 (4.8),8 (0.8),
+Trader/shop keeper,131 (14.3),204 (22.5),
+Bartender/waitress,16 (1.7),76 (8.4),
+Sex partners in the last year,,,p<0.0001
+None,117 (12.7),62 (6.8),
+One,571 (62.1),485 (53.5),
+Two,149 (16.2),190 (21.0),
+Three,52 (5.7),93 (10.3),
+Four or more,39 (3.3),62 (6.8),
+HIV prevalence,,,p<0.0001
+HIV negative,790 (86.0),545 (60.2),
+HIV positive,129 (14.0),361 (39.8),
+Viral load suppression status,,,p=0.83
+1000 copies/ml,118 (91.2),326 (90.3),
+>1000 copies/ml,11 (8.5),35 (9.7),
+Male circumcision status**,,,p=0.41
+Uncircumcised,205 (51.6),225 (48.6),

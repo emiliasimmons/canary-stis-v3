@@ -1,0 +1,11 @@
+{
+  "file": "Young et al. - 2023 - From ‘no problem’ to ‘a lot of difficulties’ barriers to health service utilization among migrants.pdf",
+  "pages": 11,
+  "title": "Examining the computation of the underlying components of DALYs",
+  "author": "Stphane Verguet",
+  "subject": "DOI: https://doi.org/10.1093/heapol/czad017, Health Policy and PlanningAy, 00, 00, Published xx xxx xxx. Abstract: Disability-adjusted life years (DALYs) capture the mortality and morbidity arising from a disease: they incorporate the years of life lost (YLLs) and the years of life lived with disability (YLD) due to a disease. The relative importance of YLLs and YLDs differs across diseases. The magnitudes of YLLs and YLDs depend on parameters such as the age of onset of disease, duration of disease, the case fatality ratio and disability weight. In this paper, we examine the mathematical computation of the DALY and its underlying components, YLDs and YLLs. We aim to demonstrate under which circumstances (e.g. sets of input parameters) disease-specific YLDs and YLLs become sizeable relative to one another using the parameters of a set of diseases in low-income country settings. Researchers could then focus on understanding the key inputs that drive the relative extents of YLDs and YLLs (e.g. determine whether a detailed estimation of disability weights is essential), while maintaining DALYs as their key outcome metric consistent with disease burden assessments.",
+  "creator": "LaTeX with hyperref",
+  "producer": "LuaLaTeX; modified using iTextSharp.LGPLv2.Core 3.7.4.0",
+  "creation_date": "D:20230510130231+05'30'",
+  "engine": "docling"
+}

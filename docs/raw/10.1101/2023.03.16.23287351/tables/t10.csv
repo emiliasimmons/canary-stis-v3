@@ -1,0 +1,11 @@
+,Akaike information criterion (AIC).Men,Akaike information criterion (AIC).Women,%observations within 95% prediction intervals.Men,%observations within 95% prediction intervals.Women,%observations within 95% prediction intervals.All
+Central model,,,,,
+,"8,032","11,579",98.77%,98.82%,98.80%
+,"[7,937-8,140]","[11,508-11,688]",[97.78-99.68],[97.78-99.68],[98.10-99.49]
+Alternative models,,,,,
+with 2D GP over age,"8,033","11,580",98.84%,93.32%,96.08%
+and survey round,"[7,938-8,141]","[11,511-11,690]",[98.10-99.68],[91.18-95.10],[94.96-96.95]
+without interaction term between,"8,033","11,592",98.79%,93.83%,96.31%
+age and survey round,"[7,938-8,142]","[11,521-11,706]",[97.78-99.68],[92.06-95.24],[95.27-97.23]
+with 2D GP over age and survey round and,"8,035","11,590",98.82%,93.45%,96.13%
+without interaction term between age and survey round,"[7,939-8,143]","[11,517-11,701]",[97.78-99.68],[90.94-95.24],[94.99-97.23]

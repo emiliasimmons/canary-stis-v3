@@ -1,0 +1,17 @@
+Cervical Infections.Sensitivity,Cervical Infections.Specificity,Cervical Infections.Test,Cervical Infections.Outcome,Prevalence (per 1000).50,Prevalence (per 1000).150,Prevalence (per 1000).300
+0.6,0.9,RDT 1,TP,30,90,180
+,,,FN - missed treatment,20,60,120
+,,,TN,855,765,630
+,,,FP - overtreatment,95,85,70
+0.7,0.9,RDT 2,TP,35,105,210
+,,,FN - missed treatment,15,45,90
+,,,TN,855,765,630
+,,,FP - overtreatment,95,85,70
+0.8,0.9,RDT 3,TP,40,120,240
+,,,FN - missed treatment,10,30,60
+,,,TN,855,765,630
+,,,FP - over overtreatment,95,85,70
+0. 95,0.98,Molecular POCT assay,TP,47,142,285
+,,,FN - missed treatment,3,8,15
+,,,TN,931,833,686
+,,,FP - overtreatment,19,17,14

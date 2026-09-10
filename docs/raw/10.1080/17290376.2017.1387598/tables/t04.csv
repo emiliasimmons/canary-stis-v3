@@ -1,0 +1,8 @@
+0,1,2,3,4
+Table 2. Continued.,Table 2. Continued.,Table 2. Continued.,Table 2. Continued.,Table 2. Continued.
+Characteristics,OR,95% CI,% change in Odds,p value
+Religion,,,,
+Islam,Ref,,,
+Christian,1.36,1.29-1.43,36.0,.000
+Catholic,1.15,1.06-1.23,15.0,.000
+Other,1.36,1.11-1.66,36.0,.003

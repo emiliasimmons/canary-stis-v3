@@ -1,0 +1,82 @@
+## EDITORIAL COMMENT
+
+## To stem HIV in Africa, prevent transmission to young women
+
+## Marie Laga a , Bernhard Schwa ¨rtlander b , Elisabeth Pisani c , Papa Salif Sow d and Michel Carae ¨l b
+
+AIDS 2001, 15 :931-934
+
+## Africa, HIV, transmission, young women
+
+One after another, community-based studies of HIV infection in east and southern Africa confirm an appalling reality: young women (15-19 years) are infected with HIV in truly enormous numbers compared with their male counterparts (Fig. 1). The most striking example of these high infection rates among young women is published in this issue [1]. In that population-based survey in Carletonville, South Africa, the prevalence of HIV among young people aged 1424 years was 9% for men and 34% for women, and the infection rate was 67% for women aged 24! In addition, data emerging from the study by Buve ´ et al. [2] suggest that the high HIV prevalence among women aged 15-19 years could be critical in provoking and maintaining an explosive HIV epidemic. This should give policy-makers pause for thought, demanding both increased prevention efforts and new approaches to prevention.
+
+Until recently, it was unclear what proportion of women in the 15-19 years age group were infected with HIV in Africa, and virtually no data were available for young men. HIV prevalence estimates have been mainly derived from sentinel surveillance systems centred on pregnant women attending selected antenatal clinics. Because a significant proportion of young women in the general population are not sexually active and so do not get pregnant, it was assumed that data from antenatal clinics significantly overestimated the true levels of HIV infection in younger age groups.
+
+Now population-based studies are shedding light on the matter, indicating very high proportions of young women already infected with HIV and consistently lower rates for boys in the same age group [1] (Fig. 1).
+
+The study from Carletonville [1] and Fig. 1 show how dramatic the sex differential in HIV infection is for young men and women. In these mature HIV epidemics, two to eight times more women are infected with HIV than men in both the 15-19 and 20-24 year age groups. The pattern is consistent regardless of the overall level of HIV prevalence, and is seen in both urban and rural areas, although it is less pronounced in the latter.
+
+The same community studies showed that HIV prevalence in men catches up with the prevalence in women in later age groups, partly through marriage and partly through extramarital partnerships, usually in the early or mid-30s, as illustrated by the data obtained from Kisumu, Kenya (Fig. 2). Overall, some 30% of women aged 15-49 years are infected with HIV in that study population compared with 20% of men. This difference in overall rates between men and women is likely to be at least partly because women are infected
+
+From the a Institute of Tropical Medicine, Antwerp, Belgium; b UNAIDS, Geneva, Switzerland; c Consultant, Nairobi, Kenya; and d University Hospital Fann, Dakar, Senegal.
+
+Correspondence to: Marie Laga, Institute of Tropical Medicine, Antwerp, Belgium.
+
+Received and accepted: 23 February 2001.
+
+Fig. 1. HIV prevalence among 15-19-year-old men and women, various community studies. j Women, 15-19 years; men, 15-19 years. Sources: Buve ´ et al. [2], Gregson and Garnett [3], Fylkesnes et al. [4] and Boerma et al. [5], with permission.
+
+<!-- image -->
+
+Fig. 2. Age distribution of HIV prevalence, Kisumu, Kenya, 1997. -- Women; --- men. Source: Buve ´ et al. [2], with permission.
+
+<!-- image -->
+
+younger. As the younger age groups substantially outnumber people of older ages in developing countries, high rates of HIV infection in young women have a higher weight for overall HIV levels than high rates in older men.
+
+There are several possible explanations for the differences in HIV infection rates between young men and young women. The first is that the differences are artefacts of imperfect data collection. Non-response in community-based HIV surveys is higher among men than women, and those who are repeatedly absent or who refuse HIV testing may be more likely to be HIV infected than other individuals. However, in the studies presented here, the differences in response rates between men and women are typically smaller among those under 25 years than in older ages groups. This, together with the magnitude of the difference between men and women and the consistency of the findings across a range of different settings, suggests that there is a real difference in HIV infection levels between young men and young women.
+
+Sexual activity itself does not appear to explain the difference. In almost all surveys carried out by the World Health Organization's Global Programme on AIDS in eastern and southern Africa, boys begin to have sex at the same age as girls or slightly later, and they report a higher turnover of partners before marriage than women [6]. Although women generally under-report sexual behaviour compared with men, the consistency of the differences in reported sexual behaviour between boys and girls using different study methods in different settings in east and southern Africa suggest that at least some of the differences are real. However, data from community-based HIV prevalence studies demonstrated that this higher level of sexual activity in boys does not lead to the same rapid increase in HIV prevalence as does a lower level of sexual activity in women.
+
+One reason for this is that HIV is transmitted more easily from men to women than from women to men. Studies in industrialized countries [7] have shown that men are two to three times more likely to transmit HIV to women than vice versa, in the absence of other risk factors. The risk is even higher when a young, physiologically immature woman has sex with an HIVinfected partner. This was first shown in a cohort study in Rwanda [8], in which young age (defined as , 20 years) was a strong and independent risk factor for incident HIV infection, after taking into account other risk factors such as marital status, sexual activity or sexually transmitted infections (STI). It is highly plausible that the risk of HIV acquisition increases even further during acts of sex in which vaginal or cervical trauma and bleeding are common, such as forced sex or during the loss of virginity. Higher levels of asymptomatic and untreated STI, such as gonococcal or chlamydial infections among young women compared with young men further add to the increased susceptibility to HIV among this group [1]. In the Carletonville study [1] the most striking and strongest independent risk factor for HIV was herpes simplex virus (HSV) type 2 seropositivity with odds ratios of 9.8 (5.8-16.6) for women and 5.3 (2.7-10.3) for men. HSV-2 is increasingly recognized as the primary cause of genital ulcers in populations with high prevalences of HIV [9], and it is well documented that herpetic genital ulcers are co-factors in HIV transmission (through increasing both susceptibility and infectiousness). The interrelationship between HSV-2 seropositivity and HIV is not yet fully understood, but evidence that the two epidemics are mutually reinforcing each other is accumulating [10]. For example, genital shedding of HIV seems to be enhanced in the presence of HSV-2 and vice versa. Although there is increasing interest in controlling HSV-2 as part of HIV prevention, especially in Africa, it is unclear what operational strategies countries should adopt. Making antiviral therapy for HSV affordable and available in this part of the world should be one priority. The other would be a concerted effort to accelerate phase II/III trials with already existing therapeutic and prophylactic vaccines.
+
+Patterns of sexual mixing may also account for differences in HIV/STI infection levels between men and women. Some of the discrepancy could be explained by a small number of highly sexually active HIVinfected men infecting a large number of women in their age group. This pattern could not be confirmed in studies that collected detailed sexual behaviour data [2]. A more likely explanation is the frequent sexual relationships between younger women and older men, increasing the likelihood that a young woman will encounter an already HIV-infected partner, and become infected herself. The majority of young unmarried men report that they have sex with women younger than themselves, and many young women have sex with men several years their senior; men who have already been exposed to the risk of HIV/STI infection for many years. For example, in Kisesa and rural Zimbabwe, 17 and over 20% of young women aged 15-19 years, respectively, had partners more than 10 years their senior [11,12].
+
+It is possible that the age difference between sexual partners may be increasing in response to both a worsening economic situation and the fear of HIV. Anecdotal evidence from several countries in subSaharan Africa indicates that as men become more aware of the dangers of AIDS, they increasingly seek out younger partners in the belief that young women are unlikely to be HIV infected. Men also appear to be less likely to use condoms with young female partners they have selected in this way. The skewed balance of power in relationships between older men and younger girls makes it exceptionally difficult for girls themselves to negotiate safer sex in these relationships.
+
+The policy implications of these findings are twofold. First, it is absolutely crucial to reach young women with prevention services, including sex education, also before they become sexually active. Second, because many young women are infected with HIV by older men, greater efforts should be made to encourage these men to adopt safer behaviours. As men still play a dominant role in deciding whether and under what circumstances sex will take place, prevention programmes should focus much more on them.
+
+The range of information and services provided to young women and their older partners in a high-HIV prevalence epidemic should aim to:
+
+## Reduce early exposure to risky sex
+
+Girls may become less susceptible to HIV infection as they grow older and their reproductive tract matures. Although scientific evidence that would help quantify this effect is lacking, a delay of a few years in first sexual activity has been associated with a reduction of HIV prevalence among young people in Uganda [13]. Efforts to reduce early exposure to sex include promoting abstinence throughout adolescence as a 'cool' behaviour for young people, and teaching negotiation skills and alternatives to penetrative sex. In addition, increased access to higher levels of school education has been shown to be associated with delayed first sex and increased condom use.
+
+## Reduce likelihood of transmission per sexual act
+
+Consistent condom use is the most effective way to reduce the likelihood of HIV being transmitted during sex between an infected and an uninfected partner. However, young women are still frequently unable to obtain condoms, unable to negotiate their use, and are sometimes reluctant to use them in relationships with older partners. Making condoms easily accessible to young women and teaching negotiation skills are first steps, but it is important to be realistic about what such efforts can achieve. In view of the power imbalance, female-controlled methods, such as vaginal microbicides, if ever found to be effective, would certainly be an enormous additional benefit in this context. Meanwhile, vigorous efforts are needed to disabuse men of the notion that young partners are 'safe' partners, and to encourage them to use condoms with all their partners.
+
+Youth-friendly 'Reproductive Health Services' should increase young women's access to STI treatment, but also to HIV prevention methods and protection against unwanted pregnancies. At the same time, greater efforts must be made at a community level to increase recognition of the early symptoms of STI, to seek treatment, to encourage abstinence during symptoms and to notify all their partners (and not just their regular partners) of possible asymptomatic infection.
+
+## Reduce age difference between partners
+
+As very few of their age peers are infected with HIV, in a mature epidemic young women who choose only partners their own age will be exposed to HIV far less than women who have sex with older men. Changing the age structure of sexual mixing is not easy. Young women are often dependent upon older men and employed partners for financial support. Indeed, as families start to feel the impact of the AIDS epidemic and the economic deterioration it brings, access to resources provided by older men may grow in importance. 'Demand reduction' - working with older men to make sex with teenage girls socially unacceptable, for example - is one approach. Providing girls with skills and opportunities that reduce dependence on men for financial support is another. Reducing their need for resources, for example by providing contraceptives to reduce unwanted pregnancy and the costs of child-rearing, might also be attempted.
+
+None of the above-listed interventions is easy, not least because cultural, religious and political sensitivities run rife in this area. New approaches must be tried, and not all will succeed. However, uncertainty about how best to support young people in establishing safe sex lives cannot be an excuse for inaction. It is time to recognize that success in cutting back the devastation wrought by HIV and AIDS in east and southern Africa depends upon the successful prevention of transmission of HIV to young women, while focusing on both men and women.
+
+## References
+
+1. Auvert B, Ballard R, Campbell C, et al. High prevalence of HIV infection among youth in a South African mining town is associated with HSV-2 seropositivity and sexual behaviour. AIDS 2001, 15: 885-898.
+2. Buve ´ A, Auvert B, Carae ¨l M, et al. Factors determining differences in rate of spread of HIV in sub-Saharan Africa: results
+3. from a population based survey in four African cities. AIDS 2001, 15 (Suppl.): in press.
+3. Gregson S, Garnett G. Contrasting gender differentials in HIV-1 prevalence and associated mortality increase in Eastern and Southern Africa: artefact of data or natural course of epidemics? Paper prepared for presentation at INED seminar, Paris, 1 April 1999. AIDS 2000, 14 (Suppl. 3) :S85-S99.
+4. Fylkesnes K, Ndhlovu Z, Kasumba K, Musonda RM, Sichone M. Studying dynamics of the HIV epidemic: population-based data compared with sentinel surveillance in Zambia. AIDS 1998, 12 :1227-1234.
+5. Boerma T, Urassa M, Klokke A, Senkoro KP, Ng'weshemi JZL. Spread of HIV in rural Tanzania. AIDS 1999, 13 :1233-1240.
+6. Carae ¨l M. Sexual behaviour. In: Sexual behaviour about AIDS in the developing world. Findings from a WHO multisite study. Cleland J, Ferry B (editors). London: Taylor and Francis; 1995.
+7. Downs AM, de Vincenzi I. Probability of heterosexual transmission of HIV: relationship to the number of unprotected sexual contacts. J Acquir Immune Defic Syndr Hum Retrovirol 1996, 11 :388-395.
+8. Bulterys M, Chao A, Habimana P, et al. Incident HIV-1 infection in a cohort of young women in Butare, Rwanda. AIDS 1994, 8 :1585-1591.
+9. Chen CY, Ballard RC, Beck-Sague CM, et al. Human immunodeficiency virus infection and genital ulcer disease in South Africa: the herpetic connection. Sex Transm Dis 2000, 1 :21-29.
+10. Corey L. Herpes simplex type 2 infection in the developing world: is it time to address this disease? Sex Transm Dis 2000, 1 :30-31.
+11. Boerma JT, Cunningham A, Nnko S, Banda C. Indicators of sexual behaviour derived from population-based surveys in developing countries . Paper presented at the Annual Meeting of the Population Association of America. New York, March 1999.
+12. Gregson S, Nyamukapa CA, Garnett GP, et al. Sexual mixing patterns and sex-differentials in teenage exposure to HIV infection in rural Zimbawe. Paper presented at IUSSP Conference of Sexual Networks and the Spread of HIV Infection . Chiang Mai, Thailand, February 2000.
+13. Asiimwe-Okiror G, Opio AA, Musinguzi J, Madraa E, Tembo G, Carae ¨l M. Change in sexual behaviour and decline in HIV infection among young pregnant women in urban Uganda. AIDS 1997, 11 :1757-1763.

@@ -1,0 +1,44 @@
+table 7 TPP—combined/monochlamydial infection test,col_1,col_2,col_3,col_4,col_5
+Goal of test,To detect CT,,,,
+"Intended use and target patient* Surveillance/case management: sexually active population, including key populations (eg, MSM, SW, STI clinic/service attendees)
+Screening/regular testing: under age of 25 years and key populations",,,,,
+Target use setting,Healthcare settings particularly at primary care level (level 1) or above,,,,
+"Results Clear positive, negative or invalid result with minimal instructions for interpretation",,,,,
+Equipment,"Single-use, biodegradable or recyclable disposable diagnostic test preferred, reader optional (small, portable, tabletop or
+handheld, no electricity/power supply required)",,,,
+target use(s),testing patient with stI,,,,
+Reference technology Laboratory-based NAAT,,,,,
+Performance,,,Minimal,,Optimal
+Clinical sensitivity† >90% (LL>90%) (genital) 100% (genital),,,,,
+Clinical specificity,,,98% (LL>95%) (genital),,100% (genital)
+Quantitation‡ Not applicable,,,,,
+Key minimal and optimal operational characteristics for chlamydial infection test,,,,,
+,,Minimal,,Optimal,
+"Specimen§ First-catch urine =2 hours since last Any urine (all persons), self-collected vaginal swab
+void (all persons), healthcare worker-
+collected vaginal swab",,,,,
+Specimen preparation,,"Minimal sample processing; no more
+than one operator step",,Integrated,
+"Steps performed by healthcare worker between No more than three operator steps One operator step (none of which has a timed interval), excluding waste disposal
+specimen preparation and result that are not timed nor labour
+intensive",,,,,
+Time to result,,=60 min,,=30 min,
+"Connectivity: device/reader If combined with a reader, reader has If combined with a reader, internally integrated GPS/GPRS module and conformity with
+integrated GPS module. HL-7 messaging standards",,,,,
+Data export (for quality assurance): device/reader,,"If combined with a reader, full data
+export over mobile phone network",,"► If combined with a reader, full data export over mobile phone network (data
+transmission can automatically select between GPRS or more advanced networks
+and GSM, based on available coverage).
+► GPRS should be able to use the internet FTP to transmit data: data transfer should
+be initiated every 6–12 hours automatically by the reader; data can be exported
+in a format compatible with HL-7 standards, where appropriate; instrument tracks
+and transmits quality assurance data over time (eg, identify shifts or trends).",
+"Target price per test (excluding the cost of a <US$5 <US$1
+device or reader)¶",,,,,
+*Should be guided by the knowledge of the local epidemics.,,,,,
+†Based on a sample size sufficient to achieve CIs of ±5% around a point estimate of sensitivity and specificity.,,,,,
+"‡POCTs are only to provide a positive/negative result, other quantitative methods will be used for quantitation.",,,,,
+§Sensitivity and specificity for rectal and pharyngeal swabs are not yet determined.,,,,,
+¶It does not include the cost of device/reader in case the POCT is device based or/and requires a reader for the result.,,,,,
+"CT, Chlamydia trachomatis; FTP, File Transfer Protocol; GPRS, General Packet Radio Service; GPS, Global Positioning System; GSM, Global System for Mobile; MSM, men who have
+sex with men; POCT, point-of-care testing; SW, sex worker; TPP, target product profile.",,,,,

@@ -1,0 +1,14 @@
+Occupation,Women.adjIRR (95% CI),Women.p-value,Men.adjIRR (95% CI),Men.p-value
+Agriculture,Ref.,Reference,Reference,Reference
+Construction,-,-,1.16 (0.54-2.48),0.707
+Trading,1.1 (0.66-1.73),0.800,1.25 (0.66-2.37),0.501
+Casual labor,-,-,1.45 (0.33-6.39),0.623
+Civil service,0.40 (0.16-1.00),0.051,0.87 (0.36-2.13),0.767
+Student,0.36 (0.18-0.72),0.004,0.19 (0.05-0.73),0.015
+Mechanic,-,-,0.91 (0.30-2.83),0.875
+Transportation,-,-,2.75 (1.37-5.50),0.004
+Bar/restaurant worker,2.88 (1.51-5.49),0.001,-,-
+Local crafts,1.96 (0.76-5.06),0.164,-,-
+Hairdressing,0.76 (0.32-1.79),0.523,-,-
+Tailoring/laundry,1.33 (0.40-4.42),0.640,-,-
+Housekeeping,1.08 (0.57-2.04),0.819,-,-

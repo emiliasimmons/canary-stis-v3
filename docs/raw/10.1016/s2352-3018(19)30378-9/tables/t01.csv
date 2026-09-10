@@ -1,0 +1,27 @@
+,Recipient population,Phylogenetically supported transmission flows among RCCS communities*,Estimated contribution to overall HIV-1 transmission among RCCS communities† (posterior mean),Predicted contribution to overall HIV-1 transmission among inland and lakeside areas of the Rakai region‡ (posterior predictive mean)
+Source overall,,,,
+Fishing communities,Fishing communities,141 (48·1%),44·5% (38·6-50·5),5·2% (3·8-7·0)
+Fishing communities,Inland communities,7 (2·4%),3·5% (1·7-6·3),1·7% (0·6-3·5)
+Inland communities,Fishing communities,23 (7·8%),7·8% (5·1-11·3),4·3% (2·3-7·0)
+Inland communities,Inland communities,94 (32·1%),35·5% (29·8-41·6),88·7% (84·5-91·9)
+External to Rakai area,Fishing communities,17 (5·8%),5·8% (3·5-8·9),··
+External to Rakai area,Inland communities,6 (2·0%),2·5% (1·0-5·0),··
+Unknown origin,Fishing communities,3 (1·0%),··,··
+Unknown origin,Inland communities,2 (0·7%),··,··
+Source by sex,,,,
+"Men, fishing communities","Women, fishing communities",79 (27%),25·3% (20·6-30·5),2·9% (2·0-4·2)
+"Men, fishing communities","Women, inland communities",6 (2·0%),3·1% (1·4-5·9),1·5% (0·5-3·2)
+"Men, inland communities","Women, fishing communities",12 (4·1%),4·2% (2·2-7·0),2·5% (1·1-4·8)
+"Men, inland communities","Women, inland communities",59 (20·1%),22·3% (17·4-27·7),55·8% (44·5-66·2)
+"Men, external to Rakai area","Women, fishing communities",8 (2·7%),2·6% (1·2-4·9),··
+"Men, external to Rakai area","Women, inland communities",4 (1·4%),1·5% (0·5-3·7),··
+"Men, unknown origin","Women, fishing communities",3 (1·0%),··,··
+"Men, unknown origin","Women, inland communities",2 (0·7%),··,··
+"Women, fishing communities","Men, fishing communities",62 (21·2%),19·0% (14·8-23·8),2·2% (1·5-3·2)
+"Women, fishing communities","Men, inland communities",1 (0·3%),0·2% (0·0-1·2),0·1% (0·0-0·9)
+"Women, inland communities","Men, fishing communities",11 (3·8%),3·5% (1·8-6·0),1·7% (0·7-3·3)
+"Women, inland communities","Men, inland communities",35 (11·9%),13·1% (9·4-17·6),32·8% (22·7-44·0)
+"Women, external to Rakai area","Men, fishing communities",9 (3·1%),3·0% (1·5-5·5),··
+"Women, external to Rakai area","Men, inland communities",2 (0·7%),0·8% (0·1-2·5),··
+"Women, unknown origin","Men, fishing communities",0,··,··
+"Women, unknown origin","Men, inland communities",0,··,··

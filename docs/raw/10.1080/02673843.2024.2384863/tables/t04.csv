@@ -1,0 +1,6 @@
+0,1
+Type of causal effect,aOR (SE) 95%CI
+Direct effect of secondary education on adolescent marriage,0.28** (0.128)
+Indirect effect of secondary education on adolescent marriage mediated by pregnancy,0.105-0.608 0.55*** (0.080)
+Total effect of secondary education and pregnancy on adolescent marriage,0.421-0.721 0.15** (0.759) 0.055-0.349
+Percent of effect mediated (risk ratio scale) Observations,"31.51% 1,104"

@@ -1,0 +1,8 @@
+Sources,Recipients,"Phylogenetically Strongly Supported Transmission Pairs Including Same-Sex Pairs * (Count, Proportion)","Phylogenetically Strongly Supported Transmission Pairs Excluding Same-Sex Pairs * (Count, Proportion)","Estimated Transmission Flows among Study Participants, Based on Data Including Same-Sex Pairs ** (Mean, 95% Credibility Interval of Posterior Density)","Estimated Transmission Flows among Study Participants, Based on Data Excluding Same-Sex Pairs ** (Mean, 95% Credibility Interval of Posterior Density)","Estimated Transmission Flow Ratios, Based on Data Excluding Same-Sex Pairs *** (Mean, 95% Credibility Interval of Posterior Density)"
+FF,FF,33 (31.4%),33 (44.6%),35.8% (26.2-46.1%),45.5% (34.1-57.0%),-
+FF,GP,9 (8.6%),9 (12.1%),9.9% (4.7-16.8%),12.7% (6.1-21.3%),-
+FF,WHR,2 (1.9%),1 (1.4%),-,-,-
+GP,FF,14 (13.3%),14 (18.9%),15.3% (8.7-23.3%),19.5% (11.4-29.3%),1.56 (0.68-3.72)
+GP,GP,36 (34.3%),16 (21.6%),39.0% (29.0-49.4%),22.3% (13.4-32.7%),-
+WHR,GP,1 (1.0%),1 (1.4%),-,-,-
+WHR,WHR,10 (9.5%),0 (0%),-,-,-

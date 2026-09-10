@@ -1,0 +1,6 @@
+,Acceptability.beta,Acceptability.SE,Acceptability.p value,Appropriateness.beta,Appropriateness.SE,Appropriateness.p value,Feasibility.beta,Feasibility.SE,Feasibility.p value
+Intercept,- 0.06,0.10,0.5732,0.10,0.12,0.4192,0.09,0.13,0.4816
+Vignette 1 low on construct Vignette 2 high on construct,0.76,0.15,< .0001,0.68,0.17,<.0001,0.92,0.18,< .0001
+Vignette 1 high on construct Vignette 2 low on construct,- 0.90,0.14,< .0001,- 1.18,0.17,<.0001,- 1.26,0.18,< .0001
+Vignette 1 high on construct Vignette 2 high on construct,0.02,0.15,0.9082,- 0.20,0.16,0.2093,- 0.10,0.17,0.5744
+Adjusted R 2,0.41,,,0.42,,,0.46,,

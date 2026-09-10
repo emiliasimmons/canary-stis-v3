@@ -1,0 +1,42 @@
+Characteristics,OR,95% CI,% change in Odds,p value
+Good knowledge of HIV transmission,1.33,1.26-1.41,33.0,.000
+Good knowledge of HIV prevention,1.33,1.25-1.41,33.0,.000
+Recently had STI,1.47,1.33-1.63,47.0,.000
+Recently had multiple sex partner months,2.03,1.90-2.18,103.0,.000
+Recently had transactional sex,1.84,1.64-2.05,84.0,.000
+Currently using modern contraceptive,1.58,1.48-1.69,58.0,.000
+Tested for HIV,,,,
+", 12",1.20,1.11-1.29,20.0,.000
+Over 12,1.35,1.27-1.44,35.0,.000
+Never,Ref,,,
+Age,,,,
+15-19,1.56,1.43-1.70,56.0,.000
+20-24,1.63,1.51-1.76,63.0,.000
+25-34,1.45,1.34-1.56,45.0,.000
+35-64,Ref,,,
+Sex,,,,
+Male,1.04,0.99-1.09,4.0,.138
+Female,Ref,,,
+Marital,,,,
+Currently married,1.11,1.05-1.17,11.0,.000
+Formerly married,1.06,0.93-1.20,6.0,.383
+Never married,Ref,,,
+Location,,,,
+Urban,Ref,,,
+Rural,1.05,0.99-1.10,5.0,.093
+Wealth status,,,,
+Poorer,1.14,1.07-1.22,14.0,.000
+Middle,1.06,1.01-1.12,6.0,.028
+Richer,Ref,,,
+Zone,,,,
+North Central,1.19,1.10-1.30,19.0,.000
+North East,1.12,1.03-1.22,12.0,.009
+North West,0.64,0.59-0.70,2 36.0,.000
+South East,1.03,0.95-1.13,3.0,.445
+South South,1.34,1.24-1.46,34.0,.000
+South West,Ref,,,
+Education,,,,
+No formal education,Ref,,,
+Qur'anic only,1.10,1.02-1.18,10.0,.015
+Secondary,1.19,1.11-1.27,19.0,.000
+Higher,1.24,1.14-1.36,24.0 (,.000 Continued )

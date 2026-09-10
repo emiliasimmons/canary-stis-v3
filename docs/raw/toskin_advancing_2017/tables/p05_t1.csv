@@ -1,0 +1,43 @@
+table 4 TPP—combined TP and non-TP POCT for syphilis,col_1,col_2,col_3,col_4,col_5,col_6,col_7,col_8
+Goal of test,,,To detect TP-specific antibodies and non-TP-specific antibodies,,,,,
+"Intended use and target patient* Surveillance/case management: sexually active population, including key populations (eg, MSM, SW, STI clinic/service
+attendees)
+Screening: pregnant women, key populations",,,,,,,,
+Target use setting,,,To detect TP-specific antibodies and non-TP-specific antibodies,,,,,
+"Results Clear reactive, non-reactive or invalid result with minimal instructions for interpretation",,,,,,,,
+Equipment,,,"Single-use diagnostic test preferred, reader optional (small, portable, tabletop or handheld, no electricity/power supply
+required)",,,,,
+target use(s),,,tP component,,,,non-tP component,
+Reference technology TPPA RPR,,,,,,,,
+Performance,Minimal,,,Optimal,,Minimal,,Optimal
+Clinical sensitivity† >80% >90% >95% of high titre (1:8) specimens >99% of high titre (1:8) specimens,,,,,,,,
+Clinical specificity,>90%,,,>95%,,>80%,,>95%
+Quantitation‡ Not applicable,,,,,,,,
+Key minimal and optimal operational characteristics for combined tP and non-tP POct for syphilis,,,,,,,,
+,,Minimal,,,Optimal,,,
+"Specimen Finger prick capillary blood (maximum Finger prick capillary blood (maximum 20 µL)
+50 µL)",,,,,,,,
+"Steps performed by healthcare worker between
+specimen preparation and result",,"No more than three operator steps
+that are not timed nor labour intensive",,,"Maximum one operator step (none of which has a timed interval), excluding waste
+disposal",,,
+Training required <90 min 30 min,,,,,,,,
+Time to result,,=60 min,,,=30 min,,,
+"Connectivity: device/reader If combined with a reader, reader has If combined with a reader, internally integrated GPS/GPRS module and conformity
+integrated GPS module. with HL-7 messaging standards",,,,,,,,
+Data export (for quality assurance): device/reader,,"If combined with a reader, full data
+export over mobile phone network",,,"► If combined with a reader, full data export over mobile phone network (data
+transmission can automatically select between GPRS or more advanced networks
+and GSM, based on available coverage).
+► GPRS should be able to use the internet FTP to transmit data: data transfer should
+be initiated every 6–12 hours automatically by the reader; data can be exported
+in a format compatible with HL-7 standards, where appropriate; instrument tracks
+and transmits quality assurance data over time (eg, identify shifts or trends).",,,
+"Target price per test (excluding the cost of a <US$3 <US$1.5
+device or reader)§",,,,,,,,
+*Should be guided by the knowledge of the local epidemics.,,,,,,,,
+†Based on a sample size sufficient to achieve CIs of ±5% around a point estimate of sensitivity and specificity.,,,,,,,,
+"‡POCTs are only to provide a positive/negative result, other quantitative methods will be used for quantitation.",,,,,,,,
+§It does not include the cost of device/reader in case the POCT is device based or/and requires a reader for the result.,,,,,,,,
+"FTP, File Transfer Protocol; GPRS, General Packet Radio Service; GPS, Global Positioning System; GSM, Global System for Mobile; MSM, men who have sex with men; POCT, point-
+of-care testing; RPR, rapid plasma regain; SW, sex worker; TP, treponemal; TPP, target product profile; TPPA, Treponema pallidum particle agglutination.",,,,,,,,

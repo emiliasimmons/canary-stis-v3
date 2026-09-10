@@ -1,0 +1,6 @@
+HIV Subtype,Database sequences (FCs),FCs,GP,Total,P-values ‡ (Proportions in FCs vs GP)
+Subtype A1,15 (34.1%),100 (47.4%),177 (50.4%),292,0.24
+Subtype D,14 (31.8%),70 (33.2%),122 (34.8%),206,0.35
+Subtype C,1 (2.3%),2 (0.9%),9 (2.6%),12,0.08
+Inter-subtype recombinants,14 (31.8%),39 (18.5%),43 (12.2%),96,0.02 *
+Total,44,211,351,606,

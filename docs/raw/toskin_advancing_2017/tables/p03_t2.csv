@@ -1,0 +1,22 @@
+table 2 Meta -analysis data on performance of select TP POCTs for syphilis,col_1,col_2,col_3
+POct,sample,Parameters,Assuming imperfect reference standards (95% crl)*
+"Alere Determine Serum Sensitivity 90.04% (80.45, 95.21)
+Specificity 94.15% (89.26, 97.66)
+Whole blood Sensitivity 86.32% (77.26, 91.70)
+Specificity 95.85% (92.42, 97.74)",,,
+SD Syphilis 3.0,Serum,Sensitivity,"87.06% (75.67, 94.50)"
+,,Specificity,"95.85% (89.89, 99.53)"
+,Whole blood,Sensitivity,"84.50% (78.81, 92.61)"
+,,Specificity,"97.95% (92.54, 99.33)"
+"Syphicheck-WB Serum Sensitivity 74.48% (56.85, 88.44)
+Specificity 99.14% (96.37, 100.0)
+Whole blood Sensitivity 74.47% (63.94, 82.13)
+Specificity 99.58% (98.91, 99.96)",,,
+Visitect Syphilis,Serum,Sensitivity,"85.13% (72.83, 92.57)"
+,,Specificity,"96.45% (91.92, 99.29)"
+,Whole blood,Sensitivity,"74.26% (53.62, 83.68)"
+,,Specificity,"99.43%, (98.22, 99.98)"
+Adapted from Jafari et al.17,,,
+"*Adjustments were made for imperfect reference standards using the Bayesian hierarchical summary receiver operating characteristic curve method. The results are point
+estimates of sensitivity and specificity for each test, using serum and whole blood, around a 95% credible interval (as opposed to a CI).",,,
+"Crl, credible interval; NA, not available; POCT, point-of-care testing; TP, treponemal.",,,

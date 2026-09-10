@@ -1,0 +1,38 @@
+"table 5 POC platforms—CT, NG and CT/NG: summary of selected analytical and operational characteristics",col_1,col_2,col_3,col_4,col_5
+Company,Cepheid,Atlas Genetics,Alere,Molbio/bigTec,Ustar
+"Assay name GeneXpert Atlas io Alere i Truelab PCR RT CPA HIV-1 Viral Load
+CT, CT/NG CT; CT/NG (pipeline) CT/NG (pipeline) CT, NG (pipeline) CT (pipeline)",,,,,
+Use setting,"Tabletop, not portable
+Level 2—district hospital","Tabletop; portable
+Level 1—health centre","Tabletop; portable
+Level 1—health centre","2 instruments; not
+portable; Level 2—district
+hospital",Level 2—district hospital
+"Specimen Female and male urine, Self-collected and clinician- Female and male urine, TBD TBD
+endocervical swab/patient- collected vaginal swabs endocervical swab/
+collected vaginal swab from symptomatic and patient-collected vaginal
+asymptomatic women, and swab
+urine from men",,,,,
+Steps,"~4; sample preparation
+automated","~4; automated sample
+preparation on instrument","~6 simple steps; raw
+sample added to device",Multiple pipetting steps,"~3–5 steps from sample
+to result"
+Time to result ~90 min 30 min <60 min,,,,,
+"Cold chain; reagent
+stability",No; TBD,"Cartridges with reagents
+stable at 2°C–25°C",No; >12 months,"No; 3 months at
+temperatures to 40°C",
+"Power Mains power required; solar Mains power required AC mains and DC from Rechargeable lithium ion Mains power or
+power possible external AC/DC supplied battery rechargeable battery
+plug pack",,,,,
+Training,Less than 0.5 day,"Less than 1 hour; no formal
+training required; self-
+explanatory user guide and
+screens on instrument",Less than 0.5 day,Less than 0.5 day,Approximately 0.5 day
+"Connectivity Yes; computer/internet required; Yes; via middleware Yes; USB and Ethernet Yes; wireless connectivity Will be used with Genie
+remote calibration outlets device; TBD",,,,,
+"Equipment cost (US$); per
+test cost","~$17 000 (with 4 modules), but
+could be higher; $16.20 (CT/NG)",TBD,TBD,~$8000; TBD,<$5000; TBD
+"AC, alternating current; CT, Chlamydia trachomatis; DC, direct current; NG, Neisseria gonorrhoeae; POC, point of care; TBD, to be determined.",,,,,

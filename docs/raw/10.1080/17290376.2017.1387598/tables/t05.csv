@@ -1,0 +1,41 @@
+Characteristics,OR,95% CI,% change in Odds,p value
+Good KHT,1.19,1.12-1.27,19.1,.000
+Good KHP,1.13,1.06-1.21,13.2,.000
+Recently had STI,1.31,1.18-1.46,31.3,.000
+Recently had multiple sex partner,1.72,1.60-1.86,72.1,.000
+Recently had transactional sex,1.21,1.08-1.36,21.1,.002
+Currently using modern contraceptive,1.25,1.16-1.35,8.3,.000
+Tested for HIV,,,,
+", 12",1.03,0.94-1.12,2.6,.549
+Over 12,1.19,1.11-1.27,18.5,.000
+Never,Ref,,,
+Age,,,,
+15-19,1.41,1.29-1.55,41.2,.000
+20-24,1.43,1.30-1.56,42.5,.000
+25-34,1.27,1.15-1.41,27,.000
+35-64,Ref,,,
+Marital status,,,,
+Currently married,1.07,0.99-1.15,6.7,.093
+Formerly married,1.00,0.87-1.14,2 0.4,.955
+Never married,Ref,,,
+Wealth status,,,,
+Poorer,0.99,0.92-1.06,2 1.2,.745
+Middle,0.86,0.8-0.92,2 14.2,.000
+Richer,Ref,,,
+Zone,,,,
+North Central,1.17,1.08-1.28,17.1,.000
+North East,1.12,1.01-1.23,11.5,.027
+North West,0.68,0.61-0.75,2 32.2,.000
+South East,1.09,0.99-1.2,9.0,.075
+South South,1.25,1.15-1.37,25.4,.000
+South West,Ref,,,
+Education,,,,
+No formal education,Ref,,,
+Qur'anic only,1.01,0.93-1.09,1.0,.805
+Secondary,1.04,0.95-1.13,3.7,.394
+Higher,0.96,0.86-1.06,2 4.4,.394
+Religion,,,,
+Islam,Ref,,,
+Christian,1.04,0.97-1.12,4.3,.236
+Catholic,0.90,0.82-0.99,2 10.2,.025
+Other,1.13,0.92-1.4,13.5,.241

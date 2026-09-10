@@ -1,0 +1,7 @@
+Variables,Agrarian (n=4435) G.PRR (95% CI),Agrarian (n=4435) G.P-Value,Fishing (n=2003) H.PRR (95% CI),Fishing (n=2003) H.P-Value,Trading (n=1810) H.PRR (95% CI),Trading (n=1810) H.P-Value
+Past year alcohol use,Past year alcohol use,Past year alcohol use,Past year alcohol use,Past year alcohol use,Past year alcohol use,Past year alcohol use
+Yes,"1.35 (1.20, 1.52)",<0.0001,"1.30 (1.10, 1.54)",0.0018,"1.24 (1.00, 1.53)",0.0477
+No,Ref,-,ref,-,ref,-
+Past year TS,Past year TS,Past year TS,Past year TS,Past year TS,Past year TS,Past year TS
+Yes,"1.21 (1.03, 1.42)",0.0176,"1.19 (0.92, 1.54)",0.1818,"1.22 (0.87, 1.71)",0.2493
+No,Ref,-,ref,-,ref,-

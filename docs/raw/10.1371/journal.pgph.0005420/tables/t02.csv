@@ -1,0 +1,11 @@
+ID *,Sex (Age),Clinic Referral Link?,Genetic Distance ( gag ),Genetic Distance ( pol ),Genetic distance ( whole ),Temporal Distance
+AR1,M(23)-F(22),no,0.0000,0.0000,0.0002,42 days
+AC1,M(27)-F(21),yes,0.0027,0.0056,0.0091,0 days
+AC2,M(33)-F(21),yes,0.0033,0.0050,0.0110,10 days
+AC3,M(30)-F(21),yes,0.0034,0.0040,0.0058,23 days
+AC4,M(27)-F(22),yes,0.0041,0.0037,0.0104,8 days
+AC5,M(23)-F(22),yes,0.0046,0.0076,0.0038,6 days
+AC6,M(41)-F(38),yes,0.0075,0.0057,0.0074,0 days
+CC1,M(28)-F(26),yes,0.0109,0.0037,0.0138,13 days
+AC7,M(32)-F(32),yes,0.0206,0.0138,0.0300,0 days
+CC2,M(38)-F(35),yes,0.0267,0.0131,0.0320,14 days

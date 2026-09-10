@@ -1,0 +1,17 @@
+Cervical infections.Sensitivity,Cervical infections.Specificity,Cervical infections.Flowchart,Cervical infections.Outcomes,Prevalence (per 1000).50,Prevalence (per 1000).150,Prevalence (per 1000).300
+0.28,0.57,Flowchart 1,TP,14,42,84
+,,,FN - missed treatment,36,108,216
+,,,TN,542,485,399
+,,,FP - overtreatment,409,366,301
+0.45,0.74,Flowchart 2,TP,22,67,135
+,,,FN - missed treatment,28,83,165
+,,,TN,705,631,519
+,,,FP - overtreatment,245,219,181
+0.90,0.35,Flowchart 3,TP,45,135,270
+,,,FN - missed treatment,5,15,30
+,,,TN,335,300,247
+,,,FP - overtreatment,615,550,453
+0.84,0.45,Flowchart 4,TP,42,126,252
+,,,FN - missed treatment,8,24,48
+,,,TN,430,385,317
+,,,FP - overtreatment,520,465,383

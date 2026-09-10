@@ -1,0 +1,9 @@
+Source,Recipient,"Phylogenetically strongly supported transmission pairs excluding same-sex pairs * (count, proportion)","Estimated transmission flows among study participants, based on data excluding same-sex pairs ** (mean, 95% credibility interval of posterior density)","Estimated transmission flow ratios, based on data excluding same-sex pairs *** (mean, 95% credibility interval of posterior density)"
+Men 18-24 years,Women 18-24 years,9 (12.5%),9.1% (4.2-15.7%),3.16 (0.92-14.44)
+Men 18-24 years,Women 25-59 years,9 (12.5%),11.7% (5.6-19.9%),1.29 (0.47-3.69)
+Men 25-59 years,Women 18-24 years,13 (18.1 %),17.0% (9.2-26.3%),2.63 (0.96-8.28)
+Men 25-59 years,Women 25-59 years,18 (25%),29.8% (19.2-41.7%),2.29 (1.02-5.52)
+Women 18-24 years,Men 18-24 years,3 (4.2%),3.1% (0.7-7.5%),-
+Women 18-24 years,Men 25-59 years,5 (6.9%),6.7% (2.3-13.4%),-
+Women 25-59 years,Men 18-24 years,7 (9.7%),9.2% (3.8-16.8%),-
+Women 25-59 years,Men 25-59 years,8 (11.1%),13.4% (6.1-22.9%),-

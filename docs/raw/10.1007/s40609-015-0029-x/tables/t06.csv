@@ -1,0 +1,12 @@
+0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+p value a,,<0.001,<0.001,ref,0.929,0.702 0.004,ref,<0.001,<0.001,ref,<0.001,0.011,0.838,ref,<0.001,
+,95 %Upper,- 0.48,0.16,ref 0.16,0.13,- 0.07,ref,- 0.17 -,0.55,ref,- 0.48,- 0.07,0.17,ref,- 0.87,
+,95 %Lower,- 0.55,0.11,ref - 0.14,- 0.19,- 0.39,ref,- 0.42,- 0.83,ref,- 0.83,- 0.50,- 0.14,ref,- 2.00,
+Adolescent men ( n =7335),Estimate,- 0.52,0.13,ref 0.01,- 0.03,- 0.23,ref,- 0.30,- 0.69,ref,- 0.66,- 0.28,0.02,ref,- 1.44,significant in men
+Adolescent men ( n =7335),Odds Ratio,0.60,1.14 ref,1.01,0.97,0.79,ref,0.74,0.50,ref,0.52,0.75,1.02,ref,0.24,Not
+,p value a,<0.001,<0.001 ref,0.041,0.844,0.004,ref 0.034,<0.001,,ref,<0.001,<0.001,<0.001,ref,<0.001,ref 0.001
+,95 %Upper,- 0.42,0.14 ref,0.36,0.16,- 0.08,ref - 0.01,- 0.42,,ref,- 0.48,- 0.46,- 0.26,ref,- 4.88,ref - 0.10
+=8782),95 %Lower,- 0.50,0.10,ref 0.01,- 0.20,- 0.44,ref - 0.30,- 0.73,,ref,- 0.82,- 0.91,- 0.57,ref,- 6.42,ref - 0.38
+women ( n,Estimate,- 0.46,0.12 ref,0.18,- 0.02,- 0.26,ref -,0.15,- 0.58,ref,- 0.65,- 0.68,- 0.42,ref,- 5.65,ref - 0.24
+Adolescent,Odds Ratio,0.63,1.13,ref 1.20,0.98,0.77,ref,0.86,0.56,ref,0.52,0.50,0.66,ref,0.004,ref 0.79
+RISK FACTORS,,Age of respondents,Family size Sibship size,1 - 59 %(first quartile) 70 %(second quartile),60 - - 79 %(third quartile),71 80 - 100 %(fourth quartile),SES High,Median,Low Orphanhood status,Not an orphan,Double orphan,Mother died,Father died,Marriage status Never married,Ever married Residency area,Rural villages Trading villages

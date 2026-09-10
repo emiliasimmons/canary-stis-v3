@@ -1,0 +1,18 @@
+Venue characteristics,"Means of venue characteristics by cluster.Alcohol-­ serving venues with music, sex brokers, sex work and a provision of sex on-­ site Cluster 1","Means of venue characteristics by cluster.Alcohol-­ serving venues with sex work, no music and no provision of sex on-­ site Cluster 2","Means of venue characteristics by cluster.Alcohol-­ serving venues with music, no sex workers and no provision of sex on-­ site Cluster 3",Means of venue characteristics by cluster.Non-­ alcohol-­ serving social venues Cluster 4
+Sexual partnerships on-­ site,,,,
+ People meet new sexual partners here,0.984,0.950,0.539,0.237
+ Sex workers solicit customers,0.758,0.612,0.185,0.050
+ Sex brokers on-­ site,0.551,0.450,0.106,0.006
+ Provision of sex on-­ site,0.787,0.475,0.070,0.131
+ Male staff find new sex partners,0.503,0.612,0.115,0.037
+ Female staff find new sex partners,0.748,0.675,0.070,0.025
+ Female customers come with hopes of finding a sex partner,0.724,0.787,0.460,0.175
+ MSM come to socialise,0.070,0.112,0.053,0.012
+Activities on-­ site,,,,
+ Buying and eating food,0.629,0.487,0.389,0.418
+ Socialising for 1+ hours,0.976,0.912,1.000,0.675
+ Alcohol consumption,0.992,0.625,0.849,0.381
+ Live or recorded music,0.976,0.362,0.991,0.050
+ Dancing,0.866,0.100,0.663,0.018
+ Massage,0.047,0.030,0.044,0.031
+" Any type of sports MSM, men who have sex",0.330 with men.,0.150,0.185,0.150

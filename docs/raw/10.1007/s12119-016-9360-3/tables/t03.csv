@@ -1,0 +1,40 @@
+Characteristics,Number,% of women in risky sexual behavior,p value
+Age groups,,,
+\ 25,63,42.6,0.789
+25-29,108,44.2,
+30-34,114,42.5,
+35-39,120,44.3,
+40-44,89,34.9,
+45-49,74,39.7,
+Duration of union in years,,,
+\ 5,218,45.3,0.369
+5-9,158,40.5,
+10 or more,192,38.5,
+Place of residence,,,
+Rural,445,46.1,0.001
+Urban,123,25.4,
+Highest level of education,,,
+No education,112,66.4,0.001
+Primary,179,45.3,
+Secondary,156,33.1,
+Tertiary,121,24.4,
+Occupation of respondent,,,
+Unemployed,165,61.2,0.001
+Trading,80,45.2,
+Government sector,134,29.2,
+Teaching,59,30.5,
+Student,47,20.5,
+Domestic worker,83,38.3,
+Religious affiliation,,,
+Catholic,72,47.8,0.053
+Methodist,146,32.4,
+Pentecostal,213,45.5,
+SDA,95,38.0,
+Other religions,42,51.2,
+Home language group,,,
+Setswana,376,39.5,0.288
+Afrikaans,21,33.3,
+IsiXhosa,50,49.0,
+Sesotho,74,43.1,
+Zulu,47,53.3,
+Total,568,41.7,

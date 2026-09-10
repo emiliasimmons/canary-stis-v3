@@ -1,0 +1,8 @@
+0,1,2,3,4,5,6,7,8,9,10,11
+P-Value,,,,significant in multivariate,,,0.0109,-,,-,<0.0001
+PRR (95% CI),,,,Not included in final model; not analysis,,,"1.92 (1.16, 3.18)",ref,,ref,"2.21 (1.86, 2.63)"
+IPV P-Value,- 0.0581,0.0006,,model; not significant in analysis,,,model; not significant in analysis,,,-,<0.0001
+Physical PRR (95% CI),"ref 0.89 (0.78, 1.00)","0.66 (0.52, 0.84)",,Not included in final multivariate,,,Not included in final multivariate,,,ref,"1.83 (1.61, 2.09)"
+IPV P-Value,- 0.4099,0.8802,- 0.0490,0.6452,0.0973,0.7349,model; not significant in analysis,,,-,<0.0001
+Verbal PRR (95% CI),"ref 0.95 (0.86, 1.07)","0.99 (0.82, 1.18)","ref 0.53 (0.28, 1.00)","1.03 (0.91, 1.16)","0.85 (0.69, 1.03)","1.02 (0.90, 1.16)",Not included in final bivariate,,,ref,"0.11 (0.08, 0.16)"
+Variables,P5-P7 S1-S4,Higher than S4 Occupation,Housekeeping Student,Trade/shopkeeper,Bar owner/waitress,Other,Past year drug use Yes,No,# of past year intimate partners,1 partner,>1 partner

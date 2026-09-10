@@ -1,0 +1,28 @@
+Variables,Totals *,%,HIV Prevalence,95% CI,p -value **
+Age,,,,,
+15 to 19 years,1606,51.1,5.6,4.2 - 7.5,< 0.001
+20 to 24 years,1486,48.9,17.4,14.6 - 20.6,
+Race,,,,,
+Black African,2130,83.2,13.5,11.6 - 15.7,< 0.001
+Other,955,16.8,0.9,0.4 - 1.7,
+Marital status,,,,,
+Not Married,2874,95.5,11.7,10.0 - 13.7,0.303
+Married,140,4.5,7.2,2.8 - 17.2,
+Education level,,,,,
+Primary school,252,7.8,16.7,10.3 - 25.9,0.121
+Secondary school,2406,87.3,11.4,9.6 - 13.5,
+Tertiary,126,4.8,6.4,2.6 - 15.2,
+Employment,,,,,
+Unemployed,2604,88.0,11.3,9.5 - 13.3,0.651
+Employed,363,12.0,12.8,7.6 - 20.8,
+Locality,,,,,
+Urban formal,1578,49.8,9.2,7.2 - 11.8,0.007
+Urban informal,367,7.3,19.1,13.3 - 26.8,
+Rural informal,891,39.5,12.7,10.0 - 16.1,
+Rural formal,256,3.5,10.3,7.1 - 14.8,
+Assert based SES ***,,,,,
+Quintile 1,705,25.1,13.2,10.0 - 17.1,< 0.001
+Quintile 2,681,26.6,16.7,12.9 - 21.4,
+Quintile 3,642,21.4,11.5,8.1 - 16.2,
+Quintile 4,684,19.2,6.5,3.9 - 10.6,
+Quintile 5,329,7.8,3.0,0.9 - 9.4,

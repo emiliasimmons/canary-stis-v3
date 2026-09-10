@@ -1,0 +1,6 @@
+Variable,Measure description,Measure description
+STI history,Binary,Yes vs no-in response to any question on the three ulcerative STI symptoms Yes=1 and no=0
+Consistent condom use,Binary,Always vs sometimes or never in last 6 months Always=0 and sometimes/never=1
+Multiple partners in 12 months,Binary,"0-1 vs 2-4 or 5+ partners in the past 12 months 0-1=0, 2 and above=1"
+Alcohol consumption,Binary,Never vs ever-in response to a question on alcohol consumption in the past 4 weeks Never=0 and ever=1
+Education background,Binary,No education-completed primary vs secondary and above education Completed primary education=1 and completed secondary and above education=0

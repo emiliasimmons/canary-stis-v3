@@ -1,0 +1,28 @@
+Age group,Calendar period,New HIV infections,Person-years,Incidence rate/100 py,aRR (95% CI) 1
+"uMkhanyakude , South Africa","uMkhanyakude , South Africa","uMkhanyakude , South Africa","uMkhanyakude , South Africa","uMkhanyakude , South Africa","uMkhanyakude , South Africa"
+15-19 years,2006-2010,269,"5,663",4.75 (4.13-5.46),1.04 (0.85-1.28)
+15-19 years,2011-2015,227,"4,992",4.54 (3.93-5.25),1
+15-19 years,2016-2018,98,"3,529",2.78 (2.24-3.46),0.62 (0.48-0.82)
+20-24 years,2006-2010,365,"4,866",7.50 (6.64-8.47),1.06 (0.89-1.27)
+20-24 years,2011-2015,336,"4,743",7.08 (6.23-8.04),1
+20-24 years,2016-2018,151,"2,600",5.80 (4.81-7.00),0.82 (0.65-1.04)
+15-24 years,2006-2010,634,"10,529",6.02 (5.51-6.58),1.06 (0.92-1.21)
+15-24 years,2011-2015,563,"9,736",5.78 (5.27-6.34),1
+15-24 years,2016-2018,249,"6,130",4.07 (3.54-4.67),0.74 (0.62-0.87)
+"Gem , Kenya - Comparison of 2 calendar periods (a priori analysis)","Gem , Kenya - Comparison of 2 calendar periods (a priori analysis)","Gem , Kenya - Comparison of 2 calendar periods (a priori analysis)","Gem , Kenya - Comparison of 2 calendar periods (a priori analysis)","Gem , Kenya - Comparison of 2 calendar periods (a priori analysis)","Gem , Kenya - Comparison of 2 calendar periods (a priori analysis)"
+15-19 years,2010-2015,30,"4,866",0.62 (0.40-0.94),1
+15-19 years,2016-2019,6,"1,236",0.49 (0.16-1.50),0.79 (0.24-2.63)
+20-24 years,2010-2015,31,"3,191",0.97 (0.63-1.50),1
+20-24 years,2016-2019,7,"1,088",0.64 (0.28-1.49),0.66 (0.26-1.70)
+15-24 years,2010-2015,61,"8,057",0.76 (0.55-1.04),1
+15-24 years,2016-2019,13,"2,325",0.56 (0.28-1.11),0.74 (0.36-1.53)
+- Comparison of 3 calendar periods (a posteriori analysis),- Comparison of 3 calendar periods (a posteriori analysis),- Comparison of 3 calendar periods (a posteriori analysis),- Comparison of 3 calendar periods (a posteriori analysis),- Comparison of 3 calendar periods (a posteriori analysis),- Comparison of 3 calendar periods (a posteriori analysis)
+15-19 years,2010-2012,20,"2,171",0.92 (0.57-1.49),2.48 (1.16-5.31)
+15-19 years,2013-2015,10,"2,695",0.37 (1.90-7.30),1
+15-19 years,2016-2019,6,"1,236",0.49 (0.16-1.50),1.31 (0.35-4.89)
+20-24 years,2010-2012,16,"1,588",1.01 (0.60-1.69),1.08 (0.53-2.18)
+20-24 years,2013-2015,15,"1,603",0.94 (0.52-1.70),1
+20-24 years,2016-2019,7,"1,088",0.64 (0.28-1.49),0.69 (0.53-2.18)
+15-24 years,2010-2012,36,"3,759",0.96 (0.67-1.36),1.65 (0.99-2.75)
+15-24 years,2013-2015,25,"4,298",0.58 (0.37-0.92),1
+15-24 years,2016-2019,13,"2,325",0.56 (0.28-1.11),0.96 (0.43-2.14)

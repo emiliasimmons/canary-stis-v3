@@ -1,0 +1,43 @@
+Characteristic,Residents in old.households n,Residents in old.(N=21 %,Residents in new households (N=2920).n,Residents in new households (N=2920).%,"χ 2 , p value"
+Gender,,,,,
+ Men,10 134,47.8,1401,48.0,"0.039, p=0.84"
+ Women,11 074,52.2,1519,52.0,
+Age,,,,,
+ 15-19,5627,26.5,446,15.3,"500.839, p<0.01"
+ 20-24,3692,17.4,789,27.0,
+ 25-29,3086,14.6,701,24.0,
+ 30-39,5199,24.5,716,24.5,
+ 40-49,3604,17.0,268,9.2,
+Marital status,,,,,
+ Currently married or cohabitating,10 280,48.5,1691,57.9,"91.468, p<0.01"
+ Not currently married or cohabitating,10 928,51.5,1229,42.1,
+Relation to household head,,,,,
+ Head,8602,40.6,1677,57.4,"582.715, p<0.01"
+ Spouse,5071,23.9,812,27.8,
+ Child/grandchild,5954,28.1,251,8.6,
+ Parent,2,0.0,0,0.0,
+ Sibling,194,0.9,39,1.3,
+ Other relative/not related,1383,6.5,141,4.8,
+Residence status,,,,,
+ Permanent (>6 months/year),20 365,96.0,2468,84.5,"668.820, p<0.01"
+ Transient (<6 months/year),843,4.0,452,15.5,
+New in-­ migrant,,,,,
+ Yes,4139,19.5,1358,46.5,
+ No,17 069,80.5,1562,53.5,
+SES quartile,,,,,
+ Lowest,4685,22.2,536,18.4,"121.362, p<0.01"
+ Lower,5114,24.2,811,27.8,
+ Higher,4876,23.1,874,30.0,
+ Highest,6458,30.6,693,23.8,
+Land ownership,,,,,
+ Rent,8514,40.2,1901,65.2,"741.250, p<0.01"
+ Own,11 481,54.2,803,27.5,
+ Other,1176,5.6,213,7.3,
+Household size quartiles,,,,,
+ Q1 (1-2 members),6187,29.2,1658,56.8,"1,100, p<0.01"
+ Q2 (3-4 members),5110,24.1,720,24.7,
+ Q3 (5-6 members),4366,20.6,317,10.9,
+ Q4 (7+ members),5545,26.2,225,7.7,
+Gender of household head,,,,,
+ Man,15 415,72.8,2222,76.3,"15.610, p<0.01"
+ Woman,5753,27.2,691,23.7,

@@ -1,0 +1,18 @@
+Parameter description,Lower range,Upper range,Distribution
+Risk assortativity,0.05,0.95,uniform
+Baseline probability of a woman having an HIV test in the period before 2006.,0.1,0.2,uniform
+Baseline annual probability of a woman having an HIV test in a given year after 2006,0.05,0.4,uniform
+Multiplier for baseline annual probability of a man having an HIV test in a given year compared to a woman.,0.4,1.1,uniform
+Per-timestep hazard of transmission from an HIV+ individual to a HIV- partner.,0.05,0.3,uniform
+Probability that an individual not in PopART collects CD4 test results and therefore join pre-ART care.,0.75,0.95,uniform
+Multiplier of hazard of HIV infection if transmission is from male to female.,1,3,uniform
+Proportion of men in the population that are in low risk sexual activity class on entry to the model,0.3,0.6,uniform
+Proportion of women in the population that are in low risk sexual activity class on entry to the model,0.3,0.6,uniform
+Proportion of men in the medium risk activity class compared to the high sexual risk activity class on entry to the model,0.5,0.99,uniform
+Proportion of women in the medium risk activity class compared to the high sexual risk activity class on entry to the model,0.5,0.99,uniform
+Multiplier to account for potential over/under-reporting of number of sexual partners.,0.625,5,uniform
+Log of the multiplier for the initial proportion of individuals that are infected (stratified by age and sex) during the HIV seeding process.,0,2,uniform
+"Mean time delay (in years), as drawn from an exponential distribution, until starting ART after testing HIV+ for an individual in the background care cascade.",0.4,0.7,uniform
+Multiplier to scale parameter for gamma distribution determining the duration of partnerships within a patch.,1,2,uniform
+Probability that a woman stays virally suppressed after the initial ART phase,0.65,0.9,uniform
+Multiplier for the probability that a man stays virally suppressed after the initial ART phase compared to a women,0.6,1,uniform

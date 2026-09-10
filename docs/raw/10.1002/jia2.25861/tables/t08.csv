@@ -1,0 +1,13 @@
+0,1,2,3,4,5,6,7,8
+AUC-ROC(95% CI),-,-,-,"- 0.70 (0.65, 0.75)",0.63 (-),"0.58 (0.51, 0.65) 0.49 (0.30, 0.63) 0.56 (0.50, 0.62)","0.69 (0.64, 0.74) 0.61 (0.58, 0.65)","0.66 (0.54, 0.74) 0.69 (0.60, 0.78) 0.59 (0.56, 0.62) - -"
+Score externally validated,- -,-,- VOICE,VOICE,VOICE (modified) VOICE VOICE VOICE,(under 25) VOICE ( ≥ 25) VOICE VOICE (modified) -,VOICE,-
+Predictors available,- -,-,- 6/7,6/7,4/5 5/7 All d,All d All,-,All -
+N Val a,- 1,-,1 -,-,- 1 1,1 1,-,- -
+AUC-ROC(95% CI),"0.79 (0.70, 0.81) c c","0.71 (-) 0.69 (0.66, 0.72) b","0.67 (0.64, 0.70) b",,"0.70 (0.60, 0.79) 0.62 (0.56, 0.68)",,"0.62 (0.58, 0.64) b 0.59 (0.55, 0.61) b","0.64 (0.59, 0.69) b 0.62 (0.58, 0.67) b"
+Score developed,Wand-2012 Wand-2018,VOICE,VOICE (modified),,Burgess (under 25) Burgess (under 25),(modified),Peebles (under-25) Peebles (under-25),(modified) Peebles (25 + ) Peebles (25 + ) (modified)
+Prediction horizon,1-2 yrs 1-2 + yrs,1 yr,1 yr,1 yr,1 yr 25) 18 mo,+ ) 2.2 yrs 25) + ) 1 yr,<,
+(study HIV incident cases,(RCT) 148 e (RCT) 776,(RCT) 263,98,(RCT) 59,ASPIRE (RCT) 95 CAPRISA 004 47 ( <,13 (25 001 81 (RCT) 188,(,72 (25
+Dev a Cohort design),1 c MIRA 1 c Multiple,1 b VOICE,HPTN 035,(RCT) FEM-PrEP,-,(RCT) FACTS 2 b,(RCT) ECHO,
+N,,,,,1,-,,
+author,(2012),,,,(2018) (2018),,,
+First (year),Wand Wand (2018),Balkus (2016),,,Balkus Burgess,Burgess (2017),Peebles (2020),

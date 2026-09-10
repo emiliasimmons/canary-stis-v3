@@ -1,0 +1,34 @@
+Measure,Unadjusted,Adjusted
+FEMALES,,
+Olderpartner ‡,0.99 (0.98-1.00),1.00 (0.99-1.00)
+Interactionbetweenforced,,
+sexandearlydebut Notforcedxlaterdebut(ref),1.00,1.00
+Forcedxlaterdebut,1.41 (1.24-1.60)*,1.37 (1.23-1.52)*
+Notforcedxearlydebut,1.32 (1.17-1.48)*,1.29 (1.16-1.44)*
+Forcedxearlydebut,1.06 (0.70-1.61),1.15 (0.79-1.70)
+Age-group,,
+15-19,na,0.79 (0.71-0.87)*
+20-24(ref),na,1.00
+Education,,
+Attending/completedhigh school (ref),na,1.00
+Notattendingschool/ droppedout,na,1.48 (1.34-1.65)*
+Residence,,
+Urban(ref),na,1.00
+Rural,na,1.40 (1.26-1.55)*
+MALES,,
+Olderpartner ‡,0.98 (0.96-0.99)*,0.99 (0.98-1.01)
+Forcedsex,,
+No(ref),1.00,1.00
+Yes,1.44 (1.08-1.93)*,1.56 (1.16-2.09)*
+Earlydebut,,
+No(ref),1.00,1.00
+Yes,1.46 (1.30-1.64)*,1.47 (1.36-1.59)*
+Age-group,,
+15-19,na,0.87 (0.79-0.96)*
+20-24(ref),na,1.00
+Education,,
+Completed/attendinghigh school (ref),na,1.00
+Notattendingschool/ droppedout,na,1.22 (1.12-1.33)*
+Residence,,
+Urban(ref),na,1.00
+Rural,na,1.40 (1.25-1.58)*

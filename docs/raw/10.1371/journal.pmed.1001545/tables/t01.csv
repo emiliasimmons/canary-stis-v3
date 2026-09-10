@@ -1,0 +1,12 @@
+Model Input,Base Case,95% CI,95% CI,Distribution,Reference
+ICS test sensitivity,86.0%,74.5%,94.1%,Beta,Tucker et al. [15]
+ICS test specificity,99.0%,97.8%,99.7%,Beta,Tucker et al. [15]
+"Stillbirth, mother with untreated syphilis",25.6%,17.8%,33.4%,Beta,Gomez et al. [5]
+"Neonatal mortality, mother with untreated syphilis",12.3%,9.1%,15.9%,Beta,Gomez et al. [5]
+"Congenital syphilis, mother with untreated syphilis",15.5%,7.1%,26.2%,Beta,Gomez et al. [5]
+"Stillbirth, mother without syphilis",4.6%,2.9%,6.8%,Beta,Gomez et al. [5]
+"Penicillin effectiveness in reducing stillbirths, RR",42.0%,16.1%,91.0%,Log-normal,Hawkes et al. [25]
+"Penicillin effectiveness in reducing neonatal mortality, RR",46.0%,25.0%,79.0%,Log-normal,Hawkes et al. [25]
+"Penicillin effectiveness in reducing congenital syphilis, RR",33.5%,18.0%,57.0%,Log-normal,Hawkes et al. [25] a
+Congenital syphilis disability weight,0.315,0.159,0.471,Normal,Murray and Lopez [18]
+Discount rate,3.0%,1.4%,5.3%,Beta,WHO [17] b

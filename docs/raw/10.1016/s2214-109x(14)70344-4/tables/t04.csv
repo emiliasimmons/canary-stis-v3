@@ -1,0 +1,4 @@
+,Control.Incident cases (person-years),Control.Participants*,Control.Incident cases per 100 person-years,Intervention.Incident cases (person-years),Intervention.Participants*,Intervention.Incident cases per 100 person-years,Comparisons.IRR (95% CI); p value,Comparisons.aIRR† (95% CI); p value
+Women,71 (6154),2038,1·15,56 (5649),1925,0·99,0·86 (0·61-1·22); p=0·396,0·72 (0·49-1·07); p=0·1020
+Men,48 (4237),1435,1·13,27 (3861),1326,0·70,0·62 (0·39-0·99); p=0·045,0·59 (0·35-0·95); p=0·0304
+Overall,119 (10 390),3473,1·15,83 (9510),3251,0·87,0·76 (0·58-1·01); p=0·057,0·67 (0·46-0·97); p=0·0362

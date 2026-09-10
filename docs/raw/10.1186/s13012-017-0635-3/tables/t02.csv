@@ -1,0 +1,10 @@
+Source,df,Dependent variables.Acceptability.F,Dependent variables.Acceptability.η 2,Dependent variables.Appropriateness.F,Dependent variables.Appropriateness.η 2,Dependent variables.Feasibility.F,Dependent variables.Feasibility.η 2
+AC,1,114.1*,.26,20.3*,.06,4.1,.01
+AP,1,15.4*,.05,66.0*,.17,4.9,.02
+FE,1,0.58,.002,6.0*,.02,143.5*,.31
+AC × AP,1,0.59,.002,0.18,.001,0.66,.00
+AC × FE,1,0.48,.001,0.24,.001,1.3,.00
+AP × FE,,,,,,,
+AC × AP × FE,,,,,,,
+Residual,320,,,,,,
+,,R 2 = .43 (Adj R 2 = .42),R 2 = .43 (Adj R 2 = .42),R 2 = .37 (Adj R 2 = .36),R 2 = .37 (Adj R 2 = .36),R 2 = .42 (Adj R 2 = .41),R 2 = .42 (Adj R 2 = .41)

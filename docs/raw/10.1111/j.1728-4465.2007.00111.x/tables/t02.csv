@@ -1,0 +1,57 @@
+Variable,Per- cent,(N),Median age at first sex,Mantel-Cox hazard ratio (univariate test),Adjusted hazard ratio (multivariate test)
+Residence,,,,,
+Agricultural estate,37,(746),18,1.24***,-
+Subsistence farm (r),32,(635),19,1.00,-
+Town,16,(320),18,1.44***,-
+Roadside,15,(312),18,1.26*,-
+Total,100,"(2,013)",18,-,-
+Literate,,,,,
+No (r),3,(63),18,1.00,-
+Yes,97,"(1,937)",18,0.75,-
+Total,100,"(2,000)",18,-,-
+Completed primary,,,,,
+education,,,,,
+No (r),19,(379),18,1.00,-
+Yes,81,"(1,634)",18,0.84*,-
+Total,100,"(2,013)",18,-,-
+Employment status,,,,,
+Professional or skilled,7,(146),18,0.91,0.93
+Manual (r),49,(966),18,1.00,-
+Unemployed,27,(528),18,0.79**,0.86*
+Student,17,(336),20,0.54***,0.61***
+Total,100,"(1,976)",18,-,-
+AIDS knowledge,,,,,
+Below average (r),42,(821),18,1.00,-
+Above average,58,"(1,144)",18,0.86*,-
+Total,100,"(1,965)",18,-,-
+Reads news once a,week,,,,
+No (r),61,"(1,207)",18,1.00,-
+Yes,39,(757),18,1.06,-
+Total,100,"(1,964)",18,-,-
+Watches television every,,,,,
+week No (r),69,"(1,377)",18,1.00,-
+Yes,31,(629),18,1.16*,-
+Total,100,"(2,006)",18,-,-
+Listens to radio every day,,,,,
+No (r),37,(742),18,1.00,-
+Yes,63,"(1,267)",18,1.04,-
+Total,100,"(2,009)",18,-,-
+Church,,,,,
+Traditional,11,(229),18,1.58***,1.39**
+Methodist,7,(131),19,0.94,0.96
+Anglican (r),25,(497),18,1.00,-
+Roman Catholic,16,(322),18,1.07,1.03
+Apostolic,2,(43),19,1.07,0.99
+None,10,(201),18,1.30*,1.21
+Other,29,(590),18,0.98,0.97
+Total Tribe,100,"(2,013)",18,-,-
+Karanga,5,(105),18,1.00,0.95
+Manyika (r),57,"(1,137)",18,1.00,
+Maungwe,16,(329),18,1.02,1.08
+Ndau,8,(160),18,0.92,0.87
+Zezuru,5,(101),18,1.29,1.23
+Other Total,9 100,"(173) (2,005)",17 18,1.46** -,1.25* -
+Household has radio,,,,,
+No (r),41,(793),18,1.00,-
+Yes,59,"(1,154)",18,1.03,-
+Total,100,"(1,947)",18,-,-

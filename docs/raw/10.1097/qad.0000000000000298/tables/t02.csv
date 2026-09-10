@@ -1,0 +1,21 @@
+Cofactor,Relative risk,95% Confidence interval,References
+Factors that increase transmission probability,,,
+High plasma viral load (log 10 copies/ml),2.89,"(2.19, 3.82)",[69]
+Genital ulcer disease a,2.65,"(1.35, 5.19)",[69]
+Acute versus asymptomatic stage of disease,7.25 b,"(3.05, 17.3)",[70]
+Late versus asymptomatic stage of disease,5.81 b,"(3.00, 11.4)",[70]
+Factors that decrease transmission probability,,,
+Use of antiretrovirals by HIV-infected partner,,,
+Early versus delayed treatment,0.04 c,"(0.01, 0.27)",[72]
+Received treatment versus no treatment,0.08,"(0.00, 0.57)",[73]
+Pre-exposure prophylaxis of HIV-uninfected partner,,,
+Among heterosexual couples,0.29 d,"(0.17, 0.47)","[16,17]"
+Among MSM,0.56,"(0.37, 0.85)",[74]
+Among injection drug users,0.52,"(0.28, 0.90)",[75]
+Condom use,0.20 e,"(0.08, 0.47)",[18]
+Male circumcision (heterosexual partners),,,
+HIV-uninfected partner is male,0.50 f,"(0.34, 0.72)",[76]
+HIV-uninfected partner is female,0.80,"(0.53, 1.36)",[77]
+Male circumcision (MSM),,,
+Insertive partner is HIV-uninfected,0.27 g,"(0.17, 0.44)",[78]
+Receptive partner is HIV-uninfected,1.20 g,"(0.63, 2.29)",[78]

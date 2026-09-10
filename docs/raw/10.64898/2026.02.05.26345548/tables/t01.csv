@@ -1,0 +1,22 @@
+Parameter,Incidence rate ratio (95% CI)
+Study recruitment type/population (N studies),
+Matched modelled estimates,1.00 (Reference)
+Studies representative of the total adult population,
+Population cohort studies and UTT trials [control clusters] (N=10),"0.95 (0.49, 1.86)"
+Nationally-representative household surveys (N=27),"1.01 (0.64, 1.59)"
+Other household surveys (N=23),"1.25 (0.79, 1.96)"
+Studies not representative of the total adult population,
+"Clinical trials, excluding UTT trials [control arms] (N=21)","2.91 (1.80, 4.69)"
+Pregnant/post-partum women (N=21),"2.44 (1.47, 4.06)"
+Other studies (N=10),"2.38 (1.46, 3.87)"
+Convenience sample from total population (N=2),"1.42 (0.41, 4.94)"
+Female sex workers (N=28),"6.46 (4.18, 10.00)"
+Men who have sex with men (N=22),"44.02 (27.35, 70.87)"
+Sex,
+Female,1.00 (Reference)
+Male,"0.99 (0.92, 1.08)"
+Year [reference year = 2014],"0.99 (0.98, 1.01)"
+Random effect precision parameter,Estimate (95% CI)
+Study (IID),"0.93 (0.73, 1.19)"
+Sex-specific time trend (RW2) ‡,"26.43 (11.50, 63.06)"
+Study type-specific time trend (RW2) ‡,"16.66 (9.71, 28.42)"

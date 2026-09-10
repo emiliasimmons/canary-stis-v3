@@ -1,0 +1,48 @@
+table 10 TPP—combined/mono-HPV DNA or RNA test,col_1,col_2,col_3,col_4,col_5
+Goal of test,,"To detect clinically relevant (=1.0 pg/mL) high-risk HPV (HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58, 59 and 68), HPV DNA
+or RNA; correlated with CIN3+",,,
+Intended use and target patient* Screening: women aged 30–64 years or HIV-positive women at any age,,,,,
+Target use setting,,"To detect clinically relevant (=1.0 pg/mL) high-risk HPV (HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58, 59 and 68), HPV DNA
+or RNA; correlated with CIN3+",,,
+"Results Clear positive, negative or invalid result with minimal instructions for interpretation",,,,,
+Equipment,,"Single-use, biodegradable or recyclable disposable diagnostic test preferred, reader optional (small, portable, tabletop or
+handheld, no electricity/power supply required)",,,
+target use(s),,,,,
+Reference technology Laboratory-based NAAT,,,,,
+Performance,,,Minimal,,Optimal
+Clinical sensitivity† 85% 95%,,,,,
+Clinical specificity,,,‡,,
+Quantitation§ Not applicable,,,,,
+Key minimal and optimal operational characteristics for hPV dnA or rnA test,,,,,
+,Minimal,,,Optimal,
+"Specimen Provider-collected cervical specimen and self- Provider-collected cervical specimen and self-collected cervicovaginal
+collected cervicovaginal specimen (preferred specimen (preferred because no need for speculum exam or clinic visit)
+because no need for speculum exam or clinic visit)",,,,,
+"Steps performed by healthcare worker between
+specimen preparation and result","No more than three operator steps that are not
+timed nor labour intensive",,,"Maximum one operator step (none of which has a timed interval),
+excluding waste disposal",
+Training required <90 min 30 min,,,,,
+Time to result,=60 min,,,=30 min,
+Regulatory requirements Compliance with appropriate ISO standard,,,,,
+Connectivity: device/reader,"If combined with a reader, reader has integrated
+GPS module.",,,"If combined with a reader, internally integrated GPS/GPRS module and
+conformity with HL-7 messaging standards",
+"Data export (for quality assurance): device/reader If combined with a reader, full data export over ► If combined with a reader, full data export over mobile phone
+mobile phone network network (data transmission can automatically select between GPRS
+or more advanced networks and GSM, based on available coverage).
+► GPRS should be able to use the internet FTP to transmit data: data
+transfer should be initiated every 6–12 hours automatically by the
+reader; data can be exported in a format compatible with HL-7
+standards, where appropriate; instrument tracks and transmits
+quality assurance data over time (eg, identify shifts or trends).",,,,,
+"Target price per test (excluding the cost of a
+device or reader)¶",<US$3,,,<US$1.5,
+Link to full target product profile—combined/mono-HPV DNA or RNA test,,,,,
+∗Should be guided by the knowledge of the local epidemics.,,,,,
+†Based on a sample size sufficient to achieve CIs of ±5% around a point estimate of sensitivity and specificity.,,,,,
+‡Values are currently under revision.,,,,,
+"§POCTs are only to provide a positive/negative result, other quantitative methods will be used for quantitation.",,,,,
+¶It does not include the cost of device/reader in case the POCT is device based or/and requires a reader for the result.,,,,,
+"FTP, File Transfer Protocol; GPRS, General Packet Radio Service; GPS, Global Positioning System; GSM, Global System for Mobile; HPV, human papillomavirus; ISO, International
+Organization for Standardization; POCT, point-of-care testing; TPP, target product profile.",,,,,

@@ -1,0 +1,12 @@
+0,1,2,3,4,5,6,7,8,9,10,11,12,13,14
+AUC-ROC(95% CI),"(0.44, 0.65)",,,"0.64 (0.52, 0.75)",-,-,,,,,,,,
+externally,0.55,-,,-,-,,,,-,,,-,,
+Score validated,VOICE,-,,VOICE VOICE,- -,-,,,-,,,-,,
+Predictors available,6/7,-,,All d 4/7,- -,-,,,-,,,-,,
+N Val a,1,1,,- 1,- -,-,,,-,,,-,,
+AUC-ROC(95% CI),,"0.79 (0.69, 0.89) b",,,"0.67 (0.64, 0.70) b 0.69 (0.66, 0.73) b","0.59 (0.55, 0.62) b 0.70 (0.68, 0.73) b","0.73 (0.71, 0.76) b",,0.68 c,(age + 0.65 c,covariates,(age + 0.72 c 0.71 c,covariates,
+Prediction Score developed,horizon 1 yr,1 yr,Rosenberg,1 yr,1 yr Kagaayi (female) 1 yr Kagaayi (male),1 yr Balzer (risk group based),Balzer (model based),Balzer (machine,learning) 1 yr Roberts (female),Roberts (female),geographic only),1 yr Roberts (male) Roberts (male),geographic,only)
+HIV incident,cases 33,14,,18,342 225,519,,,1160,,,248,,
+Cohort (study,design) HPTN 068,(RCT) Girl Power,(quasi-experi- mental),CAPRISA 007,(RCT) RCCS (cohort) RCCS (cohort),SEARCH (RCT),,,ACDIS (cohort),,,,,
+N a,Dev,1 b,,-,2 b,3 b,,,2 c,,,,,
+First author,(year) Giovenco,(2019) Rosenberg,(2020),Ayton (2020),Kagaayi (2014),Balzer (2020),,,Roberts (2021),,,,,

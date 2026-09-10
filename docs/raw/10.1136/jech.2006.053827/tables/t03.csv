@@ -1,0 +1,21 @@
+Variable,Non-students.N (%),Students.N (%),Model 1.aOR (95% CI),Model 2.aOR (95% CI),Model 3.aOR (95% CI)
+Total number,380,623,,,
+Lack of HIV knowledge,188 (49.5),373 (59.9),1.13 (0.81 to 1.57),1.16 (0.81 to 1.64),1.22 (0.84 to 1.77)
+Lack of household communication,174 (45.8),347 (55.7),1.22 (0.87 to 1.72),1.40 (0.97 to 2.02),1.24 (0.84 to 1.83)
+Not had an HIV test,324 (85.3),585 (93.9),1.23 (0.67 to 2.28),1.26 (0.70 to 2.27),0.79 (0.42 to 1.49)
+Ever had sex*,364 (95.8),342 (54.9),0.77 (0.65 to 0.90),0.74 (0.62 to 0.87),0.95 (0.81 to 1.12)
+Unwanted sex at debut{,167 (45.9),179 (52.3),1.04 (0.74 to 1.46),0.90 (0.62 to 1.31),0.97 (0.65 to 1.46)
+More than 2 partners during lifetime,197 (51.8),110 (17.7),0.59 (0.41 to 0.85),0.54 (0.37 to 0.79),0.69 (0.46 to 1.04)
+More than 1 partner during previous year,25 (6.6),32 (5.1),0.89 (0.42 to 1.87),0.82 (0.39 to 1.72),0.92 (0.41 to 2.08)
+Ever had a child,275 (72.4),87 14.0),0.17 (0.12 to 0.25),0.16 (0.11 to 0.24),
+14-19 years,236/320 (73.8),72/576 (13.0),0.09 (0.05 to 0.15),0.08 (0.04 to 0.15),-
+20-25 years,39/60 (65.0),12/47 (25.5),0.30 (0.19 to 0.50),0.31 (0.19 to 0.53),-
+Continuing sexual activity (versus secondar y,abstinence){ 327 (89.8),309 (90.4),1.22 (0.62 to 2.40),1.16 (0.55 to 2.44),0.79 (0.38 to 1.65)
+No. of partnerships,354,346,,,
+Intercourse more than 5 times in past year,269 (76.0),195 (56.4),0.68 (0.41 to 0.88),0.55 (0.36 to 0.83),0.57 (0.37 to 0.87)
+Male partner more than 3 years older than female,208 (63.4),147 (44.7),0.53 (0.35 to 0.78),0.47 (0.31 to 0.71),0.52 (0.34 to 0.80)
+Only male partner provides resources,244 (68.9),256 (74.0),1.07 (0.70 to 1.63),1.29 (0.81 to 2.04),1.26 (0.78 to 2.03)
+Never used a condom in past year,186 (52.5),153 (44.2),0.63 (0.43 to 0.93),0.62 (0.42 to 0.93),0.60 (0.40 to 0.91)
+No condom use at last sex,271 (76.6),223 (64.5),0.65 (0.43 to 0.99),0.62 (0.40 to 0.96),0.69 (0.44 to 1.07)
+Data on HIV serostatus,302,507,,,
+HIV positive,50 (16.6),29 (5.7),0.75 (0.38 to 1.50),0.73 (0.36 to 1.50),0.73 (0.34 to 1.56)

@@ -1,0 +1,37 @@
+,Value,Source
+Oral PrEP effectiveness,75%,Baeten et al (2012) 10
+Lenacapavir effectiveness,95%,Bekker et al (2024) 15
+Lenacapavir scale-up period,2026-29,Assumption
+Lenacapavir implementation period,2026-35,Assumption
+Analytic time horizon,2026-60,Assumption
+Costs,,
+Lenacapavir demand generation,10% per dose,Assumption based on VMMC literature
+Lenacapavir provision cost,$8·55,Mangale et al (2022) 16 and UNICEF Supply Division 17
+Lenacapavir wastage,5%,Assumption
+Western Kenya annual health-care costs (among those not on,Western Kenya annual health-care costs (among those not on,ART)
+HIV-positive CD4 <200 cells per µL,$110·30,Eaton et al (2014) 18
+HIV-positive CD4 200-349 cells per µL,$30·38,Eaton et al (2014) 18
+HIV-positive CD4 >350 cells per µL,$8·59,Eaton et al (2014) 18
+End-of-life care,$105·68,Eaton et al (2014) 18
+Annual ART provision,$196·85,"Larson et al (2018), 19 Long et al (2010), 20 The Global Fund, 21 and Haas et al (2015) 22"
+Oral PrEP per person-month,$10·88,Wanga et al (2021) 23
+Facility-based HIV-positive test,$3·68,Meisner et al (2021) 24
+Facility-based HIV-negative test,$2·64,Meisner et al (2021) 24
+South Africa annual health-care costs (among those not on ART),South Africa annual health-care costs (among those not on ART),South Africa annual health-care costs (among those not on ART)
+HIV-positive CD4 <200 cells per µL,$374·08,Eaton et al (2014) 18
+HIV-positive CD4 200-349 cells per µL,$102·95,Eaton et al (2014) 18
+HIV-positive CD4 >350 cells per µL,$29·10,Eaton et al (2014) 18
+End-of-life care,$358·10,Eaton et al (2014) 18
+Annual ART provision,$189·56,"Larson et al (2018), 19 Long et al (2010), 20 The Global Fund, 21 and Haas et al (2015) 22"
+Oral PrEP per person-month,$15·20,Jamieson et al (2022) 25
+Facility-based HIV-positive test,$5·62,Meyer-Rath et al (2019) 26
+Facility-based HIV-negative test,$3·62,Meyer-Rath et al (2019) 26
+Zimbabwe annual health-care costs (among those not on ART),Zimbabwe annual health-care costs (among those not on ART),Zimbabwe annual health-care costs (among those not on ART)
+HIV-positive CD4 <200 cells per µL,$93·98,Eaton et al (2014) 18
+HIV-positive CD4 200-349 cells per µL,$25·89,Eaton et al (2014) 18
+HIV-positive CD4 >350 cells per µL,$7·32,Eaton et al (2014) 18
+End-of-life care,$89·83,Eaton et al (2014) 18
+Annual ART provision,$176·01,"Larson et al (2018), 19 Long et al (2010), 20 The Global Fund, 21 and Haas et al (2015) 22"
+Oral PrEP per person-month,$9·25,Wanga et al (2021) 23
+Facility-based HIV-positive test,$3·13,Meisner et al (2021) 24
+Facility-based HIV-negative test,$2·24,Meisner et al (2021) 24

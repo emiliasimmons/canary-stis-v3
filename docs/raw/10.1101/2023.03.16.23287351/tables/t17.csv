@@ -1,0 +1,10 @@
+Observed transmission events within 95% prediction interval (%),Observed transmission events vs. predicted transmission events (MAE) †,Incidence rate prior mean within 95% posterior range (%),Incidence rate prior mean vs. incidence rate posterior median (MAE) †
+Central model,,,
+"log β g → h r,i,j = ˆ c g → h ( i, j )+ γ 0 + γ g + γ r + γ p ( r ) + f g → h 0 ( i, j )+ f g → h r ( j )+ f g → h p ( r ) ( i ) , 99.57",(6c) 0.0482,96.98,0.00032
+Alternative models,,,
+"log β g → h r,i,j = ˆ c g → h ( i, j )+ γ 0 + γ g + γ r + γ p ( r ) + f g → h 0 ( i, j )+ f g → h p ( r ) ( i ) , (11a) 99.55",0.0495,67.78,0.00058
+"log β g → h r,i,j = ˆ c g → h ( i, j )+ γ 0 + γ g + γ r + γ p ( r ) + f g → h 0 ( i, j )+ f g → h p ( r ) ( j ) , (11b) 99.59",0.0486,66.67,0.00058
+"log β g → h r,i,j = ˆ c g → h ( i, j )+ γ 0 + γ g + γ r + γ p ( r ) + f g → h 0 ( i, j )+ f g → h p ( r ) ( i, j ) , (11c) 99.57",0.0492,68.1,0.00057
+"log β g → h r,i,j = ˆ c g → h ( i, j )+ γ 0 + γ g + γ r + γ p ( r ) + f g → h 0 ( i, j )+ f g → h r ( j ) , (11d) 99.53",0.0484,96.03,0.00033
+"log β g → h r,i,j = ˆ c g → h ( i, j )+ γ 0 + γ g + γ r + γ p ( r ) + f g → h 0 ( i, j )+ f g → h r ( j )+ f g → h p ( r ) ( j 99.55",") , (11e) 0.0480",97.62,0.00031
+"log β g → h r,i,j = ˆ c g → h ( i, j )+ γ 0 + γ g + γ r + γ p ( r ) + f g → h 0 ( i, j )+ f g → h r ( j )+ f g → h p ( r ) ( i, j ) , 99.57",(11f) 0.0482,97.46,0.00031

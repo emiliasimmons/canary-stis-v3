@@ -1,0 +1,13 @@
+Characteristic,OR,95% CI
+Married,0.36,"(0.13, 1.10)"
+Less than primary education {,3.00,"(1.68, 5.37)"
+"CD4 count , 400",1.03,"(0.56, 1.93)"
+Relationship duration,,
+# 1,1,reference
+1-3,0.46,"(0.19, 1.10)"
+$ 4,0.30,"(0.14, 0.64)"
+Age difference (per 5 years),0.93,"(0.74, 1.16)"
+Female index partner,1.62,"(0.77, 3.74)"
+Male circumcised,1.30,"(0.59, 3.15)"
+Any unprotected sex in past month,2.43,"(1.34, 4.37)"
+Other partners in past month,4.36,"(1.23, 15.49)"

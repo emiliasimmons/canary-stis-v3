@@ -1,0 +1,22 @@
+Variables,Total *,%,HIV prevalence,95% CI,p -value **
+Age at sexual debut (years),,,,,
+<15,105,3.5,10.0,3.5 - 25.4,0.802
+>=15,2976,96.5,11.4,9.8 - 13.3,
+No of sex partners in last 12 months,,,,,
+One partner,1395,8.6,15.5,12.8 - 18.6,0.100
+2 or more partners,127,91.4,22,13.8 - 33.2,
+Age-disparate sexual partnership,,,,,
+Partner 5 years and older,565,36.1,18.0,13.6 - 23.4,0.060
+Partner 5 years and younger,2,0.1,,,
+Partner within 5 years older or younger,951,63.9,14.8,11.5 - 18.9,
+Condom use during sexual contact,,,,,
+Consistent,564,36.4,18.6,14.1 - 24.0,0.534
+Inconsistent,944,63.4,14.9,11.8 - 18.6,
+Self-perceived risk of HIV Infection,,,,,
+No,615,21.4,18.9,14.9 - 23.8,<0.001
+Yes,2438,78.6,9.3,7.6 - 11.3,
+Alcohol use risk score (AUDIT) ***,,,,,
+Abstainers,2095,76.7,12.6,10.6 - 14.9,0.034
+Low risk (1 - 7),518,18.4,8.8,5.4 - 14.2,
+High risk drinkers (8 - 19),132,3.6,3.0,1.2 - 7.1,
+Hazardous drinkers (20+),13,0.8,9.2,2.2 - 31.3,

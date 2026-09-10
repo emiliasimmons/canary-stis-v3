@@ -1,0 +1,12 @@
+Variables.,N(% whose partner's age difference was (0-4yr)(5-9yrs)(10+ yrs)).,Age disparity at last sex+.Model2 AOR(95%CI),Age disparity at last sex+.Model4 AOR(95%CI),Age disparity at last sex+.Pvalue
+Peer influence,,P = 0.0284,P = 0.008,
+Yes no none,74 (66.2)(23.0)(5.4),1,1,
+Yes to 1 item,128 (53.9)(34.4)(6.3),0.51 (0.27-0.96),0.54 (0.28-1.02),0.059
+Yes to 2 or more items,367 (54.2)(38.7)(4.6),0.46 (0.26-0.82),0.40 (0.22-0.72),0.002
+Relationship with parents/guardians,Relationship with parents/guardians,P < 0.001,,
+Yes no none,347 (48.1)(44.1)(5.8),1,,
+Yes to 1 item,40 (65.0)(22.5)(2.5),2.74 (1.26-5.94),,
+Yes to 2 or more items,182 (68.1)(22.5)(4.4),2.71 (1.78-4.14),,
+Does voluntary work in the community,Does voluntary work in the community,P = 0.369,,
+No,342 (54.4)(37.7)(5.6),1,,
+Yes,227 (57.7)(32.6)(4.4),1.17 (0.83-1.66),,

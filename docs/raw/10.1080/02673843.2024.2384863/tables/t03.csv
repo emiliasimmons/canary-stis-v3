@@ -1,0 +1,21 @@
+,,OR,SE,95%CI,95%CI,p-value
+Time,,0.87,0.01,0.85,0.89,<.0001
+Age,,2.60,0.11,2.40,2.82,<.0001
+Education level,Education level,,,,,<.0001
+,None or Lower primary level,ref,,,,
+,Upper primary level,0.28,0.04,0.22,0.36,<.0001
+,Lower Secondary or higher,0.09,0.01,0.07,0.12,<.0001
+SES,,,,,,0.054
+,Low,ref,,,,
+,Low-medium,1.08,0.13,0.86,1.36,0.506
+,Medium-high,1.04,0.13,0.82,1.32,0.761
+,High,0.82,0.11,0.63,1.06,0.124
+Orphanhood,,,,,,0.296
+,Double orphan,ref,,,,
+,Not orphan,1.26,0.18,0.96,1.66,0.097
+,Maternal orphan,1.35,0.25,0.94,1.94,0.099
+,Paternal orphan,1.14,0.18,0.84,1.55,0.390
+Type of community,Type of community,,,,,
+,Rural,ref,,,,
+,Peri-urban,1.00,0.10,0.81,1.22,0.985
+Constant,,0.000,0.000,0.000,0.000,<.0001

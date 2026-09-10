@@ -1,0 +1,13 @@
+Variables.,High risk sexual behaviour.Mean score,High risk sexual behaviour.Model 2 Estimate (95%CI),High risk sexual behaviour.Model 4 Estimate (95%CI),High risk sexual behaviour.Pvalue
+Yes,2.0,-1.19 (-1.44-0.95),-0.59 (-0.79-0.39),< 0.001
+Peer influence,,p < 0.001,p < 0.001,
+Yes no none,1.9,1,1,
+Yes to 1 item,2.1,0.24 (-0.09-0.57),0.06 (-0.20-0.32),0.668
+Yes to 2 or more items,3.9,1.29 (0.96-1.62),0.79 (0.52-1.05),< 0.001
+Relationship with parents/guardians,,p < 0.001,,
+Yes no none,4.9,Ref,,
+Yes to 1 item,2.0,-2.18 (-2.6-1.76),,
+Yes to 2 or more items,1.9,-2.06 (-2.35-1.77),,
+Does voluntary work in the community,,p < 0.001,,
+No,3.2,Ref,,
+Yes,2.5,-0.47 (-0.71-0.23),,

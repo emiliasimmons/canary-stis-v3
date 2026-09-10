@@ -1,0 +1,3 @@
+# Source documents stay local. The extracted content.md is what the canon cites.
+raw/**/*.pdf
+raw/**/*.docx

@@ -1,0 +1,27 @@
+table 8 POCTs—TV: summary of selected analytical and operational characteristics,col_1,col_2,col_3
+Company,Cepheid,Quidel,Atlas Genetics
+Assay name GeneXpert AmpliVue Atlas io (pipeline),,,
+Use setting,"Tabletop; not portable
+Level 2","Tabletop; not portable
+Level 2; need heat block; vortex","Tabletop; portable
+Level 1"
+"Specimen Female and male urine, endocervical swab/ Vaginal swabs from symptomatic and asymptomatic Self-collected and clinician-collected
+patient-collected vaginal swab women vaginal swabs from symptomatic and
+asymptomatic women, and urine from
+men",,,
+Steps,~4; sample preparation automated,Moderately complex; ~12 steps; timed incubation,"~4; automated sample preparation on
+instrument"
+Time to result ~60 min 45 min 30 min,,,
+Cold chain; reagent stability,Kit storage: 2°C–28°C,Cartridge/cassettes: 2°C–30°C; buffers: 2°C–8°C,"Cartridges with reagents stable at
+2°C–25°C"
+Power Mains power required; can use solar Mains power required for heat block Mains power required,,,
+Training,Less than 0.5 day,Less than 0.5 day,"Less than 1 hour; no formal training
+required; self-explanatory user guide and
+screens on instrument"
+"Connectivity Yes; computer/internet required; remote No Yes; via middleware
+calibration",,,
+"Equipment cost (US$); per
+test","~$17 000 (with 4 modules), but could be
+higher; $19.00",TBD,TBD
+Level 1=primary healthcare centre. Level 2=district hospital.,,,
+"POCT, point-of-care testing; TBD, to be determined; TV, Trichomonas vaginalis.",,,

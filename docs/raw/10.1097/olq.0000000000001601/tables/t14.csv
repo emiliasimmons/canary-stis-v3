@@ -1,0 +1,13 @@
+,Syphilis 1,Syphilis 1,Gonorrhea 2,Chlamydia 3
+Pooled RR (95% CI),"1.77 (1.22, 2.58) 4","1.77 (1.22, 2.58) 4",2.80 (1.50-5.20),0.80 (0.30-1.90)
+"I 2 , p value","8.5%, 0.358","8.5%, 0.358",NA,NA
+SA RR Range,1.51-2.53,1.51-2.53,NA,NA
+k,5,5,1,1
+By Multivariate Adjustment,Unadjusted RR,Adjusted RR,Single data point is multivariate adjusted,Single data point is unadjusted
+Pooled RR (95% CI),"1.92 (1.02, 3.62)","2.10 (0.92, 4.80)",Single data point is multivariate adjusted,Single data point is unadjusted
+"I 2 , p value","51.1%, 0.129","0.0%, 1.000",Single data point is multivariate adjusted,Single data point is unadjusted
+k,3,2,Single data point is multivariate adjusted,Single data point is unadjusted
+By Risk of Bias in Temporality,Higher Risk,Lower Risk,Single data point is lower-risk,Single data point is higher-risk
+Pooled RR (95% CI),"1.71 (1.15, 2.54)","3.40 (0.82, 14.12)",Single data point is lower-risk,Single data point is higher-risk
+"I 2 , p value","I=12.4%, p=0.331",NA,Single data point is lower-risk,Single data point is higher-risk
+k,4,1,Single data point is lower-risk,Single data point is higher-risk

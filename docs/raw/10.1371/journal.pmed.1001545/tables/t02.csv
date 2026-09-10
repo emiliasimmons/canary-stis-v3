@@ -1,0 +1,43 @@
+Country,Syphilis Prevalence [Reference] (Beta),Percentage of Women Receiving Antenatal Syphilis Screening [19] a (Not Varied),Number of Live Births [16] (Not Varied),Antenatal Care Coverage [16] (Not Varied),Neonatal Mortality Rate [26] (Beta),Hourly Nurse Wage in US Dollars [43] (Log- Normal)
+Angola,5.2% [23],Not reported,"795,000",80%,4.0%,$ 1.13
+Benin,2.2% [24],Not reported,"350,000",84%,3.1%,$ 1.60
+Botswana,0.9% [24],Not reported,"47,000",94%,3.7%,"$ 5.74 [24,44]"
+Burkina Faso,1.4% [19],0.9%,"713,000",85%,2.5%,$ 2.21
+Burundi,3.2% [24],Not reported,"283,000",99%,2.8%,$ 0.84
+Cameroon,2.3% [45],Not reported,"710,000",82%,3.2%,$ 6.19
+Cape Verde b,1.9% [23],Not reported,"10,000",98%,0.8%,$ 2.57
+Central African Republic,10.0% [19],71.9%,"154,000",69%,3.8%,$ 6.80
+Chad,4.9% [23],Not reported,"503,000",53%,2.9%,$ 0.98 [46]
+Comoros,4.6% [24],0%,"28,000",75%,2.2%,$ 1.99 [47]
+Co ˆte d'Ivoire,1.1% [48],Not reported,"673,000",85%,4.4%,$ 1.64
+Democratic Republic of the Congo,3.3% [19],2.1%,"2,873,000",86%,3.5%,$ 0.31 [49]
+Djibouti,3.1% [50],63.3%,"26,000",92%,2.9%,$ 5.42 [47]
+Equatorial Guinea,14.0% [19],35.8%,"26,000",86%,3.0%,$ 3.21
+Eritrea,1.7% [23],0%,"191,000",70%,1.9%,$ 0.79 [47]
+Ethiopia,2.2% [19],Not reported,"2,613,000",28%,3.8%,$ 0.66
+Gabon c,8.6% [51],Not reported,"41,000",94%,2.7%,$ 3.34
+Gambia d,7.0% [23],Not reported,"66,000",98%,3.7%,$ 1.68
+Ghana,3.6% [24],9.0%,"770,000",90%,2.6%,$ 0.97
+Guinea,5.7% [23],Not reported,"390,000",88%,3.8%,$ 1.76
+Guinea Bissau,1.1% [19],Not reported,"58,000",93%,3.6%,$ 1.23
+Kenya,2.4% [52],58.8%,"1,529,000",92%,2.4%,$ 1.16
+Lesotho,2.1% [24],66.9%,"60,000",92%,2.1%,$ 2.16
+Liberia,13.6% [19],10.9%,"154,000",79%,4.8%,$ 0.68 [53]
+Madagascar,5.6% [24],84.7%,"732,000",86%,2.4%,$ 0.41
+Malawi,1.9% [24],Not reported,"663,000",92%,3.0%,$ 0.65
+Mali,3.8% [24],Not reported,"714,000",70%,4.0%,$ 1.24
+Mauritania,3.8% [24],Not reported,"117,000",75%,5.2%,$ 1.68
+Mozambique,5.7% [19],66.7%,"883,000",92%,3.5%,$ 1.10
+Namibia,1.7% [19],93.8%,"60,000",95%,2.1%,$ 5.71 [47]
+Niger,1.5% [19],Not reported,"755,000",46%,2.6%,$ 2.50
+Nigeria,3.0% [54],Not reported,"6,332,000",58%,4.0%,$ 2.55 [55]
+Rwanda,1.5% [19],75.2%,"438,000",98%,3.5%,$ 2.00
+Senegal,0.6% [56],Not reported,"465,000",87%,2.2%,$ 1.49
+Sierra Leone,1.4% [19],0%,"226,000",87%,4.2%,$ 0.62 [57]
+South Africa,1.9% [24],74.5%,"1,059,000",97%,1.5%,$ 8.25 [57]
+Sudan,2.2% [19],3.3%,"1,429,000",64%,2.0%,$ 2.98 [47]
+Swaziland,8.0% [24],34.8%,"35,000",97%,2.8%,$ 2.00 [58]
+Tanzania,2.8% [19],78.1%,"1,862,000",88%,3.2%,$ 1.57 [59]
+Togo,1.2% [19],4.6%,"193,000",87%,3.3%,$ 1.52
+Uganda e,3.0% [24],Not reported,"1,514,000",94%,2.5%,$ 1.22 [47]
+Zambia f,8.3% [24],43.3%,"600,000",94%,2.6%,$ 0.49

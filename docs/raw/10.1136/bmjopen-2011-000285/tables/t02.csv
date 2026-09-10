@@ -1,0 +1,41 @@
+Table 2 Multivariate logistic ORs and 95% CIs for HIV.,regression:.Prevalence (%),infection.Univariate analysis OR (95% CI),infection.p Value,Multivariate analysis OR (95% CI),p Value
+Age (years),,,,,
+< 25,41,1,,1,
+25 e 29,21,1.98 (1.66 to 2.38),< 0.001,1.52 (1.23 to 1.87),< 0.001
+30 e 34,16,1.60 (1.32 to 1.95),< 0.001,1.19 (0.94 to 1.50),0.142
+35+,,0.70 (0.58 to 0.85),< 0.001,0.50 (0.40 to 0.63),< 0.001
+Age at first sex (years),,,,,
+< 15 (1st quintile),20,1.87 (1.47 to 2.36),< 0.001,1.96 (1.53 to 2.51),< 0.001
+15 e 16 (2nd quintile),20,1.50 (1.17 to 1.90),0.001,1.61 (1.25 to 2.08),< 0.001
+17 e 18 years (3rd quintile),20,1.41 (1.13 to 1.76),0.002,1.49 (1.19 to 1.87),0.001
+19 e 20 (4th quintile),20,1.16 (0.87 to 1.54),0.316,1.18 (0.89 to 1.59),0.251
+21+ (5th Quintile),20,1,,1,
+At least high school,education,,,,
+Yes,26,1,,1,
+No,74,1.21 (1.04 to 1.41),0.010,1.37 (1.15 to 1.62),< 0.001
+English spoken at home,,,,,
+Yes,5,1,,e,
+No,95,1.91 (1.53 to 2.39),< 0.001,e,
+Religion,,,,,
+Other,9,1,,,
+Christian,91,1.34 (1.06 to 1.71),0.015,e,
+Number of lifetime sex partners,,,,,
+One,25,1,,1,
+Two,28,2.49 (2.01 to 3.10),< 0.001,1.73 (1.37 to 2.20),< 0.001
+Three,21,4.35 (3.47 to 5.44),< 0.001,2.82 (2.20 to 3.62),< 0.001
+Four or more,26,6.65 (5.35 to 8.26),< 0.001,4.09 (3.20 to 5.22),< 0.001
+Cohabitation status,,,,,
+Married/living with/a sexual partner,15,1,,1,
+Not married/not living with/a sexual partner,85,7.02 (5.20 to 9.47),< 0.001,4.32 (3.11 to 6.00),< 0.001
+Have you ever had vaginal sex with condom?,,,,,
+No,30,1,,,
+Yes,70,1.40 (1.21 to 1.63),< 0.001,e,
+Using any contraception*,,,,,
+Yes,78,1,,,
+No,22,1.36 (1.16 to 1.60),< 0.001,e,
+HSV diagnosis,,,,,
+No,27,1,,1,
+Yes,73,7.20 (5.88 to 8.82),< 0.001,6.19 (4.98 to 7.70),< 0.001
+STI diagnosis y,,,,,
+No,84,1,,1,
+Yes,16,1.34 (1.12 to 1.61),0.001,1.24 (1.02 to 1.51),0.038

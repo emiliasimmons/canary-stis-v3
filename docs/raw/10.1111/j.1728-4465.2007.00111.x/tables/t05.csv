@@ -1,0 +1,10 @@
+Variable,Per- cent,(N),Median age at first sex,Mantel-Cox hazard ratio (univariate test),Adjusted hazard ratio (multivariate test)
+House had cement floor,,,,,
+No (r),16,(339),16,1.00,-
+Yes,84,"(1,760)",17,0.62***,-
+Total,100,"(2,099)",17,-,-
+Residence history,,,,,
+In survey location since birth (r),46,(979),18,1.00,-
+Previously urban area,17,(359),17,1.56***,1.30**
+Previously rural area,38,(805),16,2.00***,1.40***
+Total,100,"(2,143)",17,-,-

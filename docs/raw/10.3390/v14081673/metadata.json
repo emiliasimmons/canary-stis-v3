@@ -1,0 +1,11 @@
+{
+  "file": "Pujol-Hodge et al. - 2022 - Detection of HIV-1 Transmission Clusters from Dried Blood Spots within a Universal Test-and-Treat Tr.pdf",
+  "pages": 18,
+  "title": "Detection of HIV-1 Transmission Clusters from Dried Blood Spots within a Universal Test-and-Treat Trial in East Africa",
+  "author": "Emma Pujol-Hodge, Jesus F. Salazar-Gonzalez, Deogratius Ssemwanga, Edwin D. Charlebois, James Ayieko, Heather E. Grant, Teri Liegler, Katherine E. Atkins, Pontiano Kaleebu, Moses R. Kamya, Maya Petersen, Diane V. Havlir and Andrew J. Leigh Brown",
+  "subject": "The Sustainable East Africa Research in Community Health (SEARCH) trial was a universal test-and-treat (UTT) trial in rural Uganda and Kenya, aiming to lower regional HIV-1 incidence. Here, we quantify breakthrough HIV-1 transmissions occurring during the trial from population-based, dried blood spot samples. Between 2013 and 2017, we obtained 549 gag and 488 pol HIV-1 consensus sequences from 745 participants: 469 participants infected prior to trial commencement and 276 SEARCH-incident infections. Putative transmission clusters, with a 1.5% pairwise genetic distance threshold, were inferred from maximum likelihood phylogenies; clusters arising after the start of SEARCH were identified with Bayesian time-calibrated phylogenies. Our phylodynamic approach identified nine clusters arising after the SEARCH start date: eight pairs and one triplet, representing mostly opposite-gender linked (6/9), within-community transmissions (7/9). Two clusters contained individuals with non-nucleoside reverse transcriptase inhibitor (NNRTI) resistance, both linked to intervention communities. The identification of SEARCH-incident, within-community transmissions reveals the role of unsuppressed individuals in sustaining the epidemic in both arms of a UTT trial setting. The presence of transmitted NNRTI resistance, implying treatment failure to the efavirenz-based antiretroviral therapy (ART) used during SEARCH, highlights the need to improve delivery and adherence to up-to-date ART recommendations, to halt HIV-1 transmission.",
+  "creator": "LaTeX with hyperref",
+  "producer": "pdfTeX-1.40.21",
+  "creation_date": "D:20220729184256+08'00'",
+  "engine": "docling"
+}

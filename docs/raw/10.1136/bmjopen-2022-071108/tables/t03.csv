@@ -1,0 +1,43 @@
+Characteristic,New in-­ migrants in old.households n,New in-­ migrants in old.(N=4139) %,New in-­ migrants in new households (N=1358).n,New in-­ migrants in new households (N=1358).%,"χ 2 , p value"
+Gender,,,,,
+ Men,1708,41.3,653,48.1,"19.406, p<0.01"
+ Women,2431,58.7,705,51.0,
+Age,,,,,
+ 15-19,927,22.4,187,13.8,"64.630, p<0.01"
+ 20-24,1119,27.0,445,32.8,
+ 25-29,862,20.8,353,26.0,
+ 30-39,886,21.4,279,20.5,
+ 40-49,345,8.3,94,6.9,
+Marital status,,,,,
+ Currently married or cohabitating,2204,53.3,723,53.2,"<1.0, p=0.99"
+ Not currently married or cohabitating,1935,46.8,635,46.8,
+Relation to household head,,,,,
+ Head,1884,45.5,908,66.9,"233.633, p<0.01"
+ Spouse,1268,30.6,338,24.9,
+ Child/grandchild,364,8.8,44,3.2,
+ Parent,0,0.0,0,0.0,
+ Sibling,70,1.7,18,1.3,
+ Other relative/not related,552,13.3,50,3.7,
+Residence status,,,,,
+ Permanent (>6 months/year),3389,81.9,938,69.1,"100.110, p<0.01"
+ Transient (<6 months/year),750,18.1,420,30.9,
+SES quartile,,,,,
+ Lowest,984,23.9,302,22.3,"33.366, p<0.01"
+ Lower,1162,28.2,453,33.4,
+ Higher,1104,26.8,399,29.4,
+Highest,871,21.1,202,14.9,
+ Land ownership,,,,,
+ Rent,2936,71.1,1122,82.7,"82.827, p<0.01"
+ Own,770,18.7,119,8.8,
+ Other,421,10.2,116,8.5,
+Household size quartiles,,,,,
+ Q1 (1-2 members),2449,59.2,1048,77.2,"215.532, p<0.01"
+ Q2 (3-4 members),856,20.7,248,18.3,
+ Q3 (5-6 members),435,10.5,52,3.8,
+ Q4 (7+ members),399,9.6,10,0.7,
+Gender of household head,,,,,
+ Man,2962,71.8,998,73.5,"1.445, p=0.23"
+ Woman,1163,28.2,360,26.5,
+Youth dependency ratio (members <18 divided by members 18+),Youth dependency ratio (members <18 divided by members 18+),Youth dependency ratio (members <18 divided by members 18+),Youth dependency ratio (members <18 divided by members 18+),Youth dependency ratio (members <18 divided by members 18+),
+ 0 (no dependents),1789,43.2,783,57.7,"99.869, p<0.01"
+ 0.5-1,1000,24.3,271,20.0,

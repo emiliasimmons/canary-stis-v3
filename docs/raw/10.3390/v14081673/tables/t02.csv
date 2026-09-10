@@ -1,0 +1,19 @@
+,Total HIV+.n,Sequenced HIV+.n,Sequencing Density.%
+Prevalent sequencing density by geographical region,Prevalent sequencing density by geographical region,Prevalent sequencing density by geographical region,Prevalent sequencing density by geographical region
+Western Uganda,2873,263,9.15
+Eastern Uganda,1590,5,0.31
+Western Kenya,9066,199,2.19
+Total,"13,529",467,3.45
+Incident sequencing density by geographical region,Incident sequencing density by geographical region,Incident sequencing density by geographical region,Incident sequencing density by geographical region
+Western Uganda,317,114,35.96
+Eastern Uganda,132,56,42.42
+Western Kenya,401,106,26.43
+Total,850,276,32.47
+Prevalent sequencing density by trial arm,Prevalent sequencing density by trial arm,Prevalent sequencing density by trial arm,Prevalent sequencing density by trial arm
+Intervention,7212,204,2.83
+Control,6317,263,4.16
+Total,"13,529",467,3.45
+Incident sequencing density by trial arm,Incident sequencing density by trial arm,Incident sequencing density by trial arm,Incident sequencing density by trial arm
+Intervention,435,144,33.10
+Control,415,132,31.81
+Total,850,276,32.47

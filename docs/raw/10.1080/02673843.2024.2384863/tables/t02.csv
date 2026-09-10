@@ -1,0 +1,37 @@
+,N,%,aOR,95% CI,95% CI,p-value
+Time*,,,0.86,0.84,0.88,<.0001
+Ever pregnant,,,,,,<.0001
+No,"5,177",82.9,ref,,,
+Yes,"1,067",17.1,39.59,31.12,50.36,<.0001
+Age**,,,,,,<.0001
+15 years,"2,168",31.0,ref,,,
+16 years,"2,405",34.4,2.44,2.10,2.84,<.0001
+17 years,"2,425",34.7,5.59,4.80,6.50,<.0001
+Education level,,,,,,<.0001
+None or Lower primary level,494,7.1,ref,,,
+Upper primary level,"3,219",46.0,0.29,0.22,0.37,<.0001
+Lower secondary or higher,"3,284",46.9,0.09,0.07,0.12,<.0001
+Orphanhood status,,,,,,0.12
+Double orphan,841,12.0,ref,,,
+Not an orphan,"4,426",63.3,1.08,0.83,1.40,0.566
+Maternal orphan,507,7.3,1.49,1.05,2.11,0.025
+Paternal orphan,"1,223",17.5,1.12,0.84,1.49,0.439
+Household SES,,,,,,<.0001
+Low,789,11.3,ref,,,
+Low-medium,"1,360",19.5,0.95,0.76,1.18,0.644
+Medium-high,"2,153",30.8,0.82,0.66,1.03,0.096
+High,"2,681",38.4,0.59,0.47,0.75,<.0001
+Other variables:,,,,,,
+Type of community,,,,,,
+Rural,"4,939",70.6,ref,,,
+Peri-urban,"2,059",29.4,0.81,0.67,0.98,0.033
+Religion,,,,,,0.19
+Catholic,"4,560",65.2,ref,,,
+Protestant,"1,119",16.0,0.97,0.77,1.22,0.786
+Saved/Pentescotal,267,3.8,0.53,0.30,0.96,0.036
+Muslim,1009,14.4,1.05,0.82,1.35,0.679
+Other,42,0.6,,Omitted due to low cell count,Omitted due to low cell count,Omitted due to low cell count
+Age at first sex,,,,,,
+Never had sex,"2,856",40.8,ref,,,
+Had sex at 12-14 years,"1,333",19.1,211.9,104.80,428.5,<.0001
+Had sex at 15-17 years,"1,523",21.9,161.3,80.54,322.9,
