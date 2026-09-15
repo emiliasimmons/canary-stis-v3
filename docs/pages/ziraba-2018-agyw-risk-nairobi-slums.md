@@ -7,14 +7,15 @@ published: 2018-05-31
 resource: 10.1371/journal.pone.0197479
 local: raw/10.1371/journal.pone.0197479
 tags: [sexual-networks, hiv, care-seeking]
-updated: 2026-09-10 00:26
+updated: 2026-09-16 07:44
 ---
+
+Source: [ziraba-2018](https://doi.org/10.1371/journal.pone.0197479)
 
 A pre-intervention baseline for the DREAMS Partnership, built from Wave 2 (2009) of the
 Transition to Adulthood study nested in the Nairobi Urban Health and Demographic
 Surveillance System. The analysis covers 1,390 female respondents aged 12-23 in the
-Korogocho and Viwandani informal settlements. Extracted text sits in
-`raw/10.1371/journal.pone.0197479`.
+Korogocho and Viwandani informal settlements.
 
 Four behavioural outcomes are reported (ever tested for HIV and received the result,
 condom use at last sex, more than one partner in 12 months, age-disparate sex), plus age

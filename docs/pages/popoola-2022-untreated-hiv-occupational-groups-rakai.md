@@ -10,7 +10,9 @@ tags: [hiv, rakai, care-seeking]
 updated: 2026-09-10 11:18
 ---
 
-medRxiv preprint, not peer reviewed at the time of posting, re-analysing the same 12 Rakai Community Cohort Study rounds and the same 30 continuously surveyed communities as the 1999-2016 incidence analysis, this time stratified by self-reported primary occupation. 33,866 participants, 19,113 (56%) women, contributed 102,759 person-visits. The incidence cohort is 17,840 women contributing 57,912 person-years and 14,244 men contributing 49,403 person-years. Fishing communities are excluded, since RCCS surveys there started only in 2011. Extracted content in [raw/10.1101/2022.06.21.22276714/](../raw/10.1101/2022.06.21.22276714/).
+Source: [popoola-2022](https://doi.org/10.1101/2022.06.21.22276714)
+
+medRxiv preprint, not peer reviewed at the time of posting, re-analysing the same 12 Rakai Community Cohort Study rounds and the same 30 continuously surveyed communities as the 1999-2016 incidence analysis, this time stratified by self-reported primary occupation. 33,866 participants, 19,113 (56%) women, contributed 102,759 person-visits. The incidence cohort is 17,840 women contributing 57,912 person-years and 14,244 men contributing 49,403 person-years. Fishing communities are excluded, since RCCS surveys there started only in 2011.
 
 ## Relevance to project
 

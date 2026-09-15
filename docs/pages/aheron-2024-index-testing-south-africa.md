@@ -10,13 +10,14 @@ tags: [partner-notification, hiv]
 updated: 2026-09-10 00:19
 ---
 
+Source: [aheron-2024](https://doi.org/10.1007/s10461-024-04269-3)
+
 Descriptive analysis of routine PEPFAR monitoring data (quarterly MER indicators) from 371
 public health facilities in 12 CDC-supported districts of South Africa, October 2019 to
 September 2021. Index testing means offering an HIV test to the sexual, needle-sharing and
 biological-child contacts named by a person newly diagnosed with HIV. The paper walks the
 full cascade: offered, accepted, contacts elicited, contacts tested, contacts newly
-positive. Aggregate programme data only, no individual-level records. Extracted text and
-both cascade tables sit in `raw/10.1007/s10461-024-04269-3`.
+positive. Aggregate programme data only, no individual-level records.
 
 ## Relevance to project
 

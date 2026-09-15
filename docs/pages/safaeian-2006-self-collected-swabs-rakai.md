@@ -10,6 +10,8 @@ tags: [diagnostics, care-seeking, rakai]
 updated: 2026-09-10 10:31
 ---
 
+Source: [safaeian-2006](https://doi.org/10.1097/01.olq.0000243623.67673.22)
+
 Paired-specimen comparison nested in a population-based cohort in rural Rakai District,
 2002-2003, in which women provided a self-administered vaginal swab and were separately
 offered a pelvic examination with a physician-collected cervical swab, both tested for

@@ -10,6 +10,8 @@ tags: [rakai, hiv]
 updated: 2026-09-10 10:20
 ---
 
+Source: [kagaayi-2019](https://doi.org/10.1016/s2352-3018(19)30190-0)
+
 Prospective open population-based cohort of persons aged 15-49 across five surveys
 (2011-2017) in four fishing communities on Lake Victoria, Uganda. These communities sit
 within the Rakai/south-central Uganda surveillance area and represent the hyperendemic

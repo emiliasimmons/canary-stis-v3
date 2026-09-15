@@ -10,7 +10,9 @@ tags: [sexual-networks, hiv, sti]
 updated: 2026-09-10 00:11
 ---
 
-Mixed-methods cross-sectional study in Mahikeng Local Municipality, North West Province, South Africa, 2012. A two-stage probability sample of enumeration areas from the 2011 census yielded 568 women aged 18-49, currently married or cohabiting, of whom 78.3% were rural; 33 of them also gave in-depth interviews. The outcome is self-reported "ever had a risky sexual act" while in the current union, a binary the paper never defines operationally. Extracted text sits at `../raw/10.1007/s12119-016-9360-3/content.md`.
+Source: [osuafor-2016](https://doi.org/10.1007/s12119-016-9360-3)
+
+Mixed-methods cross-sectional study in Mahikeng Local Municipality, North West Province, South Africa, 2012. A two-stage probability sample of enumeration areas from the 2011 census yielded 568 women aged 18-49, currently married or cohabiting, of whom 78.3% were rural; 33 of them also gave in-depth interviews. The outcome is self-reported "ever had a risky sexual act" while in the current union, a binary the paper never defines operationally.
 
 ## Relevance to project
 

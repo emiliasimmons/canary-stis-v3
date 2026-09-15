@@ -10,13 +10,14 @@ tags: [sti, diagnostics, prep]
 updated: 2026-09-10 09:47
 ---
 
+Source: [de-voux-2023](https://doi.org/10.1097/olq.0000000000001729)
+
 Prospective cohort study (PrEP-PP) of 1194 HIV-uninfected pregnant women at their first
 antenatal visit at the Gugulethu MOU in Cape Town, South Africa (2019-2021). Women were
 tested for CT and NG by POC (Cepheid GeneXpert, Aug 2019 to Nov 2020) or lab-based assay
 (ThermoFisher TaqMan, Dec 2020 to Oct 2021) depending on when they enrolled. The switch
 from POC to lab testing was forced by COVID-era supply chain disruption, not randomised.
-All women received HIV risk counselling and were offered oral PrEP (TDF/FTC). Source at
-`raw/10.1097/olq.0000000000001729/content.md`.
+All women received HIV risk counselling and were offered oral PrEP (TDF/FTC).
 
 ## Relevance to project
 

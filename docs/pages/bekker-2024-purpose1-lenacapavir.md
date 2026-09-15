@@ -10,11 +10,13 @@ tags: [prep, hiv, sti, coinfection]
 updated: 2026-09-10 00:33
 ---
 
+Source: [bekker-2024](https://doi.org/10.1056/NEJMoa2407001)
+
 PURPOSE 1, a phase 3 double-blind randomized trial at 25 South African and 3 Ugandan sites,
 comparing subcutaneous lenacapavir every 26 weeks against daily oral F/TAF, with daily oral
 F/TDF as an active control and a cross-sectional recency-assay estimate of background HIV
 incidence as the primary comparator. Participants were sexually active women aged 16-25 not
-on PrEP. Extracted text and tables in `raw/10.1056/nejmoa2407001`.
+on PrEP.
 
 Among 5338 randomized HIV-negative participants over 4821 person-years, 55 incident HIV
 infections: 0 of 2134 on lenacapavir (0 per 100 person-years, 95% CI 0.00-0.19), 39 of 2136

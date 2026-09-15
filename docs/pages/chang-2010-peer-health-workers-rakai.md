@@ -10,14 +10,15 @@ tags: [hiv, rakai, care-seeking]
 updated: 2026-09-10 00:36
 ---
 
-A cluster-randomized trial run by the Rakai Health Sciences Program across the 15
-non-overlapping catchment areas of its mobile ART clinic program, May 2006 to July 2008.
+Source: [chang-2010](https://doi.org/10.1371/journal.pone.0010923)
+
+A cluster-randomized trial run by the Rakai Health Sciences Program across the 15 non-
+overlapping catchment areas of its mobile ART clinic program, May 2006 to July 2008.
 Clusters were randomized 2:1 to receive community-based peer health workers (10 clusters,
 970 patients) or usual care (5 clusters, 366 patients). Peer health workers were people
 living with HIV, already on ART with good adherence for six months and literate, nominated
 by fellow patients; they ran clinic counseling sessions and biweekly home visits where
-they recorded symptoms, self-reported adherence, and a pill count. Extracted text at
-`raw/10.1371/journal.pone.0010923`.
+they recorded symptoms, self-reported adherence, and a pill count.
 
 Primary outcomes were pill-count adherence and cumulative risk of virologic failure
 (>400 copies/mL). Neither moved: cumulative failure 17.8% (124/698) in the intervention

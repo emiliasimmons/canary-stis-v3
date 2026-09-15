@@ -10,7 +10,9 @@ tags: [hiv]
 updated: 2026-09-10 00:06
 ---
 
-An IHME geospatial mapping paper estimating HIV prevalence among adults aged 15-49 on a 5x5-km grid, annually 2000-2017, for 47 sub-Saharan African countries, along with the number of people living with HIV per cell. Estimates are aggregated up to first- and second-level administrative subdivisions and calibrated to national GBD 2017 figures. Extracted text sits at `raw/dwyer-lindgren_mapping_2019`.
+Source: [dwyer-lindgren-2019](https://doi.org/10.1038/s41586-019-1200-9)
+
+An IHME geospatial mapping paper estimating HIV prevalence among adults aged 15-49 on a 5x5-km grid, annually 2000-2017, for 47 sub-Saharan African countries, along with the number of people living with HIV per cell. Estimates are aggregated up to first- and second-level administrative subdivisions and calibrated to national GBD 2017 figures.
 
 ## Relevance to project
 

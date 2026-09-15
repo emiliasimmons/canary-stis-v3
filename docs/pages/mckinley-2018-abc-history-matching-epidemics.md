@@ -10,15 +10,16 @@ tags: [modeling, hiv]
 updated: 2026-09-10 10:29
 ---
 
+Source: [mckinley-2018](https://doi.org/10.1214/17-sts618)
+
 Review article in Statistical Science covering simulation-based Bayesian inference for
 epidemic models: classic ABC with rejection, MCMC and SMC samplers, tolerance schedules,
 summary statistics, generalised ABC, indirect inference and synthetic likelihood, then
 emulation and history matching. The methodological argument is carried by a case study on
 Mukwano, an individual-based stochastic microsimulation of heterosexual partnership
 formation, sexual activity and HIV transmission fitted to a 25-year open cohort of about
-18,000 people in rural Uganda. Extracted text sits in `../raw/10.1214/17-sts618/`; the two
-supplements (the tolerance bisection method, and the ABC posteriors against the history
-matching depth plots) are not included.
+18,000 people in rural Uganda. The two supplements (the tolerance bisection method, and
+the ABC posteriors against the history matching depth plots) are not included.
 
 ## Relevance to project
 

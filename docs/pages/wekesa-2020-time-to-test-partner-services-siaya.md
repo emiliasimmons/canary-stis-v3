@@ -10,6 +10,8 @@ tags: [partner-notification, hiv, care-seeking]
 updated: 2026-09-10 00:19
 ---
 
+Source: [wekesa-2020](https://doi.org/10.1371/journal.pone.0238794)
+
 Retrospective analysis of routine partner-services registers from 117 health facilities in
 Siaya County, western Kenya (June 2017 to August 2018), a setting with 15-21% adult HIV
 prevalence. HIV-positive index clients named adult (18+) sexual contacts; the analysis

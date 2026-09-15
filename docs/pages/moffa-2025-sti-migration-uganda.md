@@ -10,7 +10,9 @@ tags: [sti, rakai, hiv, coinfection, sexual-networks]
 updated: 2026-09-10 00:35
 ---
 
-Secondary analysis of the Sexually Transmitted Infection Prevalence Study (STIPS), a cross-sectional survey of chlamydia, gonorrhoea, trichomonas, syphilis and HSV-2 nested in the Rakai Community Cohort Study, run May-October 2019 in two communities: an inland semi-urban trading centre with surrounding villages, and a Lake Victoria fishing community. 1,825 consenting adults aged 18-49, of whom 358 (19.6%) were classified as recent migrants, meaning they had moved into the community since the prior RCCS census round roughly 18 months earlier. Extracted source in `raw/10.1136/sextrans-2024-056190`.
+Source: [moffa-2025](https://doi.org/10.1136/sextrans-2024-056190)
+
+Secondary analysis of the Sexually Transmitted Infection Prevalence Study (STIPS), a cross-sectional survey of chlamydia, gonorrhoea, trichomonas, syphilis and HSV-2 nested in the Rakai Community Cohort Study, run May-October 2019 in two communities: an inland semi-urban trading centre with surrounding villages, and a Lake Victoria fishing community. 1,825 consenting adults aged 18-49, of whom 358 (19.6%) were classified as recent migrants, meaning they had moved into the community since the prior RCCS census round roughly 18 months earlier.
 
 ## Relevance to project
 

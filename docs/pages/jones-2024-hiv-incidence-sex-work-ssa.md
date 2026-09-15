@@ -10,7 +10,9 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:15
 ---
 
-Systematic review and meta-analysis of directly measured HIV incidence among women who engage in sex work (WESW) in sub-Saharan Africa, and of that incidence relative to women in the general population living in the same district, of the same age, in the same year. Searches ran to Feb 28, 2024 and yielded 83 incidence estimates from 32 studies covering 1985-2020: 2194 seroconversions over 51,490 person-years. Each WESW estimate was divided by an age-district-year matched total-population female incidence, taken from the UNAIDS Naomi district model for 2022 and extrapolated backwards parallel to national female incidence trajectories, to give an incidence rate ratio (IRR). Extracted content, including the full per-study incidence table, in [raw/10.1016/s2214-109x(24)00227-4/](../raw/10.1016/s2214-109x%2824%2900227-4/).
+Source: [jones-2024](https://doi.org/10.1016/S2214-109X(24)00227-4)
+
+Systematic review and meta-analysis of directly measured HIV incidence among women who engage in sex work (WESW) in sub-Saharan Africa, and of that incidence relative to women in the general population living in the same district, of the same age, in the same year. Searches ran to Feb 28, 2024 and yielded 83 incidence estimates from 32 studies covering 1985-2020: 2194 seroconversions over 51,490 person-years. Each WESW estimate was divided by an age-district-year matched total-population female incidence, taken from the UNAIDS Naomi district model for 2022 and extrapolated backwards parallel to national female incidence trajectories, to give an incidence rate ratio (IRR).
 
 ## Relevance to project
 

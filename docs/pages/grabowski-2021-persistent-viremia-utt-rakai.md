@@ -10,7 +10,9 @@ tags: [hiv, rakai, sexual-networks]
 updated: 2026-09-10 00:18
 ---
 
-Repeat viral load measurements on HIV-positive participants in the Rakai Community Cohort Study, restricted to the four Lake Victoria fishing communities (adult HIV prevalence 38-43%), across three surveys with viral load testing: midpoints January 2012 (pre-UTT), May 2015, and January 2017. Universal test and treat was implemented in 2013. The unit of analysis is a visit-pair, two consecutive person-visits classified by suppression status at each end: durable suppression, new/renewed suppression, loss of suppression (rebound), or persistent viremia. Suppression is viral load below 400 copies/mL on the Abbott RealTime assay. 1346 participants contributed 1883 visit-pairs. Extracted text in `raw/10.1093/infdis/jiab021`.
+Source: [grabowski-2021](https://doi.org/10.1093/infdis/jiab021)
+
+Repeat viral load measurements on HIV-positive participants in the Rakai Community Cohort Study, restricted to the four Lake Victoria fishing communities (adult HIV prevalence 38-43%), across three surveys with viral load testing: midpoints January 2012 (pre-UTT), May 2015, and January 2017. Universal test and treat was implemented in 2013. The unit of analysis is a visit-pair, two consecutive person-visits classified by suppression status at each end: durable suppression, new/renewed suppression, loss of suppression (rebound), or persistent viremia. Suppression is viral load below 400 copies/mL on the Abbott RealTime assay. 1346 participants contributed 1883 visit-pairs.
 
 ## Relevance to project
 

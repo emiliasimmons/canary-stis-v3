@@ -10,6 +10,8 @@ tags: [diagnostics, hiv]
 updated: 2026-09-10 10:33
 ---
 
+Source: [serhir-2016](https://doi.org/10.1371/journal.pone.0156023)
+
 Laboratory evaluation of two HIV recency assays in PLOS ONE. Mean duration of recent
 infection (MDRI) came from 473 longitudinal specimens from 123 treatment-naive
 seroconverters in the Quebec Primary HIV-1 Infection cohort, whose infection dates are
@@ -18,7 +20,7 @@ seroconversion. False recency rate (FRR) came from 420 specimens from separate i
 with established infection (90 cohort members over 14 months post-infection, 330 public
 health laboratory serobank specimens confirmed positive over 24 months earlier). MDRI was
 estimated by nonparametric interval-censored survival, as the area under the survival
-curve. Extracted text sits in `../raw/10.1371/journal.pone.0156023/`.
+curve.
 
 ## Relevance to project
 

@@ -10,7 +10,9 @@ tags: [hiv, care-seeking]
 updated: 2026-09-10 00:20
 ---
 
-A cross-sectional household survey of 5649 people aged 15-59 (84.5% of 6688 eligible, 2377 households, two-stage stratified cluster sample from the 2011 census) in the Mbongolwane and Eshowe Health Service Areas of KwaZulu-Natal, South Africa, conducted July-October 2013, eight years into the public ART programme and two years into MSF support. Extracted text sits in `raw/10.1186/s12889-018-5208-0`.
+Source: [huerga-2018](https://doi.org/10.1186/s12889-018-5208-0)
+
+A cross-sectional household survey of 5649 people aged 15-59 (84.5% of 6688 eligible, 2377 households, two-stage stratified cluster sample from the 2011 census) in the Mbongolwane and Eshowe Health Service Areas of KwaZulu-Natal, South Africa, conducted July-October 2013, eight years into the public ART programme and two years into MSF support.
 
 What distinguishes it from self-reported cascade surveys: ART status was measured as antiretroviral drug presence in blood (nevirapine, efavirenz, lopinavir, by LC-MS/MS on dried blood spots), not by asking. Only diagnosis awareness and linkage were self-reported. The ART initiation threshold at the time was CD4 below 350 cells/uL, so the numbers describe a pre-universal-treatment programme.
 

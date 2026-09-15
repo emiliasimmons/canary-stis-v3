@@ -10,12 +10,14 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:16
 ---
 
+Source: [pujol-hodge-2022](https://doi.org/10.3390/v14081673)
+
 A molecular epidemiology paper working from dried blood spots banked during the SEARCH
 universal test-and-treat trial (32 communities in Western Uganda, Eastern Uganda, and
 Western Kenya, June 2013 to June 2017). Partial *gag* (n = 549) and *pol* (n = 488)
 consensus sequences from 745 HIV-positive participants were used first to pick genetic
 clusters, then to date them, so that transmissions occurring inside the trial period could
-be separated from ones that predated it. Extracted text sits in `raw/10.3390/v14081673`.
+be separated from ones that predated it.
 
 ## Relevance to project
 

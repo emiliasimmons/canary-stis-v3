@@ -10,6 +10,8 @@ tags: [rakai, hiv]
 updated: 2026-09-10 10:21
 ---
 
+Source: [wawer-1997](https://doi.org/10.1097/00002030-199708000-00011)
+
 Two-year follow-up (1990-1992) of an open cohort of all adults aged 15-59 in 31
 representative community clusters in rural Rakai District. Cataloged from abstract; the
 full text has not been extracted.

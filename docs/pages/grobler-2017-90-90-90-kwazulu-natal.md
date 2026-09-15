@@ -10,7 +10,9 @@ tags: [hiv, care-seeking]
 updated: 2026-09-10 00:19
 ---
 
-A household-based cross-sectional survey (HIV Incidence Provincial Surveillance System, HIPSS) measuring the three UNAIDS 90-90-90 cascade steps directly in a general adult population, using laboratory HIV serology and viral load rather than clinic records or model estimates. 9812 participants aged 15-49 (3547 men, 6265 women) in Vulindlela and Greater Edendale, uMgungundlovu district, KwaZulu-Natal, enrolled June 2014 to June 2015 under a three-stage random sample (212 census enumeration areas, 50 households each, one member per household), population-weighted for selection and non-response. Extracted text at `raw/10.1016/s2352-3018(17)30122-4`.
+Source: [grobler-2017](https://doi.org/10.1016/S2352-3018(17)30122-4)
+
+A household-based cross-sectional survey (HIV Incidence Provincial Surveillance System, HIPSS) measuring the three UNAIDS 90-90-90 cascade steps directly in a general adult population, using laboratory HIV serology and viral load rather than clinic records or model estimates. 9812 participants aged 15-49 (3547 men, 6265 women) in Vulindlela and Greater Edendale, uMgungundlovu district, KwaZulu-Natal, enrolled June 2014 to June 2015 under a three-stage random sample (212 census enumeration areas, 50 households each, one member per household), population-weighted for selection and non-response.
 
 ## Relevance to project
 

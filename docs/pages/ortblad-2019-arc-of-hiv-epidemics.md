@@ -10,12 +10,13 @@ tags: [hiv, sexual-networks, rakai]
 updated: 2026-09-10 00:14
 ---
 
+Source: [ortblad-2019](https://doi.org/10.1097/COH.0000000000000569)
+
 A narrative review in *Current Opinion in HIV and AIDS* summarizing the five universal
 test-and-treat (UTT) cluster-randomized trials run in sub-Saharan Africa between 2012 and
 2018, then arguing from their results that HIV epidemics in the region are moving from a
 hyperendemic phase into a declining/endemic phase in which incidence re-concentrates in
-marginalized core groups the trials' delivery models did not reach. Extracted text and
-both trial tables are at `../raw/10.1097/coh.0000000000000569/`.
+marginalized core groups the trials' delivery models did not reach.
 
 ## Relevance to project
 

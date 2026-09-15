@@ -10,6 +10,8 @@ tags: [hiv, rakai]
 updated: 2026-09-10 00:18
 ---
 
+Source: [rosen-2024](https://doi.org/10.1002/jia2.26200)
+
 A population-based analysis of longitudinal viral load outcomes among people living with HIV
 in 40 Rakai Community Cohort Study (RCCS) communities in southern Uganda across survey
 rounds 17-19 (February 2015 to October 2020), spanning the national rollout of Universal
@@ -18,7 +20,7 @@ HIV-1 assay at a threshold of <200 RNA copies/ml, and the unit of analysis is a 
 two consecutive visits about 18 months apart, classified as durable suppression, new or
 renewed suppression, viral rebound, or persistent viraemia. Viraemia is split into low-level
 (200-999 copies/ml) and high-level (>=1000 copies/ml). 3080 participants aged 15-49
-contributed 4604 visit-pairs. Extracted text sits in `raw/10.1002/jia2.26200`.
+contributed 4604 visit-pairs.
 
 ## Relevance to project
 

@@ -10,6 +10,8 @@ tags: [rakai, hiv, sti, coinfection, care-seeking]
 updated: 2026-09-10 00:25
 ---
 
+Source: [wawer-1999](https://doi.org/10.1016/S0140-6736(98)06439-3)
+
 The Rakai STD Control for AIDS Prevention Study, the community-randomised trial that tested
 whether population-level STI control lowers HIV-1 incidence, reported in the Lancet in 1999.
 Ten clusters of four to seven contiguous villages in Rakai District, Uganda, were randomised
@@ -18,8 +20,7 @@ within three blocks to home-based mass antibiotic treatment (azithromycin 1 g, c
 anthelmintic, iron-folate, and vitamins. Residents aged 15-59 were visited every 10 months,
 interviewed, sampled, and given directly observed treatment irrespective of symptoms or test
 results. Results cover baseline plus two follow-up rounds (20 months), the point at which the
-Data Safety and Monitoring Board judged the primary endpoint met. Extracted text at
-`raw/10.1016/s0140-6736(98)06439-3`.
+Data Safety and Monitoring Board judged the primary endpoint met.
 
 ## Relevance to project
 

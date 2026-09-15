@@ -10,6 +10,8 @@ tags: [rakai, sexual-networks, hiv]
 updated: 2026-09-10 10:01
 ---
 
+Source: [santelli-2013](https://doi.org/10.1097/qai.0b013e3182926795)
+
 Cohort study of HIV incidence among 6741 sexually experienced youth aged 15-24 enrolled in
 the Rakai Community Cohort Study from 1999 to 2008. Examines behavioral (number of
 partners, condom use, alcohol), biological (circumcision, genital ulcer disease), and

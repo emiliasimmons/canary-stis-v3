@@ -10,6 +10,8 @@ tags: [prep, hiv, rakai, care-seeking]
 updated: 2026-09-10 10:29
 ---
 
+Source: [ddaaki-2021](https://doi.org/10.1007/s10461-021-03360-3)
+
 Qualitative study around Uganda's 2017 PrEP pilot for priority populations (sex workers,
 fishermen, truck drivers, HIV-discordant couples), comparing anticipated barriers before
 rollout with reported experience after, from 75 in-depth interviews and 12 focus groups

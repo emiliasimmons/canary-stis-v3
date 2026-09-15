@@ -10,7 +10,9 @@ tags: [hiv, coinfection, prep]
 updated: 2026-09-10 10:34
 ---
 
-CDC's update of its 2005 per-act HIV transmission risk estimates, drawing mainly on published meta-analyses rather than pooling primary studies afresh, with new fixed-effects inverse-variance pooling only where no current meta-analysis existed (anal intercourse, needle sharing). Searches covered 2008 to 2012 for transmission risk and 2008 to May 2013 for modifying factors. Estimates were deliberately weighted toward high-income-country data to match the US epidemic. Extracted content in [raw/10.1097/qad.0000000000000298/](../raw/10.1097/qad.0000000000000298/).
+Source: [patel-2014](https://doi.org/10.1097/QAD.0000000000000298)
+
+CDC's update of its 2005 per-act HIV transmission risk estimates, drawing mainly on published meta-analyses rather than pooling primary studies afresh, with new fixed-effects inverse-variance pooling only where no current meta-analysis existed (anal intercourse, needle sharing). Searches covered 2008 to 2012 for transmission risk and 2008 to May 2013 for modifying factors. Estimates were deliberately weighted toward high-income-country data to match the US epidemic.
 
 ## Key points
 

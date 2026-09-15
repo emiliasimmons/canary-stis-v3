@@ -10,7 +10,9 @@ tags: [hiv, rakai, care-seeking]
 updated: 2026-09-10 11:17
 ---
 
-Observational analysis of 12 Rakai Community Cohort Study survey rounds between April 1999 and September 2016, covering 30 continuously surveyed communities of adults 15 to 49 in Rakai District, south-central Uganda. 33,937 participants contributed 103,011 person-visits; the incidence cohort of 17,870 initially HIV-negative people contributed 58,344 person-intervals and 94,427 person-years, in which 931 seroconversions were observed. Fishing communities are not in this analysis: data collection there began only in 2011. Extracted content in [raw/10.1056/nejmoa1702150/](../raw/10.1056/nejmoa1702150/).
+Source: [grabowski-2017](https://doi.org/10.1056/NEJMoa1702150)
+
+Observational analysis of 12 Rakai Community Cohort Study survey rounds between April 1999 and September 2016, covering 30 continuously surveyed communities of adults 15 to 49 in Rakai District, south-central Uganda. 33,937 participants contributed 103,011 person-visits; the incidence cohort of 17,870 initially HIV-negative people contributed 58,344 person-intervals and 94,427 person-years, in which 931 seroconversions were observed. Fishing communities are not in this analysis: data collection there began only in 2011.
 
 ## Relevance to project
 

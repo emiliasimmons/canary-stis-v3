@@ -10,6 +10,8 @@ tags: [care-seeking, hiv, rakai]
 updated: 2026-09-14 15:24
 ---
 
+Source: [nakigozi-2015](https://doi.org/10.1097/qai.0000000000000710)
+
 > Note: summary derived from the abstract only, not the full source.
 
 Randomized controlled trial in Rakai, Uganda, testing whether a patient-selected "care buddy," a household or community support person, improves engagement in pre-antiretroviral HIV care. 1209 pre-ART HIV-infected patients aged 15 and over were randomized to standard of care (n=604) or a patient-selected care buddy (n=605) and followed at 6 and 12 months. Outcomes were adherence to CD4-monitoring clinic visits, HIV disease progression, and self-reported conduct of daily life, assessed by incidence and prevalence rate ratios in intent-to-treat and as-treated analyses.

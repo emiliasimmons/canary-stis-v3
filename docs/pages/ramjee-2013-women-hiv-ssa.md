@@ -10,11 +10,12 @@ tags: [hiv, sti, sexual-networks, prep, care-seeking]
 updated: 2026-09-10 00:38
 ---
 
+Source: [ramjee-2013](https://doi.org/10.1186/1742-6405-10-30)
+
 A narrative review in AIDS Research and Therapy covering why HIV incidence in sub-Saharan
 Africa falls disproportionately on women, and what has been tried against it. It reports no
 new data: every figure is cited from a trial, cohort, or UNAIDS report, and the review's
-value is the assembled list of risk mechanisms rather than any single number. Extracted
-text sits in `raw/10.1186/1742-6405-10-30`.
+value is the assembled list of risk mechanisms rather than any single number.
 
 ## Relevance to project
 

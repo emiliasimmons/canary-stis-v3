@@ -10,7 +10,9 @@ tags: [hiv, rakai, sexual-networks, modeling]
 updated: 2026-09-10 10:33
 ---
 
-Combines the Rakai Community Cohort Study incidence cohort with longitudinal HIV deep-sequence phylogenetics across 36 inland communities in south-central Uganda, nine survey rounds (rounds 10-18) from September 2003 to May 2018. 38,749 participants enrolled, 22,724 seronegative at first survey contributing 127,217 person-years, 1,117 incident infections observed, 1,978 people with viraemic HIV deep-sequenced, and 227 heterosexual source-recipient pairs placed in calendar time. Transmission flows were fitted with semi-parametric Poisson flow regression under the constraint of matching the observed age- and sex-specific incidence. Extracted content in [raw/10.1038/s41564-023-01530-8/](../raw/10.1038/s41564-023-01530-8/).
+Source: [monod-2023](https://doi.org/10.1038/s41564-023-01530-8)
+
+Combines the Rakai Community Cohort Study incidence cohort with longitudinal HIV deep-sequence phylogenetics across 36 inland communities in south-central Uganda, nine survey rounds (rounds 10-18) from September 2003 to May 2018. 38,749 participants enrolled, 22,724 seronegative at first survey contributing 127,217 person-years, 1,117 incident infections observed, 1,978 people with viraemic HIV deep-sequenced, and 227 heterosexual source-recipient pairs placed in calendar time. Transmission flows were fitted with semi-parametric Poisson flow regression under the constraint of matching the observed age- and sex-specific incidence.
 
 ## Key points
 

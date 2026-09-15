@@ -10,13 +10,14 @@ tags: [hiv]
 updated: 2026-09-10 00:23
 ---
 
+Source: [vandormael-2019](https://doi.org/10.1038/s41467-019-13473-y)
+
 Prospective HIV incidence estimates from the Africa Health Research Institute (AHRI)
 population-based surveillance platform in the Hlabisa sub-district of KwaZulu-Natal, South
 Africa: roughly 90,000 residents in 11,000 households across 438 km², surveyed two to three
 times a year with annual dried-blood-spot HIV testing. The incidence cohort is 22,239
-repeat testers (9,630 men aged 15-54, 12,609 women aged 15-49) contributing 92,877
-person-years between 2005 and 2017. Extracted text and tables sit in
-`raw/10.1038/s41467-019-13473-y`.
+repeat testers (9,630 men aged 15-54, 12,609 women aged 15-49) contributing 92,877 person-
+years between 2005 and 2017.
 
 ## Relevance to project
 

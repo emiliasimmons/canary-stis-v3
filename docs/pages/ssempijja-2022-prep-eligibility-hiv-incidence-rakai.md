@@ -10,6 +10,8 @@ tags: [hiv, prep, rakai, care-seeking]
 updated: 2026-09-10 10:28
 ---
 
+Source: [ssempijja-2022](https://doi.org/10.1097/qai.0000000000002946)
+
 Cross-sectional and cohort analysis within the Rakai Community Cohort Study applying
 Uganda's national PrEP eligibility tool to a general adult population rather than to
 designated key populations. Eligibility required at least one of four self-reported risks

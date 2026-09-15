@@ -10,7 +10,9 @@ tags: [hiv, prep, care-seeking, sexual-networks]
 updated: 2026-09-10 00:27
 ---
 
-Impact evaluation of the PEPFAR DREAMS Partnership, a multi-component HIV prevention package for adolescent girls and young women (AGYW), across three sites: urban informal settlements in Nairobi (n=1081, ages 15-22), rural Gem in western Kenya (n=1171, ages 13-22), and rural uMkhanyakude in KwaZulu-Natal (n=2184, ages 13-22). Closed cohorts randomly sampled from demographic surveillance frames, enrolled 2017-2018 and followed to 2019. Because DREAMS was not randomized, impact is estimated observationally: propensity-score regression adjustment comparing the counterfactuals that all versus no AGYW were invited to DREAMS by 2018. All outcomes are self-reported. Extracted text and tables sit in `../raw/10.1097/qad.0000000000003157`.
+Source: [floyd-2022](https://doi.org/10.1097/QAD.0000000000003157)
+
+Impact evaluation of the PEPFAR DREAMS Partnership, a multi-component HIV prevention package for adolescent girls and young women (AGYW), across three sites: urban informal settlements in Nairobi (n=1081, ages 15-22), rural Gem in western Kenya (n=1171, ages 13-22), and rural uMkhanyakude in KwaZulu-Natal (n=2184, ages 13-22). Closed cohorts randomly sampled from demographic surveillance frames, enrolled 2017-2018 and followed to 2019. Because DREAMS was not randomized, impact is estimated observationally: propensity-score regression adjustment comparing the counterfactuals that all versus no AGYW were invited to DREAMS by 2018. All outcomes are self-reported.
 
 ## Relevance to project
 

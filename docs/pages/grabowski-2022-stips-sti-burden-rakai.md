@@ -10,6 +10,8 @@ tags: [rakai, sti, hiv, coinfection, diagnostics, sexual-networks]
 updated: 2026-09-10 00:12
 ---
 
+Source: [grabowski-2022](https://doi.org/10.1016/S2214-109X(22)00424-7)
+
 The Sexually Transmitted Infection Prevalence Study (STIPS), a cross-sectional study nested
 in round 19 of the Rakai Community Cohort Study, tested 1825 consenting residents aged
 18-49 in two RCCS communities between May 27 and Oct 25, 2019: one semi-urban inland
@@ -18,8 +20,7 @@ trading centre with surrounding villages (n=919) and one Lake Victoria fishing c
 (clinician-collected) and vaginal (self-collected) swabs; trichomonas by OSOM rapid antigen
 test on the same swabs; syphilis by SD Bioline treponemal antibody with RPR titre on
 seropositives, high-titre defined as RPR >=1:8; HSV-2 by Kalon ELISA; HIV by rapid-test
-algorithm with viral load on seropositives. Extracted text and tables sit in
-`../raw/10.1016/s2214-109x(22)00424-7`.
+algorithm with viral load on seropositives.
 
 ## Relevance to project
 

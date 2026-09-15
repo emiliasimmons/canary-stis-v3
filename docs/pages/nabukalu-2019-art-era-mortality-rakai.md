@@ -10,7 +10,9 @@ tags: [hiv, rakai]
 updated: 2026-09-10 00:31
 ---
 
-Survival analysis of the Rakai Community Cohort Study over 2000-14, covering the 30 communities followed continuously across that window, published in Population Studies. Free ART reached the district in June 2004 through PEPFAR-funded Rakai Health Sciences Program clinics, and the paper splits its analysis at that date: pre-ART (Jan 2000 - May 2004) and ART (Jun 2004 - Dec 2014). It reports mortality rates by HIV status and sex, partial life expectancy between exact ages 15 and 50, and Weibull hazard models for people living with HIV. Extracted text sits in `raw/10.1080/00324728.2019.1595099`.
+Source: [nabukalu-2020](https://doi.org/10.1080/00324728.2019.1595099)
+
+Survival analysis of the Rakai Community Cohort Study over 2000-14, covering the 30 communities followed continuously across that window, published in Population Studies. Free ART reached the district in June 2004 through PEPFAR-funded Rakai Health Sciences Program clinics, and the paper splits its analysis at that date: pre-ART (Jan 2000 - May 2004) and ART (Jun 2004 - Dec 2014). It reports mortality rates by HIV status and sex, partial life expectancy between exact ages 15 and 50, and Weibull hazard models for people living with HIV.
 
 ## Relevance to project
 

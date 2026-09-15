@@ -10,7 +10,9 @@ tags: [hiv, coinfection]
 updated: 2026-09-10 10:36
 ---
 
-Systematic review and random-effects Poisson meta-analysis of per-partnership HIV-1 infectiousness in prospective heterosexual serodiscordant-couple studies, searched to July 2011. Fifty publications included, of which nine compared ART-using with non-ART-using index cases within the same study and 41 did not stratify. Outcome is HIV incidence rate per 100 person-years of partnership exposure, not per act. The stated motivation is that trials with intensive adherence counselling overstate what treatment-as-prevention achieves in routine settings. Extracted content in [raw/10.1097/ede.0b013e318276cad7/](../raw/10.1097/ede.0b013e318276cad7/).
+Source: [baggaley-2013](https://doi.org/10.1097/EDE.0b013e318276cad7)
+
+Systematic review and random-effects Poisson meta-analysis of per-partnership HIV-1 infectiousness in prospective heterosexual serodiscordant-couple studies, searched to July 2011. Fifty publications included, of which nine compared ART-using with non-ART-using index cases within the same study and 41 did not stratify. Outcome is HIV incidence rate per 100 person-years of partnership exposure, not per act. The stated motivation is that trials with intensive adherence counselling overstate what treatment-as-prevention achieves in routine settings.
 
 ## Key points
 

@@ -10,6 +10,8 @@ tags: [hiv, sexual-networks, care-seeking]
 updated: 2026-09-10 00:30
 ---
 
+Source: [babirye-2023](https://doi.org/10.1136/bmjopen-2022-065239)
+
 Secondary analysis of the Uganda PLACE 2018 survey (Priorities for Local AIDS Control
 Efforts), a venue-mapping exercise across 25 districts, Rakai among them. Community
 informants list the public places where people go to meet new sexual partners, a
@@ -17,7 +19,6 @@ stratified sample of venues is visited and profiled, and workers plus a sample o
 are interviewed and HIV-tested on site. This paper takes the 480 venues that employed
 workers aged 15-24 and their 1007 HIV-negative young workers, clusters the venues on 18
 binary features, and regresses a five-item vulnerability index on cluster membership.
-Extracted text and tables in `../raw/10.1136/bmjopen-2022-065239`.
 
 ## Relevance to project
 

@@ -10,7 +10,9 @@ tags: [hiv, prep, modeling, economics, sexual-networks]
 updated: 2026-09-10 00:32
 ---
 
-An agent-based modelling analysis of scaling up lenacapavir, a twice-yearly injectable pre-exposure prophylaxis, in three eastern and southern African settings from 2026 to 2035. The model is EMOD-HIV, an individual-based heterosexual-network microsimulation with monthly time steps, calibrated to HIV prevalence by age and sex and to numbers on ART, with 100 resampled parameter sets carrying the uncertainty. The paper's contribution is the maximum per-dose price at which lenacapavir clears a cost-effectiveness threshold, and how that price moves as coverage widens. Extracted content in [raw/10.1016/s2352-3018(24)00239-x/](../raw/10.1016/s2352-3018(24)00239-x/).
+Source: [wu-2024](https://doi.org/10.1016/S2352-3018(24)00239-X)
+
+An agent-based modelling analysis of scaling up lenacapavir, a twice-yearly injectable pre-exposure prophylaxis, in three eastern and southern African settings from 2026 to 2035. The model is EMOD-HIV, an individual-based heterosexual-network microsimulation with monthly time steps, calibrated to HIV prevalence by age and sex and to numbers on ART, with 100 resampled parameter sets carrying the uncertainty. The paper's contribution is the maximum per-dose price at which lenacapavir clears a cost-effectiveness threshold, and how that price moves as coverage widens.
 
 ## Relevance to project
 

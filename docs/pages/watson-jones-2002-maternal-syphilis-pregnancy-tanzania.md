@@ -10,7 +10,9 @@ tags: [sti, diagnostics]
 updated: 2026-09-10 10:29
 ---
 
-Retrospective cohort recruited at delivery in three hospitals in Mwanza Region, northwestern Tanzania, June 1998 to April 2000, among women whose antenatal cards showed no syphilis screening during pregnancy. Every RPR-positive woman and the next two RPR-negative women were enrolled, then retested at a reference laboratory with quantitative RPR plus TPHA (FTA-ABS where discordant), giving 73 women with high-titer active syphilis (RPR titer at or above 1:8 with a positive treponemal test), 27 low-titer active, 9 past or treated, 38 biological false positive, and 233 seronegative. Extracted content in [raw/10.1086/342952/](../raw/10.1086/342952/).
+Source: [watson-jones-2002](https://doi.org/10.1086/342952)
+
+Retrospective cohort recruited at delivery in three hospitals in Mwanza Region, northwestern Tanzania, June 1998 to April 2000, among women whose antenatal cards showed no syphilis screening during pregnancy. Every RPR-positive woman and the next two RPR-negative women were enrolled, then retested at a reference laboratory with quantitative RPR plus TPHA (FTA-ABS where discordant), giving 73 women with high-titer active syphilis (RPR titer at or above 1:8 with a positive treponemal test), 27 low-titer active, 9 past or treated, 38 biological false positive, and 233 seronegative.
 
 ## Key points
 

@@ -10,7 +10,9 @@ tags: [hiv, sexual-networks, modeling]
 updated: 2026-09-10 00:14
 ---
 
-A five-page commentary in the Journal of the International AIDS Society by Garnett (Gates Foundation), reasoning from transmission-dynamic first principles rather than new data. Extracted text sits at `raw/10.1002/jia2.25727/content.md`. It carries one table defining R0, Rt, the incidence/mortality ratio, the core group, risk factors, and the population attributable fraction, each with how the quantity is expected to move as HIV comes under control in sub-Saharan Africa.
+Source: [garnett-2021](https://doi.org/10.1002/jia2.25727)
+
+A five-page commentary in the Journal of the International AIDS Society by Garnett (Gates Foundation), reasoning from transmission-dynamic first principles rather than new data. It carries one table defining R0, Rt, the incidence/mortality ratio, the core group, risk factors, and the population attributable fraction, each with how the quantity is expected to move as HIV comes under control in sub-Saharan Africa.
 
 ## Relevance to project
 

@@ -10,7 +10,9 @@ tags: [hiv, sexual-networks, prep]
 updated: 2026-09-10 00:21
 ---
 
-Population-based cohort evaluation of the DREAMS Partnership, a 12-intervention combination HIV prevention package for adolescent girls and young women (AGYW) rolled out from 2016. HIV incidence was measured directly by repeat serology in two demographic surveillance sites: uMkhanyakude (KwaZulu-Natal, South Africa, annual rounds 2006-2018, 26,393 person-years among women 15-24) and Gem (Siaya, western Kenya, six rounds 2010-2019, 10,382 person-years). Extracted content in [raw/10.1371/journal.pmed.1003837/](../raw/10.1371/journal.pmed.1003837/).
+Source: [birdthistle-2021](https://doi.org/10.1371/journal.pmed.1003837)
+
+Population-based cohort evaluation of the DREAMS Partnership, a 12-intervention combination HIV prevention package for adolescent girls and young women (AGYW) rolled out from 2016. HIV incidence was measured directly by repeat serology in two demographic surveillance sites: uMkhanyakude (KwaZulu-Natal, South Africa, annual rounds 2006-2018, 26,393 person-years among women 15-24) and Gem (Siaya, western Kenya, six rounds 2010-2019, 10,382 person-years).
 
 ## Relevance to project
 

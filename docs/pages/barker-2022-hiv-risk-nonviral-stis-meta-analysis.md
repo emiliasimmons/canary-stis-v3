@@ -10,11 +10,13 @@ tags: [hiv, sti, coinfection]
 updated: 2026-09-10 09:47
 ---
 
+Source: [barker-2022](https://doi.org/10.1097/olq.0000000000001601)
+
 Systematic review and meta-analysis of 32 studies (97 effect sizes) on HIV acquisition
 risk among high-risk heterosexuals diagnosed with a nonviral STI. Searched PubMed, Web of
 Science, and Embase through December 2017. Included only studies where STI diagnosis was
 confirmed to precede HIV diagnosis, addressing the temporality bias that weakened earlier
-reviews. Raw extraction in `raw/10.1097/olq.0000000000001601/`.
+reviews.
 
 ## Relevance to project
 

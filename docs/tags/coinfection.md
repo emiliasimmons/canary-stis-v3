@@ -35,3 +35,6 @@ description: Biological interaction between concurrent infections, particularly 
 - [Age of coital debut and HIV seroprevalence among women in Durban](../pages/wand-2012-coital-debut-hiv-durban.md) -- MIRA screening and follow-up cohort in KwaZulu-Natal linking early sexual debut, lifetime partner count, HSV2 and curable STIs to HIV prevalence and incidence in women
 - [Control of sexually transmitted diseases for AIDS prevention in Uganda: a randomised community trial](../pages/wawer-1999-rakai-std-mass-treatment-trial.md) -- Rakai cluster-randomised trial of home-based mass STD treatment; STI prevalence fell but HIV-1 incidence was unchanged (rate ratio 0.97).
 - [Genital immunology and HIV susceptibility in young women](../pages/yi-2013-genital-immunology-young-women.md) -- Narrative review of the mucosal-immunology reasons women, and young women in particular, have a higher per-act HIV acquisition risk than men.
+
+### Syntheses (1)
+- [The STI-HIV cofactor and the HIV reduction achievable by clearing curable STIs](../pages/sti-hiv-cofactor.md) -- Curable STIs raise per-act HIV transmission, but observational cofactor ratios overstate the incidence reduction from clearing the four bacterial STIs, and the attributable ceiling in a mature epidemic is 3-17%.

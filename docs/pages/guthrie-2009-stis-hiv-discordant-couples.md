@@ -10,7 +10,9 @@ tags: [sti, hiv, coinfection, partner-notification]
 updated: 2026-09-10 00:12
 ---
 
-Cross-sectional analysis of enrollment data from 416 stable HIV-1-discordant couples in Nairobi, Kenya, recruited 2004-2007 from voluntary counseling and testing centers and antenatal clinics. The couples were nested in the Partners in Prevention HSV/HIV Transmission Study, an acyclovir trial, so every HIV-positive partner was HSV-2-seropositive with CD4 >= 250 cells/uL and not on ART. All participants were tested at enrollment for syphilis (RPR with TPHA confirmation), chlamydia, gonorrhoea and trichomoniasis (nucleic-acid amplification on male urine and female cervical swabs), plus HSV-2 serology, bacterial vaginosis and cervical cytology. Extracted content in [raw/10.1371/journal.pone.0008276/](../raw/10.1371/journal.pone.0008276/).
+Source: [guthrie-2009](https://doi.org/10.1371/journal.pone.0008276)
+
+Cross-sectional analysis of enrollment data from 416 stable HIV-1-discordant couples in Nairobi, Kenya, recruited 2004-2007 from voluntary counseling and testing centers and antenatal clinics. The couples were nested in the Partners in Prevention HSV/HIV Transmission Study, an acyclovir trial, so every HIV-positive partner was HSV-2-seropositive with CD4 >= 250 cells/uL and not on ART. All participants were tested at enrollment for syphilis (RPR with TPHA confirmation), chlamydia, gonorrhoea and trichomoniasis (nucleic-acid amplification on male urine and female cervical swabs), plus HSV-2 serology, bacterial vaginosis and cervical cytology.
 
 ## Key points
 

@@ -10,6 +10,8 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 10:33
 ---
 
+Source: [bbosa-2019](https://doi.org/10.1038/s41598-018-37458-x)
+
 Cross-sectional molecular epidemiology study in Scientific Reports. HIV-1 partial `pol`
 sequences (mean 1,257 bp) from HIV-positive adults enrolled September 2014 to September
 2016 in 8 fishing communities on the Lake Victoria shore (Mpigi, Wakiso, Masaka, Kalungu
@@ -17,8 +19,8 @@ districts) and 2 adjacent general-population cohorts. Transmission pairs were id
 Cluster Picker and HIV-TRACE at genetic-distance cutoffs of 4.5% and 1.5%, timing came from
 BEAST v1.8.4 with a relaxed clock and skygrid prior, and direction of spread came from
 discrete-trait phylogeography over 7 locations with Bayesian stochastic search variable
-selection. Extracted text sits in `../raw/10.1038/s41598-018-37458-x/`; the supplementary
-tables holding the pair-level results and the migration matrix are not included.
+selection. The supplementary tables holding the pair-level results and the migration matrix
+are not included.
 
 ## Relevance to project
 

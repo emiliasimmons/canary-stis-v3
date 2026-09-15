@@ -10,7 +10,9 @@ tags: [hiv, modeling, rakai, sexual-networks]
 updated: 2026-09-10 00:14
 ---
 
-A systematic review pooling directly observed adult HIV incidence across sub-Saharan Africa, matched observation by observation to UNAIDS modelled incidence for the same subnational area, sex, five-year age group and year, then regressed to ask whether the models sit at the right level and decline at the right rate. The review extends Joshi et al. (published 2010-2019) with literature published July 2019 to February 2024, and adds PHIA survey microdata, seven population cohorts, four universal-test-and-treat trials, and key-population meta-analyses. Yield: 3560 observations from 179 studies in 21 countries, 23,000 seroconversions over 3.1 million person-years, median study year 2014 (IQR 2006-2016). Extracted content in [raw/10.64898/2026.02.05.26345548/](../raw/10.64898/2026.02.05.26345548/).
+Source: [stevens-2026](https://doi.org/10.64898/2026.02.05.26345548)
+
+A systematic review pooling directly observed adult HIV incidence across sub-Saharan Africa, matched observation by observation to UNAIDS modelled incidence for the same subnational area, sex, five-year age group and year, then regressed to ask whether the models sit at the right level and decline at the right rate. The review extends Joshi et al. (published 2010-2019) with literature published July 2019 to February 2024, and adds PHIA survey microdata, seven population cohorts, four universal-test-and-treat trials, and key-population meta-analyses. Yield: 3560 observations from 179 studies in 21 countries, 23,000 seroconversions over 3.1 million person-years, median study year 2014 (IQR 2006-2016).
 
 Modelled estimates are UNAIDS Global HIV Epidemic Estimates published July 2024 (EPP-Spectrum, Thembisa v4.7 for South African provinces). Regression is Bayesian mixed-effect Poisson with log person-years offset and log modelled incidence as offset, fitted in R-INLA.
 

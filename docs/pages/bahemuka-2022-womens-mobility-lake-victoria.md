@@ -10,14 +10,15 @@ tags: [hiv, sexual-networks, care-seeking]
 updated: 2026-09-10 00:36
 ---
 
+Source: [bahemuka-2022](https://doi.org/10.1007/s10461-022-03824-0)
+
 A cross-sectional survey run by the Lake Victoria Consortium for Health Research in six fishing
 villages across Kenya (Kete, Ogal), Tanzania (Kayenze, Itabagumb) and Uganda (Kiimi, Lambu),
 each village of roughly 1000 residents with prior-survey HIV prevalence between 15 and 34%.
-Roughly 150 women aged 15 and over were randomly sampled per village from a dwelling census,
-901 in total, and interviewed once between March 2018 and June 2019 about overnight trips in the
+Roughly 150 women aged 15 and over were randomly sampled per village from a dwelling census, 901
+in total, and interviewed once between March 2018 and June 2019 about overnight trips in the
 preceding four months. The outcome is trip duration, not HIV status: nobody was tested, and no
-incidence or prevalence was measured in this sample. Extracted text sits in
-`../raw/10.1007/s10461-022-03824-0`.
+incidence or prevalence was measured in this sample.
 
 ## Relevance to project
 

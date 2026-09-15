@@ -10,12 +10,13 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:18
 ---
 
+Source: [mabaso-2018](https://doi.org/10.1186/s12889-018-5051-3)
+
 Secondary analysis of the 2012 South African National HIV Prevalence, Incidence and
 Behaviour Survey, a multi-stage stratified cluster household sample with dried blood spot
 HIV testing. The analysis sample is 3092 women aged 15-24 interviewed and tested, weighted
 to national population estimates. Survey-weighted logistic regression with stepwise
-selection, fitted three times: all 15-24, girls 15-19, and women 20-24. Extracted text in
-`raw/10.1186/s12889-018-5051-3`.
+selection, fitted three times: all 15-24, girls 15-19, and women 20-24.
 
 ## Relevance to project
 

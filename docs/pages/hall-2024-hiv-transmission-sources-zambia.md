@@ -10,6 +10,8 @@ tags: [hiv, sexual-networks, modeling]
 updated: 2026-09-10 00:15
 ---
 
+Source: [hall-2023](https://doi.org/10.1016/S2666-5247(23)00220-3)
+
 Phylogenetic source attribution nested in the HPTN 071 (PopART) universal-test-and-treat
 trial in Zambia. Viral genomes from 7124 participants across nine Zambian trial communities
 were deep-sequenced; 5612 sequences passing a 50% consensus-coverage threshold went into
@@ -19,8 +21,7 @@ at the estimated time of transmission, not at sampling, using within-host phylog
 diversity to date infection. Counts are reweighted (iterative proportional fitting) so the
 recipient sample matches the trial's HIV-positive population on sex, birth cohort,
 community, and marital status, with the first three targets taken from the PopART-IBM
-simulation and marital status from the 2018 Zambia DHS. Extracted text in
-`raw/10.1016/s2666-5247(23)00220-3/`.
+simulation and marital status from the 2018 Zambia DHS.
 
 ## Relevance to project
 

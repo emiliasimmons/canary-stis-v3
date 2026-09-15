@@ -10,13 +10,14 @@ tags: [hiv, sexual-networks, prep, coinfection, care-seeking]
 updated: 2026-09-10 00:27
 ---
 
+Source: [dellar-2015](https://doi.org/10.7448/IAS.18.2.19408)
+
 Narrative review from CAPRISA in the *Journal of the International AIDS Society*, arguing
 that adolescent girls and young women (AGYW, defined as ages 15-24) are a key population
 for HIV epidemic control in southern Africa, and cataloguing the behavioural, structural
 and biological explanations for their excess risk. It reports no new data of its own,
 adapting its figures from the 2012 South African national survey (Shisana et al.) and a
-KwaZulu-Natal school survey (Abdool Karim et al. 2014). Extracted content sits in
-`../raw/10.7448/ias.18.2.19408/`.
+KwaZulu-Natal school survey (Abdool Karim et al. 2014).
 
 ## Relevance to project
 

@@ -10,6 +10,8 @@ tags: [rakai, hiv]
 updated: 2026-09-10 10:20
 ---
 
+Source: [sewankambo-1994](https://doi.org/10.1097/00002030-199412000-00011)
+
 One-year follow-up (1990-1991) of a population-based rural cohort in Rakai District,
 measuring HIV-specific mortality, infant mortality by maternal serostatus, and population
 growth. Cataloged from abstract; the full text has not been extracted.

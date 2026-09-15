@@ -10,6 +10,8 @@ tags: [economics, sti]
 updated: 2026-09-10 10:32
 ---
 
+Source: [smith-2008](https://doi.org/10.1097/olq.0b013e31815b07dd)
+
 Utility elicitation study in Sexually Transmitted Diseases. Women read short scenarios
 describing five health states associated with pelvic inflammatory disease (ambulatory PID
 treatment, hospital PID treatment, ectopic pregnancy, chronic pelvic pain, infertility) and

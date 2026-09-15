@@ -10,7 +10,9 @@ tags: [hiv, prep, sti]
 updated: 2026-09-09 22:52
 ---
 
-The VOICE trial (MTN-003), a five-arm randomised placebo-controlled trial of daily oral tenofovir disoproxil fumarate (TDF), oral TDF-emtricitabine (TDF-FTC), and 1% tenofovir vaginal gel as HIV pre-exposure prophylaxis in 5029 women aged 18-45 at 15 sites in South Africa, Uganda and Zimbabwe, enrolled September 2009 to June 2011 and followed to August 2012. Extracted content in [raw/marrazzo_tenofovir-based_2015/](../raw/marrazzo_tenofovir-based_2015/).
+Source: [marrazzo-2015](https://doi.org/10.1056/NEJMoa1402269)
+
+The VOICE trial (MTN-003), a five-arm randomised placebo-controlled trial of daily oral tenofovir disoproxil fumarate (TDF), oral TDF-emtricitabine (TDF-FTC), and 1% tenofovir vaginal gel as HIV pre-exposure prophylaxis in 5029 women aged 18-45 at 15 sites in South Africa, Uganda and Zimbabwe, enrolled September 2009 to June 2011 and followed to August 2012.
 
 ## Key points
 

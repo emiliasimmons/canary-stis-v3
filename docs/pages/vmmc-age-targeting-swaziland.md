@@ -10,7 +10,9 @@ tags: [hiv, modeling]
 updated: 2026-09-10 00:22
 ---
 
-A policy-facing modeling exercise run for the Swaziland Ministry of Health in 2013-2014, asking which male age groups a voluntary medical male circumcision (VMMC) program should target. The tool is DMPPT 2.0, a compartmental Excel model that tracks circumcised males by five-year age group through ageing and mortality, and compares a scale-up scenario against a baseline holding circumcision prevalence fixed. Extracted content sits in `raw/10.1371/journal.pone.0156776`.
+Source: [kripke-2016](https://doi.org/10.1371/journal.pone.0156776)
+
+A policy-facing modeling exercise run for the Swaziland Ministry of Health in 2013-2014, asking which male age groups a voluntary medical male circumcision (VMMC) program should target. The tool is DMPPT 2.0, a compartmental Excel model that tracks circumcised males by five-year age group through ageing and mortality, and compares a scale-up scenario against a baseline holding circumcision prevalence fixed.
 
 Inputs: age-specific male HIV incidence from the Swaziland HIV Incidence Measurement Survey (SHIMS); population, mortality, births, and HIV prevalence from a national Spectrum/Goals projection; baseline circumcision prevalence by age from the 2006-07 Swaziland DHS (8.2% overall, 4% at ages 10-19 rising to 20% at 35-39). VMMC unit cost $109 USD, held constant across ages; ART $536 per person-year. Costs, circumcisions, and infections averted all discounted 3% per year. National context: adult HIV prevalence 31% and incidence 2.4% per year at ages 18-49.
 

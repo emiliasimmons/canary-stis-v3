@@ -10,7 +10,9 @@ tags: [hiv, prep, coinfection]
 updated: 2026-09-10 00:25
 ---
 
-A phase 3, double-blind, placebo-controlled trial of tenofovir 1% vaginal gel used pericoitally (one dose within 12 h before sex, one within 12 h after, the BAT-24 regimen) at nine community sites in South Africa. 2029 sexually active HIV-negative women aged 18-30 were followed for up to 27 months on product between October 2011 and August 2014, contributing 3036 woman-years. Extracted text and tables sit in `raw/10.1016/s1473-3099(18)30428-6`.
+Source: [delany-moretlwe-2018](https://doi.org/10.1016/S1473-3099(18)30428-6)
+
+A phase 3, double-blind, placebo-controlled trial of tenofovir 1% vaginal gel used pericoitally (one dose within 12 h before sex, one within 12 h after, the BAT-24 regimen) at nine community sites in South Africa. 2029 sexually active HIV-negative women aged 18-30 were followed for up to 27 months on product between October 2011 and August 2014, contributing 3036 woman-years.
 
 ## Relevance to project
 

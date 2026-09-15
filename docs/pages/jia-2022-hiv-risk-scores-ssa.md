@@ -10,11 +10,13 @@ tags: [hiv, sti]
 updated: 2026-09-10 09:45
 ---
 
-Systematic review and random-effects meta-analysis of 14 HIV incidence risk scores
-from 13 studies (134,423 individuals, 301,820 person-years) across sub-Saharan Africa.
-The review pools effect estimates for individual-level predictors of HIV seroconversion
+Source: [jia-2022](https://doi.org/10.1002/jia2.25861)
+
+Systematic review and random-effects meta-analysis of 14 HIV incidence risk scores from
+13 studies (134,423 individuals, 301,820 person-years) across sub-Saharan Africa. The
+review pools effect estimates for individual-level predictors of HIV seroconversion
 among heterosexual adults and evaluates how well composite scores discriminate future
-infections. Raw extraction in `raw/10.1002/jia2.25861/content.md`.
+infections.
 
 ## Relevance to project
 

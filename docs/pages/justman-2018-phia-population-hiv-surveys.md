@@ -10,14 +10,16 @@ tags: [hiv]
 updated: 2026-09-10 00:11
 ---
 
+Source: [justman-2018](https://doi.org/10.1056/NEJMp1801934)
+
 A three-page NEJM Perspective describing the Population-based HIV Impact Assessment (PHIA)
 Project, launched in 2014 by ICAP at Columbia with PEPFAR funding and ministries of health,
-which runs nationally representative household surveys of adults and children in 14
-high-burden countries. The argument is about measurement rather than biology: facility data
-only see people already diagnosed, and model projections inherit both that data and their
-own assumptions, so directly measured population estimates of incidence, viral load
+which runs nationally representative household surveys of adults and children in 14 high-
+burden countries. The argument is about measurement rather than biology: facility data only
+see people already diagnosed, and model projections inherit both that data and their own
+assumptions, so directly measured population estimates of incidence, viral load
 suppression, and paediatric prevalence are needed to see where a national response is
-failing. Extracted text in `../raw/justman_hiv_2018/content.md`.
+failing.
 
 ## Relevance to project
 

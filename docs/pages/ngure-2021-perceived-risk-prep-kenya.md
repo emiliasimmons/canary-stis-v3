@@ -10,12 +10,13 @@ tags: [hiv, prep, care-seeking]
 updated: 2026-09-10 09:47
 ---
 
+Source: [ngure-2021](https://doi.org/10.3389/frph.2021.637869)
+
 Serial qualitative interviews with 50 young Kenyan women (18-24) enrolled in the MPYA PrEP
 trial, conducted at enrollment, 3 months, and 12 months. The study sites were Thika (HIV
 prevalence 1.1%) and Kisumu (17.5%) in Kenya. All participants scored >5 on the VOICE risk
 tool; 54% reported multiple current sexual partners, 50% reported condomless sex in the
-prior month, and median age was 21 years. Raw content in
-[raw/10.3389/frph.2021.637869/content.md](../raw/10.3389/frph.2021.637869/content.md).
+prior month, and median age was 21 years.
 
 ## Relevance to project
 

@@ -9,9 +9,11 @@ tags: [rakai, sexual-networks]
 updated: 2026-09-10 00:36
 ---
 
+Source: [beres-2021](https://doi.org/10.2196/22693)
+
 A 90-day pilot randomized trial in Rakai, Uganda, testing whether automated, behavior-responsive phone messaging (ecological momentary assessment and intervention, EMAI) changes five self-reported behaviors: fruit and vegetable consumption, alcohol, cigarette smoking, and sex with a non-marital or non-long-term partner without a condom. Registered as NCT04375423, funded by the Johns Hopkins Center for Global Health.
 
-The extracted file at `raw/10.2196/22693` is the CONSORT-EHEALTH submission form (57 pages, July 2020), not the article. It carries quoted excerpts from the manuscript, so numbers below come from those quotes; the trial's tables (1-4) are not reproduced in it.
+The source is the CONSORT-EHEALTH submission form (57 pages, July 2020), not the article. It carries quoted excerpts from the manuscript, so numbers below come from those quotes; the trial's tables (1-4) are not reproduced in it.
 
 ## Relevance to project
 

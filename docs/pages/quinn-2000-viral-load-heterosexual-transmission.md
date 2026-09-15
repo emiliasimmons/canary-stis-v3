@@ -10,6 +10,8 @@ tags: [hiv, rakai, coinfection, partner-notification]
 updated: 2026-09-10 00:32
 ---
 
+Source: [quinn-2000](https://doi.org/10.1056/nejm200003303421303)
+
 Prospective follow-up of 415 HIV-1-serodiscordant couples identified retrospectively inside
 the Rakai STD Control for AIDS Prevention community trial (15,127 adults, Rakai district,
 Uganda, November 1994 to October 1998; five surveys at 10-month intervals; median follow-up
@@ -17,7 +19,7 @@ Uganda, November 1994 to October 1998; five surveys at 10-month intervals; media
 partner at the visit before each 10-month at-risk interval, about 4 to 5 months before
 probable seroconversion, and was never available to clinicians during the trial. No
 antiretroviral therapy was available in rural Uganda at the time, so viral loads are
-untreated natural-history values. Extracted text sits in `raw/10.1056/nejm200003303421303`.
+untreated natural-history values.
 
 ## Relevance to project
 

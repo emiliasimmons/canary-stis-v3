@@ -10,7 +10,9 @@ tags: [hiv, economics, care-seeking]
 updated: 2026-09-10 10:31
 ---
 
-Micro-costing of the streamlined HIV care model in the 16 SEARCH trial intervention communities (NCT01864603), covering 17 health facilities across West Uganda, East Uganda and Kenya. Two-week site visits from July 2015 to June 2016 combined staff interviews, administrative records, and self-administered time-and-motion records from 140 clinic staff. Costs in 2016 US dollars per person per year. Extracted content in [raw/10.1097/qad.0000000000001958/](../raw/10.1097/qad.0000000000001958/).
+Source: [shade-2018](https://doi.org/10.1097/QAD.0000000000001958)
+
+Micro-costing of the streamlined HIV care model in the 16 SEARCH trial intervention communities (NCT01864603), covering 17 health facilities across West Uganda, East Uganda and Kenya. Two-week site visits from July 2015 to June 2016 combined staff interviews, administrative records, and self-administered time-and-motion records from 140 clinic staff. Costs in 2016 US dollars per person per year.
 
 ## Key points
 

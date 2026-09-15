@@ -10,7 +10,9 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:24
 ---
 
-Systematic review (PubMed to January 2012, plus African Index Medicus and Google Scholar) of quantitative studies in sub-Saharan Africa relating age at first sex to biologically confirmed HIV infection in women from the general population. Twenty-five studies from 128 screened full texts, mostly cross-sectional, across South Africa, Zimbabwe, Tanzania, Cameroon, Kenya, Rwanda, Malawi, Nigeria, Ghana, and a four-city study (Cotonou, Yaoundé, Kisumu, Ndola). Extracted text and tables sit in `raw/10.1111/aji.12043`.
+Source: [stockl-2013](https://doi.org/10.1111/aji.12043)
+
+Systematic review (PubMed to January 2012, plus African Index Medicus and Google Scholar) of quantitative studies in sub-Saharan Africa relating age at first sex to biologically confirmed HIV infection in women from the general population. Twenty-five studies from 128 screened full texts, mostly cross-sectional, across South Africa, Zimbabwe, Tanzania, Cameroon, Kenya, Rwanda, Malawi, Nigeria, Ghana, and a four-city study (Cotonou, Yaoundé, Kisumu, Ndola).
 
 ## Relevance to project
 

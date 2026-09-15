@@ -10,7 +10,9 @@ tags: [sti, diagnostics]
 updated: 2026-09-09 22:52
 ---
 
-WHO Department of Reproductive Health and Research report combining four landscape analyses of point-of-care tests (2014, 2015, updated December 2016) with target product profiles agreed by a 32-member international expert group across two technical consultations, using an adapted Delphi method. Covers syphilis, *Neisseria gonorrhoeae*, *Chlamydia trachomatis*, *Trichomonas vaginalis* and HPV, specifying 28 analytical and operational characteristics each at a minimal and an optimal level. Extracted content in [raw/toskin_advancing_2017/](../raw/toskin_advancing_2017/).
+Source: [toskin-2017](https://doi.org/10.1136/sextrans-2016-053071)
+
+WHO Department of Reproductive Health and Research report combining four landscape analyses of point-of-care tests (2014, 2015, updated December 2016) with target product profiles agreed by a 32-member international expert group across two technical consultations, using an adapted Delphi method. Covers syphilis, *Neisseria gonorrhoeae*, *Chlamydia trachomatis*, *Trichomonas vaginalis* and HPV, specifying 28 analytical and operational characteristics each at a minimal and an optimal level.
 
 ## Summary
 

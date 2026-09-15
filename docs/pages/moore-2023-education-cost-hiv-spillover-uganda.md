@@ -10,13 +10,14 @@ tags: [hiv, rakai, care-seeking]
 updated: 2026-09-10 11:19
 ---
 
+Source: [moore-2023](https://doi.org/10.1080/17441692.2023.2221973)
+
 Team-based ethnographic fieldwork carried out in Rakai District between June and August
 2019, part of a larger study of how the transition to adulthood shapes HIV vulnerability.
 The argument is that Uganda's Universal Primary Education policy, in force since 1997,
 removed tuition at government primary schools but left families carrying uniforms,
 textbooks, meals and exam fees, and made attendance a legal obligation, so that the search
-for school fees pushes household members into arrangements that raise HIV risk. Extracted
-text sits at `raw/10.1080/17441692.2023.2221973/content.md`.
+for school fees pushes household members into arrangements that raise HIV risk.
 
 ## Relevance to project
 

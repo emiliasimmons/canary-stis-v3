@@ -10,12 +10,13 @@ tags: [rakai, hiv, care-seeking, sexual-networks]
 updated: 2026-09-10 10:30
 ---
 
+Source: [wagman-2014](https://doi.org/10.1016/s2214-109x(14)70344-4)
+
 Comparative trial of the Safe Homes and Respect for Everyone (SHARE) intimate partner
 violence intervention nested in the Rakai Community Cohort Study, using cluster
 assignments inherited from an earlier family-planning trial. 11,448 residents aged 15-49
 were enrolled between February 2005 and June 2006, 5,337 in four intervention clusters and
 6,111 in seven control clusters, with follow-up surveys at roughly 16 and 35 months.
-Extracted text at `raw/10.1016/s2214-109x(14)70344-4/content.md`.
 
 ## Relevance to project
 

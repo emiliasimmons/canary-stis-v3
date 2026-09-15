@@ -10,6 +10,8 @@ tags: [hiv, rakai, care-seeking]
 updated: 2026-09-10 10:34
 ---
 
+Source: [chang-2016](https://doi.org/10.1016/s2352-3018(16)30034-0)
+
 Observational study in Lancet HIV using Rakai Community Cohort Study data collected August
 2011 to May 2013. All 40 surveyed communities were classified as agrarian (27), trading (9)
 or lakeside fishing (4), HIV prevalence was mapped with Bayesian methods, and risk factors,

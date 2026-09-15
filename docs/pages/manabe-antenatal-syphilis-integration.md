@@ -10,13 +10,15 @@ tags: [sti, hiv, diagnostics, partner-notification]
 updated: 2026-09-10 00:11
 ---
 
+Source: [manabe-2015](https://doi.org/10.1186/s12879-014-0739-1)
+
 A single-site descriptive cohort at the Infectious Diseases Institute in Kampala, Uganda,
 testing whether syphilis screening can be bolted onto an antenatal clinic already embedded
 in an adult HIV clinic. Consecutive HIV-positive pregnant women were enrolled October 2010
 to December 2011, screened with lab-based rapid plasma reagin (RPR), treated on site with
 2.4 MU benzathine penicillin if positive, and given an anonymized slip to pass to their
 partner. Treponemal antibody testing (Determine Syphilis TP) was run retrospectively on
-batched samples. Extracted content sits in `raw/10.1186/s12879-014-0739-1`.
+batched samples.
 
 ## Relevance to project
 

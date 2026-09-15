@@ -10,7 +10,9 @@ tags: [hiv, sexual-networks, coinfection, sti]
 updated: 2026-09-10 00:26
 ---
 
-A four-page editorial comment in *AIDS* (2001) written around the Carletonville youth survey published in the same issue. It gathers community-based prevalence data from South Africa, Kenya, Zimbabwe, Zambia and Tanzania to argue that the sex gap in HIV among 15-24-year-olds is real rather than a survey artefact, and that its main driver is young women partnering with older, already-exposed men. Extracted content in `raw/10.1097/00002030-200105040-00014/`.
+Source: [laga-2001](https://doi.org/10.1097/00002030-200105040-00014)
+
+A four-page editorial comment in *AIDS* (2001) written around the Carletonville youth survey published in the same issue. It gathers community-based prevalence data from South Africa, Kenya, Zimbabwe, Zambia and Tanzania to argue that the sex gap in HIV among 15-24-year-olds is real rather than a survey artefact, and that its main driver is young women partnering with older, already-exposed men.
 
 ## Relevance to project
 

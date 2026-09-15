@@ -10,6 +10,8 @@ tags: [rakai, hiv]
 updated: 2026-09-10 10:02
 ---
 
+Source: [kong-2016](https://doi.org/10.1001/jama.2016.7292)
+
 Ecological analysis of person-level data from population-based surveys in 45 rural Rakai
 communities, 1999-2013, examining whether increasing community-level coverage of medical
 male circumcision (MMC) and antiretroviral therapy (ART) was associated with reduced

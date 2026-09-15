@@ -10,7 +10,9 @@ tags: [rakai, hiv, sti, coinfection]
 updated: 2026-09-10 00:32
 ---
 
-The Rakai arm of the three adult male circumcision trials. 4996 HIV-negative, uncircumcised men aged 15-49 in rural Rakai district, Uganda, randomised to immediate circumcision (n=2474) or circumcision delayed 24 months (n=2522), with HIV testing, examination and behavioural interview at 6, 12 and 24 months. NIAID stopped the trial early for efficacy on 12 December 2006, at roughly 73% of anticipated person-time. Extracted text and tables are in `../raw/10.1016/s0140-6736(07)60313-4/`.
+Source: [gray-2007](https://doi.org/10.1016/S0140-6736(07)60313-4)
+
+The Rakai arm of the three adult male circumcision trials. 4996 HIV-negative, uncircumcised men aged 15-49 in rural Rakai district, Uganda, randomised to immediate circumcision (n=2474) or circumcision delayed 24 months (n=2522), with HIV testing, examination and behavioural interview at 6, 12 and 24 months. NIAID stopped the trial early for efficacy on 12 December 2006, at roughly 73% of anticipated person-time.
 
 ## Relevance to project
 

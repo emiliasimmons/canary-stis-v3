@@ -10,7 +10,9 @@ tags: [prep, hiv, sti]
 updated: 2026-09-10 00:25
 ---
 
-Phase 3, randomized, double-blind, placebo-controlled trial of a monthly silicone vaginal ring containing 25 mg dapivirine, a non-nucleoside reverse-transcriptase inhibitor, in 2629 HIV-1-seronegative women aged 18-45 at 15 sites in Malawi, South Africa, Uganda and Zimbabwe, enrolled August 2012 to June 2015. Extracted text in `raw/10.1056/nejmoa1506110`.
+Source: [baeten-2016](https://doi.org/10.1056/NEJMoa1506110)
+
+Phase 3, randomized, double-blind, placebo-controlled trial of a monthly silicone vaginal ring containing 25 mg dapivirine, a non-nucleoside reverse-transcriptase inhibitor, in 2629 HIV-1-seronegative women aged 18-45 at 15 sites in Malawi, South Africa, Uganda and Zimbabwe, enrolled August 2012 to June 2015.
 
 ## Relevance to project
 

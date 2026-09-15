@@ -10,7 +10,9 @@ tags: [prep, sti, hiv, care-seeking, diagnostics]
 updated: 2026-09-10 00:37
 ---
 
-POWER was a prospective implementation-science evaluation of oral tenofovir-based PrEP offered as a routine service to sexually active HIV-negative adolescent girls and young women (AGYW) aged 16-25 at family planning, youth and primary-care clinics in Kisumu (Kenya), Cape Town and Johannesburg (South Africa), June 2017 to September 2020, n = 2550. It measured how far women got along the PrEP cascade with no travel reimbursement and no active retention outreach, and tested for chlamydia and gonorrhoea at enrolment and 6 months. Extracted text sits in `raw/10.1002/jia2.25962`.
+Source: [celum-2022](https://doi.org/10.1002/jia2.25962)
+
+POWER was a prospective implementation-science evaluation of oral tenofovir-based PrEP offered as a routine service to sexually active HIV-negative adolescent girls and young women (AGYW) aged 16-25 at family planning, youth and primary-care clinics in Kisumu (Kenya), Cape Town and Johannesburg (South Africa), June 2017 to September 2020, n = 2550. It measured how far women got along the PrEP cascade with no travel reimbursement and no active retention outreach, and tested for chlamydia and gonorrhoea at enrolment and 6 months.
 
 ## Relevance to project
 

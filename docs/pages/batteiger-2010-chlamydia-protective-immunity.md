@@ -10,13 +10,15 @@ tags: [sti, immunity, coinfection]
 updated: 2026-09-10 00:12
 ---
 
+Source: [batteiger-2010](https://doi.org/10.1086/652400)
+
 Narrative review commissioned for the CDC Chlamydia Immunology and Control Expert Advisory
 Meeting (April 2008), published in a *Journal of Infectious Diseases* supplement. It asks
 whether humans acquire protective immunity to genital *Chlamydia trachomatis*, whether
 prompt antibiotic treatment attenuates that immunity, and which laboratory measures track
 it. An Ovid Medline search (1950 onward, English, ages 1-65) narrowed 1287 titles to 209,
 then to 108 read in detail by four reviewers. No human challenge studies exist, so every
-inference is indirect. Extracted text in `raw/10.1086/652400`.
+inference is indirect.
 
 ## Relevance to project
 

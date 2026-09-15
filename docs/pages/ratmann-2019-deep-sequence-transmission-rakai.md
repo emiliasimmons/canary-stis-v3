@@ -10,12 +10,13 @@ tags: [hiv, rakai, sexual-networks]
 updated: 2026-09-10 00:31
 ---
 
+Source: [ratmann-2019](https://doi.org/10.1038/s41467-019-09139-4)
+
 The methods paper establishing that HIV-1 deep-sequence phylogenetics (phyloscanner) can
 be scaled from suspected transmission pairs to a whole population-based sample, and that
 the direction of transmission can be recovered without assuming anything about the
 epidemic. The data are the Rakai Community Cohort Study, 40 communities surveyed August
 2011 to January 2015, so the population is the same one canary-stis will calibrate to.
-Extracted content in `raw/10.1038/s41467-019-09139-4`.
 
 ## Relevance to project
 

@@ -27,3 +27,6 @@ description: Tracing and notifying sexual partners of diagnosed individuals, its
 - [Male-Partner Treatment to Prevent Recurrence of Bacterial Vaginosis (StepUp)](../pages/stepup-bv-partner-treatment.md) -- Randomized trial in Australian couples where treating the male partner cut 12-week bacterial vaginosis recurrence from 63% to 35%, the strongest partner-treatment effect size available.
 - [Assisted HIV partner notification services in resource-limited settings: experiences and achievements from Cameroon](../pages/tih-2019-apns-cameroon.md) -- Nine years of programmatic assisted partner notification in Cameroon, giving yield per index case, cascade attrition, and social-harm rates.
 - [Time to HIV testing of sexual contacts identified by HIV-positive index clients in Siaya County, Kenya](../pages/wekesa-2020-time-to-test-partner-services-siaya.md) -- Routine partner-services program data on 6,845 elicited sexual contacts; median 14.5 days from notification to HIV test, with only 48.8% projected to ever test over 1.25 years.
+
+### Syntheses (1)
+- [Partner notification and its omission from canary-stis](../pages/partner-notification-pathway.md) -- Notification finds contacts at 4-14x general-testing positivity but reaches about half of those named, and both the concentration and the reinfection it interrupts are already represented in the model.

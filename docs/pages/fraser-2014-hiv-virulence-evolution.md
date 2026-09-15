@@ -10,12 +10,13 @@ tags: [hiv, modeling]
 updated: 2026-09-10 00:35
 ---
 
+Source: [fraser-2014](https://doi.org/10.1126/science.1243727)
+
 A *Science* review of why untreated HIV-1 infection progresses fast in some people and
 slowly in others, framed as a conflict between selection inside the host and selection
 between hosts. Its organising quantity is set-point viral load (SPVL), the roughly stable
 plasma viral load during asymptomatic infection, which ranges from under 20 to about 10^6
-virions per mL and predicts both infectiousness and time to AIDS. The extracted text is at
-`raw/10.1126/science.1243727/content.md`.
+virions per mL and predicts both infectiousness and time to AIDS.
 
 ## Relevance to project
 

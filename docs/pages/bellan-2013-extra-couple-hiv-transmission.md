@@ -10,6 +10,8 @@ tags: [hiv, sexual-networks, modeling]
 updated: 2026-09-10 09:47
 ---
 
+Source: [bellan-2013](https://doi.org/10.1016/s0140-6736(12)61960-6)
+
 Bellan et al. built a mechanistic couple-transmission model fitted to DHS data from
 27,201 cohabiting couples (men 15--59, women 15--49) in 18 sub-Saharan African countries
 (surveys 2003--2011). The model separates the probability that a seropositive individual in
@@ -19,8 +21,6 @@ country-specific HIV prevalence trends, and age-at-seroconversion survival estim
 Parameters were estimated by Bayesian MCMC with uninformative priors on transmission
 coefficients and an informative log-normal prior on the female-to-male vs. male-to-female
 within-couple transmission ratio (centered at 1, SD 0.5).
-
-Raw source: `raw/10.1016/s0140-6736(12)61960-6/content.md`.
 
 ## Relevance to project
 

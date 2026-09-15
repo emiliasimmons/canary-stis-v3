@@ -10,6 +10,8 @@ tags: [hiv, rakai, sexual-networks, phylogenetics]
 updated: 2026-09-10 11:17
 ---
 
+Source: [bbosa-2020](https://doi.org/10.3390/v12030331)
+
 A viral deep-sequence phylogenetic study run by the MRC/UVRI and LSHTM Uganda Research Unit
 in central and southwestern Uganda, distinct from the Rakai Community Cohort Study though
 written by an overlapping group and set up to test the same question. Between August 2014
@@ -19,8 +21,7 @@ ten Lake Victoria fisherfolk (FF) communities and three sites recruiting women a
 of infection and their male clients (WHR). Deep sequencing of the virus in each person
 yields many sequence fragments rather than one consensus sequence, and the ordering of
 those fragments in a phylogeny carries information about who infected whom, so the analysis
-recovers the direction of transmission and not only the fact of linkage. The extracted text
-and tables sit at `raw/10.3390/v12030331`.
+recovers the direction of transmission and not only the fact of linkage.
 
 ## Relevance to project
 

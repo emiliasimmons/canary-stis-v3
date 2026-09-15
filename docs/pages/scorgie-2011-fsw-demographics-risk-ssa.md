@@ -9,6 +9,8 @@ tags: [sexual-networks, hiv, sti]
 updated: 2026-09-10 10:01
 ---
 
+Source: [scorgie-2011](https://doi.org/10.1007/s10461-011-9985-z)
+
 Systematic review characterising female sex workers (FSW) across sub-Saharan Africa:
 demographics, partnership patterns, condom use, STI and HIV prevalence, and substance use.
 No abstract was available for this entry; content is drawn from the title and bib metadata,

@@ -10,7 +10,9 @@ tags: [hiv, sti, coinfection, sexual-networks]
 updated: 2026-09-10 00:21
 ---
 
-A cohort analysis nested in the MIRA diaphragm trial (Umkomaas and Botha's Hill, southern Durban, South Africa, September 2002 to September 2005). 3492 sexually active women aged 18-49 were screened and cross-sectionally analysed for HIV prevalence; the 1485 who were HIV-negative and enrolled were followed roughly 24 months for seroconversion. The paper reports risk factors for prevalent and incident HIV and the population attributable risk (PAR) for each. Extracted text sits in `raw/10.1136/bmjopen-2011-000285/`.
+Source: [wand-2012](https://doi.org/10.1136/bmjopen-2011-000285)
+
+A cohort analysis nested in the MIRA diaphragm trial (Umkomaas and Botha's Hill, southern Durban, South Africa, September 2002 to September 2005). 3492 sexually active women aged 18-49 were screened and cross-sectionally analysed for HIV prevalence; the 1485 who were HIV-negative and enrolled were followed roughly 24 months for seroconversion. The paper reports risk factors for prevalent and incident HIV and the population attributable risk (PAR) for each.
 
 ## Relevance to project
 

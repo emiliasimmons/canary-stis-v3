@@ -10,14 +10,15 @@ tags: [rakai, hiv]
 updated: 2026-09-10 00:37
 ---
 
+Source: [khalifa-2023](https://doi.org/10.1136/bmjopen-2022-071108)
+
 Since 2008 the Rakai Community Cohort Study censuses everyone inside its surveillance
 boundaries but only surveys residents of households already on the books before that year.
 People who move into newly built structures as entirely new households are counted and then
 left out of the interview and blood draw. This paper asks what that exclusion costs the
 cohort's headline HIV numbers, using round 19 (June 2018 to November 2020, 33 inland rural
 and peri-urban communities) and an ensemble machine-learning model to impute serostatus and
-viremia for the excluded group. Extracted text and tables sit in
-`raw/10.1136/bmjopen-2022-071108`.
+viremia for the excluded group.
 
 ## Relevance to project
 

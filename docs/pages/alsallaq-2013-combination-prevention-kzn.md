@@ -10,6 +10,8 @@ tags: [hiv, modeling, care-seeking]
 updated: 2026-09-10 00:25
 ---
 
+Source: [alsallaq-2013](https://doi.org/10.1371/journal.pone.0054575)
+
 A deterministic compartmental model of heterosexual HIV transmission in KwaZulu-Natal, South
 Africa (adult prevalence about 23%), used to project the population-level incidence effect of
 four prevention components delivered together: community home-based HIV testing reaching 90% of
@@ -18,7 +20,7 @@ positive test, medical male circumcision, and ART. The population is stratified 
 circumcision status, and sexual risk group, with staged infectiousness by CD4. It is fitted by
 rejection sampling to antenatal and household HIV prevalence, one longitudinal incidence
 estimate, and province-wide ART coverage; the uncertainty ranges quoted are interquartile
-ranges across accepted parameter sets. Extracted content in `raw/10.1371/journal.pone.0054575`.
+ranges across accepted parameter sets.
 
 ## Relevance to project
 

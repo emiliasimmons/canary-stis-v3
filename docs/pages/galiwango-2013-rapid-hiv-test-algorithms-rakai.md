@@ -10,6 +10,8 @@ tags: [diagnostics, hiv, rakai]
 updated: 2026-09-10 10:34
 ---
 
+Source: [galiwango-2013](https://doi.org/10.1016/j.jviromet.2013.04.003)
+
 Cross-sectional diagnostic accuracy evaluation in the Journal of Virological Methods.
 Participants in Rakai, Uganda were tested by the Ugandan Ministry of Health parallel rapid
 algorithm using Determine, Stat-Pak and Uni-Gold, then by EIA with western blot

@@ -10,7 +10,9 @@ tags: [hiv, rakai, care-seeking]
 updated: 2026-09-10 11:19
 ---
 
-Cross-sectional analysis linking Rakai Community Cohort Study survey and surveillance records to the Rakai Health Sciences Program clinical database (OpenMRS, covering 19 government clinics) for the 3,666 HIV-positive participants identified between September 2013 and December 2015. The population spans 41 agrarian, trading and fishing communities in Rakai District. People who died or out-migrated before December 2015 were removed from the denominator. Extracted content in [raw/10.7448/ias.20.1.21590/](../raw/10.7448/ias.20.1.21590/).
+Source: [billioux-2017](https://doi.org/10.7448/IAS.20.1.21590)
+
+Cross-sectional analysis linking Rakai Community Cohort Study survey and surveillance records to the Rakai Health Sciences Program clinical database (OpenMRS, covering 19 government clinics) for the 3,666 HIV-positive participants identified between September 2013 and December 2015. The population spans 41 agrarian, trading and fishing communities in Rakai District. People who died or out-migrated before December 2015 were removed from the denominator.
 
 ## Relevance to project
 

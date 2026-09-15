@@ -10,6 +10,8 @@ tags: [rakai, hiv, care-seeking]
 updated: 2026-09-10 10:30
 ---
 
+Source: [nakyanjo-2018](https://doi.org/10.1080/09540121.2018.1500009)
+
 In-depth interviews with 27 women in fishing and trading communities in Rakai, Uganda,
 covering perceptions of medical male circumcision and the influence women exert on whether
 their partners get circumcised. Participants included women married to circumcised and to

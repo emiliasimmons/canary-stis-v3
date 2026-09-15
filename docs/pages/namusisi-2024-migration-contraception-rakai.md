@@ -10,12 +10,14 @@ tags: [rakai, hiv, care-seeking]
 updated: 2026-09-10 00:35
 ---
 
+Source: [namusisi-2024](https://doi.org/10.1186/s12978-024-01796-z)
+
 A cross-sectional analysis of Rakai Community Cohort Study survey round 15 (July 2011 to
 May 2013, 30 agrarian and semi-urban trading communities in south-central Uganda), asking
 whether recent in-migration and HIV serostatus interact to shape unmet demand for modern
 contraception. The analytic sample is 3,417 sexually active women aged 15-49 who did not
 intend to become pregnant in the next 12 months, drawn from 6,083 women in 10,960 R15
-participants. Extracted text sits in `raw/10.1186/s12978-024-01796-z`.
+participants.
 
 The primary outcome is unsatisfied contraceptive demand: non-use of pill, condom,
 Depo-Provera, IUD, implant, or tubal ligation among women who wish to avoid pregnancy.

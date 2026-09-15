@@ -10,6 +10,8 @@ tags: [partner-notification, hiv]
 updated: 2026-09-14 15:37
 ---
 
+Source: [remera-2021](https://doi.org/10.1097/qai.0000000000002878)
+
 > Note: summary derived from the abstract only, not the full source.
 
 Pilot of voluntary assisted partner notification (VAPN) in 23 health facilities in Kigali, Rwanda, October 2018 to December 2019. Index cases were persons with a new HIV diagnosis before antiretroviral therapy initiation, or persons already on ART, who reported sexual partners of unknown HIV status. Three referral modalities were offered: contract referral (the index client agrees to notify partners within a set period, after which the provider follows up), provider referral (a health worker notifies partners directly), and dual referral (client and health worker together). A Bayesian hierarchical logistic regression, adjusted for factors chosen by Bayesian variable selection, estimated the association between modality and the odds of identifying an HIV-positive partner.

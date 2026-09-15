@@ -10,6 +10,8 @@ tags: [hiv, rakai, sexual-networks, modeling]
 updated: 2026-09-10 00:31
 ---
 
+Source: [monod-2023](https://doi.org/10.1101/2023.03.16.23287351)
+
 medRxiv preprint combining the Rakai Community Cohort Study incidence cohort with
 longitudinal HIV deep-sequence phylogenetics across nine survey rounds (rounds 10-18,
 September 2003 to May 2018) in 36 inland communities of south-central Uganda. Fishing

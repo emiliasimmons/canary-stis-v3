@@ -10,7 +10,9 @@ tags: [prep, hiv, sti]
 updated: 2026-09-10 00:33
 ---
 
-Phase 3, double-blind, randomized, active-controlled trial of subcutaneous lenacapavir (927 mg every 26 weeks) against daily oral emtricitabine-tenofovir disoproxil fumarate (F/TDF), in 3271 cisgender gay, bisexual and other men, transgender women, transgender men and gender-nonbinary people aged 16 and over having condomless receptive anal sex with partners assigned male at birth. 92 sites across the United States, Brazil, Peru, Thailand, South Africa, Argentina and Mexico; screening from June 2021, randomization completed December 2023, stopped early at the interim analysis in September 2024. Funded by Gilead Sciences. Extracted text in `raw/10.1056/nejmoa2411858`.
+Source: [kelley-2024](https://doi.org/10.1056/NEJMoa2411858)
+
+Phase 3, double-blind, randomized, active-controlled trial of subcutaneous lenacapavir (927 mg every 26 weeks) against daily oral emtricitabine-tenofovir disoproxil fumarate (F/TDF), in 3271 cisgender gay, bisexual and other men, transgender women, transgender men and gender-nonbinary people aged 16 and over having condomless receptive anal sex with partners assigned male at birth. 92 sites across the United States, Brazil, Peru, Thailand, South Africa, Argentina and Mexico; screening from June 2021, randomization completed December 2023, stopped early at the interim analysis in September 2024. Funded by Gilead Sciences.
 
 There was no placebo arm. The comparator for the primary analysis was a counterfactual background incidence estimated cross-sectionally from the 4634 screened participants with an HIV test result, using a recency assay (LAg-EIA avidity) and a recent infection testing algorithm.
 

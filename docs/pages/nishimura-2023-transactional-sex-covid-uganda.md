@@ -10,12 +10,13 @@ tags: [sexual-networks, rakai]
 updated: 2026-09-10 11:18
 ---
 
+Source: [nishimura-2024](https://doi.org/10.1080/13691058.2023.2238796)
+
 Semi-structured in-depth interviews conducted by phone between November 2021 and February
 2022 with 26 sexually active men aged 18-49 in Rakai District, recruited from prior Rakai
 Community Cohort Study (RCCS) participants who had agreed to be recontacted. The question is
 how the two Ugandan COVID-19 lockdowns, from March 2020 and from June 2021, changed men's
-non-marital sexual partnerships. Extracted text sits at
-`raw/10.1080/13691058.2023.2238796/content.md`.
+non-marital sexual partnerships.
 
 Transactional sex is defined as in the RCCS survey item, a relationship dependent on the
 implicit exchange of money, favours or goods for sex, spanning one-night encounters through

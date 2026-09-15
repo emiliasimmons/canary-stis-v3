@@ -10,7 +10,9 @@ tags: [hiv, rakai, sexual-networks]
 updated: 2026-09-10 00:34
 ---
 
-Three independent analyses of the same Rakai Community Cohort Study survey round (RCCS R13, June 2008 to December 2009, 14,594 participants aged 15-49 in 8,899 households across 46 communities) asking where new HIV infections come from geographically: spatial clustering of seropositive households, phylogenetics of *gag* and *env* sequences from 1,099 ART-naive seropositive participants, and an egocentric transmission model fitted to self-reported partner locations. Extracted text and tables in `../raw/10.1371/journal.pmed.1001610`.
+Source: [grabowski-2014](https://doi.org/10.1371/journal.pmed.1001610)
+
+Three independent analyses of the same Rakai Community Cohort Study survey round (RCCS R13, June 2008 to December 2009, 14,594 participants aged 15-49 in 8,899 households across 46 communities) asking where new HIV infections come from geographically: spatial clustering of seropositive households, phylogenetics of *gag* and *env* sequences from 1,099 ART-naive seropositive participants, and an egocentric transmission model fitted to self-reported partner locations.
 
 Overall HIV seroprevalence was 12.2% (1,786/14,594) and incidence 1.2 per 100 person-years (95% CI 1.0-1.3, 189 incident cases), with 70% coverage of the censused eligible population.
 

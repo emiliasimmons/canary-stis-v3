@@ -10,10 +10,11 @@ tags: [sti, diagnostics]
 updated: 2026-09-10 09:45
 ---
 
+Source: [wi-2019](https://doi.org/10.1002/jia2.25343)
+
 A review commissioned by WHO's Human Reproduction Programme that updates the Zemouri et al.
 (2016) meta-analysis of vaginal discharge syndromic management and surveys POCTs
-commercially available or in the pipeline for CT, NG, TV and syphilis. The raw extraction
-is at `raw/10.1002/jia2.25343/content.md`.
+commercially available or in the pipeline for CT, NG, TV and syphilis.
 
 ## Relevance to project
 

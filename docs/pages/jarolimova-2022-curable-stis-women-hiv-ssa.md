@@ -10,6 +10,8 @@ tags: [sti, hiv, coinfection]
 updated: 2026-09-10 10:22
 ---
 
+Source: [jarolimova-2022](https://doi.org/10.1097/qad.0000000000003163)
+
 Cataloged from abstract; the full text has not been extracted.
 
 Systematic review and meta-analysis of 67 studies reporting prevalence of curable STIs

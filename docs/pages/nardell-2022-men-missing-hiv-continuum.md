@@ -10,13 +10,14 @@ tags: [hiv, care-seeking]
 updated: 2026-09-10 00:18
 ---
 
+Source: [nardell-2022](https://doi.org/10.1002/jia2.25889)
+
 A systematic review pairing a meta-analysis of men's attainment of the UNAIDS 95-95-95
 goals in sub-Saharan Africa with a meta-synthesis of qualitative work on why men stay away
 from HIV care. PubMed and Embase, articles published 2014 through 16 October 2020, data
 collected from 2009 onward; 129 studies in the meta-analysis covering 1,564,019
 participants in 21 countries, and 40 qualitative studies covering 2683 participants in 10
-countries. Uganda contributed 18 of the 129 quantitative studies. Extracted content in
-`raw/10.1002/jia2.25889`.
+countries. Uganda contributed 18 of the 129 quantitative studies.
 
 ## Relevance to project
 

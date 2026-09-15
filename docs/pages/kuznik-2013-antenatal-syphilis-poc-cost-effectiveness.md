@@ -10,7 +10,9 @@ tags: [diagnostics, economics, sti]
 updated: 2026-09-10 10:30
 ---
 
-Decision analytic model, one tree per country for 43 sub-Saharan African countries, comparing universal antenatal screening with an immunochromatographic strip (ICS) treponemal rapid test plus three benzathine penicillin injections against the current national screening rate. National health system perspective, 2011 US dollars, benefits restricted to the infant. Extracted content in [raw/10.1371/journal.pmed.1001545/](../raw/10.1371/journal.pmed.1001545/).
+Source: [kuznik-2013](https://doi.org/10.1371/journal.pmed.1001545)
+
+Decision analytic model, one tree per country for 43 sub-Saharan African countries, comparing universal antenatal screening with an immunochromatographic strip (ICS) treponemal rapid test plus three benzathine penicillin injections against the current national screening rate. National health system perspective, 2011 US dollars, benefits restricted to the infant.
 
 ## Key points
 

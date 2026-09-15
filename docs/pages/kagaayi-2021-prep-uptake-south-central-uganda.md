@@ -10,12 +10,13 @@ tags: [hiv, prep, rakai]
 updated: 2026-09-10 09:47
 ---
 
-Programme evaluation of oral PrEP (TDF/3TC) rollout through government clinics in
-HIV-hyperendemic fishing villages and trading centres across Rakai, Kyotera, Masaka, and
+Source: [kagaayi-2020](https://doi.org/10.1002/jia2.25588)
+
+Programme evaluation of oral PrEP (TDF/3TC) rollout through government clinics in HIV-
+hyperendemic fishing villages and trading centres across Rakai, Kyotera, Masaka, and
 Lyantonde districts, April 2018 to March 2019. Enrolled 2,536 HIV-negative adults at
 substantial risk, drawn from sex workers (53%), fisher folk (21%), truck drivers (13%),
-HIV-discordant couples (8%), and others. Raw content in
-[raw/10.1002/jia2.25588/content.md](../raw/10.1002/jia2.25588/content.md).
+HIV-discordant couples (8%), and others.
 
 ## Relevance to project
 

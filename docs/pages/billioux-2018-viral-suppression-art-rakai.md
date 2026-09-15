@@ -10,6 +10,8 @@ tags: [rakai, hiv]
 updated: 2026-09-10 10:21
 ---
 
+Source: [billioux-2018](https://doi.org/10.1097/qad.0000000000001761)
+
 Cross-sectional analysis of ART uptake, viral suppression, and geospatial patterns of
 facility use among 1,554 HIV-positive participants in the RCCS, February 2015 to September
 2016. Cataloged from abstract; the full text has not been extracted.

@@ -10,6 +10,8 @@ tags: [hiv, modeling]
 updated: 2026-09-10 10:36
 ---
 
+Source: [cori-2015](https://doi.org/10.1097/QAD.0000000000000854)
+
 Analysis of the AIDS Therapy Evaluation in the Netherlands (ATHENA) cohort, restricted to people whose seroconversion date could be placed within one year and who had intensive clinical follow-up before starting treatment. CD4 trajectories were fitted with a monotonic spline separating a smoothed underlying decline from measurement noise, then summarised as time spent in four categories. Written from the published abstract; no full text is held on this machine.
 
 ## Key points

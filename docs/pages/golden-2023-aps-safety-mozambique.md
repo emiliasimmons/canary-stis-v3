@@ -10,6 +10,8 @@ tags: [partner-notification, hiv]
 updated: 2026-09-14 15:37
 ---
 
+Source: [golden-2023](https://doi.org/10.1097/qai.0000000000003203)
+
 > Note: summary derived from the abstract only, not the full source.
 
 Prospective programme evaluation of assisted partner notification services (APS) for newly diagnosed HIV-positive individuals at three public health centres in Maputo, Mozambique, 2016 to 2019. Counsellors offered APS to new diagnoses and prospectively assessed adverse events (AEs): being pushed, abandoned, or yelled at; being hit; and loss of financial support or expulsion from the house. It is one of the few reports of APS safety data from a routine African public health programme, alongside cascade effectiveness.

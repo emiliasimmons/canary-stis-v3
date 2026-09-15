@@ -10,11 +10,11 @@ tags: [hiv, rakai, sexual-networks]
 updated: 2026-09-10 00:22
 ---
 
-medRxiv preprint reporting HIV trends among adolescents and young adults (15-24) in the
-Rakai Community Cohort Study, nine survey rounds from 2005 to 2020 across the 30
-continuously followed communities, 35,938 person-rounds (19,473 for women, 16,510 for
-men). Extracted content in [raw/10.1101/2025.01.07.25320118/](../raw/10.1101/2025.01.07.25320118/),
-with the round-by-round trend tables under `tables/`.
+Source: [grilo-2025](https://doi.org/10.1101/2025.01.07.25320118)
+
+medRxiv preprint reporting HIV trends among adolescents and young adults (15-24) in the Rakai
+Community Cohort Study, nine survey rounds from 2005 to 2020 across the 30 continuously followed
+communities, 35,938 person-rounds (19,473 for women, 16,510 for men).
 
 ## Relevance to project
 

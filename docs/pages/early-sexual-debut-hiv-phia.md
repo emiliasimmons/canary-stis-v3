@@ -10,12 +10,14 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:24
 ---
 
+Source: [he-2024](https://doi.org/10.1007/s10461-024-04343-w)
+
 A pooled analysis of Population-Based HIV Impact Assessment (PHIA) household surveys run in
 sub-Saharan Africa between 2015 and 2019, asking whether first sex before age 18 predicts
 *recent* HIV infection rather than prevalent infection. Eleven countries, 99,672 records
 aged 10-24 (55,249 female, 44,423 male), carrying 2,687 prevalent cases and 104 recent
 infections. Recency comes from a limiting-antigen avidity assay converted to incidence by
-the Kassanjee estimator. Extracted text sits in `raw/10.1007/s10461-024-04343-w`.
+the Kassanjee estimator.
 
 ## Relevance to project
 

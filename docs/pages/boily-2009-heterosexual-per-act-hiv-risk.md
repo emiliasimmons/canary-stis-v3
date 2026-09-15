@@ -10,7 +10,9 @@ tags: [hiv, coinfection]
 updated: 2026-09-10 10:35
 ---
 
-Systematic review and random-effects meta-analysis of empirical per-act heterosexual HIV-1 transmission probabilities, searched to September 2008, covering 43 publications on 25 distinct study populations, of which 26 studies entered the main pooled analysis. Study designs were retrospective partner, prospective serodiscordant couple, and simple prospective or cross-sectional studies where exposure was inferred from partner-pool prevalence. Meta-regression on log-transformed estimates was used to explain heterogeneity. Extracted content in [raw/10.1016/s1473-3099(09)70021-0/](../raw/10.1016/s1473-3099(09)70021-0/).
+Source: [boily-2009](https://doi.org/10.1016/S1473-3099(09)70021-0)
+
+Systematic review and random-effects meta-analysis of empirical per-act heterosexual HIV-1 transmission probabilities, searched to September 2008, covering 43 publications on 25 distinct study populations, of which 26 studies entered the main pooled analysis. Study designs were retrospective partner, prospective serodiscordant couple, and simple prospective or cross-sectional studies where exposure was inferred from partner-pool prevalence. Meta-regression on log-transformed estimates was used to explain heterogeneity.
 
 ## Key points
 

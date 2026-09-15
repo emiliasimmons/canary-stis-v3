@@ -10,6 +10,8 @@ tags: [modeling, hiv]
 updated: 2026-09-10 10:21
 ---
 
+Source: [jewell-2021](https://doi.org/10.1097/qai.0000000000002684)
+
 Mathematical modeling study using EMOD-HIV (an agent-based model) to simulate communities
 in the SEARCH trial across Uganda and Kenya. Parameterized with demographic data, HIV
 prevalence, male circumcision coverage, and viral suppression. Cataloged from abstract;

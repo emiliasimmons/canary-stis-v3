@@ -10,6 +10,8 @@ tags: [sexual-networks, care-seeking, rakai]
 updated: 2026-09-14 15:25
 ---
 
+Source: [wagman-2008](https://doi.org/10.1177/0886260508327707)
+
 > Note: summary derived from the abstract only, not the full source.
 
 Qualitative study of sexual coercion among adolescent women aged 15 to 17 in Rakai District, Uganda, drawn from focus group discussions and in-depth interviews with pregnant and never-pregnant sexually active adolescents. It examines the continuum of coercive experiences, the contexts in which they occur, how adolescents perceive and respond to them, and the links between coercion and reproductive-health outcomes including early sexual debut and pregnancy.

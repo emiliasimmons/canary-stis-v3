@@ -10,7 +10,9 @@ tags: [sexual-networks]
 updated: 2026-09-10 00:18
 ---
 
-Cross-sectional household survey of a two-stage stratified random sample of men aged 18-49 in three districts of the Eastern Cape and KwaZulu-Natal, South Africa, measuring self-reported engagement with women in prostitution and with transactional sexual relationships. Analysis covers 1645 sexually active men who answered both sets of questions. Extracted text and tables sit in `raw/10.1186/1471-2458-12-325`.
+Source: [jewkes-2012](https://doi.org/10.1186/1471-2458-12-325)
+
+Cross-sectional household survey of a two-stage stratified random sample of men aged 18-49 in three districts of the Eastern Cape and KwaZulu-Natal, South Africa, measuring self-reported engagement with women in prostitution and with transactional sexual relationships. Analysis covers 1645 sexually active men who answered both sets of questions.
 
 ## Relevance to project
 

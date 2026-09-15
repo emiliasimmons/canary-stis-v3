@@ -10,12 +10,13 @@ tags: [partner-notification, hiv]
 updated: 2026-09-10 10:36
 ---
 
+Source: [lasry-2019](https://doi.org/10.15585/mmwr.mm6821a2)
+
 MMWR report summarising routine programme data from CDC-supported PEPFAR implementing
 partners in 20 countries over six fiscal quarters, 1 October 2016 to 31 March 2018. Index
-testing here means an HIV-positive index patient voluntarily names sexual and
-needle-sharing partners and biological children, who are then contacted by the patient or
-the provider and offered testing. Extracted text sits in
-`../raw/10.15585/mmwr.mm6821a2/`.
+testing here means an HIV-positive index patient voluntarily names sexual and needle-
+sharing partners and biological children, who are then contacted by the patient or the
+provider and offered testing.
 
 ## Relevance to project
 

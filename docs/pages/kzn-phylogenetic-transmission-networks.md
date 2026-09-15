@@ -10,11 +10,12 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:15
 ---
 
+Source: [de-oliveira-2017](https://doi.org/10.1016/S2352-3018(16)30186-2)
+
 A cross-sectional household survey of 9812 randomly selected adults aged 15-49 in two
 uMgungundlovu subdistricts (one urban, one rural) of KwaZulu-Natal, South Africa, enrolled
 June 2014 to June 2015, with HIV-1 *pol* sequencing on everyone above 1000 copies per mL
-and a maximum-likelihood phylogeny used to identify transmission clusters. Extracted text
-and tables sit in `raw/10.1016/s2352-3018(16)30186-2`.
+and a maximum-likelihood phylogeny used to identify transmission clusters.
 
 ## Relevance to project
 

@@ -10,9 +10,10 @@ tags: [hiv, sti, coinfection]
 updated: 2026-09-10 09:47
 ---
 
-Review of the evidence for treating STIs to prevent HIV transmission, covering
-observational data, all nine RCTs conducted through 2010, and explanations for why
-trial results diverged. Raw content at `raw/10.1097/01.aids.0000390704.35642.47/content.md`.
+Source: [hayes-2010](https://doi.org/10.1097/01.aids.0000390704.35642.47)
+
+Review of the evidence for treating STIs to prevent HIV transmission, covering observational
+data, all nine RCTs conducted through 2010, and explanations for why trial results diverged.
 
 ## Relevance to project
 

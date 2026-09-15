@@ -10,7 +10,9 @@ tags: [sti, care-seeking]
 updated: 2026-09-10 10:32
 ---
 
-Cross-sectional study of consecutively enrolled mother-newborn dyads on the maternity ward of Mbarara Regional Referral Hospital, southwestern Uganda, June to September 2015. Mothers were screened by fingerprick TPHA, and TPHA-positives confirmed by venous RPR; newborns of dual-positive mothers were then tested by RPR, with a titre four times the mother's taken as congenital syphilis. Stillbirths and perinatal deaths were excluded. Extracted content in [raw/10.1186/s12884-020-03047-y/](../raw/10.1186/s12884-020-03047-y/).
+Source: [oloya-2020](https://doi.org/10.1186/s12884-020-03047-y)
+
+Cross-sectional study of consecutively enrolled mother-newborn dyads on the maternity ward of Mbarara Regional Referral Hospital, southwestern Uganda, June to September 2015. Mothers were screened by fingerprick TPHA, and TPHA-positives confirmed by venous RPR; newborns of dual-positive mothers were then tested by RPR, with a titre four times the mother's taken as congenital syphilis. Stillbirths and perinatal deaths were excluded.
 
 ## Key points
 

@@ -10,14 +10,16 @@ tags: [hiv, care-seeking]
 updated: 2026-09-10 00:29
 ---
 
+Source: [green-2020](https://doi.org/10.1002/jia2.25470)
+
 A PRISMA systematic review (PROSPERO CRD42018089505) of how the UNAIDS 90-90-90 cascade
-varies by sociodemographic group among adults aged 15 and over living with HIV in
-sub-Saharan Africa. Embase and MEDLINE plus prespecified grey literature (PHIA, DHS, AIS,
+varies by sociodemographic group among adults aged 15 and over living with HIV in sub-
+Saharan Africa. Embase and MEDLINE plus prespecified grey literature (PHIA, DHS, AIS,
 ALPHA, WHO/UNAIDS/MSF reports, conference abstracts) published 2014 to August 2018, with at
 least half the study period falling in the universal-test-and-treat era. 3533 titles
 screened, 92 studies extracted (50 peer-reviewed, 42 grey). No pooled measure of
 association was estimated: the headline numbers are unweighted medians of study-level
-prevalences. Extracted text and tables sit under `raw/10.1002/jia2.25470`.
+prevalences.
 
 The four outcomes are defined by their denominators. Awareness of HIV-positive status
 (first 90) over all people living with HIV; ART use (second 90) over those aware; viral

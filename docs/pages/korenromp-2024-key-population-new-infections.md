@@ -10,11 +10,12 @@ tags: [hiv, modeling, sexual-networks]
 updated: 2026-09-10 00:14
 ---
 
+Source: [korenromp-2024](https://doi.org/10.1097/QAI.0000000000003340)
+
 UNAIDS's 2023-round reconstruction of how adult (15-49) new HIV infections are distributed
 across key populations and their sex partners, for 2010 and 2022, covering 172 countries
 with populations above 250,000. It replaces the earlier annual point estimates, which the
 authors say could not be compared across rounds because the methods kept changing.
-Extracted text and the four main tables are in `../raw/10.1097/qai.0000000000003340`.
 
 Country estimates were pulled from whichever transmission model that country's national
 HIV estimate rested on, under a fixed hierarchy: Goals (71 countries, and all of

@@ -10,11 +10,12 @@ tags: [prep, hiv]
 updated: 2026-09-10 10:30
 ---
 
-Intensive pharmacokinetic study in 17 HIV-negative adults on 30 days of daily oral
-TDF/FTC followed by a 30-day washout, characterising tenofovir-diphosphate (TFV-DP) in red
-blood cells against peripheral blood mononuclear cells and extending the measurement to
-dried blood spots. Raw content in
-[raw/10.1089/aid.2012.0089/content.md](../raw/10.1089/aid.2012.0089/content.md).
+Source: [castillo-mancilla-2012](https://doi.org/10.1089/aid.2012.0089)
+
+Intensive pharmacokinetic study in 17 HIV-negative adults on 30 days of daily oral TDF/FTC
+followed by a 30-day washout, characterising tenofovir-diphosphate (TFV-DP) in red blood
+cells against peripheral blood mononuclear cells and extending the measurement to dried
+blood spots.
 
 ## Relevance to project
 

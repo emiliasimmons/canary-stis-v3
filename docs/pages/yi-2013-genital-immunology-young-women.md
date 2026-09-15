@@ -10,11 +10,13 @@ tags: [hiv, coinfection, immunity, sti, sexual-networks]
 updated: 2026-09-10 00:20
 ---
 
+Source: [yi-2013](https://doi.org/10.1111/aji.12035)
+
 A six-page invited review (Am J Reprod Immunol 69 Suppl. 1: 74-79) from Kaul's group in
 Toronto and Nairobi, arguing that the female and adolescent skew of HIV incidence in
 endemic settings is only partly behavioural, and that mucosal biology at the site of
 exposure supplies the rest. It reviews other people's studies and adds one previously
-unpublished comparison (Fig. 1). Extracted text sits at `raw/10.1111/aji.12035`.
+unpublished comparison (Fig. 1).
 
 ## Relevance to project
 

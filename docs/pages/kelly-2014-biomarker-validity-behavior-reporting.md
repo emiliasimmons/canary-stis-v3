@@ -10,7 +10,9 @@ tags: [sexual-networks, hiv]
 updated: 2026-09-10 00:38
 ---
 
-A 2010 household survey in Kampala, Uganda, randomizing women aged 18-24 to three questionnaire delivery modes and testing whether their reported sexual behavior survives comparison with biological markers. The three arms were paper-and-pencil face-to-face interview with question rewording permitted (FTFI, n = 365), computer-assisted personal interview with questions read verbatim (CAPI, n = 317), and audio computer-assisted self-interview for the sensitive questions (ACASI, n = 338). The questionnaire was a subset of the 2006 Uganda DHS women's instrument. Extracted text sits in `raw/10.1111/j.1728-4465.2014.00375.x`.
+Source: [kelly-2014](https://doi.org/10.1111/j.1728-4465.2014.00375.x)
+
+A 2010 household survey in Kampala, Uganda, randomizing women aged 18-24 to three questionnaire delivery modes and testing whether their reported sexual behavior survives comparison with biological markers. The three arms were paper-and-pencil face-to-face interview with question rewording permitted (FTFI, n = 365), computer-assisted personal interview with questions read verbatim (CAPI, n = 317), and audio computer-assisted self-interview for the sensitive questions (ACASI, n = 338). The questionnaire was a subset of the 2006 Uganda DHS women's instrument.
 
 ## Relevance to project
 

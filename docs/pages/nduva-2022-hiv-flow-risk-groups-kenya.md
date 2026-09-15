@@ -10,6 +10,8 @@ tags: [hiv, sexual-networks, phylogenetics]
 updated: 2026-09-10 11:18
 ---
 
+Source: [nduva-2022](https://doi.org/10.1093/ve/veac016)
+
 A phylogenetic and phylogeographic analysis of 4058 Kenyan HIV-1 pol sequences sampled
 1986-2019, combining 755 newly generated sequences with 3303 previously published ones,
 annotated by risk group (heterosexual, men who have sex with men, female sex workers,
@@ -17,7 +19,7 @@ people who inject drugs) and by former administrative province. Unlike the two U
 deep-sequence studies, direction here is inferred not from within-host viral diversity but
 from a discrete-trait phylogeographic model: risk group and province are treated as states
 on a dated tree, and the expected number of state changes along branches (Markov jumps) is
-counted. The extracted text and tables sit at `raw/10.1093/ve/veac016`.
+counted.
 
 ## Relevance to project
 

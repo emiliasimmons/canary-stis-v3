@@ -10,16 +10,18 @@ tags: [hiv, sexual-networks, sti]
 updated: 2026-09-10 00:17
 ---
 
+Source: [bell-2025](https://doi.org/10.1371/journal.pgph.0005420)
+
 Secondary analysis of the iKnow randomised trial (NCT02467439), which ran combination HIV
-detection in two Lilongwe STI clinics from 2015 to 2019, nearly all enrolment at Bwaila,
-the only free STI clinic in Lilongwe District. Participants were STI clinic attendees aged
-18+, plus sexual partners and social contacts they referred. Acute HIV infection (AHI) was
-a negative or discordant rapid serological test with HIV RNA above 5,000 copies/ml on PCR;
-recent infection (RHI, roughly 4 months since acquisition) came from a Sedia LAg-avidity
-assay among seropositives; everyone else seropositive was chronic (CHI). Household GPS
-points came off locator forms, which were only collected for seronegative and serodiscordant
-attendees, so people with post-acute infection have no location. PANGEA deep sequencing
-gave whole genomes assembled with shiver. Extracted text in `raw/10.1371/journal.pgph.0005420`.
+detection in two Lilongwe STI clinics from 2015 to 2019, nearly all enrolment at Bwaila, the
+only free STI clinic in Lilongwe District. Participants were STI clinic attendees aged 18+,
+plus sexual partners and social contacts they referred. Acute HIV infection (AHI) was a
+negative or discordant rapid serological test with HIV RNA above 5,000 copies/ml on PCR; recent
+infection (RHI, roughly 4 months since acquisition) came from a Sedia LAg-avidity assay among
+seropositives; everyone else seropositive was chronic (CHI). Household GPS points came off
+locator forms, which were only collected for seronegative and serodiscordant attendees, so
+people with post-acute infection have no location. PANGEA deep sequencing gave whole genomes
+assembled with shiver.
 
 ## Relevance to project
 

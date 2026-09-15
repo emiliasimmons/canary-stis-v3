@@ -10,7 +10,9 @@ tags: [coinfection, sti, hiv, diagnostics]
 updated: 2026-09-10 00:20
 ---
 
-Narrative review from CAPRISA and the University of KwaZulu-Natal on why women in eastern and southern Africa acquire HIV across the genital mucosa at the rates they do, and on whether treating the infections that inflame that mucosa moves the risk. It is a mechanism review: immunology of the female genital tract, the pro-inflammatory signature left by each pathogen class, and what the evidence says about treatment reversing it. No new data, no pooled estimate. Extracted content in [raw/10.1016/j.jri.2021.103291/](../raw/10.1016/j.jri.2021.103291/).
+Source: [mtshali-2021](https://doi.org/10.1016/j.jri.2021.103291)
+
+Narrative review from CAPRISA and the University of KwaZulu-Natal on why women in eastern and southern Africa acquire HIV across the genital mucosa at the rates they do, and on whether treating the infections that inflame that mucosa moves the risk. It is a mechanism review: immunology of the female genital tract, the pro-inflammatory signature left by each pathogen class, and what the evidence says about treatment reversing it. No new data, no pooled estimate.
 
 ## Relevance to project
 

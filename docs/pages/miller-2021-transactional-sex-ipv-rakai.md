@@ -10,10 +10,11 @@ tags: [sexual-networks, rakai, hiv]
 updated: 2026-09-10 11:17
 ---
 
+Source: [miller-2021](https://doi.org/10.1007/s10461-020-03069-9)
+
 A cross-sectional secondary analysis of Rakai Community Cohort Study (RCCS) survey rounds
 collected between August 2016 and May 2018, asking whether women who engage in
-transactional sex, or who drink, are at higher risk of intimate partner violence. Extracted
-text sits at `raw/10.1007/s10461-020-03069-9/content.md`.
+transactional sex, or who drink, are at higher risk of intimate partner violence.
 
 Transactional sex here means a non-commercial sexual relationship carrying an implicit
 expectation that sex is exchanged for material support. It is measured by a single question

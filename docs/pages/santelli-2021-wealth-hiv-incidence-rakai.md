@@ -10,6 +10,8 @@ tags: [rakai, hiv]
 updated: 2026-09-10 00:36
 ---
 
+Source: [santelli-2021](https://doi.org/10.1097/QAD.0000000000002989)
+
 Analysis of the Rakai Community Cohort Study (RCCS) linking household socioeconomic status
 (SES) to HIV incidence over 24 years. It uses 28 communities followed continuously from
 round 1 (February 1994) through round 18 (ending May 2018), averaging 5387 households and
@@ -19,8 +21,7 @@ least two HIV tests and a prior negative. Fishing communities (introduced in rou
 mobile households are excluded. SES is a nine-asset index (radio, bicycle, motorcycle, car,
 latrine, electricity, modern roof, floor, wall) reduced by principal components analysis to
 a first component explaining 26% of variance, then cut into quartiles. Incidence rate ratios
-come from GEE Poisson regression with an exchangeable correlation structure. Extracted text
-sits in `raw/10.1097/qad.0000000000002989`.
+come from GEE Poisson regression with an exchangeable correlation structure.
 
 ## Relevance to project
 

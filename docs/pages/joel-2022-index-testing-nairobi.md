@@ -10,6 +10,8 @@ tags: [partner-notification, hiv, care-seeking]
 updated: 2026-09-14 15:38
 ---
 
+Source: [joel-2022](https://doi.org/10.1111/tmi.13843)
+
 > Note: summary derived from the abstract only, not the full source.
 
 Retrospective analysis of programmatic aggregate data on HIV index testing (a form of assisted partner notification) across 48 health facilities in Nairobi County, Kenya, October 2017 to September 2019, spanning the first two years of roll-out. It reports cascade outcomes (partner testing uptake, HIV positivity, and the contribution of index testing to total diagnoses) and compares them between the two years, in the general population and among key populations (KPs).

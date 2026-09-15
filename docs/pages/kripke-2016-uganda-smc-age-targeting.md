@@ -10,6 +10,8 @@ tags: [hiv, modeling]
 updated: 2026-09-10 00:22
 ---
 
+Source: [kripke-2016](https://doi.org/10.1371/journal.pone.0158693)
+
 A PLOS ONE modeling exercise run with Uganda's Ministry of Health to re-set national targets
 for safe male circumcision (SMC, Uganda's term for voluntary medical male circumcision). The
 tool is DMPPT 2.0, a compartmental Excel model that tracks circumcised males by five-year age
@@ -18,7 +20,7 @@ incidence exported from the country's Spectrum/AIM file (validated version of 17
 Each scenario raises circumcision coverage to 80% in one age band or combination between 2014
 and 2018 by linear interpolation from 2013 baseline coverage, then holds it, and is compared
 against a baseline where circumcision prevalence stays put. Outputs are compiled over 2014-2028
-and discounted at 3% per year. Extracted text at `raw/10.1371/journal.pone.0158693`.
+and discounted at 3% per year.
 
 ## Relevance to project
 

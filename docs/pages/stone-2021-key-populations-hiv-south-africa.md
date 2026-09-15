@@ -10,11 +10,13 @@ tags: [hiv, modeling, sexual-networks]
 updated: 2026-09-10 00:17
 ---
 
+Source: [stone-2021](https://doi.org/10.1002/jia2.25650)
+
 A compartmental HIV transmission model of South African adults 15-49, dividing the
 population into low-risk males and females, female sex workers (FSW), clients of FSW, and
 men who have sex with men (MSM) split at age 30. It asks how much of ongoing HIV
 transmission runs through each partnership type, and what scaling ART within each group
-would achieve. Extracted text and tables are in `../raw/10.1002/jia2.25650`.
+would achieve.
 
 The model runs three partnership types (main, casual, commercial), tracks vaginal and anal
 acts separately, and layers condom use, male circumcision, and ART with loss to care on top.

@@ -10,12 +10,14 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:17
 ---
 
+Source: [magosi-2022](https://doi.org/10.7554/eLife.72657)
+
 Deep-sequence phylogenetic reconstruction of who infected whom among participants in the
 Botswana Combination Prevention Project (Ya Tsie), a 30-community pair-matched trial of
 universal test-and-treat run 2013-2018 across roughly 175,664 residents. HIV-1 whole
 genomes were deep-sequenced for 5114 consenting adults aged 16-64; 3832 passed genome
 completeness criteria, about 14% (3832 / 27,446) of the people estimated to be living with
-HIV in trial communities. Extracted text sits in `raw/10.7554/elife.72657`.
+HIV in trial communities.
 
 ## Relevance to project
 

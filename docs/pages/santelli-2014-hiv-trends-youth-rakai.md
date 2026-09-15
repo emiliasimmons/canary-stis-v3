@@ -10,6 +10,8 @@ tags: [rakai, hiv]
 updated: 2026-09-10 10:02
 ---
 
+Source: [santelli-2014](https://doi.org/10.1097/qad.0000000000000533)
+
 An analysis of HIV incidence trends among youth (15-24 years, n = 22,164) in the Rakai
 Community Cohort Study from 1999 to 2011, spanning the period before widespread ART
 roll-out through its early expansion. Incidence rates (per 1,000 person-years) are reported

@@ -10,12 +10,13 @@ tags: [care-seeking, hiv, rakai]
 updated: 2026-09-10 11:19
 ---
 
+Source: [chang-2008](https://doi.org/10.1177/1545109708318525)
+
 A three-page service evaluation of a toll-free telephone warmline, meaning a line staffed
 during working hours rather than around the clock, set up at the Rakai Health Sciences
 Program central clinic in April 2006 to give clinical advice to the field staff, peer health
 workers and patients of its antiretroviral therapy programme. It logs who called, why, and
-what happened by the end of the call, over the 17 months to August 2007. Extracted text sits
-at `raw/10.1177/1545109708318525/content.md`.
+what happened by the end of the call, over the 17 months to August 2007.
 
 ## Relevance to project
 

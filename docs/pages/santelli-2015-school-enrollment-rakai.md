@@ -10,11 +10,12 @@ tags: [rakai, hiv, sexual-networks]
 updated: 2026-09-10 00:29
 ---
 
+Source: [santelli-2015](https://doi.org/10.1007/s40609-015-0029-x)
+
 A mixed-methods analysis of the Rakai Community Cohort Study restricted to adolescents aged
 15-19, covering 21,735 person-rounds across 28 continuously surveyed communities from 1994 to
 2013 (rounds 1-15, round 5 excluded). Its subject is school enrollment: what predicts it, and
-what behaviours and infection outcomes go with it. Extracted text and the eight tables are in
-`../raw/10.1007/s40609-015-0029-x`.
+what behaviours and infection outcomes go with it.
 
 ## Relevance to project
 

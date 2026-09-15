@@ -10,6 +10,8 @@ tags: [partner-notification, sti, care-seeking]
 updated: 2026-09-10 10:01
 ---
 
+Source: [parkes-ratanshi-2020](https://doi.org/10.1071/sh19092)
+
 Three-arm RCT (STOP trial) at three antenatal clinics in Kampala, Uganda, randomising
 pregnant women with a positive point-of-care treponemal test 1:1:1 to notification slips
 alone (standard of care), notification slips plus SMS, or notification slips plus telephone

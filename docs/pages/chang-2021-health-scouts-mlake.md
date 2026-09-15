@@ -10,6 +10,8 @@ tags: [hiv, rakai, care-seeking]
 updated: 2026-09-10 00:34
 ---
 
+Source: [chang-2021](https://doi.org/10.1371/journal.pmed.1003475)
+
 A pragmatic cluster-randomized trial (mLAKE, NCT02556957) of "Health Scouts", community
 health workers delivering household counseling supported by a smartphone app, in one
 fishing community of roughly 4,000-5,000 adolescents and adults on Lake Victoria in Rakai
@@ -17,8 +19,7 @@ District, Uganda. Forty contiguous clusters, 20 intervention and 20 control, wit
 intervention running September 2015 to December 2018. Outcomes were measured through three
 cross-sectional Rakai Community Cohort Study (RCCS) survey rounds nested in the trial:
 baseline (n = 2,148, mid-May 2015), mid-study (n = 2,533, mid-January 2017), and end-study
-(n = 1,903, early October 2018), all among residents aged 15-49. Extracted text sits in
-`raw/10.1371/journal.pmed.1003475`.
+(n = 1,903, early October 2018), all among residents aged 15-49.
 
 ## Relevance to project
 

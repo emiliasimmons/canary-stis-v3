@@ -10,6 +10,8 @@ tags: [prep, hiv, care-seeking]
 updated: 2026-09-10 10:22
 ---
 
+Source: [koss-2020](https://doi.org/10.1016/s2352-3018(19)30433-3)
+
 Cataloged from abstract; the full text has not been extracted.
 
 72-week interim analysis from the SEARCH study. Following community sensitisation and PrEP

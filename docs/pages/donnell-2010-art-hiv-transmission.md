@@ -10,13 +10,15 @@ tags: [hiv, partner-notification]
 updated: 2026-09-10 00:27
 ---
 
+Source: [donnell-2010](https://doi.org/10.1016/S0140-6736(10)60705-2)
+
 Post-hoc cohort analysis of the Partners in Prevention HSV/HIV Transmission Study, a
 placebo-controlled trial of aciclovir suppression in 3381 heterosexual HIV-serodiscordant
 couples across 14 sites in seven African countries (Botswana, Kenya, Rwanda, South Africa,
 Tanzania, Uganda, Zambia), enrolled 2004-2007 and followed up to 24 months. Index partners
 were HIV-1 and HSV-2 seropositive with CD4 at least 250 cells per microlitre at enrolment;
 ART was started during follow-up per then-current national guidelines (threshold roughly
-200-250 cells per microlitre). Extracted text at `raw/10.1016/s0140-6736(10)60705-2`.
+200-250 cells per microlitre).
 
 The outcome is phylogenetically linked transmission within the study partnership, so
 infections acquired outside the couple (39 events, 0.81 per 100 person-years) are excluded

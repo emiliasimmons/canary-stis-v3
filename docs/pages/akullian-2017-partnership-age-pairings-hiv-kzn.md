@@ -10,6 +10,8 @@ tags: [sexual-networks, hiv]
 updated: 2026-09-10 10:02
 ---
 
+Source: [akullian-2017](https://doi.org/10.1097/qad.0000000000001553)
+
 A population-based cohort study of HIV acquisition in Umkhanyakude district, rural
 KwaZulu-Natal, following women 15-49 and men 15-55 from 2004 to 2015 in the Africa Health
 Research Institute (AHRI) surveillance area. Generalized additive models estimated smoothed

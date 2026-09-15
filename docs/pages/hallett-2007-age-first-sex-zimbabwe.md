@@ -10,14 +10,15 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:24
 ---
 
+Source: [hallett-2007](https://doi.org/10.1111/j.1728-4465.2007.00111.x)
+
 Cross-sectional behavioural survey with linked HIV serology from 12 communities in
 Manicaland province, rural Zimbabwe, interviewed July 1998 to January 2000 (forestry
 plantations, tea and coffee estates, subsistence farming areas, small towns, roadside
 trading centres). 4,331 men aged 17-54 and 5,149 women aged 15-44 enrolled, 77 percent of
 those eligible; after excluding inconsistent responses, 4,138 men and 4,948 women were
 analysed. Sensitive questions used an informal confidential voting interview in 75 percent
-of literate respondents' interviews. Extracted text at
-`../raw/10.1111/j.1728-4465.2007.00111.x/content.md`.
+of literate respondents' interviews.
 
 ## Relevance to project
 

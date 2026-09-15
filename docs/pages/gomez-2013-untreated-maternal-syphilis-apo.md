@@ -10,7 +10,9 @@ tags: [sti]
 updated: 2026-09-09 22:51
 ---
 
-Systematic review and meta-analysis, commissioned in support of the WHO congenital syphilis elimination initiative, pooling adverse pregnancy outcomes in women seroreactive for *Treponema pallidum* and untreated against women who were not seroreactive. Of 3258 citations screened, six studies met inclusion, spanning the United Kingdom (1917), the United States (1940s), Zambia (1990), Malawi (1987-90) and Tanzania (1998-2000). Extracted content in [raw/gomez_untreated_2013/](../raw/gomez_untreated_2013/).
+Source: [gomez-2013](https://doi.org/10.2471/BLT.12.107623)
+
+Systematic review and meta-analysis, commissioned in support of the WHO congenital syphilis elimination initiative, pooling adverse pregnancy outcomes in women seroreactive for *Treponema pallidum* and untreated against women who were not seroreactive. Of 3258 citations screened, six studies met inclusion, spanning the United Kingdom (1917), the United States (1940s), Zambia (1990), Malawi (1987-90) and Tanzania (1998-2000).
 
 ## Key points
 

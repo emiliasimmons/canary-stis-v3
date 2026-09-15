@@ -10,7 +10,9 @@ tags: [hiv, modeling, sexual-networks]
 updated: 2026-09-10 00:12
 ---
 
-Cross-source comparison of how much of HIV incidence in sub-Saharan Africa falls on key populations: female sex workers (FSW), men who have sex with men (MSM), and people who inject drugs (PWID). Three sources are placed side by side for 2021: incidence-rate ratios pooled from empirical cohort studies, outputs from 94 country applications of 9 dynamic transmission models, and the UNAIDS 2022 Global AIDS Update. Extracted content in [raw/10.1097/qai.0000000000003321/](../raw/10.1097/qai.0000000000003321/).
+Source: [stevens-2024](https://doi.org/10.1097/qai.0000000000003321)
+
+Cross-source comparison of how much of HIV incidence in sub-Saharan Africa falls on key populations: female sex workers (FSW), men who have sex with men (MSM), and people who inject drugs (PWID). Three sources are placed side by side for 2021: incidence-rate ratios pooled from empirical cohort studies, outputs from 94 country applications of 9 dynamic transmission models, and the UNAIDS 2022 Global AIDS Update.
 
 ## Relevance to project
 

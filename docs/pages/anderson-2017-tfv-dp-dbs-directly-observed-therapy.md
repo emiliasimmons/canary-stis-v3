@@ -10,10 +10,11 @@ tags: [prep, hiv]
 updated: 2026-09-10 10:30
 ---
 
+Source: [anderson-2017](https://doi.org/10.1128/aac.01710-17)
+
 Randomised crossover pharmacokinetic study in 48 HIV-negative adults (25 women) in Denver
 and San Francisco, each taking two 12-week directly observed regimens of 33%, 67%, or 100%
-of daily FTC-TDF separated by a 12-week washout. Raw content in
-[raw/10.1128/aac.01710-17/content.md](../raw/10.1128/aac.01710-17/content.md).
+of daily FTC-TDF separated by a 12-week washout.
 
 ## Relevance to project
 

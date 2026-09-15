@@ -10,6 +10,8 @@ tags: [rakai, hiv, sexual-networks]
 updated: 2026-09-10 10:20
 ---
 
+Source: [serwadda-1992](https://doi.org/10.1097/00002030-199209000-00012)
+
 Cross-sectional serological and behavioural survey of 1,292 consenting adults in 21
 randomly selected community clusters across three geographic strata of rural Rakai
 District: main road trading centres, small trading villages, and agricultural villages.

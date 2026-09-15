@@ -10,14 +10,15 @@ tags: [modeling, hiv, sexual-networks]
 updated: 2026-09-10 10:30
 ---
 
+Source: [pickles-2021](https://doi.org/10.1371/journal.pcbi.1009301)
+
 Description of PopART-IBM, an open-source discrete-time stochastic individual-based model
 of heterosexual HIV transmission written in C, built for the HPTN 071 (PopART) trial in
 Zambia and South Africa. The paper covers the model structure (demography, partnership
 formation and dissolution, HIV transmission and progression, testing and treatment
 cascade), a worked ABC calibration to one Zambian trial community, and counterfactual
-projections with the trial intervention switched off. Extracted text sits in
-`../raw/10.1371/journal.pcbi.1009301/`; the parameter tables, age-mixing matrices and
-marginal posteriors are in S1 Appendix, which is not included. Code is at
+projections with the trial intervention switched off. The parameter tables, age-mixing
+matrices and marginal posteriors are in S1 Appendix, which is not included. Code is at
 `github.com/BDIpathogens/POPART-IBM`.
 
 ## Relevance to project

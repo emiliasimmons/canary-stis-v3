@@ -10,6 +10,8 @@ tags: [hiv, rakai, sexual-networks]
 updated: 2026-09-10 00:34
 ---
 
+Source: [wawer-1991](https://doi.org/10.1136/bmj.303.6813.1303)
+
 The baseline seroprevalence survey of the population that later became the Rakai Community
 Cohort Study. A two-stage cluster sample of Rakai district, south-west Uganda: 21 of the
 district's 780 level-one resistance committees were selected at random, with trading-centre
@@ -18,8 +20,7 @@ enrolled in each, for 840 households. Everyone aged 13 and over resident at leas
 months of the year was enumerated (1927 adults); 1292 (594 men, 698 women) gave blood and
 answered a sociodemographic, sexual-behaviour and STI-symptom questionnaire. HIV-1 status
 was screened by ELISA (Recombigen, stated sensitivity 98.8%, specificity 93.3%) and
-confirmed by western blot on all positives plus 200 random negatives. Extracted text in
-`raw/10.1136/bmj.303.6813.1303`.
+confirmed by western blot on all positives plus 200 random negatives.
 
 ## Relevance to project
 

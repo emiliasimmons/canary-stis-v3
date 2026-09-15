@@ -10,11 +10,12 @@ tags: [sti, hiv, immunity]
 updated: 2026-09-10 00:24
 ---
 
+Source: [hughes-2022](https://doi.org/10.7554/eLife.78565)
+
 A prospective mucosal-immunology study nested in the Kenya Girls Study (Thika, Kenya), paired
 with a systematic review and individual-participant meta-analysis of the two comparable
 studies worldwide. Twenty immune mediators were measured in cervicovaginal lavage from
-adolescent girls and young women before and after first penile-vaginal intercourse. Extracted
-text and tables are in `raw/10.7554/elife.78565/`.
+adolescent girls and young women before and after first penile-vaginal intercourse.
 
 ## Relevance to project
 

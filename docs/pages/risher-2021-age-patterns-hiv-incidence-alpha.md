@@ -10,12 +10,14 @@ tags: [hiv, rakai, modeling]
 updated: 2026-09-10 00:30
 ---
 
+Source: [risher-2021](https://doi.org/10.1016/S2352-3018(21)00069-2)
+
 Lancet HIV analysis from the ALPHA network of six population-based HIV cohorts in Malawi
-(Karonga), South Africa (uMkhanyakude), Tanzania (Kisesa), Uganda (Masaka, Rakai) and
-Zimbabwe (Manicaland). A Bayesian model jointly reconstructs age-specific HIV incidence and
-mortality from repeated serostatus observations plus vital status, so participants who were
-HIV-positive at enrolment or tested only once still inform the incidence estimate, rather
-than only the seroconverter cohort. Extracted text sits in `../raw/10.1016/s2352-3018(21)00069-2`.
+(Karonga), South Africa (uMkhanyakude), Tanzania (Kisesa), Uganda (Masaka, Rakai) and Zimbabwe
+(Manicaland). A Bayesian model jointly reconstructs age-specific HIV incidence and mortality from
+repeated serostatus observations plus vital status, so participants who were HIV-positive at
+enrolment or tested only once still inform the incidence estimate, rather than only the
+seroconverter cohort.
 
 ## Relevance to project
 

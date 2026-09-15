@@ -10,7 +10,9 @@ tags: [hiv, rakai, modeling]
 updated: 2026-09-04 16:20
 ---
 
-Agent-based EMOD-HIV model calibrated to 20 years of Rakai Community Cohort Study data (1999-2019, ~40,000 adults, 30 communities in southern Uganda). Extracted content in [raw/akullian_evaluating_2026/](../raw/akullian_evaluating_2026/).
+Source: [akullian-2026](https://doi.org/10.1371/journal.pmed.1004993)
+
+Agent-based EMOD-HIV model calibrated to 20 years of Rakai Community Cohort Study data (1999-2019, ~40,000 adults, 30 communities in southern Uganda).
 
 HIV incidence among women 15-24 declined 71% between 2000 and 2019, from 1.57 to 0.45 per 100 person-years. The study decomposes this decline across three drivers using counterfactual scenarios.
 

@@ -10,6 +10,8 @@ tags: [prep, hiv, rakai, care-seeking]
 updated: 2026-09-10 10:29
 ---
 
+Source: [edwards-2022](https://doi.org/10.1177/09564624221121208)
+
 Mixed-methods implementation evaluation of a community health worker programme delivering
 PrEP counselling in a hyperendemic Ugandan fishing community, with the quantitative arm
 surveying all community members aged 15-49 through the Rakai Community Cohort Study and 74

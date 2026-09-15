@@ -10,7 +10,9 @@ tags: [hiv, sexual-networks, modeling]
 updated: 2026-09-10 00:16
 ---
 
-Spatial molecular epidemiology of HIV in the Africa Health Research Institute's population surveillance area (PIPSA) in Hlabisa, northern KwaZulu-Natal: a 438 km2 rural area of roughly 90,000 people. The authors combined 2011-14 population HIV surveillance (18,295 tested adults 15+, 5,624 HIV-positive), a 2004-14 seroconversion cohort (17,984 people, 2,311 seroconversions), and 1,426 HIV-1 subtype C *pol* sequences to ask how much of the transmission network passes through the area's single statistically identified high-prevalence zone. Extracted text at `raw/10.1371/journal.pgph.0000105`.
+Source: [cuadros-2022](https://doi.org/10.1371/journal.pgph.0000105)
+
+Spatial molecular epidemiology of HIV in the Africa Health Research Institute's population surveillance area (PIPSA) in Hlabisa, northern KwaZulu-Natal: a 438 km2 rural area of roughly 90,000 people. The authors combined 2011-14 population HIV surveillance (18,295 tested adults 15+, 5,624 HIV-positive), a 2004-14 seroconversion cohort (17,984 people, 2,311 seroconversions), and 1,426 HIV-1 subtype C *pol* sequences to ask how much of the transmission network passes through the area's single statistically identified high-prevalence zone.
 
 ## Relevance to project
 

@@ -10,7 +10,9 @@ tags: [sti, diagnostics, coinfection]
 updated: 2026-09-10 00:12
 ---
 
-Narrative review from the Dermatology and Skin Bank Unit, University of Siena, covering syphilis epidemiology, clinical staging, diagnostic assays and treatment. Built from a PubMed and Google Scholar search, with 55 of 100 screened papers included. The dermatologic and dermoscopic material is the bulk of the article; the parts that bear on this project are the stage timings, the transmission estimate, and the assay accuracy table. Extracted content in [raw/10.33590/emj/20-00221/](../raw/10.33590/emj/20-00221/), assay table in [tables/t01.csv](../raw/10.33590/emj/20-00221/tables/t01.csv).
+Source: [trovato-2021](https://doi.org/10.33590/emj/20-00221)
+
+Narrative review from the Dermatology and Skin Bank Unit, University of Siena, covering syphilis epidemiology, clinical staging, diagnostic assays and treatment. Built from a PubMed and Google Scholar search, with 55 of 100 screened papers included. The dermatologic and dermoscopic material is the bulk of the article; the parts that bear on this project are the stage timings, the transmission estimate, and the assay accuracy table.
 
 ## Relevance to project
 

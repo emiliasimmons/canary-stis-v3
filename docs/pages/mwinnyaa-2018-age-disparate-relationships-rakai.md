@@ -10,6 +10,8 @@ tags: [rakai, sexual-networks, hiv]
 updated: 2026-09-10 10:19
 ---
 
+Source: [mwinnyaa-2018](https://doi.org/10.1097/qai.0000000000001832)
+
 Cross-sectional analysis of 10,061 never-married women aged 15–49 in the Rakai Community Cohort Study, 1997–2013. Cataloged from abstract; the full text has not been extracted.
 
 ## Relevance to project

@@ -10,11 +10,13 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:23
 ---
 
+Source: [akullian-2021](https://doi.org/10.1073/pnas.2013164118)
+
 A population-based cohort analysis of HIV-1 seroconversions in the Africa Health Research
 Institute (AHRI) surveillance area, rural Umkhanyakude district, northern KwaZulu-Natal,
 covering 2004 to 2019 and spanning the scale-up of antiretroviral therapy (ART), voluntary
 medical male circumcision (VMMC), and universal test and treat (UTT, instituted September
-2016). Extracted content sits in `raw/10.1073/pnas.2013164118`.
+2016).
 
 The cohort is 22,406 adults (men 15-54, women 15-49) with an HIV-negative test followed by
 at least one further test, contributing 103,775 person-years (43,629 men, 60,146 women) and

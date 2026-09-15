@@ -10,13 +10,14 @@ tags: [partner-notification, sti, diagnostics]
 updated: 2026-09-10 00:11
 ---
 
+Source: [alam-2010](https://doi.org/10.1186/1471-2458-10-19)
+
 Systematic review of partner notification (PN) for the four curable bacterial STIs
 (gonorrhoea, chlamydia, syphilis, trichomoniasis) in low, lower-middle and upper-middle
 income countries. Medline, Embase and Google Scholar, January 1995 to December 2007,
 updated to March 2008: 609 records screened, 474 unique, 39 included (28 Africa, 6 Asia,
 5 Latin America/Caribbean). Only 3 were randomised trials. By the authors' own grading,
 32 studies were moderate quality, 7 low, and none high. No meta-analysis was attempted.
-Extracted content sits in `../raw/10.1186/1471-2458-10-19/`.
 
 ## Relevance to project
 

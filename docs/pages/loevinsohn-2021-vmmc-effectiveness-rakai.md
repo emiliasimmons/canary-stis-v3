@@ -10,10 +10,11 @@ tags: [hiv, rakai]
 updated: 2026-09-10 00:21
 ---
 
+Source: [loevinsohn-2021](https://doi.org/10.1093/cid/ciaa1533)
+
 An observational cohort analysis inside the Rakai Community Cohort Study measuring how much
 protection men actually got from the PEPFAR-supported circumcision programme, as opposed to
-the 50-60% efficacy the three randomized trials established. Extracted text and tables sit in
-`raw/10.1093/cid/ciaa1533`.
+the 50-60% efficacy the three randomized trials established.
 
 The cohort is 3916 non-Muslim men, HIV-uninfected and uncircumcised at entry, followed across
 RCCS survey rounds 13-17 (2008-2016, surveys roughly every 18 months) in 30 agrarian and

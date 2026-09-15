@@ -10,7 +10,9 @@ tags: [economics]
 updated: 2026-09-10 00:30
 ---
 
-A methods guideline, not an empirical study. The Bill and Melinda Gates Foundation commissioned NICE International to write a "reference case" for the economic evaluations it funds in low- and middle-income countries, after a review found wide variation in quality among them: over a third of BMGF-funded evaluations since 2000 did not report a time horizon and half did not explain their choice of comparator. The result is eleven principles, each with a set of methodological specifications and reporting standards. Extracted text in `raw/10.1016/j.jval.2016.04.015`; the eleven principles and their specifications are in the two tables at the end.
+Source: [wilkinson-2016](https://doi.org/10.1016/j.jval.2016.04.015)
+
+A methods guideline, not an empirical study. The Bill and Melinda Gates Foundation commissioned NICE International to write a "reference case" for the economic evaluations it funds in low- and middle-income countries, after a review found wide variation in quality among them: over a third of BMGF-funded evaluations since 2000 did not report a time horizon and half did not explain their choice of comparator. The result is eleven principles, each with a set of methodological specifications and reporting standards. The eleven principles and their specifications are in the two tables at the end.
 
 ## Relevance to project
 

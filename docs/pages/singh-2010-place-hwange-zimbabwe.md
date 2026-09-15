@@ -10,16 +10,17 @@ tags: [sexual-networks, hiv]
 updated: 2026-09-10 00:26
 ---
 
-A PLACE (Priorities for Local AIDS Control Efforts) study run in Hwange District, Zimbabwe
-in November-December 2006. PLACE is a venue-sampling method: community informants name the
-public places where people meet new sexual partners, the venues are verified and mapped, and
-then people socialising there are interviewed. Here 429 informants named 334 sites, 312 were
-found and characterised, and 529 men and 511 women were interviewed at 132 sampled venues
-over 12 days. The paper reports the women only, stratified by age (15-19, 20-24, 25+) and by
-venue class: Nightlife/Drinking (bars, taverns, nightclubs, lodging), Open/Transport-Related
+Source: [singh-2010](https://doi.org/10.1007/s10461-009-9572-8)
+
+A PLACE (Priorities for Local AIDS Control Efforts) study run in Hwange District, Zimbabwe in
+November-December 2006. PLACE is a venue-sampling method: community informants name the public
+places where people meet new sexual partners, the venues are verified and mapped, and then
+people socialising there are interviewed. Here 429 informants named 334 sites, 312 were found
+and characterised, and 529 men and 511 women were interviewed at 132 sampled venues over 12
+days. The paper reports the women only, stratified by age (15-19, 20-24, 25+) and by venue
+class: Nightlife/Drinking (bars, taverns, nightclubs, lodging), Open/Transport-Related
 (schools, boreholes, shops, churches, transport hubs), and Events/Private or Hidden (weddings,
-concerts, sports events, bush and abandoned yards). Extracted text sits in
-`raw/10.1007/s10461-009-9572-8`.
+concerts, sports events, bush and abandoned yards).
 
 ## Relevance to project
 

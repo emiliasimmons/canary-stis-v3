@@ -10,7 +10,9 @@ tags: [hiv, rakai, sexual-networks]
 updated: 2026-09-04 16:21
 ---
 
-Matched case-control study nested within RCCS rounds 20-21 (2021-2025), with contact tracing, venue-based FSW enrollment, and phylogenetic analysis. 187 incident HIV cases identified from 38,899 HIV tests among 22,255 people; 164 enrolled and matched to 164 HIV-negative controls. Extracted content in [raw/bell_hiv_nodate/](../raw/bell_hiv_nodate/). Preprint, not yet peer-reviewed.
+Source: [bell-2026](https://doi.org/10.64898/2026.04.29.26350859)
+
+Matched case-control study nested within RCCS rounds 20-21 (2021-2025), with contact tracing, venue-based FSW enrollment, and phylogenetic analysis. 187 incident HIV cases identified from 38,899 HIV tests among 22,255 people; 164 enrolled and matched to 164 HIV-negative controls. Preprint, not yet peer-reviewed.
 
 ## Key points
 

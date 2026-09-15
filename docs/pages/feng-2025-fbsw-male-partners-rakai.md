@@ -10,7 +10,9 @@ tags: [rakai, hiv, sexual-networks, prep]
 updated: 2026-09-10 00:30
 ---
 
-A medRxiv preprint (not peer reviewed) reporting a secondary analysis of the Rakai Community Cohort Study: 17,438 men aged 15-49 across 4 Lake Victoria fishing and 37 inland communities, contributing 35,273 visits over survey rounds 16-19 (July 2013 to November 2020). The exposure is self-reported sex in the past year with a partner whose primary or secondary occupation was sex work or bar work (FBSW, female bar or sex worker; the two were pooled). Extracted content sits in `raw/10.1101/2025.03.22.25324410`.
+Source: [feng-2025](https://doi.org/10.1101/2025.03.22.25324410)
+
+A medRxiv preprint (not peer reviewed) reporting a secondary analysis of the Rakai Community Cohort Study: 17,438 men aged 15-49 across 4 Lake Victoria fishing and 37 inland communities, contributing 35,273 visits over survey rounds 16-19 (July 2013 to November 2020). The exposure is self-reported sex in the past year with a partner whose primary or secondary occupation was sex work or bar work (FBSW, female bar or sex worker; the two were pooled).
 
 ## Relevance to project
 

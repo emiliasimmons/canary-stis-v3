@@ -10,7 +10,9 @@ tags: [hiv, partner-notification]
 updated: 2026-09-10 00:11
 ---
 
-Systematic review (PROSPERO CRD42018086844) of strategies used to promote couples HIV testing and counselling (CHTC) in sub-Saharan Africa. Five databases, publications 1980 to September 2019, heterosexual couples, at least one quantifiable measure of CHTC uptake. 6188 unique records screened, 365 full texts, 30 articles from 29 unique studies retained. Nine countries: Kenya (9), Tanzania (5), Uganda (4), South Africa (3), DRC (2), Malawi (2), Zambia (1), Zimbabwe (1), plus two studies spanning Rwanda and Zambia. No meta-analysis: strategies, outcome definitions, and denominators were too heterogeneous. Extracted content in [raw/10.1002/jia2.26075/](../raw/10.1002/jia2.26075/).
+Source: [hampanda-2023](https://doi.org/10.1002/jia2.26075)
+
+Systematic review (PROSPERO CRD42018086844) of strategies used to promote couples HIV testing and counselling (CHTC) in sub-Saharan Africa. Five databases, publications 1980 to September 2019, heterosexual couples, at least one quantifiable measure of CHTC uptake. 6188 unique records screened, 365 full texts, 30 articles from 29 unique studies retained. Nine countries: Kenya (9), Tanzania (5), Uganda (4), South Africa (3), DRC (2), Malawi (2), Zambia (1), Zimbabwe (1), plus two studies spanning Rwanda and Zambia. No meta-analysis: strategies, outcome definitions, and denominators were too heterogeneous.
 
 ## Relevance to project
 

@@ -10,10 +10,12 @@ tags: [modeling, hiv, coinfection]
 updated: 2026-09-10 00:28
 ---
 
+Source: [bershteyn-2018](https://doi.org/10.1093/femspd/fty059)
+
 A methods paper from the Institute for Disease Modeling describing EMOD, a C++ individual-based
 modeling framework covering malaria, HIV, tuberculosis, dengue, polio and typhoid on one shared
 codebase. It is a platform description, not an epidemiological study: no data, no fitted
-parameters, no results. Extracted text sits in `raw/10.1093/femspd/fty059`.
+parameters, no results.
 
 The organising idea is an object-oriented inheritance chain. A generic layer (34,512 lines as of
 February 2018) carries demographics, births, non-disease mortality, migration, socio-demographic

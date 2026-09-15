@@ -10,13 +10,14 @@ tags: [hiv, diagnostics, sexual-networks]
 updated: 2026-09-10 00:15
 ---
 
+Source: [bonsall-2020](https://doi.org/10.1128/JCM.00382-20)
+
 A laboratory and computational protocol paper describing veSEQ-HIV: probe-based bait capture
 of HIV RNA from leftover plasma, Illumina short-read sequencing, and a pipeline (shiver for
 consensus and minority variants, phyloscanner for contaminant removal and transmission
 inference, Stanford HIVdb for resistance calls). Validated on 1,620 plasma samples from
 adults aged 18+ attending 10 urban clinics in 9 Zambian communities of the HPTN 071 (PopART)
-trial, using residual blood drawn for routine CD4 counts. Extracted text at
-`raw/10.1128/jcm.00382-20`.
+trial, using residual blood drawn for routine CD4 counts.
 
 ## Relevance to project
 

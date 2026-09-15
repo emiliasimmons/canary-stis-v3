@@ -10,10 +10,11 @@ tags: [economics]
 updated: 2026-09-10 10:31
 ---
 
+Source: [woods-2016](https://doi.org/10.1016/j.jval.2016.02.017)
+
 Extrapolation of cost-effectiveness thresholds to a wide range of countries from one
 empirical anchor, the estimated marginal productivity of the English NHS, rescaled by
-national income using the income elasticity of the value of a statistical life. Extracted
-text at `raw/10.1016/j.jval.2016.02.017/content.md`.
+national income using the income elasticity of the value of a statistical life.
 
 ## Relevance to project
 

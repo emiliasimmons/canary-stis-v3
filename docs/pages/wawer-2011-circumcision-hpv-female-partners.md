@@ -10,13 +10,14 @@ tags: [rakai, sti, sexual-networks, care-seeking]
 updated: 2026-09-10 00:31
 ---
 
+Source: [wawer-2011](https://doi.org/10.1016/S0140-6736(10)61967-8)
+
 Secondary analysis of two parallel randomised trials of adult male circumcision in Rakai,
 Uganda, enrolling from September 2003 and following female partners to December 2007. Men
 aged 15-49 and HIV-negative were randomised to immediate circumcision or circumcision after
 24 months; their HIV-negative female partners (648 intervention, 597 control at analysis)
 gave self-collected vaginal swabs at baseline, 12 and 24 months, genotyped for 14 high-risk
-HPV types on the Roche Linear Array. Extracted text and tables are in
-`raw/10.1016/s0140-6736(10)61967-8`.
+HPV types on the Roche Linear Array.
 
 The headline result: at 24 months, high-risk HPV prevalence was 151/544 (27.8%) in partners
 of the immediate-circumcision group against 189/488 (38.7%) in controls, prevalence risk

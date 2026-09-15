@@ -10,6 +10,8 @@ tags: [rakai, hiv, sexual-networks]
 updated: 2026-09-10 10:21
 ---
 
+Source: [schuyler-2015](https://doi.org/10.1080/17441692.2015.1074715)
+
 Analysis of annual household census data (1999-2011, N=112,117 observations) and travel
 data (2003-2008, N=18,318) from the Rakai Community Cohort Study, examining migration and
 travel patterns among youth aged 15-24. Cataloged from abstract; the full text has not

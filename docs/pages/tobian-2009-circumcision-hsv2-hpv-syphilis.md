@@ -10,7 +10,9 @@ tags: [rakai, sti, hiv, coinfection]
 updated: 2026-09-10 00:32
 ---
 
-Secondary analysis of the two Rakai male-circumcision trials (Rakai-1, NIH-funded, enrolled 2003-2005; Rakai-2, Gates-funded, enrolled 2004-2006), asking whether circumcision prevents HSV-2, HPV, and syphilis in HIV-negative uncircumcised males aged 15-49. Identical protocols, immediate versus 24-month-delayed circumcision, visits at baseline, 6, 12, and 24 months. Extracted text and tables in `raw/10.1056/nejmoa0802556`.
+Source: [tobian-2009](https://doi.org/10.1056/NEJMoa0802556)
+
+Secondary analysis of the two Rakai male-circumcision trials (Rakai-1, NIH-funded, enrolled 2003-2005; Rakai-2, Gates-funded, enrolled 2004-2006), asking whether circumcision prevents HSV-2, HPV, and syphilis in HIV-negative uncircumcised males aged 15-49. Identical protocols, immediate versus 24-month-delayed circumcision, visits at baseline, 6, 12, and 24 months.
 
 ## Relevance to project
 

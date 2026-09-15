@@ -10,14 +10,15 @@ tags: [hiv, rakai, care-seeking]
 updated: 2026-09-10 10:35
 ---
 
+Source: [martin-2025](https://doi.org/10.1101/2025.09.01.25334862)
+
 medRxiv preprint, not peer reviewed. Six Rakai Community Cohort Study survey rounds from
 August 2011 to March 2023, covering 48,914 people and 109,328 participant-visits, with HIV
 testing, Abbott m2000 viral load quantification and viral deep sequencing. Prevalences were
 estimated by robust Poisson regression with generalised estimating equations for repeat
 participation, resistance outcomes were inverse-probability weighted for missing sequence
 data, and the individual-level suppression analysis used Bayesian logistic regression with
-post-stratification by survey, age, community type and sex. Extracted text sits in
-`../raw/10.1101/2025.09.01.25334862/`.
+post-stratification by survey, age, community type and sex.
 
 ## Relevance to project
 

@@ -10,15 +10,17 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:18
 ---
 
+Source: [pickles-2025](https://doi.org/10.1016/S2352-3018(24)00317-5)
+
 A longitudinal analysis of the Manicaland general population cohort in eastern Zimbabwe,
 eight survey rounds between 1998 and 2021, asking how quickly an individual's HIV risk
 behaviour changes and whether life-course events (marriage, divorce, widowing, employment
 change, in-migration, birth of a child) predict who acquires HIV better than the risk
 behaviours or demographics prevention programmes normally screen on. 21,213 individuals
 interviewed at least twice contributed 34,212 participant observations (63.2% women);
-median gap between an observation and the previous interview 2.8 years (IQR 2.3-3.1).
-HIV serostatus came from dried blood spots in rounds 1-7, so acquisition is defined only
-between rounds 2 and 7. Extracted content in `raw/10.1016/s2352-3018(24)00317-5`.
+median gap between an observation and the previous interview 2.8 years (IQR 2.3-3.1). HIV
+serostatus came from dried blood spots in rounds 1-7, so acquisition is defined only
+between rounds 2 and 7.
 
 ## Relevance to project
 

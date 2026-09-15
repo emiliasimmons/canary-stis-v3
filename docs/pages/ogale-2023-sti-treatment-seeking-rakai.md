@@ -10,13 +10,14 @@ tags: [sti, rakai, diagnostics]
 updated: 2026-09-10 00:15
 ---
 
+Source: [ogale-2023](https://doi.org/10.1371/journal.pgph.0001626)
+
 A cross-sectional analysis nested in the STI Prevalence Study (STIPS), itself nested in the
 Rakai Community Cohort Study. All consenting adults aged 18-49 in two RCCS communities, one
-inland agrarian and one Lake Victoria fishing site, were surveyed May-October 2019
-(n = 1,825) and tested for chlamydia, gonorrhoea, trichomoniasis and syphilis alongside the
+inland agrarian and one Lake Victoria fishing site, were surveyed May-October 2019 (n =
+1,825) and tested for chlamydia, gonorrhoea, trichomoniasis and syphilis alongside the
 routine HIV screen. Everyone reporting an STI-related symptom in the previous six months
-was asked whether they did anything about it and where they went. Extracted text and tables
-sit in `raw/10.1371/journal.pgph.0001626`.
+was asked whether they did anything about it and where they went.
 
 ## Relevance to project
 

@@ -10,13 +10,14 @@ tags: [sexual-networks, hiv]
 updated: 2026-09-10 00:20
 ---
 
+Source: [pettifor-2009](https://doi.org/10.1363/ifpp.35.082.09)
+
 A descriptive and regression analysis of first sexual experiences drawn from a 2003
 household survey run by the University of the Witwatersrand's Reproductive Health and HIV
 Research Unit. Stratified, disproportionate systematic sampling across all nine South
 African provinces, one randomly selected 15-24-year-old per household, 77% response,
 11,904 interviewed, of whom the 7,692 who reported ever having had sex are analysed.
-Percentages are weighted to the 2001 census; N's quoted below are unweighted. Extracted
-text in `raw/10.1363/ifpp.35.082.09`.
+Percentages are weighted to the 2001 census; N's quoted below are unweighted.
 
 ## Relevance to project
 

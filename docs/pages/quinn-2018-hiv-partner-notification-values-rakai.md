@@ -10,6 +10,8 @@ tags: [partner-notification, care-seeking, hiv, rakai]
 updated: 2026-09-14 15:24
 ---
 
+Source: [quinn-2018](https://doi.org/10.1007/s10461-018-2035-3)
+
 > Note: summary derived from the abstract only, not the full source.
 
 Qualitative study of HIV partner-notification preferences in Rakai, Uganda, run through 6 focus group discussions and 63 in-depth interviews across high-prevalence fishing communities and low-prevalence mainland communities. Participants were fishermen and sex workers in the fishing communities, male and female mainland community members, and healthcare providers. The interviews probed three notification approaches: passive referral (the index patient tells the partner), provider referral (a health worker notifies), and contract referral (the patient agrees to notify within a set period, after which a provider steps in). Analysis used a team-based matrix method.

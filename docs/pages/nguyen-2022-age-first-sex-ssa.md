@@ -10,6 +10,8 @@ tags: [sexual-networks, hiv, modeling]
 updated: 2026-09-10 00:24
 ---
 
+Source: [nguyen-2022](https://doi.org/10.1186/s12889-022-13451-y)
+
 Nguyen and Eaton pooled individual records from 253 nationally representative household
 surveys (DHS, MICS, AIS, PMA, PHIA and others) covering 3,088,315 respondents aged 15-55
 at interview, born 1950-2005, in 42 sub-Saharan African countries. They fit a Bayesian
@@ -18,8 +20,7 @@ distribution, giving the sexual debut hazard by sex, age, country, and birth coh
 than a single median. Because the same birth cohort reports its age at first sex (AFS) in
 successive survey rounds roughly five years apart, the differences between those reports
 identify a reporting bias term as a function of age at interview, estimated separately by
-sex and country and pooled hierarchically for countries with only one survey. Extracted
-text in `raw/10.1186/s12889-022-13451-y`.
+sex and country and pooled hierarchically for countries with only one survey.
 
 ## Relevance to project
 

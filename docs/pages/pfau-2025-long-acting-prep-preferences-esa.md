@@ -10,11 +10,12 @@ tags: [prep, hiv]
 updated: 2026-09-10 00:17
 ---
 
+Source: [pfau-2025](https://doi.org/10.1186/s12889-025-23529-y)
+
 A PRISMA-ScR scoping review of preferences for long-acting and on-demand PrEP among potential
 users in Eastern and Southern Africa (ESA), covering studies published 2014-2024. Of 349
 unique citations, 49 met eligibility (original research, peer-reviewed or grey, conducted in
 ESA, comparing at least one long-acting or on-demand product against daily oral PrEP).
-Extracted text at `raw/10.1186/s12889-025-23529-y`.
 
 Products covered: long-acting injectable (LAI, cabotegravir-like bimonthly), the intravaginal
 dapivirine ring (DVR), a six-month implant still in development, and oral on-demand (event

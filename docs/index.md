@@ -11,24 +11,33 @@ calibration site.
 
 ## Tags
 
-- [care-seeking](tags/care-seeking.md) · 46 pages
-- [coinfection](tags/coinfection.md) · 25 pages
-- [diagnostics](tags/diagnostics.md) · 19 pages
+- [care-seeking](tags/care-seeking.md) · 49 pages
+- [coinfection](tags/coinfection.md) · 26 pages
+- [diagnostics](tags/diagnostics.md) · 20 pages
 - [economics](tags/economics.md) · 7 pages
-- [hiv](tags/hiv.md) · 163 pages
+- [hiv](tags/hiv.md) · 168 pages
 - [immunity](tags/immunity.md) · 3 pages
-- [modeling](tags/modeling.md) · 27 pages
-- [partner-notification](tags/partner-notification.md) · 17 pages
-- [phylogenetics](tags/phylogenetics.md) · 3 pages
-- [prep](tags/prep.md) · 28 pages
-- [rakai](tags/rakai.md) · 71 pages
-- [sexual-networks](tags/sexual-networks.md) · 80 pages
-- [sti](tags/sti.md) · 45 pages
+- [modeling](tags/modeling.md) · 29 pages
+- [partner-notification](tags/partner-notification.md) · 18 pages
+- [phylogenetics](tags/phylogenetics.md) · 4 pages
+- [prep](tags/prep.md) · 29 pages
+- [rakai](tags/rakai.md) · 74 pages
+- [sexual-networks](tags/sexual-networks.md) · 81 pages
+- [sti](tags/sti.md) · 48 pages
+
+## Syntheses
+
+- [Partner notification and its omission from canary-stis](pages/partner-notification-pathway.md) -- Notification finds contacts at 4-14x general-testing positivity but reaches about half of those named, and both the concentration and the reinfection it interrupts are already represented in the model.
+- [PrEP as delivered versus trial efficacy and the STI-test-to-PrEP prevention step](pages/prep-delivered-vs-efficacy.md) -- How far delivered PrEP coverage in Eastern and Southern Africa falls below trial efficacy, and what that bounds for routing STI-positive people into PrEP.
+- [RCCS HIV incidence decline and its drivers](pages/rccs-incidence-decline-drivers.md) -- The RCCS incidence trajectory by age and sex from the 1990s to 2018, and how much of the decline ART, VMMC, and later sexual debut account for.
+- [The STI-HIV cofactor and the HIV reduction achievable by clearing curable STIs](pages/sti-hiv-cofactor.md) -- Curable STIs raise per-act HIV transmission, but observational cofactor ratios overstate the incidence reduction from clearing the four bacterial STIs, and the attributable ceiling in a mature epidemic is 3-17%.
+- [The syndromic door and the point-of-care panel](pages/syndromic-door-poc-panel.md) -- The curable-STI burden the symptomatic syndromic door reaches in Rakai, and the accuracy a point-of-care panel adds at the same door.
+- [Targeting high-transmission network positions in a generalized epidemic](pages/targeting-network-positions.md) -- How much HIV prevention comes from identifying high-transmission network positions through STI diagnosis, and why the payoff is modest and setting-dependent in a Rakai-like generalized epidemic.
 
 ## Recent
 
-- 2026-09-14 [Scale-up of HIV index testing in an urban population: Experiences and achievements from Nairobi County, Kenya](pages/joel-2022-index-testing-nairobi.md)
-- 2026-09-14 [Assisted Partner Notification Services Are Safe and Effective as They Are Brought to Scale in Mozambique](pages/golden-2023-aps-safety-mozambique.md)
-- 2026-09-14 [Brief Report: Active HIV Case Finding in the City of Kigali, Rwanda: Assessment of Voluntary Assisted Partner Notification Modalities to Detect Undiagnosed HIV Infections](pages/remera-2021-vapn-modalities-kigali.md)
-- 2026-09-14 [Experiences of Sexual Coercion Among Adolescent Women](pages/wagman-2008-sexual-coercion-adolescent-rakai.md)
-- 2026-09-14 [Impact of Patient-Selected Care Buddies on Adherence to HIV Care, Disease Progression, and Conduct of Daily Life Among Pre-antiretroviral HIV-Infected Patients in Rakai, Uganda](pages/nakigozi-2015-care-buddies-adherence-rakai.md)
+- 2026-09-16 [Understanding HIV risks among adolescent girls and young women in informal settlements of Nairobi, Kenya: Lessons for DREAMS](pages/ziraba-2018-agyw-risk-nairobi-slums.md)
+- 2026-09-14 [Partner notification and its omission from canary-stis](pages/partner-notification-pathway.md)
+- 2026-09-14 [PrEP as delivered versus trial efficacy and the STI-test-to-PrEP prevention step](pages/prep-delivered-vs-efficacy.md)
+- 2026-09-14 [RCCS HIV incidence decline and its drivers](pages/rccs-incidence-decline-drivers.md)
+- 2026-09-14 [Targeting high-transmission network positions in a generalized epidemic](pages/targeting-network-positions.md)

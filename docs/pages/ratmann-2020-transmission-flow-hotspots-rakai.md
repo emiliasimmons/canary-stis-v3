@@ -10,6 +10,8 @@ tags: [hiv, rakai, sexual-networks, phylogenetics]
 updated: 2026-09-10 11:17
 ---
 
+Source: [ratmann-2020](https://doi.org/10.1016/s2352-3018(19)30378-9)
+
 The population-based deep-sequence phylogenetic analysis of HIV transmission flow in the
 Rakai Community Cohort Study, covering 36 inland communities and the four fishing
 communities within 3 km of the Lake Victoria shoreline, over survey rounds between 10
@@ -17,8 +19,7 @@ August 2011 and 30 January 2015. Deep sequencing gives many virus fragments per 
 rather than one consensus sequence, and the ordering of each person's fragments in a
 phylogeny supports an inference about which of a linked pair infected the other.
 Reconstructed pairs were then combined with individual migration histories so that a
-source could be placed in the community they lived in before a recent move. The extracted
-text and tables sit at `raw/10.1016/s2352-3018(19)30378-9`.
+source could be placed in the community they lived in before a recent move.
 
 ## Relevance to project
 

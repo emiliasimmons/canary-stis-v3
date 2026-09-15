@@ -10,15 +10,16 @@ tags: [rakai, care-seeking, hiv]
 updated: 2026-09-10 00:34
 ---
 
+Source: [young-2023](https://doi.org/10.1093/heapol/czad019)
+
 A qualitative secondary analysis of 60 semi-structured interviews collected in Rakai and
-surrounding south-central Uganda across three rounds (November 2017, February 2019,
-August-October 2021): 35 migrants and 25 key informants (15 community health workers,
-5 clinic workers, 3 CHW supervisors, 2 community leaders). Migrants were recruited from the
-Rakai Community Cohort Study, restricted to people who had moved into a study community
-within the previous two years, and purposively sampled on age, sex, HIV status, and
-residence. Of the 31 migrants whose status was recorded, 11 were living with HIV and 10 of
-those 11 self-reported being on ART. 21 of 35 were women. Extracted text sits in
-`raw/10.1093/heapol/czad019`.
+surrounding south-central Uganda across three rounds (November 2017, February 2019, August-
+October 2021): 35 migrants and 25 key informants (15 community health workers, 5 clinic
+workers, 3 CHW supervisors, 2 community leaders). Migrants were recruited from the Rakai
+Community Cohort Study, restricted to people who had moved into a study community within
+the previous two years, and purposively sampled on age, sex, HIV status, and residence. Of
+the 31 migrants whose status was recorded, 11 were living with HIV and 10 of those 11 self-
+reported being on ART. 21 of 35 were women.
 
 The analysis is thematic, organized around three constructed composite personas ("Mary",
 "Peter", "Andrew") that vary on HIV status and job security. There are no rates, no

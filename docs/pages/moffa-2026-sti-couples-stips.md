@@ -10,7 +10,9 @@ tags: [sti, rakai, partner-notification, coinfection]
 updated: 2026-09-04 16:20
 ---
 
-Secondary analysis of the Sexually Transmitted Infection Prevalence Study (STIPS), a cross-sectional population-based study in a fishing community and an inland community in southern Uganda (May-October 2019), nested within the RCCS. Tested for chlamydia, gonorrhea, trichomonas, syphilis, high-titre syphilis (RPR >= 1:8), and HSV-2. Extracted content in [raw/10.1136_sextrans-2025-056709/](../raw/10.1136_sextrans-2025-056709/).
+Source: [moffa-2026](https://doi.org/10.1136/sextrans-2025-056709)
+
+Secondary analysis of the Sexually Transmitted Infection Prevalence Study (STIPS), a cross-sectional population-based study in a fishing community and an inland community in southern Uganda (May-October 2019), nested within the RCCS. Tested for chlamydia, gonorrhea, trichomonas, syphilis, high-titre syphilis (RPR >= 1:8), and HSV-2.
 
 ## Key points
 

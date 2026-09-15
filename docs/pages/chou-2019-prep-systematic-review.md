@@ -10,6 +10,8 @@ tags: [prep, hiv]
 updated: 2026-09-10 10:21
 ---
 
+Source: [chou-2019](https://doi.org/10.1001/jama.2019.2591)
+
 Systematic review and meta-analysis for the US Preventive Services Task Force, pooling 14
 RCTs with 18,837 participants. Cataloged from abstract; the full text has not been
 extracted.

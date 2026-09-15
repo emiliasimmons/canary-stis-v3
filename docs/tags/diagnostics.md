@@ -29,3 +29,6 @@ description: Test performance, platforms, and deployment for identifying STI and
 - [Point-of-care STI testing improves HIV pre-exposure prophylaxis initiation in pregnant women in antenatal care in Cape Town, South Africa](../pages/voux-2022-poc-sti-prep-anc-cape-town.md) -- POC STI testing doubled the odds of PrEP initiation among pregnant women compared to lab-based testing, but PrEP continuation at 3 months was lower in the POC group.
 - [Syphilis in Pregnancy in Tanzania. I. Impact of Maternal Syphilis on Outcome of Pregnancy](../pages/watson-jones-2002-maternal-syphilis-pregnancy-tanzania.md) -- Retrospective cohort of 380 unscreened women delivering in Mwanza, putting stillbirth at 25% with high-titer active syphilis against 1% in seronegative women, and 51% of all stillbirths attributable to syphilis
 - [Diagnosing sexually transmitted infections in resource-constrained settings: challenges and ways forward](../pages/wi-2019-sti-diagnostics-resource-constrained.md) -- WHO-led review of syndromic management diagnostic accuracy vs POCTs for CT/NG/TV/syphilis, with absolute-effect tables at varying prevalence
+
+### Syntheses (1)
+- [The syndromic door and the point-of-care panel](../pages/syndromic-door-poc-panel.md) -- The curable-STI burden the symptomatic syndromic door reaches in Rakai, and the accuracy a point-of-care panel adds at the same door.

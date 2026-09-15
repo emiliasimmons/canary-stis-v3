@@ -10,13 +10,15 @@ tags: [hiv, modeling, sexual-networks]
 updated: 2026-09-10 00:23
 ---
 
+Source: [akullian-2020](https://doi.org/10.1016/S2352-3018(19)30436-9)
+
 An individual-based network transmission model (EMOD, Institute for Disease Modeling) of the
 HIV epidemic in eSwatini, calibrated to age- and sex-specific antiretroviral therapy (ART) and
 voluntary medical male circumcision (VMMC) coverage, asking whether reaching the UNAIDS
 90-90-90 targets can bring eSwatini to epidemic control (fewer than 1 infection per 1000
 person-years) by 2030. Five scenarios: status quo, no ART/no VMMC, VMMC only, 90-90-90 attained
 evenly within age and sex strata, and 100% ART initiation within an average of 6 months of
-infection. Extracted content in `raw/10.1016/s2352-3018(19)30436-9`.
+infection.
 
 ## Relevance to project
 

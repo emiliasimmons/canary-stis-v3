@@ -10,7 +10,9 @@ tags: [partner-notification, hiv, care-seeking]
 updated: 2026-09-10 00:19
 ---
 
-A programme evaluation, not a trial, of assisted partner notification services (aPNS) run by Cameroon Baptist Convention Health Services across 16 CBCHS and 22 non-CBCHS facilities in five of Cameroon's ten regions, 2007 to 2015. Health advisors interviewed HIV-positive index persons, elicited sexual contacts, and notified and tested those contacts by provider referral, negotiated referral, or patient referral. Extracted text in `raw/10.1002/jia2.25310`.
+Source: [tih-2019](https://doi.org/10.1002/jia2.25310)
+
+A programme evaluation, not a trial, of assisted partner notification services (aPNS) run by Cameroon Baptist Convention Health Services across 16 CBCHS and 22 non-CBCHS facilities in five of Cameroon's ten regions, 2007 to 2015. Health advisors interviewed HIV-positive index persons, elicited sexual contacts, and notified and tested those contacts by provider referral, negotiated referral, or patient referral.
 
 ## Relevance to project
 

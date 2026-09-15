@@ -10,7 +10,9 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:28
 ---
 
-A random population sample of 916 unmarried men and 1003 unmarried women aged 14-25 in eight villages of rural Limpopo province, South Africa, interviewed in 2001 as the baseline of a microfinance cluster-randomised trial. HIV serostatus came from oral-fluid ELISA (OraSure, Vironostika Uni-Form II) and was available for 1518 of the 1919 respondents (61.1% of those eligible). The primary exposure is current attendance at school or college, with everyone else, mostly unemployed, as the comparison group. Extracted text and tables sit in `raw/10.1136/jech.2006.053827`.
+Source: [hargreaves-2008](https://doi.org/10.1136/jech.2006.053827)
+
+A random population sample of 916 unmarried men and 1003 unmarried women aged 14-25 in eight villages of rural Limpopo province, South Africa, interviewed in 2001 as the baseline of a microfinance cluster-randomised trial. HIV serostatus came from oral-fluid ELISA (OraSure, Vironostika Uni-Form II) and was available for 1518 of the 1919 respondents (61.1% of those eligible). The primary exposure is current attendance at school or college, with everyone else, mostly unemployed, as the comparison group.
 
 ## Relevance to project
 

@@ -10,7 +10,9 @@ tags: [diagnostics, care-seeking, hiv, rakai]
 updated: 2026-09-10 11:19
 ---
 
-Qualitative study run through the Rakai Health Sciences Program: 33 in-depth interviews and 6 focus groups totalling 55 participants, conducted in Luganda or English, across high-prevalence Lake Victoria fishing communities and lower-prevalence mainland communities in Rakai District. The interview sample is 12 health care providers (9 mainland, 3 fishing), 6 fishermen and boat owners, 8 female sex workers, and 7 mainland community members. Participants were recruited through RHSP community health workers and RCCS participants who had agreed to re-contact, with snowball sampling from there. Analysis used a team-based matrix method adapted from Framework Analysis. Extracted content in [raw/10.1371/journal.pone.0183280/](../raw/10.1371/journal.pone.0183280/).
+Source: [burke-2017](https://doi.org/10.1371/journal.pone.0183280)
+
+Qualitative study run through the Rakai Health Sciences Program: 33 in-depth interviews and 6 focus groups totalling 55 participants, conducted in Luganda or English, across high-prevalence Lake Victoria fishing communities and lower-prevalence mainland communities in Rakai District. The interview sample is 12 health care providers (9 mainland, 3 fishing), 6 fishermen and boat owners, 8 female sex workers, and 7 mainland community members. Participants were recruited through RHSP community health workers and RCCS participants who had agreed to re-contact, with snowball sampling from there. Analysis used a team-based matrix method adapted from Framework Analysis.
 
 ## Relevance to project
 

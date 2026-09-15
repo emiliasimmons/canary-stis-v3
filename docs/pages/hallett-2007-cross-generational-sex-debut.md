@@ -10,12 +10,13 @@ tags: [hiv, modeling, sexual-networks]
 updated: 2026-09-10 00:29
 ---
 
+Source: [hallett-2007](https://doi.org/10.1136/sti.2006.023606)
+
 A deterministic partial-differential-equation model of heterosexual HIV transmission with
 yearly age resolution, parameterised to the Manicaland (eastern Zimbabwe) population-based
 survey of roughly 10,000 adults in 12 communities, 1998-2000. It asks what two widely
 promoted behaviour interventions, discouraging cross-generational sex and delaying sexual
-debut, would do at the population level rather than to one woman's own risk. Extracted text
-in `raw/10.1136/sti.2006.023606`.
+debut, would do at the population level rather than to one woman's own risk.
 
 ## Relevance to project
 

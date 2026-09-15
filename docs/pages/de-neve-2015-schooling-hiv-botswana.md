@@ -10,7 +10,9 @@ tags: [hiv, prep]
 updated: 2026-09-10 00:25
 ---
 
-Natural-experiment study using Botswana's January 1996 secondary-school reform, which moved grade ten from senior to junior secondary and raised average attainment by about 0.79 years, as an instrument for years of schooling. Outcome is HIV serostatus at survey in the Botswana AIDS Impact Surveys II (2004) and III (2008), pooled analytic sample 7018 (3965 women, 3053 men), Botswana citizens aged 18 and over born in or after 1975 with a valid HIV test. Cohorts born in 1981 or later are treated as exposed. Extracted text and tables sit in `raw/10.1016/s2214-109x(15)00087-x`.
+Source: [de-neve-2015](https://doi.org/10.1016/S2214-109X(15)00087-X)
+
+Natural-experiment study using Botswana's January 1996 secondary-school reform, which moved grade ten from senior to junior secondary and raised average attainment by about 0.79 years, as an instrument for years of schooling. Outcome is HIV serostatus at survey in the Botswana AIDS Impact Surveys II (2004) and III (2008), pooled analytic sample 7018 (3965 women, 3053 men), Botswana citizens aged 18 and over born in or after 1975 with a valid HIV test. Cohorts born in 1981 or later are treated as exposed.
 
 ## Relevance to project
 

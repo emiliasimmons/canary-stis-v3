@@ -9,6 +9,8 @@ tags: [diagnostics, sti, care-seeking]
 updated: 2026-09-10 10:22
 ---
 
+Source: [bosu-1999](https://doi.org/10.1046/j.1365-3156.1999.00360.x)
+
 Cataloged from abstract; the full text has not been extracted.
 
 Review article examining whether syndromic management of STDs is rational and scientific.

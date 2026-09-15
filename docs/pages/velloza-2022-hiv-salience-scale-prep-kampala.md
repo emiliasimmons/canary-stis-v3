@@ -10,6 +10,8 @@ tags: [prep, hiv, care-seeking]
 updated: 2026-09-10 10:29
 ---
 
+Source: [velloza-2022](https://doi.org/10.1007/s10461-022-03762-x)
+
 Development and validation of a 9-item perceived-risk instrument, the HIV Salience and
 Perception (HPS) scale, administered at enrollment and at 1, 3 and 6 months to 499
 adolescent girls and young women aged 16-25 in a PrEP cohort study in Kampala, Uganda.

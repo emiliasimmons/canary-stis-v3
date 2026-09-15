@@ -10,11 +10,13 @@ tags: [rakai, sexual-networks]
 updated: 2026-09-10 00:29
 ---
 
+Source: [spindler-2024](https://doi.org/10.1080/02673843.2024.2384863)
+
 Repeat cross-sectional and panel analysis of 15- to 17-year-old girls in the Rakai Community
 Cohort Study (RCCS), 13 survey rounds spanning 1999-2018 across the 30 continuously followed
 communities: 6,998 observations from 5,169 girls for the trend and association models, and a
-1,104-girl panel (two or three rounds each) for a causal mediation analysis of pregnancy as
-the pathway from education to marriage. Extracted text at `../raw/10.1080/02673843.2024.2384863/`.
+1,104-girl panel (two or three rounds each) for a causal mediation analysis of pregnancy as the
+pathway from education to marriage.
 
 ## Relevance to project
 

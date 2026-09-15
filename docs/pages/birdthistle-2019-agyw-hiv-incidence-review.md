@@ -10,13 +10,15 @@ tags: [hiv, rakai, sexual-networks]
 updated: 2026-09-10 00:21
 ---
 
+Source: [birdthistle-2019](https://doi.org/10.1016/S2214-109X(19)30410-3)
+
 Systematic review and random-effects meta-analysis of directly observed (serologically
 measured) HIV incidence among adolescent girls and young women aged 15-24 in the ten
 countries selected for DREAMS investment. 51 studies from nine countries met inclusion:
 serological data collected 2005-2015, English-language, modelled incidence estimates
 excluded. 27 studies drew on general population samples, 24 on higher-risk or venue-based
 subpopulations (sex workers, bar and guesthouse workers, fishing communities, clinic
-attendees). Extracted content in `raw/10.1016/s2214-109x(19)30410-3`.
+attendees).
 
 ## Relevance to project
 

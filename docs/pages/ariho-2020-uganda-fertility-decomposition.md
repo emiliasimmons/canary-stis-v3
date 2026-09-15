@@ -10,11 +10,12 @@ tags: [sexual-networks]
 updated: 2026-09-10 00:29
 ---
 
-A demographic decomposition of Uganda's fertility decline between the 2006 and 2016
-Uganda Demographic and Health Surveys, using a nonlinear multivariate decomposition
-(Poisson, `mvdcmp`) of children ever born. The analytic sample is women aged 15-49 who
-reported ever having had sex: weighted n = 7,281 in 2006 and n = 15,799 in 2016. Extracted
-text and tables sit in `raw/10.1186/s12905-020-0881-4`.
+Source: [ariho-2020](https://doi.org/10.1186/s12905-020-0881-4)
+
+A demographic decomposition of Uganda's fertility decline between the 2006 and 2016 Uganda
+Demographic and Health Surveys, using a nonlinear multivariate decomposition (Poisson,
+`mvdcmp`) of children ever born. The analytic sample is women aged 15-49 who reported ever
+having had sex: weighted n = 7,281 in 2006 and n = 15,799 in 2016.
 
 ## Relevance to project
 

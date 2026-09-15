@@ -10,6 +10,8 @@ tags: [rakai, sexual-networks, hiv]
 updated: 2026-09-10 10:01
 ---
 
+Source: [mathur-2015](https://doi.org/10.1097/qai.0000000000000539)
+
 Analysis of self-reported partner characteristics and HIV acquisition among young men
 (n = 1969) and women (n = 2826) in the Rakai Community Cohort Study, 2005-2011. The study
 controls for individual-level risk factors to isolate the contribution of partner

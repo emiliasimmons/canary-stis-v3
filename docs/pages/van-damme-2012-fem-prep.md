@@ -10,7 +10,9 @@ tags: [prep, hiv, sti, sexual-networks]
 updated: 2026-09-10 00:38
 ---
 
-FEM-PrEP was a randomised, double-blind, placebo-controlled trial of once-daily oral tenofovir disoproxil fumarate plus emtricitabine (TDF-FTC) in 2120 HIV-negative women aged 18-35 at four sites in Kenya (Bondo), South Africa (Pretoria, Bloemfontein) and Tanzania (Arusha), enrolled June 2009 to April 2011 and stopped early for futility on 18 April 2011. Eligibility required at least one vaginal sex act in the previous 2 weeks or more than one partner in the previous month, so the cohort is a general-risk rather than a formally defined key population, with 12.6% reporting sex for money or gifts with a non-primary partner in the previous 4 weeks. Extracted text sits in `raw/10.1056/nejmoa1202614`.
+Source: [van-damme-2012](https://doi.org/10.1056/NEJMoa1202614)
+
+FEM-PrEP was a randomised, double-blind, placebo-controlled trial of once-daily oral tenofovir disoproxil fumarate plus emtricitabine (TDF-FTC) in 2120 HIV-negative women aged 18-35 at four sites in Kenya (Bondo), South Africa (Pretoria, Bloemfontein) and Tanzania (Arusha), enrolled June 2009 to April 2011 and stopped early for futility on 18 April 2011. Eligibility required at least one vaginal sex act in the previous 2 weeks or more than one partner in the previous month, so the cohort is a general-risk rather than a formally defined key population, with 12.6% reporting sex for money or gifts with a non-primary partner in the previous 4 weeks.
 
 ## Relevance to project
 

@@ -10,11 +10,13 @@ tags: [rakai, hiv, sexual-networks]
 updated: 2026-09-10 00:34
 ---
 
+Source: [grabowski-2020](https://doi.org/10.1038/s41467-020-14636-y)
+
 Analysis of two consecutive Rakai Community Cohort Study rounds, R15 (Aug 2011 to May 2013)
 and R16 (Aug 2014 to Jan 2015), covering 38 communities: 27 agrarian, 7 trading, and 4 Lake
 Victoria fishing. It characterizes who migrates, how far, what their HIV status is, and
 whether the high-prevalence fishing communities seed infection into the surrounding inland
-population. Extracted text and tables sit in `raw/10.1038/s41467-020-14636-y`.
+population.
 
 The headline result reverses the usual hotspot assumption. Migrants moving *into* fishing
 communities carry high HIV prevalence, while out-migration from those communities is

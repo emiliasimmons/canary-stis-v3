@@ -10,13 +10,15 @@ tags: [modeling, hiv, sexual-networks, coinfection]
 updated: 2026-09-10 00:27
 ---
 
+Source: [bershteyn-2013](https://doi.org/10.1098/rsif.2013.0613)
+
 First peer-reviewed description of EMOD-HIV v0.7, an agent-based model of heterosexual
 partnership formation and HIV transmission calibrated to South African demography and
 prevalence by age, sex and year. The paper does two things: documents the model's structure
 (pair formation algorithm, partnership types, concurrency flags, disease progression), and
 then dissects the simulated transmission chains to ask which agents keep the epidemic from
-ageing out of the population. Extracted text sits in `../raw/10.1098/rsif.2013.0613/`; the
-parameter table and model description are in electronic supplements not included here.
+ageing out of the population. The parameter table and model description are in electronic
+supplements not included here.
 
 ## Relevance to project
 

@@ -10,6 +10,8 @@ tags: [sti, diagnostics]
 updated: 2026-09-10 09:45
 ---
 
+Source: [karellis-2022](https://doi.org/10.1016/s2666-5247(21)00191-9)
+
 Systematic review of 24 studies (26,126 individuals) evaluating 17 multiplexed rapid
 nucleic acid amplification test (RNAAT) platforms and 7 immunochromatographic devices for
 simultaneous detection of multiple STIs. Published in *Lancet Microbe*. Studies were

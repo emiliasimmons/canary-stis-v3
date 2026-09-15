@@ -10,13 +10,14 @@ tags: [modeling]
 updated: 2026-09-10 10:31
 ---
 
+Source: [didelot-2011](https://doi.org/10.1214/11-ba602)
+
 Statistical methods paper in Bayesian Analysis. It builds ABC estimators of model evidence
 (the marginal likelihood) for each candidate model independently, so Bayes factors can be
 formed as a ratio without a sampler that jumps between models, and then works out when a
 summary statistic is safe to use for model comparison. Validated on a Poisson-versus-
 geometric toy problem where the evidence is analytic, then applied to demographic models
-fitted to human Y-chromosome microsatellite data. Extracted text sits in
-`../raw/10.1214/11-ba602/`.
+fitted to human Y-chromosome microsatellite data.
 
 ## Relevance to project
 

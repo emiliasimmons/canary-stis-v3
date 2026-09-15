@@ -10,6 +10,8 @@ tags: [rakai, hiv]
 updated: 2026-09-10 10:21
 ---
 
+Source: [olawore-2018](https://doi.org/10.1016/s2352-3018(18)30009-2)
+
 Prospective cohort study from the RCCS examining HIV acquisition among 15,187 HIV-negative
 participants aged 15-49, followed for 89,292 person-years (1999-2015). Cataloged from
 abstract; the full text has not been extracted.

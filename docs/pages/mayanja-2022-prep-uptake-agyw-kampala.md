@@ -10,14 +10,15 @@ tags: [prep, hiv, care-seeking, sti]
 updated: 2026-09-10 00:37
 ---
 
+Source: [mayanja-2022](https://doi.org/10.1002/jia2.25909)
+
 Prospective cohort at the Good Health for Women Project clinic in Kampala, following 265
-adolescent girls and young women (AGYW) aged 14-24 for 12 months from enrolment in
-January-October 2019. All were HIV-negative, PrEP-naive, sexually active in the prior three
-months, and drawn from 22 urban-slum communities where sex work and entertainment-venue work
-are common. Volunteers were shown five biomedical prevention products (oral PrEP, long-acting
+adolescent girls and young women (AGYW) aged 14-24 for 12 months from enrolment in January-
+October 2019. All were HIV-negative, PrEP-naive, sexually active in the prior three months,
+and drawn from 22 urban-slum communities where sex work and entertainment-venue work are
+common. Volunteers were shown five biomedical prevention products (oral PrEP, long-acting
 injectable PrEP, ARV vaginal ring, PrEP implant, HIV vaccine) across two education sessions,
-ranked them 1-5, and were then offered daily TDF/3TC. Extracted content and tables sit at
-`raw/10.1002/jia2.25909`.
+ranked them 1-5, and were then offered daily TDF/3TC.
 
 ## Relevance to project
 

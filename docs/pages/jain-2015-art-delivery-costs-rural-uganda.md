@@ -10,7 +10,9 @@ tags: [hiv, economics]
 updated: 2026-09-10 10:31
 ---
 
-Micro-costing study nested in the EARLI trial (NCT01479634), which put 197 asymptomatic adults with CD4 above 350 cells/uL on ART at Bwizibwera Health Center, Mbarara, southwestern Uganda, from 2011. Combines administrative cost records, ART prices and a four-week time-and-motion study of staff activity, then projects six scale-up scenarios of increasing efficiency. Costs in 2012 US dollars, per person per year. Extracted content in [raw/10.1371/journal.pone.0143433/](../raw/10.1371/journal.pone.0143433/).
+Source: [jain-2015](https://doi.org/10.1371/journal.pone.0143433)
+
+Micro-costing study nested in the EARLI trial (NCT01479634), which put 197 asymptomatic adults with CD4 above 350 cells/uL on ART at Bwizibwera Health Center, Mbarara, southwestern Uganda, from 2011. Combines administrative cost records, ART prices and a four-week time-and-motion study of staff activity, then projects six scale-up scenarios of increasing efficiency. Costs in 2012 US dollars, per person per year.
 
 ## Key points
 

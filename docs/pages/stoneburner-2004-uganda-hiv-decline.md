@@ -10,13 +10,12 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:21
 ---
 
+Source: [stoneburner-2004](https://doi.org/10.1126/science.1093166)
+
 A Science policy-forum analysis of Uganda's HIV decline through the 1990s, arguing that the
 decline was driven by population-wide reduction in casual sexual partnerships rather than by
 condoms, testing, or STI treatment. It compares Ugandan antenatal surveillance and
-behavioural survey data against Kenya, Malawi, and Zambia. Extracted text is at
-`raw/10.1126/science.1093166/content.md`; the extraction covers a full Science page run, so
-the article starts partway down the file (the two neighbouring articles, on hollow
-nanocrystals and on anvil cloud nuclei, are not part of this source).
+behavioural survey data against Kenya, Malawi, and Zambia.
 
 ## Relevance to project
 

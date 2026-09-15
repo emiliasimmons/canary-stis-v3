@@ -10,15 +10,16 @@ tags: [partner-notification, sti, sexual-networks]
 updated: 2026-09-10 00:14
 ---
 
+Source: [vodstrcil-2025](https://doi.org/10.1056/NEJMoa2405404)
+
 StepUp, an open-label randomized controlled trial at two sexual health services and three
 family-planning services across three Australian states, enrolled 164 couples in which the
 woman had symptomatic bacterial vaginosis (BV) and a regular male partner of at least 8
 weeks. Both arms gave the woman first-line therapy (metronidazole 400 mg twice daily for 7
-days, or intravaginal clindamycin or metronidazole where contraindicated). The
-intervention arm added treatment of the male partner: oral metronidazole 400 mg twice daily
-plus 2% clindamycin cream applied to the glans and upper shaft, both for 7 days. The
-control arm left the man untreated. Extracted content sits at
-`raw/10.1056/nejmoa2405404`.
+days, or intravaginal clindamycin or metronidazole where contraindicated). The intervention
+arm added treatment of the male partner: oral metronidazole 400 mg twice daily plus 2%
+clindamycin cream applied to the glans and upper shaft, both for 7 days. The control arm
+left the man untreated.
 
 ## Relevance to project
 

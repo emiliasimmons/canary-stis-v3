@@ -10,12 +10,13 @@ tags: [hiv, sexual-networks]
 updated: 2026-09-10 00:23
 ---
 
+Source: [borgdorff-2018](https://doi.org/10.1016/S2352-3018(18)30025-0)
+
 Secondary analysis of three home-based counselling and testing (HBCT) rounds nested in the
 KEMRI/CDC health and demographic surveillance system in Gem, Siaya County, western Kenya:
 28 688 people aged 15-64 in 2011, 17 021 in 2012, 16 772 in 2016. Participants were tracked
-across rounds by surveillance ID, so a retrospective open cohort could be assembled from
-a service-delivery testing programme. Extracted text sits in
-`../raw/10.1016/s2352-3018(18)30025-0/content.md`.
+across rounds by surveillance ID, so a retrospective open cohort could be assembled from a
+service-delivery testing programme.
 
 ## Relevance to project
 
