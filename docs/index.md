@@ -14,15 +14,15 @@ calibration site.
 - [care-seeking](tags/care-seeking.md) · 50 pages
 - [coinfection](tags/coinfection.md) · 27 pages
 - [diagnostics](tags/diagnostics.md) · 21 pages
-- [economics](tags/economics.md) · 8 pages
-- [hiv](tags/hiv.md) · 169 pages
+- [economics](tags/economics.md) · 9 pages
+- [hiv](tags/hiv.md) · 170 pages
 - [immunity](tags/immunity.md) · 3 pages
-- [modeling](tags/modeling.md) · 30 pages
+- [modeling](tags/modeling.md) · 31 pages
 - [partner-notification](tags/partner-notification.md) · 19 pages
-- [phylogenetics](tags/phylogenetics.md) · 4 pages
-- [prep](tags/prep.md) · 30 pages
+- [phylogenetics](tags/phylogenetics.md) · 5 pages
+- [prep](tags/prep.md) · 31 pages
 - [rakai](tags/rakai.md) · 75 pages
-- [sexual-networks](tags/sexual-networks.md) · 82 pages
+- [sexual-networks](tags/sexual-networks.md) · 83 pages
 - [sti](tags/sti.md) · 49 pages
 - [study-concept](tags/study-concept.md) · 1 pages
 
@@ -37,8 +37,8 @@ calibration site.
 
 ## Recent
 
+- 2026-09-17 [Canonical figures in HIV transmission modeling: a taxonomy with named examples](pages/hiv-modeling-figure-archetypes.md)
 - 2026-09-17 [Canary study concept: originating note and May 2026 convening deck](pages/canary-study-concept.md)
 - 2026-09-16 [Understanding HIV risks among adolescent girls and young women in informal settlements of Nairobi, Kenya: Lessons for DREAMS](pages/ziraba-2018-agyw-risk-nairobi-slums.md)
 - 2026-09-14 [Partner notification and its omission from canary-stis](pages/partner-notification-pathway.md)
 - 2026-09-14 [PrEP as delivered versus trial efficacy and the STI-test-to-PrEP prevention step](pages/prep-delivered-vs-efficacy.md)
-- 2026-09-14 [RCCS HIV incidence decline and its drivers](pages/rccs-incidence-decline-drivers.md)
