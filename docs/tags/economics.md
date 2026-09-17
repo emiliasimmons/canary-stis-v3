@@ -9,7 +9,8 @@ description: Costing, cost-effectiveness, and the resource constraints under whi
 
 ## Members
 
-### Entries (7)
+### Entries (8)
+- [Canary study concept: originating note and May 2026 convening deck](../pages/canary-study-concept.md) -- The idea the project started from: the pathway decomposition proposed from STI diagnostics to HIV incidence, the counterfactual arm ladder meant to separate the pathways, and the empirical anchors named for it.
 - [The International Decision Support Initiative Reference Case for Economic Evaluation: an aid to thought](../pages/idsi-reference-case.md) -- BMGF-commissioned reference case for economic evaluation in LMICs; eleven principles with methodological specifications, including DALYs or QALYs, a lifetime horizon, a 3% discount rate, and current practice as the required comparator.
 - [Estimated Costs for Delivery of HIV Antiretroviral Therapy to Individuals with CD4+ T-Cell Counts >350 cells/uL in Rural Uganda](../pages/jain-2015-art-delivery-costs-rural-uganda.md) -- Micro-costing of nurse-driven ART delivery at a rural Mbarara health centre, US$628 per person-year observed at steady state and US$320 under a maximally efficient scale-up model
 - [Antenatal Syphilis Screening Using Point-of-Care Testing in Sub-Saharan African Countries: A Cost-Effectiveness Analysis](../pages/kuznik-2013-antenatal-syphilis-poc-cost-effectiveness.md) -- Decision-tree model across 43 sub-Saharan African countries putting rapid treponemal antenatal screening at a mean US$11 per DALY averted, with per-country test and treatment unit costs

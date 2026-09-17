@@ -9,11 +9,12 @@ description: HIV pre-exposure prophylaxis: efficacy, uptake, adherence, retentio
 
 ## Members
 
-### Entries (28)
+### Entries (29)
 - [Intracellular Tenofovir-Diphosphate and Emtricitabine-Triphosphate in Dried Blood Spots following Directly Observed Therapy](../pages/anderson-2017-tfv-dp-dbs-directly-observed-therapy.md) -- Directly observed dosing confirms the 350/700/1250 fmol/punch adherence thresholds for 2, 4 and 7 doses per week, the scale on which PrEP efficacy gradients are reported.
 - [Use of a Vaginal Ring Containing Dapivirine for HIV-1 Prevention in Women (MTN-020-ASPIRE)](../pages/aspire-dapivirine-ring.md) -- Phase 3 trial of the monthly dapivirine ring in African women, giving a 27-37% HIV-1 efficacy estimate, placebo-arm HIV incidence by age, and baseline STI prevalence in a trial cohort.
 - [Twice-Yearly Lenacapavir or Daily F/TAF for HIV Prevention in Cisgender Women (PURPOSE 1)](../pages/bekker-2024-purpose1-lenacapavir.md) -- Phase 3 trial in South African and Ugandan women aged 16-25 giving zero HIV infections on twice-yearly lenacapavir, plus baseline and incident STI rates in the same cohort
 - [Evaluating the impact of DREAMS on HIV incidence among adolescent girls and young women: A population-based cohort study in Kenya and South Africa](../pages/birdthistle-2021-dreams-hiv-incidence.md) -- Directly observed HIV incidence in two open cohorts (uMkhanyakude, South Africa; Gem, Kenya) showing declines in AGYW that began before DREAMS and did not accelerate under it
+- [Canary study concept: originating note and May 2026 convening deck](../pages/canary-study-concept.md) -- The idea the project started from: the pathway decomposition proposed from STI diagnostics to HIV incidence, the counterfactual arm ladder meant to separate the pathways, and the empirical anchors named for it.
 - [Tenofovir, Emtricitabine, and Tenofovir Diphosphate in Dried Blood Spots for Determining Recent and Cumulative Drug Exposure](../pages/castillo-mancilla-2012-tfv-dp-dried-blood-spots.md) -- Establishes the 17-day red-cell half-life of tenofovir-diphosphate that turns a dried blood spot into a measure of average PrEP doses per week over the preceding months.
 - [PrEP use and HIV seroconversion rates in adolescent girls and young women from Kenya and South Africa: the POWER demonstration project](../pages/celum-2022-power-prep-agyw.md) -- PrEP initiation, persistence and adherence in 2550 AGYW, with curable STI prevalence and incidence and the fraction of infections that were symptomatic
 - [Preexposure prophylaxis for the prevention of HIV infection (USPSTF systematic review)](../pages/chou-2019-prep-systematic-review.md) -- PrEP efficacy from 14 RCTs (RR 0.46 overall, 0.27 with ≥70% adherence) and adverse event profile

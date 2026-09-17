@@ -9,7 +9,7 @@ description: Partnership structure, concurrency, mixing patterns, degree distrib
 
 ## Members
 
-### Entries (80)
+### Entries (81)
 - [Sexual partnership age pairings and risk of HIV acquisition in rural South Africa](../pages/akullian-2017-partnership-age-pairings-hiv-kzn.md) -- Population-based cohort quantifying HIV acquisition risk by sexual partner age group in men and women in hyperendemic KwaZulu-Natal
 - [The effect of 90-90-90 on HIV-1 incidence and mortality in eSwatini: a mathematical modelling study](../pages/akullian-2020-eswatini-90-90-90.md) -- EMOD network model of eSwatini finds ART scale-up cut adult HIV incidence 43.6% over 2010-16 but no treatment scenario reaches epidemic control by 2030.
 - [Large age shifts in HIV-1 incidence patterns in KwaZulu-Natal, South Africa](../pages/akullian-2021-age-shifts-hiv-incidence-kzn.md) -- 16-year AHRI cohort showing HIV incidence declines concentrated in young men and women, shifting peak incidence 5 y older in men and 2 y in women
@@ -26,6 +26,7 @@ description: Partnership structure, concurrency, mixing patterns, degree distrib
 - [Evaluating the impact of DREAMS on HIV incidence among adolescent girls and young women: A population-based cohort study in Kenya and South Africa](../pages/birdthistle-2021-dreams-hiv-incidence.md) -- Directly observed HIV incidence in two open cohorts (uMkhanyakude, South Africa; Gem, Kenya) showing declines in AGYW that began before DREAMS and did not accelerate under it
 - [A Comprehensive Genomics Solution for HIV Surveillance and Clinical Monitoring in Low-Income Settings](../pages/bonsall-2020-veseq-hiv-genomics.md) -- veSEQ-HIV, a 30 GBP whole-genome HIV sequencing assay validated on 1,620 Zambian plasma samples, giving viral load, drug resistance, and directed transmission networks from one test.
 - [HIV incidence in western Kenya during scale-up of ART and VMMC](../pages/borgdorff-2018-hiv-incidence-siaya.md) -- Population-based cohort in Gem, Siaya County, Kenya, 2011-16; HIV incidence halved from 11.1 to 5.7 per 1000 person-years as ART and circumcision coverage rose
+- [Canary study concept: originating note and May 2026 convening deck](../pages/canary-study-concept.md) -- The idea the project started from: the pathway decomposition proposed from STI diagnostics to HIV incidence, the counterfactual arm ladder meant to separate the pathways, and the empirical anchors named for it.
 - [The role of high-risk geographies in the perpetuation of the HIV epidemic in rural South Africa](../pages/cuadros-2022-high-risk-geographies-kzn.md) -- Phylogenetic transmission links in rural KwaZulu-Natal concentrate on one peri-urban high-prevalence cluster, quantifying how much of a generalized epidemic's network runs through a small high-risk core.
 - [Adolescent girls and young women: key populations for HIV epidemic control](../pages/dellar-2015-agyw-key-populations.md) -- Narrative review of why 15-24 year old women in southern Africa acquire HIV 5-7 years earlier than men, and what prevention has and has not worked.
 - [Association Between Early Sexual Debut and New HIV Infections Among Adolescents and Young Adults in 11 African Countries](../pages/early-sexual-debut-hiv-phia.md) -- PHIA cross-sectional analysis putting the adjusted odds of recent HIV infection at 2.65x for sexual debut before age 18, ages 10-24.

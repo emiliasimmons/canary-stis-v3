@@ -9,9 +9,10 @@ description: Tracing and notifying sexual partners of diagnosed individuals, its
 
 ## Members
 
-### Entries (17)
+### Entries (18)
 - [Improving HIV Case Finding Through Index Testing: Findings from Health Facilities in 12 Districts of South Africa, October 2019-September 2021](../pages/aheron-2024-index-testing-south-africa.md) -- PEPFAR programme data on the HIV index-testing cascade in 371 South African facilities; 2.6% of tests but 17.8% positivity, 1.0 contacts elicited per client, 51% of contacts tested.
 - [Partner notification for sexually transmitted infections in developing countries: a systematic review](../pages/alam-2010-partner-notification-developing-countries.md) -- Systematic review of 39 studies on STI partner notification in low- and middle-income countries; median 54% of partners notified, with spousal partners reached far more than casual ones.
+- [Canary study concept: originating note and May 2026 convening deck](../pages/canary-study-concept.md) -- The idea the project started from: the pathway decomposition proposed from STI diagnostics to HIV incidence, the counterfactual arm ladder meant to separate the pathways, and the empirical anchors named for it.
 - [Heterosexual HIV-1 transmission after initiation of antiretroviral therapy: a prospective cohort analysis](../pages/donnell-2010-art-hiv-transmission.md) -- Serodiscordant-couple cohort giving genetically linked HIV transmission rates per 100 person-years by ART status, CD4 stratum, and plasma viral load.
 - [Assisted Partner Notification Services Are Safe and Effective as They Are Brought to Scale in Mozambique](../pages/golden-2023-aps-safety-mozambique.md) -- Prospective evaluation of APS at three Maputo facilities (2016-2019); 55% of tested partners newly HIV-positive, case-finding index 0.36, and a 1.2% adverse-event rate
 - [Sexually Transmitted Infections among HIV-1-Discordant Couples](../pages/guthrie-2009-stis-hiv-discordant-couples.md) -- Enrollment cross-section of 416 Kenyan HIV-discordant couples: 16% of couples had a curable STI, and a partner's STI raised the odds 5.9-fold

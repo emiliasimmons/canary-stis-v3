@@ -11,19 +11,20 @@ calibration site.
 
 ## Tags
 
-- [care-seeking](tags/care-seeking.md) · 49 pages
-- [coinfection](tags/coinfection.md) · 26 pages
-- [diagnostics](tags/diagnostics.md) · 20 pages
-- [economics](tags/economics.md) · 7 pages
-- [hiv](tags/hiv.md) · 168 pages
+- [care-seeking](tags/care-seeking.md) · 50 pages
+- [coinfection](tags/coinfection.md) · 27 pages
+- [diagnostics](tags/diagnostics.md) · 21 pages
+- [economics](tags/economics.md) · 8 pages
+- [hiv](tags/hiv.md) · 169 pages
 - [immunity](tags/immunity.md) · 3 pages
-- [modeling](tags/modeling.md) · 29 pages
-- [partner-notification](tags/partner-notification.md) · 18 pages
+- [modeling](tags/modeling.md) · 30 pages
+- [partner-notification](tags/partner-notification.md) · 19 pages
 - [phylogenetics](tags/phylogenetics.md) · 4 pages
-- [prep](tags/prep.md) · 29 pages
-- [rakai](tags/rakai.md) · 74 pages
-- [sexual-networks](tags/sexual-networks.md) · 81 pages
-- [sti](tags/sti.md) · 48 pages
+- [prep](tags/prep.md) · 30 pages
+- [rakai](tags/rakai.md) · 75 pages
+- [sexual-networks](tags/sexual-networks.md) · 82 pages
+- [sti](tags/sti.md) · 49 pages
+- [study-concept](tags/study-concept.md) · 1 pages
 
 ## Syntheses
 
@@ -36,8 +37,8 @@ calibration site.
 
 ## Recent
 
+- 2026-09-17 [Canary study concept: originating note and May 2026 convening deck](pages/canary-study-concept.md)
 - 2026-09-16 [Understanding HIV risks among adolescent girls and young women in informal settlements of Nairobi, Kenya: Lessons for DREAMS](pages/ziraba-2018-agyw-risk-nairobi-slums.md)
 - 2026-09-14 [Partner notification and its omission from canary-stis](pages/partner-notification-pathway.md)
 - 2026-09-14 [PrEP as delivered versus trial efficacy and the STI-test-to-PrEP prevention step](pages/prep-delivered-vs-efficacy.md)
 - 2026-09-14 [RCCS HIV incidence decline and its drivers](pages/rccs-incidence-decline-drivers.md)
-- 2026-09-14 [Targeting high-transmission network positions in a generalized epidemic](pages/targeting-network-positions.md)

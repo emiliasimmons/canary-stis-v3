@@ -41,3 +41,4 @@
 - **rakai**: Data, studies, and parameters from the Rakai Community Cohort Study and surrounding communities in south-central Uganda.
 - **sexual-networks**: Partnership structure, concurrency, mixing patterns, degree distributions, and extra-couple contacts that shape STI and HIV transmission.
 - **sti**: Epidemiology, natural history, treatment, and prevalence of the four curable bacterial STIs the model tracks: gonorrhoea, chlamydia, trichomoniasis, and syphilis.
+- **study-concept**: Proposals, protocols, and trial designs: the pathways a study sets out to separate, the arms meant to separate them, and what each contrast is intended to isolate.
