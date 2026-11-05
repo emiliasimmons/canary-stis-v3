@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+# Mirror an experiment to a remote host and launch run.py in a detached tmux session.
+#
+# Usage: scripts/mirror <ssh-target> <track/folder> [run.py args...]
+#   <ssh-target>    ssh host and git remote of the same name; repo at ~/Projects/<repo> on it
+#   <track/folder>  experiment path under experiments/ (e.g. kenya/42_wider_beta)
+#   [run.py args]   forwarded verbatim to run.py (e.g. -j 80)
+#
+# Pushes the current branch to the target, so the remote runs exactly the local HEAD.
+# Aborts while the experiment folder, src/, or deps (pyproject.toml, uv.lock) have
+# uncommitted changes, since those would not reach the remote.
+#
+# The target's clone receives pushes directly (receive.denyCurrentBranch=updateInstead),
+# so there is no fetch from GitHub.
+#
+# Run from the main checkout, the remote is ~/Projects/<repo>. Run from a linked
+# worktree, the remote is ~/Projects/<repo>/worktrees/<branch> (a remote worktree of the
+# same clone), so two branches can run at once without resetting each other's tree.
+set -euo pipefail
+
+die() { printf 'mirror: %s\n' "$1" >&2; exit 1; }
+
+[ $# -ge 2 ] || die "usage: scripts/mirror <ssh-target> <track/folder> [run.py args...]"
+target=$1
+slug=$2
+shift 2
+run_args="$*"
+
+root=$(git rev-parse --show-toplevel) || die "not inside a git repo"
+# the common dir, so the name is the main checkout's even when run from a worktree
+repo=$(basename "$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")")
+branch=$(git -C "$root" rev-parse --abbrev-ref HEAD)
+default=$(git -C "$root" symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null || true)
+default=${default#origin/}
+default=${default:-main}
+
+if [ "$(git -C "$root" rev-parse --path-format=absolute --git-dir)" \
+   = "$(git -C "$root" rev-parse --path-format=absolute --git-common-dir)" ]; then
+  remote_dir="Projects/$repo"
+  session_name=${slug//\//_}
+else
+  remote_dir="Projects/$repo/worktrees/$branch"
+  session_name="${branch//\//_}__${slug//\//_}"
+fi
+
+[ "$branch" = "$default" ] && die "refusing to mirror from '$default'; check out the experiment's branch"
+[ -f "$root/experiments/$slug/run.py" ] || die "no experiments/$slug/run.py locally"
+
+dirty=$(git -C "$root" status --porcelain -- "experiments/$slug" src pyproject.toml uv.lock)
+[ -z "$dirty" ] || die "uncommitted changes affecting the run (commit before mirroring):
+$dirty"
+
+git -C "$root" remote get-url "$target" >/dev/null 2>&1 \
+  || die "no git remote named '$target'; add one with: git remote add $target $target:Projects/$repo"
+echo "mirror: pushing $branch to $target ..."
+git -C "$root" push --quiet "$target" "$branch" || die "push of '$branch' to '$target' failed"
+
+head_sha=$(git -C "$root" rev-parse HEAD)
+
+echo "mirror: updating $target:$remote_dir to $branch ..."
+# a worktree's branch commit is already in the remote's shared object store from the push
+if [ "$remote_dir" != "Projects/$repo" ]; then
+  ssh "$target" "cd Projects/$repo && git worktree add worktrees/'$branch' '$branch' 2>/dev/null || true"
+fi
+ssh "$target" "cd $remote_dir && git checkout --quiet '$branch' && git reset --hard --quiet '$branch'" \
+  || die "remote update failed (repo cloned at ~/Projects/$repo on $target?)"
+
+remote_sha=$(ssh "$target" "cd $remote_dir && git rev-parse HEAD")
+[ "$remote_sha" = "$head_sha" ] || die "remote HEAD is $remote_sha, local is $head_sha"
+
+if ssh "$target" "tmux has-session -t '$session_name' 2>/dev/null"; then
+  die "a tmux session '$session_name' already exists on $target; attach or kill it first"
+fi
+ssh "$target" "cat > ~/.mirror_${session_name}.sh" <<EOF
+cd ~/$remote_dir
+uv run python experiments/$slug/run.py $run_args 2>&1 | tee ~/mirror_${session_name}.log
+EOF
+ssh "$target" "tmux new-session -d -s '$session_name' 'bash -l ~/.mirror_${session_name}.sh'"
+
+echo "mirror: launched on $target -> experiments/$slug/run.py $run_args"
+echo "  attach: ssh $target -t tmux attach -t $session_name"
+echo "  log:    ssh $target tail -f mirror_${session_name}.log"
+echo "  pull:   scripts/mirror-pull $target $slug"

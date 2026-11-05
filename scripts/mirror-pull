@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Pull an experiment's results back from a remote host.
+#
+# Usage: scripts/mirror-pull <ssh-target> <track/folder>
+#
+# rsyncs experiments/<track/folder>/{outputs,figures}/ from the remote checkout that
+# scripts/mirror ran in back to this checkout, excluding any sim_cache/.
+set -euo pipefail
+
+die() { printf 'mirror-pull: %s\n' "$1" >&2; exit 1; }
+
+[ $# -eq 2 ] || die "usage: scripts/mirror-pull <ssh-target> <track/folder>"
+target=$1
+slug=$2
+
+root=$(git rev-parse --show-toplevel) || die "not inside a git repo"
+# the common dir, so the name is the main checkout's even when run from a worktree
+repo=$(basename "$(dirname "$(git rev-parse --path-format=absolute --git-common-dir)")")
+branch=$(git -C "$root" rev-parse --abbrev-ref HEAD)
+# match mirror's remote layout: a linked worktree lives under worktrees/<branch>
+if [ "$(git -C "$root" rev-parse --path-format=absolute --git-dir)" \
+   = "$(git -C "$root" rev-parse --path-format=absolute --git-common-dir)" ]; then
+  remote_dir="Projects/$repo"
+else
+  remote_dir="Projects/$repo/worktrees/$branch"
+fi
+exp="experiments/$slug"
+[ -d "$root/$exp" ] || die "no $exp locally"
+
+mkdir -p "$root/$exp/outputs" "$root/$exp/figures"
+ssh "$target" "mkdir -p $remote_dir/$exp/outputs $remote_dir/$exp/figures"
+echo "mirror-pull: $target:$remote_dir/$exp -> $exp (excluding sim_cache)"
+rsync -avz --exclude sim_cache "$target:$remote_dir/$exp/outputs/" "$root/$exp/outputs/"
+rsync -avz "$target:$remote_dir/$exp/figures/" "$root/$exp/figures/"
+echo "mirror-pull: done"

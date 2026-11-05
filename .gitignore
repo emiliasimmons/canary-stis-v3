@@ -5,7 +5,6 @@ __pycache__/
 
 # Experiment outputs (regenerable)
 experiments/*/*/outputs/
-experiments/*/*/figures/
 
 # Session scratch (local-only)
 handoff.md
