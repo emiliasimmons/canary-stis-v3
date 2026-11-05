@@ -14,7 +14,7 @@ Source: [toskin-2017](https://doi.org/10.1136/sextrans-2016-053071)
 
 WHO Department of Reproductive Health and Research report combining four landscape analyses of point-of-care tests (2014, 2015, updated December 2016) with target product profiles agreed by a 32-member international expert group across two technical consultations, using an adapted Delphi method. Covers syphilis, *Neisseria gonorrhoeae*, *Chlamydia trachomatis*, *Trichomonas vaginalis* and HPV, specifying 28 analytical and operational characteristics each at a minimal and an optimal level.
 
-## Summary
+## Target product profiles
 
 Target product profile performance floors, all against laboratory NAAT as reference except syphilis (TPPA and RPR), for genital specimens:
 
