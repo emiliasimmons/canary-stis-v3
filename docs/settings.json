@@ -1,5 +1,5 @@
 {
-  "canonize_version": "0.1.2",
+  "canonize_version": "0.1.3",
   "tag_aging_days": 90,
   "types": [],
   "check": {
