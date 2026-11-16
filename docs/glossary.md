@@ -38,6 +38,8 @@
   belongs to this pathway.
 - **Pathway E**. Network risk signal: the hypothesis that a positive STI result in an
   HIV-negative person marks someone more likely than average to acquire HIV later.
+- **Behavioral eligibility**. Qualifying for PrEP on self-reported sexual behavior, the
+  screen prevention programmes use, without an STI result.
 - **Direct treatment**. Pathways A and C together, the HIV effect of treating curable STIs
   at the care-seeking door, reported separately for symptomatic and asymptomatic
   infections.

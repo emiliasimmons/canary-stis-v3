@@ -10,7 +10,7 @@ description: HIV pre-exposure prophylaxis: efficacy, uptake, adherence, retentio
 ## Members
 
 ### Decisions (1)
-- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways, three measured as prevented fractions from seven model arms, the canary signal tested as a hypothesis inside a run, and the STI cofactor PAF as their maximum.
+- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 
 ### Entries (30)
 - [Intracellular Tenofovir-Diphosphate and Emtricitabine-Triphosphate in Dried Blood Spots following Directly Observed Therapy](../pages/anderson-2017-tfv-dp-dbs-directly-observed-therapy.md) -- Directly observed dosing confirms the 350/700/1250 fmol/punch adherence thresholds for 2, 4 and 7 doses per week, the scale on which PrEP efficacy gradients are reported.

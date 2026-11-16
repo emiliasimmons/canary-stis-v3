@@ -10,7 +10,7 @@ description: Test performance, platforms, and deployment for identifying STI and
 ## Members
 
 ### Decisions (1)
-- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways, three measured as prevented fractions from seven model arms, the canary signal tested as a hypothesis inside a run, and the STI cofactor PAF as their maximum.
+- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 
 ### Entries (20)
 - [Partner notification for sexually transmitted infections in developing countries: a systematic review](../pages/alam-2010-partner-notification-developing-countries.md) -- Systematic review of 39 studies on STI partner notification in low- and middle-income countries; median 54% of partners notified, with spousal partners reached far more than casual ones.

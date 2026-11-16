@@ -1,18 +1,17 @@
 ---
 type: decision
 title: Pathway decomposition and arm design
-description: Four reporting pathways, three measured as prevented fractions from seven model arms, the canary signal tested as a hypothesis inside a run, and the STI cofactor PAF as their maximum.
+description: Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 tags: [study-concept, modeling, diagnostics, partner-notification, prep, hiv]
-updated: 2026-11-15 22:51
+updated: 2026-11-16 15:26
 ---
 
 The study reports four pathways from point-of-care STI diagnostics to HIV incidence:
-direct treatment, partner notification, prevention targeting, and the canary signal. The
-first three are each measured as a prevented fraction from comparisons among seven model
-arms. The canary signal is a hypothesis about the epidemic, tested inside a run. The PAF of
-the STI cofactor, from a separate SOC run with the Magic cure, sets the maximum that direct
-treatment and partner notification can prevent together. Each experiment chooses its own
-outcome and time horizon.
+direct treatment, partner notification, prevention targeting, and the network risk signal.
+Eight model arms supply them. The network risk signal is a hypothesis about the epidemic,
+tested inside the POC arm. Which arms are compared, the outcome, the time horizon, and how
+pathway values relate to the total are left to each experiment. The comparisons below are
+the ones the arms were built for.
 
 ## Pathways
 
@@ -23,27 +22,68 @@ that ends the cofactor while leaving the STI transmitting. Direct treatment is s
 instead by the infections the POC panel treats that syndromic management did not, into
 symptomatic and asymptomatic. An analyzer supplies the split, with no extra arm.
 
-Partner notification is pathway B. Notified partners are treated for curable STIs and
-tested for HIV with linkage to ART, and the HIV testing part is reported as its own
-sub-category. Most of the canon's notification evidence comes from HIV index testing
+Partner notification is pathway B. Notified partners are referred to a testing visit,
+where they receive the POC panel, treatment if positive, and an HIV test with linkage to
+ART. The HIV testing part is reported as its own sub-category. Most of the canon's
+notification evidence comes from HIV index testing
 ([partner-notification synthesis](partner-notification-pathway.md)), and reporting that
-part separately keeps the STI part comparable with direct treatment. The synthesis argues
+part separately keeps the STI part comparable with direct treatment. Referral is the one
+delivery mode that tests partners: patient-delivered partner medication treated 74% of
+partners against 34% under referral
+([Alam 2010](alam-2010-partner-notification-developing-countries.md)), but no partner it
+reaches is tested for HIV or becomes eligible for STI-triggered PrEP. The synthesis argues
 the model loses little by leaving notification out. Bringing it into scope measures that
 loss instead of arguing it.
 
-Prevention targeting is pathway D: a positive STI result leads an HIV-negative person into
-prevention.
+Prevention targeting is pathway D: a positive STI result leads an HIV-negative person onto
+PrEP. STI-triggered PrEP enrolls a person in the step their STI treatment fires, at
+whatever volume the diagnoses produce. Partner notification and STI-triggered PrEP act on
+the diagnoses the POC panel produces, so neither runs on SOC.
 
-The canary signal is pathway E, restricted to acquisition: an STI infection in an
-HIV-negative person predicts that the same person acquires HIV later. It describes the
-epidemic and switches nothing on, so it has no prevented fraction. Its two requirements
-are measured apart. Whether STIs precede HIV is measured inside one run over all STI
-infections, diagnosed or not. Whether the platform reaches those people shows in the split
-between diagnosed and undiagnosed infections, and in the prevented fraction of D. A measure
-on diagnosed infections alone would give the same low value for a weak signal and for
-a narrow care-seeking door. Under the SOC arm a diagnosis is a syndromic treatment, which
-can fall on a person with no STI, so the analyzer records true infection status at each
-treatment.
+The network risk signal is pathway E, restricted to acquisition: an HIV-negative person
+who acquires one of the four curable STIs is more likely than average to acquire HIV
+later. It describes the epidemic and switches nothing on, so it has no prevented fraction.
+It is tested inside the POC arm, where no PrEP runs. In an arm with STI-triggered PrEP the
+people the signal flags are put on PrEP, and their later HIV acquisition falls because
+the PrEP works. That fall is prevention targeting's effect, the value of acting on the
+signal, and it would weaken the signal being tested. The four STIs are gonorrhoea,
+chlamydia, trichomoniasis and syphilis, the infections the POC panel detects. BV is left
+out because the panel never detects it, and its HIV cofactor in stisim is a placeholder.
+
+The test splits HIV-negative people in the POC arm by whether they acquire one of the four
+STIs and compares their later HIV acquisition, over all STI infections, diagnosed or not.
+A measure on diagnosed infections alone would give the same low value for a weak signal
+and for a narrow care-seeking door. Infection times come from the infection log. The HIV
+transmission logger's guess at the source partner plays no part, since only who acquired
+HIV and when is read. An analyzer records every treatment, syndromic or POC, with the
+person's true STI status, because a syndromic treatment can fall on a person with no STI.
+That record splits infections into diagnosed and undiagnosed.
+
+## Behavioral PrEP
+
+Behavioral PrEP runs in one arm, SOC with behavioral eligibility, which is the concept
+deck's Risk-Group PrEP arm. It stands for targeting prevention by behavior without buying
+diagnostics, the strategy POC with STI-triggered PrEP competes against. Running it in
+every arm would remove that comparison, would put PrEP in the POC arm where the network
+risk signal is tested, and would not make the baseline more realistic, since each setting
+is already selected on its HIV prevalence
+([settings decision](settings-prevalence-by-phase.md)).
+
+The screen is Uganda's national PrEP eligibility tool as applied in the RCCS
+([Ssempijja 2022](ssempijja-2022-prep-eligibility-hiv-incidence-rakai.md)): any of more
+than one partner of unknown HIV status, condomless sex outside marriage, transactional
+sex, or genital ulcers, in the past 12 months. Each item is something a person could
+report, so the screen sees what a real questionnaire sees and never the model's hidden
+risk group. In the RCCS 29% of adults qualified, with HIV incidence of 0.91 per 100
+person-years among them against 0.41 among the rest, which checks how many people the
+model's version qualifies and how much risk it concentrates. The screen is asked at
+background HIV testing visits and at STI clinic visits, the contacts where programmes
+offer PrEP. Enrollment runs at the volume the screen produces.
+
+In the model every genital ulcer is a syphilis chancre, since the non-syphilitic ulcer
+background (`gudp`) stays at zero. The ulcer item therefore marks a curable STI every time
+it fires, which real self-reported ulcers do not, and this gives behavioral PrEP a sharper
+STI signal than real screening has.
 
 ## Figures
 
@@ -53,38 +93,48 @@ which is an exposure. Gargiullo, Rothenberg and Wilson (1995, doi:10.1002/sim.47
 separate the two, with the prevented fraction measuring an intervention's impact and the
 attributable risk suited to etiology.
 
-## Arms and comparisons
+## Arms
 
 1. SOC
-2. POC
-3. POC + partner notification
-4. POC + STI-triggered prevention
-5. POC + STI-triggered prevention + partner notification
-6. POC + prevention by behavioral eligibility, matched in amount to arm 4
+2. SOC + behavioral PrEP
+3. POC
+4. POC + partner notification
+5. POC + STI-triggered PrEP
+6. POC + STI-triggered PrEP + partner notification
 7. POC + screening door at background HIV testing visits
+8. SOC + Magic cure
 
-Direct treatment is arm 2 against arm 1, so it measures what the POC arm adds over
-syndromic management.
+The screening door attaches to background HIV testing because that is the only routine
+HIV contact present in every arm. An `include_men` switch restricts it to women, matching
+the population of the INSTEP trial.
 
-Arms 2 to 5 form a 2×2 over POC. Partner notification and prevention targeting are each
-measured alone and added to the other, and the difference between the two values is their
-interaction. A sequential ladder would assign that interaction to whichever pathway came
-second, since sequential attributable fractions depend on the order of removal (Eide 2008,
-doi:10.1111/j.1752-699x.2008.00091.x).
+The Magic cure clears gonorrhoea, chlamydia, trichomoniasis and syphilis at one instant,
+and nothing in `src/` reintroduces them, so the removal lasts for the rest of the run.
+Whether stisim reintroduces infections internally has not been checked, and
+a reintroduction would make arm 8 understate the cofactor PAF. The cure leaves BV in place,
+so the PAF covers the four STIs only.
 
-The canary signal's value is arm 4 against arm 6. Behavioral eligibility is what
-prevention programmes use now, so the comparison asks whether the STI signal beats current
-practice. The concept deck labelled this comparison D as well. It sits with E because it
-measures the signal, with the amount of prevention held fixed.
+## Suggested comparisons
 
-The screening door is arm 7 against arm 2, and its effect falls in direct treatment's
-asymptomatic sub-category. The door attaches to background HIV testing because that is the
-only routine HIV contact present in every arm. An `include_men` switch restricts it to
-women, matching the population of the INSTEP trial.
+Direct treatment is POC against SOC (3 against 1), what the POC panel adds over syndromic
+management.
 
-The cofactor PAF is SOC with the Magic cure against SOC, run apart from the seven arms. The
-Magic cure clears gonorrhoea, chlamydia, trichomoniasis and syphilis at one instant, and
-nothing in `src/` reintroduces them, so the removal lasts for the rest of the run. Whether
-stisim reintroduces infections internally has not been checked, and a reintroduction would
-make this run understate the PAF. The cure leaves BV in place, so the maximum covers the
-four STIs only.
+Partner notification and STI-triggered PrEP can each be measured alone (4 or 5 against 3)
+and with the other present (6 against 5 or 4). The difference between the two values is
+their overlap, mostly notified partners who test STI-positive and so become eligible for
+STI-triggered PrEP. Reporting it as its own term avoids a sequential ladder, which would
+assign the overlap to whichever pathway came second, since sequential attributable
+fractions depend on the order of removal (Eide 2008, doi:10.1111/j.1752-699x.2008.00091.x).
+
+The two PrEP strategies compare as 5 and 2, each against its own diagnostic baseline or
+both against SOC, by total infections averted and by infections averted per PrEP user. The
+concept deck labelled this comparison D, alongside adding targeted PrEP to POC (5 against
+3). Because volumes are left free, STI-triggered PrEP can come out ahead by enrolling more
+people as well as by choosing higher-risk ones. An experiment that raises the volume of
+behavioral PrEP separates the two.
+
+The screening door is 7 against 3, and its effect falls in direct treatment's
+asymptomatic sub-category.
+
+The cofactor PAF is 8 against 1, the maximum that direct treatment and partner
+notification can prevent together.
