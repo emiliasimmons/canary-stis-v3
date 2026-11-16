@@ -18,6 +18,6 @@ dependencies = [
 package = false
 
 [tool.uv.sources]
-starsim   = { git = "ssh://git@github.com/starsimhub/starsim.git" }
-stisim    = { git = "ssh://git@github.com/starsimhub/stisim.git" }
+starsim   = { git = "ssh://git@github.com/starsimhub/starsim.git", tag = "v3.7.4" }
+stisim    = { git = "ssh://git@github.com/starsimhub/stisim.git", tag = "v1.7.2" }
 parsimmon = { git = "ssh://git@github.com/InstituteforDiseaseModeling/parsimmon.git" }

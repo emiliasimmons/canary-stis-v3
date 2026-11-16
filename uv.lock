@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.13"
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'win32'",
@@ -47,8 +47,8 @@ requires-dist = [
     { name = "parsimmon", git = "ssh://git@github.com/InstituteforDiseaseModeling/parsimmon.git" },
     { name = "scipy" },
     { name = "sciris" },
-    { name = "starsim", git = "ssh://git@github.com/starsimhub/starsim.git" },
-    { name = "stisim", git = "ssh://git@github.com/starsimhub/stisim.git" },
+    { name = "starsim", git = "ssh://git@github.com/starsimhub/starsim.git?tag=v3.7.4" },
+    { name = "stisim", git = "ssh://git@github.com/starsimhub/stisim.git?tag=v1.7.2" },
 ]
 
 [[package]]
@@ -1232,8 +1232,8 @@ wheels = [
 
 [[package]]
 name = "starsim"
-version = "3.6.1"
-source = { git = "ssh://git@github.com/starsimhub/starsim.git#3521adb4dda5a76d43ec38f5e8cb55deab08ece9" }
+version = "3.7.4"
+source = { git = "ssh://git@github.com/starsimhub/starsim.git?tag=v3.7.4#d8eafacfdf85e718fae7452d6ecadd42998a6591" }
 dependencies = [
     { name = "matplotlib" },
     { name = "networkx" },
@@ -1248,8 +1248,8 @@ dependencies = [
 
 [[package]]
 name = "stisim"
-version = "1.6.0"
-source = { git = "ssh://git@github.com/starsimhub/stisim.git#90d984f6f0df96a2f6339851654476cfb85a82fe" }
+version = "1.7.2"
+source = { git = "ssh://git@github.com/starsimhub/stisim.git?tag=v1.7.2#c00af3acb33b5c8a21e74930eebfc2f056549ffa" }
 dependencies = [
     { name = "numpy" },
     { name = "optuna" },
