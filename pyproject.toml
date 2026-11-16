@@ -21,3 +21,12 @@ package = false
 starsim   = { git = "ssh://git@github.com/starsimhub/starsim.git", tag = "v3.7.4" }
 stisim    = { git = "ssh://git@github.com/starsimhub/stisim.git", tag = "v1.7.2" }
 parsimmon = { git = "ssh://git@github.com/InstituteforDiseaseModeling/parsimmon.git" }
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

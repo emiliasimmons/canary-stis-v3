@@ -56,6 +56,12 @@ from .interventions import (
 
 _SYPH_DX_PATH = Path(__file__).parent / "data" / "syph_dx.csv"
 
+# stisim's testing modules default stop to the run's last year and only act
+# while now < stop, so they would skip the final step. Syndromic and panel
+# modules also empty the shared NG/CT/TV treatment queues on every step from
+# stop on.
+_NO_STOP = np.inf
+
 # NG/CT/TV treatments the syndromic algorithm assigns by presenting syndrome,
 # independent of what the patient carries. Each entry is [female, male];
 # tx_mix_cerv applies to women with a cervical infection and to all men,
@@ -276,6 +282,7 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
         product=product("syndromic_gud"),
         test_prob_data=pars.syph_test.symp_test_prob,
         eligibility=syph_ulcer_eligibility,
+        stop=_NO_STOP,
         dt_scale=False,
     )
     rash_test = sti.SyphTest(
@@ -283,6 +290,7 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
         product=product("syndromic_rash"),
         test_prob_data=pars.syph_test.symp_test_prob,
         eligibility=syph_rash_eligibility,
+        stop=_NO_STOP,
         dt_scale=False,
     )
 
@@ -309,7 +317,7 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
         dt_scale=False,
     )
     anc_rdt.start = pars.rdt_year
-    anc_rdt.stop = None
+    anc_rdt.stop = _NO_STOP
 
     intvs = [timer, symp_test, rash_test, anc_rpr, anc_rdt]
     treat_tests = ["syph_symp_test", "syph_rash_test", "syph_anc_rpr"]
@@ -323,6 +331,7 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
             product=product("gud2"),
             test_prob_data=pars.syph_test.symp_test_prob,
             eligibility=syph_ulcer_eligibility,
+            stop=_NO_STOP,
             dt_scale=False,
         )
         symp_test_poc.start = intv_year
@@ -333,6 +342,7 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
             product=product("rpr", label="syph_dx_rpr_confirm"),
             test_prob_data=1.0,
             eligibility=syph_anc_confirm_eligibility,
+            stop=_NO_STOP,
             dt_scale=False,
         )
         anc_confirm.start = intv_year
@@ -391,6 +401,7 @@ def build_sim(pars):
         name="syndromic_vds", label="Syndromic management - VDS",
         diseases=["ng", "ct", "tv", "bv"],
         eligibility=gate_soc(seeking_care_vds, use_poc, intv_year),
+        stop=_NO_STOP,
         treatments=[ng_tx, ct_tx, metronidazole],
         outcome_tx_map=outcome_tx_map,
         pars=syndromic_pars,
@@ -399,6 +410,7 @@ def build_sim(pars):
         name="syndromic_uds", label="Syndromic management - UDS",
         diseases=["ng", "ct", "tv"],
         eligibility=gate_soc(seeking_care_uds, use_poc, intv_year),
+        stop=_NO_STOP,
         treatments=[ng_tx, ct_tx, metronidazole],
         outcome_tx_map=outcome_tx_map,
         pars=syndromic_pars,
@@ -407,6 +419,7 @@ def build_sim(pars):
         name="panel", label="POC panel",
         diseases=["ng", "ct", "tv"],
         eligibility=gate_poc(seeking_care_any, use_poc, intv_year),
+        stop=_NO_STOP,
         treatments=[ng_tx, ct_tx, metronidazole],
         disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
         pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
@@ -415,7 +428,9 @@ def build_sim(pars):
 
     # Detection modules precede treatment modules so a treatment sees eligibility
     # set this step, not next: SymptomaticTesting/SyndromicManagement enqueue onto
-    # the shared treatments, which run immediately after.
+    # the shared treatments, which run immediately after. FSW outreach goes
+    # first: once past a user-set stop it empties those queues every step, and
+    # would erase the syndromic and panel referrals made earlier in the step.
     detection = [syndromic_vds, syndromic_uds, panel]
     if pars.fsw_outreach.rate > 0:
         fsw_stop = pars.fsw_outreach.stop
@@ -423,14 +438,14 @@ def build_sim(pars):
             coverage_per_step=pars.fsw_outreach.rate,
             name="fsw_outreach", label="fsw_outreach",
             start=pars.fsw_outreach.start if pars.fsw_outreach.start is not None else lever_start,
-            stop=fsw_stop if fsw_stop is not None else (pars.sim.start + pars.sim.dur),
+            stop=fsw_stop if fsw_stop is not None else _NO_STOP,
             diseases=["ng", "ct", "tv"],
             treatments=[ng_tx, ct_tx, metronidazole],
             disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
             negative_treatments=[],
             pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
         )
-        detection.append(fsw)
+        detection.insert(0, fsw)
 
     interventions = detection + treatments
     interventions.extend(_syphilis_pipeline(pars, use_poc, intv_year))
