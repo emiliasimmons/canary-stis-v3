@@ -13,18 +13,18 @@ calibration site.
 
 - [care-seeking](tags/care-seeking.md) · 50 pages
 - [coinfection](tags/coinfection.md) · 27 pages
-- [diagnostics](tags/diagnostics.md) · 21 pages
+- [diagnostics](tags/diagnostics.md) · 22 pages
 - [economics](tags/economics.md) · 9 pages
-- [hiv](tags/hiv.md) · 171 pages
+- [hiv](tags/hiv.md) · 172 pages
 - [immunity](tags/immunity.md) · 3 pages
-- [modeling](tags/modeling.md) · 32 pages
-- [partner-notification](tags/partner-notification.md) · 19 pages
+- [modeling](tags/modeling.md) · 33 pages
+- [partner-notification](tags/partner-notification.md) · 20 pages
 - [phylogenetics](tags/phylogenetics.md) · 5 pages
-- [prep](tags/prep.md) · 31 pages
+- [prep](tags/prep.md) · 32 pages
 - [rakai](tags/rakai.md) · 75 pages
 - [sexual-networks](tags/sexual-networks.md) · 83 pages
 - [sti](tags/sti.md) · 49 pages
-- [study-concept](tags/study-concept.md) · 2 pages
+- [study-concept](tags/study-concept.md) · 3 pages
 
 ## Syntheses
 
@@ -37,12 +37,13 @@ calibration site.
 
 ## Decisions
 
+- [Pathway decomposition and arm design](pages/pathway-decomposition-arm-design.md) -- Four reporting pathways, three measured as prevented fractions from seven model arms, the canary signal tested as a hypothesis inside a run, and the STI cofactor PAF as their maximum.
 - [Settings are hypothetical epidemics crossed by prevalence and phase](pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, with prevalence read at ages 15-49 in 2026 and phase judged from the simulated incidence curve.
 
 ## Recent
 
+- 2026-11-15 [Pathway decomposition and arm design](pages/pathway-decomposition-arm-design.md)
 - 2026-11-15 [Settings are hypothetical epidemics crossed by prevalence and phase](pages/settings-prevalence-by-phase.md)
 - 2026-09-17 [Canonical figures in HIV transmission modeling: a taxonomy with named examples](pages/hiv-modeling-figure-archetypes.md)
 - 2026-09-17 [Canary study concept: originating note and May 2026 convening deck](pages/canary-study-concept.md)
 - 2026-09-16 [Understanding HIV risks among adolescent girls and young women in informal settlements of Nairobi, Kenya: Lessons for DREAMS](pages/ziraba-2018-agyw-risk-nairobi-slums.md)
-- 2026-09-14 [Partner notification and its omission from canary-stis](pages/partner-notification-pathway.md)

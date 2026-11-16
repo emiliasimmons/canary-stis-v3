@@ -3,6 +3,8 @@
 - **POC arm**. The intervention arm: point-of-care. An etiological test-and-treat panel
   that replaces syndromic management at the same symptomatic care-seeking door, switched
   on at `pars.intv_year`. Not an asymptomatic screening programme.
+- **Screening door**. The POC panel offered to people without STI symptoms at an HIV
+  prevention contact, in addition to the symptomatic care-seeking door.
 - **SOC arm**. The comparator. Syndromic management for the whole run, selected by
   `pars.intv_year = None`.
 - **Syndromic management**. Treating on the presenting syndrome with a drug mix covering
@@ -25,8 +27,10 @@
   a curable STI is present.
 - **Pathway A**. Onward STI transmission: treating an STI shortens the infection, so fewer
   partners acquire it and fewer people later carry the STI cofactor.
-- **Pathway B**. Partner treatment cascade: partners of a diagnosed person are notified,
-  tested and treated, and every effect of treating them on HIV belongs to this pathway.
+- **Pathway B**. Partner treatment cascade: partners of a diagnosed person are notified and
+  treated for curable STIs, and tested for HIV with linkage to ART. Every effect on HIV of
+  what partners receive belongs to this pathway, with the HIV testing part reported as its
+  own sub-category.
 - **Pathway C**. Biological susceptibility: treating an STI ends the STI cofactor in the
   treated person.
 - **Pathway D**. Prevention targeting: a positive STI result leads the person into
@@ -34,6 +38,9 @@
   belongs to this pathway.
 - **Pathway E**. Network risk signal: the hypothesis that a positive STI result in an
   HIV-negative person marks someone more likely than average to acquire HIV later.
+- **Direct treatment**. Pathways A and C together, the HIV effect of treating curable STIs
+  at the care-seeking door, reported separately for symptomatic and asymptomatic
+  infections.
 - **Prevented fraction**. The proportion of incidence that an intervention, or one pathway
   of it, averts, out of the incidence that would occur without it.
 - **PAF**. Population attributable fraction: the proportion of incidence caused by a risk

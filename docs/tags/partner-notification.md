@@ -9,6 +9,9 @@ description: Tracing and notifying sexual partners of diagnosed individuals, its
 
 ## Members
 
+### Decisions (1)
+- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways, three measured as prevented fractions from seven model arms, the canary signal tested as a hypothesis inside a run, and the STI cofactor PAF as their maximum.
+
 ### Entries (18)
 - [Improving HIV Case Finding Through Index Testing: Findings from Health Facilities in 12 Districts of South Africa, October 2019-September 2021](../pages/aheron-2024-index-testing-south-africa.md) -- PEPFAR programme data on the HIV index-testing cascade in 371 South African facilities; 2.6% of tests but 17.8% positivity, 1.0 contacts elicited per client, 51% of contacts tested.
 - [Partner notification for sexually transmitted infections in developing countries: a systematic review](../pages/alam-2010-partner-notification-developing-countries.md) -- Systematic review of 39 studies on STI partner notification in low- and middle-income countries; median 54% of partners notified, with spousal partners reached far more than casual ones.

@@ -9,7 +9,8 @@ description: Proposals, protocols, and trial designs: the pathways a study sets 
 
 ## Members
 
-### Decisions (1)
+### Decisions (2)
+- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways, three measured as prevented fractions from seven model arms, the canary signal tested as a hypothesis inside a run, and the STI cofactor PAF as their maximum.
 - [Settings are hypothetical epidemics crossed by prevalence and phase](../pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, with prevalence read at ages 15-49 in 2026 and phase judged from the simulated incidence curve.
 
 ### Entries (1)
