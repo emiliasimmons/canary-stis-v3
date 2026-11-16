@@ -49,8 +49,9 @@
   agreed by expert consensus and given as a minimal and an optimal value per
   characteristic. See
   [pages/toskin-2017-sti-poct-target-product-profiles.md](pages/toskin-2017-sti-poct-target-product-profiles.md).
-- **Setting**. A hypothetical HIV epidemic the model is hand-tuned to, defined by an HIV
-  prevalence level and an epidemic phase.
+- **Setting**. A hypothetical HIV epidemic defined by an HIV prevalence level and an
+  epidemic phase, represented by the ensemble of simulations, selected from a parameter
+  exploration, whose prevalence and phase fall in its cell.
 - **Mature epidemic**. An HIV epidemic long past its incidence peak, with incidence flat
   or declining. Rakai is the standard example.
 - **Expanding epidemic**. An HIV epidemic whose incidence is still rising or peaked

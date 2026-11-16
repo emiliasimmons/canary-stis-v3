@@ -97,12 +97,12 @@ for setup and small runs.
 
 ## Intake
 
-The current work is a scenario analysis: hypothetical settings spanning high and low HIV
-prevalence crossed with high and low HIV incidence, each run under the SOC and POC arms,
-with the pathway decomposition (direct treatment, prevention targeting, network
+The current work is a scenario analysis: hypothetical settings spanning high and medium
+HIV prevalence crossed with a mature or expanding epidemic, each run under the SOC and POC
+arms, with the pathway decomposition (direct treatment, prevention targeting, network
 identification) reported per setting to show how the split shifts across epidemics.
-Settings are hand-tuned to approximate prevalence and incidence levels, so no likelihood
-or posterior is needed. The model is the Starsim/STIsim simulation in `src/sim.py`
+Each setting is an ensemble of simulations selected from a parameter exploration by its
+2026 HIV prevalence, so no likelihood or posterior is needed. The model is the Starsim/STIsim simulation in `src/sim.py`
 (10,000 agents, 1990 to 2030, monthly step); run time per simulation is not yet measured.
 Compute is the laptop for setup and small runs and zebra for sweeps. The environment is
 managed with `uv`.

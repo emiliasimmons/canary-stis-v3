@@ -9,6 +9,9 @@ description: Epidemiology, natural history, treatment, and prevalence of the fou
 
 ## Members
 
+### Decisions (1)
+- [Settings are hypothetical epidemics crossed by prevalence and phase](../pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, each an ensemble of simulations selected on prevalence at ages 15-49 in 2026, with STI and HIV biology shared and STI burden left to the model.
+
 ### Entries (46)
 - [Partner notification for sexually transmitted infections in developing countries: a systematic review](../pages/alam-2010-partner-notification-developing-countries.md) -- Systematic review of 39 studies on STI partner notification in low- and middle-income countries; median 54% of partners notified, with spousal partners reached far more than casual ones.
 - [Use of a Vaginal Ring Containing Dapivirine for HIV-1 Prevention in Women (MTN-020-ASPIRE)](../pages/aspire-dapivirine-ring.md) -- Phase 3 trial of the monthly dapivirine ring in African women, giving a 27-37% HIV-1 efficacy estimate, placebo-arm HIV incidence by age, and baseline STI prevalence in a trial cohort.
