@@ -19,5 +19,6 @@ track:
 - Whether the shared biology and care parameters are fixed at single values or explored
   over the same ranges for every setting. Fixed is the current lean.
 
-Decisions still open before the first exploration: demographics (issue 6) and the
-per-pathogen STI-to-HIV multipliers (issue 12).
+Before the first exploration: the per-pathogen STI-to-HIV multipliers (issue 12), and the
+model change that loads Eswatini and Zimbabwe demographics from UN WPP and moves the
+simulation start year to 1985, the year of their age structure (settled on issue 6).
