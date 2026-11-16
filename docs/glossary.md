@@ -52,6 +52,8 @@
 - **Setting**. A hypothetical HIV epidemic defined by an HIV prevalence level and an
   epidemic phase, represented by the ensemble of simulations, selected from a parameter
   exploration, whose prevalence and phase fall in its cell.
+- **Country setup**. The country-specific inputs a simulation is built on: demography and
+  ART and VMMC coverage, taken from one real country.
 - **Mature epidemic**. An HIV epidemic long past its incidence peak, with incidence flat
   or declining. Rakai is the standard example.
 - **Expanding epidemic**. An HIV epidemic whose incidence is still rising or peaked

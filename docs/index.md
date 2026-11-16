@@ -42,7 +42,7 @@ calibration site.
 
 ## Recent
 
-- 2026-11-15 [Settings are hypothetical epidemics crossed by prevalence and phase](pages/settings-prevalence-by-phase.md)
+- 2026-11-16 [Settings are hypothetical epidemics crossed by prevalence and phase](pages/settings-prevalence-by-phase.md)
 - 2026-11-15 [Pathway decomposition and arm design](pages/pathway-decomposition-arm-design.md)
 - 2026-09-17 [Canonical figures in HIV transmission modeling: a taxonomy with named examples](pages/hiv-modeling-figure-archetypes.md)
 - 2026-09-17 [Canary study concept: originating note and May 2026 convening deck](pages/canary-study-concept.md)

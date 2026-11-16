@@ -3,7 +3,7 @@ type: decision
 title: Settings are hypothetical epidemics crossed by prevalence and phase
 description: Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, each an ensemble of simulations selected on prevalence at ages 15-49 in 2026, with STI and HIV biology shared and STI burden left to the model.
 tags: [hiv, sti, modeling, study-concept]
-updated: 2026-11-15 23:26
+updated: 2026-11-16 10:50
 ---
 
 The study runs four settings: high (about 25%) or medium (about 15%) HIV prevalence, each
@@ -56,18 +56,36 @@ expected to drive most of the divergence between them. The direct-treatment and 
 pathways both scale with STI burden, and STI parameters set separately for each setting
 would make part of their difference across settings a product of those choices.
 
-Demography follows prevalence level. The two high-prevalence settings use Eswatini's age
-structure, age-specific fertility and mortality, and the two medium-prevalence settings use
-Zimbabwe's, both from UN World Population Prospects, with migration off and simulations
-starting in 1985 to match the age structure. Each prevalence level then resembles a real
-country's epidemic, which the settings have to be recognisable as. The cost is that the
-high-versus-medium contrast also carries a demographic one (in 1985, fertility at age 16
-was 123 births per 1000 women in Eswatini and 76 in Zimbabwe), so a difference in the
-pathway split between prevalence levels cannot be separated from demography. The two
-phases at one prevalence level share a demography. Mortality excludes HIV deaths, which
-the model simulates itself.
+The country setup follows prevalence level. The two high-prevalence settings are built on
+Eswatini's country setup and the two medium-prevalence settings on Zimbabwe's, and each
+country's simulations fill only that country's cells, so a Zimbabwe simulation that
+reaches high prevalence is discarded. A country setup carries demography and ART and VMMC
+coverage. Demography is the 1985 age structure, age-specific fertility and mortality from
+UN World Population Prospects, with migration off and simulations starting in 1985 to
+match the age structure. Mortality excludes HIV deaths, which the model simulates itself.
+ART coverage is by sex and age and VMMC coverage by age. Both enter as coverage
+proportions, which scale with each simulation's own epidemic: an explored simulation's
+prevalence differs from the real country's, and a real count of people on ART could exceed
+the people living with HIV in a low-prevalence run. Viral suppression among people on ART
+stays at stisim's default, with everyone on ART suppressed, until measured series are
+sourced for both countries.
 
-What produces each phase, which network and HIV-programme parameters move between
-settings, which setting the shared STI parameters are first set on, and whether shared
-parameters are fixed or explored over common ranges depend on simulation results and are
-left to the [settings experiments](../../experiments/settings/STATUS.md).
+HIV testing is shared by both countries: four streams (sex workers, general population,
+CD4 below 200, antenatal). The first three ramp linearly from 0 in 1990 to 0.75, 0.5 and
+0.85 in 2020 respectively, as both source models set them by hand, and the antenatal
+stream is held at 0.9, Eswatini's value. A difference between countries in
+partner-notification yield then cannot come from testing.
+
+Each prevalence level resembles a real country's epidemic, which the settings have to be
+recognisable as. The cost is that the high-versus-medium contrast also carries
+a difference in demography and treatment coverage (in 1985, fertility at age 16 was 123
+births per 1000 women in Eswatini and 76 in Zimbabwe), so a difference in the pathway
+split between prevalence levels cannot be separated from country. The two phases at one
+prevalence level share a country setup.
+
+What produces each phase, which network parameters move between settings (condom use
+included), how HIV is seeded, which setting the shared STI parameters are first set on,
+and whether shared parameters are fixed or explored over common ranges depend on
+simulation results and are left to the
+[settings experiments](../../experiments/settings/STATUS.md). Whether a country's
+simulations should also fill the other country's cells is watched there too.
