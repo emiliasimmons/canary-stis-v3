@@ -3,7 +3,7 @@ type: decision
 title: Settings are hypothetical epidemics crossed by prevalence and phase
 description: Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, each an ensemble of simulations selected on prevalence at ages 15-49 in 2026, with STI and HIV biology shared and STI burden left to the model.
 tags: [hiv, sti, modeling, study-concept]
-updated: 2026-11-15 23:09
+updated: 2026-11-15 23:26
 ---
 
 The study runs four settings: high (about 25%) or medium (about 15%) HIV prevalence, each
@@ -55,6 +55,17 @@ mix, syphilis testing) are meant to be shared by all four settings, with network
 expected to drive most of the divergence between them. The direct-treatment and network
 pathways both scale with STI burden, and STI parameters set separately for each setting
 would make part of their difference across settings a product of those choices.
+
+Demography follows prevalence level. The two high-prevalence settings use Eswatini's age
+structure, age-specific fertility and mortality, and the two medium-prevalence settings use
+Zimbabwe's, both from UN World Population Prospects, with migration off and simulations
+starting in 1985 to match the age structure. Each prevalence level then resembles a real
+country's epidemic, which the settings have to be recognisable as. The cost is that the
+high-versus-medium contrast also carries a demographic one (in 1985, fertility at age 16
+was 123 births per 1000 women in Eswatini and 76 in Zimbabwe), so a difference in the
+pathway split between prevalence levels cannot be separated from demography. The two
+phases at one prevalence level share a demography. Mortality excludes HIV deaths, which
+the model simulates itself.
 
 What produces each phase, which network and HIV-programme parameters move between
 settings, which setting the shared STI parameters are first set on, and whether shared
