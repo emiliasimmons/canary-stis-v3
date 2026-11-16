@@ -15,16 +15,16 @@ calibration site.
 - [coinfection](tags/coinfection.md) · 27 pages
 - [diagnostics](tags/diagnostics.md) · 21 pages
 - [economics](tags/economics.md) · 9 pages
-- [hiv](tags/hiv.md) · 170 pages
+- [hiv](tags/hiv.md) · 171 pages
 - [immunity](tags/immunity.md) · 3 pages
-- [modeling](tags/modeling.md) · 31 pages
+- [modeling](tags/modeling.md) · 32 pages
 - [partner-notification](tags/partner-notification.md) · 19 pages
 - [phylogenetics](tags/phylogenetics.md) · 5 pages
 - [prep](tags/prep.md) · 31 pages
 - [rakai](tags/rakai.md) · 75 pages
 - [sexual-networks](tags/sexual-networks.md) · 83 pages
 - [sti](tags/sti.md) · 49 pages
-- [study-concept](tags/study-concept.md) · 1 pages
+- [study-concept](tags/study-concept.md) · 2 pages
 
 ## Syntheses
 
@@ -35,10 +35,14 @@ calibration site.
 - [The syndromic door and the point-of-care panel](pages/syndromic-door-poc-panel.md) -- The curable-STI burden the symptomatic syndromic door reaches in Rakai, and the accuracy a point-of-care panel adds at the same door.
 - [Targeting high-transmission network positions in a generalized epidemic](pages/targeting-network-positions.md) -- How much HIV prevention comes from identifying high-transmission network positions through STI diagnosis, and why the payoff is modest and setting-dependent in a Rakai-like generalized epidemic.
 
+## Decisions
+
+- [Settings are hypothetical epidemics crossed by prevalence and phase](pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, with prevalence read at ages 15-49 in 2026 and phase judged from the simulated incidence curve.
+
 ## Recent
 
+- 2026-11-15 [Settings are hypothetical epidemics crossed by prevalence and phase](pages/settings-prevalence-by-phase.md)
 - 2026-09-17 [Canonical figures in HIV transmission modeling: a taxonomy with named examples](pages/hiv-modeling-figure-archetypes.md)
 - 2026-09-17 [Canary study concept: originating note and May 2026 convening deck](pages/canary-study-concept.md)
 - 2026-09-16 [Understanding HIV risks among adolescent girls and young women in informal settlements of Nairobi, Kenya: Lessons for DREAMS](pages/ziraba-2018-agyw-risk-nairobi-slums.md)
 - 2026-09-14 [Partner notification and its omission from canary-stis](pages/partner-notification-pathway.md)
-- 2026-09-14 [PrEP as delivered versus trial efficacy and the STI-test-to-PrEP prevention step](pages/prep-delivered-vs-efficacy.md)

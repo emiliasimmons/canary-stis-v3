@@ -9,6 +9,9 @@ description: Mathematical and computational modeling methods, including agent-ba
 
 ## Members
 
+### Decisions (1)
+- [Settings are hypothetical epidemics crossed by prevalence and phase](../pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, with prevalence read at ages 15-49 in 2026 and phase judged from the simulated incidence curve.
+
 ### Entries (29)
 - [The effect of 90-90-90 on HIV-1 incidence and mortality in eSwatini: a mathematical modelling study](../pages/akullian-2020-eswatini-90-90-90.md) -- EMOD network model of eSwatini finds ART scale-up cut adult HIV incidence 43.6% over 2010-16 but no treatment scenario reaches epidemic control by 2030.
 - [Evaluating the biomedical and behavioral drivers of HIV incidence decline in adolescent girls and young women in Uganda](../pages/akullian-2026-hiv-incidence-agyw.md) -- EMOD-HIV model calibrated to RCCS quantifying additive contributions of ART, VMMC, and delayed sexual debut to 71% HIV incidence decline in AGYW 15-24

@@ -21,10 +21,33 @@
 - **AGYW**. Adolescent girls and young women, conventionally aged 15-24.
 - **NAAT**. Nucleic acid amplification test, the laboratory reference standard that
   point-of-care STI tests are measured against.
+- **STI cofactor**. The raised per-act probability of HIV acquisition or transmission while
+  a curable STI is present.
+- **Pathway A**. Onward STI transmission: treating an STI shortens the infection, so fewer
+  partners acquire it and fewer people later carry the STI cofactor.
+- **Pathway B**. Partner treatment cascade: partners of a diagnosed person are notified,
+  tested and treated, and every effect of treating them on HIV belongs to this pathway.
+- **Pathway C**. Biological susceptibility: treating an STI ends the STI cofactor in the
+  treated person.
+- **Pathway D**. Prevention targeting: a positive STI result leads the person into
+  prevention (PrEP, condoms, counseling), and every effect of that prevention on HIV
+  belongs to this pathway.
+- **Pathway E**. Network risk signal: the hypothesis that a positive STI result in an
+  HIV-negative person marks someone more likely than average to acquire HIV later.
+- **Prevented fraction**. The proportion of incidence that an intervention, or one pathway
+  of it, averts, out of the incidence that would occur without it.
+- **PAF**. Population attributable fraction: the proportion of incidence caused by a risk
+  factor, which would disappear if every exposure to it were removed.
 - **Target product profile**. A specification of what a test must achieve to be useful,
   agreed by expert consensus and given as a minimal and an optimal value per
   characteristic. See
   [pages/toskin-2017-sti-poct-target-product-profiles.md](pages/toskin-2017-sti-poct-target-product-profiles.md).
+- **Setting**. A hypothetical HIV epidemic the model is hand-tuned to, defined by an HIV
+  prevalence level and an epidemic phase.
+- **Mature epidemic**. An HIV epidemic long past its incidence peak, with incidence flat
+  or declining. Rakai is the standard example.
+- **Expanding epidemic**. An HIV epidemic whose incidence is still rising or peaked
+  recently, so its decline cannot yet be told apart from a temporary dip.
 
 ## Tags
 

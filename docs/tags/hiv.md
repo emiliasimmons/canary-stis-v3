@@ -9,6 +9,9 @@ description: HIV epidemiology, incidence, prevalence, transmission dynamics, tre
 
 ## Members
 
+### Decisions (1)
+- [Settings are hypothetical epidemics crossed by prevalence and phase](../pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, with prevalence read at ages 15-49 in 2026 and phase judged from the simulated incidence curve.
+
 ### Entries (165)
 - [Improving HIV Case Finding Through Index Testing: Findings from Health Facilities in 12 Districts of South Africa, October 2019-September 2021](../pages/aheron-2024-index-testing-south-africa.md) -- PEPFAR programme data on the HIV index-testing cascade in 371 South African facilities; 2.6% of tests but 17.8% positivity, 1.0 contacts elicited per client, 51% of contacts tested.
 - [Sexual partnership age pairings and risk of HIV acquisition in rural South Africa](../pages/akullian-2017-partnership-age-pairings-hiv-kzn.md) -- Population-based cohort quantifying HIV acquisition risk by sexual partner age group in men and women in hyperendemic KwaZulu-Natal
