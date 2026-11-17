@@ -81,6 +81,77 @@ SYNDROMIC_TX_MIX_NONCERV = dict(
 )
 
 
+# HIV testing shared by every country setup: annual testing probability among
+# the eligible, linear between the listed years, as both source models set it.
+HIV_TEST_RAMPS = dict(
+    fsw=dict(year=[1990, 2020, 2040], prob=[0.0, 0.75, 0.85]),
+    general=dict(year=[1990, 2020, 2040], prob=[0.0, 0.5, 0.6]),
+    low_cd4=dict(year=[1990, 2020, 2040], prob=[0.0, 0.85, 0.95]),
+)
+HIV_TEST_ANC_PROB = 0.9
+
+
+def _fsw_not_in_care(sim):
+    hiv = sim.diseases.hiv
+    return sim.networks.structuredsexual.fsw & ~hiv.diagnosed & ~hiv.on_art
+
+
+def _others_not_in_care(sim):
+    hiv = sim.diseases.hiv
+    return ~sim.networks.structuredsexual.fsw & ~hiv.diagnosed & ~hiv.on_art
+
+
+def _low_cd4_undiagnosed(sim):
+    hiv = sim.diseases.hiv
+    return (hiv.cd4 < 200) & ~hiv.diagnosed
+
+
+def _antenatal_undiagnosed(sim):
+    tri1 = sim.demographics.pregnancy.tri1_uids
+    return tri1[~sim.diseases.hiv.diagnosed[tri1]]
+
+
+def country_hiv_tests():
+    """The four HIV testing streams every country setup shares."""
+    eligibility = dict(fsw=_fsw_not_in_care, general=_others_not_in_care, low_cd4=_low_cd4_undiagnosed)
+    tests = []
+    for stream, ramp in HIV_TEST_RAMPS.items():
+        # HIVTest takes the listed year nearest the current one, so the ramp
+        # goes in annually
+        years = np.arange(ramp["year"][0], ramp["year"][-1] + 1)
+        test = sti.HIVTest(
+            name=f"hiv_test_{stream}", label=f"hiv_test_{stream}",
+            years=years,
+            test_prob_data=np.interp(years, ramp["year"], ramp["prob"]),
+            eligibility=eligibility[stream],
+        )
+        test.stop = _NO_STOP
+        tests.append(test)
+    anc = sti.HIVTest(
+        name="hiv_test_anc", label="hiv_test_anc",
+        test_prob_data=HIV_TEST_ANC_PROB,
+        eligibility=_antenatal_undiagnosed,
+        dt_scale=False,
+    )
+    anc.stop = _NO_STOP
+    return tests + [anc]
+
+
+def country_coverage(country, programme):
+    """A country's coverage table for 'art' or 'vmmc', checked to be proportions.
+
+    Counts fail when a simulation's HIV prevalence or population differs from
+    the real country's, so a table with an n_ column, or without its p_ column,
+    is rejected.
+    """
+    path = Path(country.datafolder) / f"{country.name}_{programme}_coverage.csv"
+    table = pd.read_csv(path)
+    p, n = f"p_{programme}", f"n_{programme}"
+    if p not in table or n in table or not table[p].between(0, 1).all():
+        raise ValueError(f"{path} must give coverage as proportions in a {p} column, with no {n} column")
+    return table
+
+
 def latent_seed_frame(init_prev, n_risk_groups=3):
     """One row per risk group, sex and sex-work status, all at the same rate.
 
@@ -124,12 +195,13 @@ def sim_pars(**kwargs):
         pars = sim_pars(intv_year=2027)                 # run the POC arm
         pars = sim_pars(care_seek_mult=1.5)             # care-seeking lever
         pars = sim_pars(bundled_prevention=dict(coverage=0.5))
-        pars = sim_pars(country=dict(name="eswatini"))  # country demographics
+        pars = sim_pars(country=dict(name="eswatini"))  # country setup
 
     Off-states are sentinels, not flags: ``intv_year=None`` (SOC throughout),
     ``care_seek_mult=1.0``, ``bundled_prevention=None``,
     ``fsw_outreach.rate=0.0``, ``prep.eligibility='none'``, ``magic_cure.year=None``,
-    ``country.name=None`` (scalar birth and death rates).
+    ``country.name=None`` (scalar birth and death rates, and the HIV programmes
+    in ``hiv_test``, ``art`` and ``vmmc``).
     """
     pars = sc.objdict()
 
@@ -194,11 +266,13 @@ def sim_pars(**kwargs):
     pars.bundled_prevention = None            # dict(coverage=, eff=, dur_months=); CondomCounseling
     pars.fsw_outreach = sc.objdict(rate=0.0, start=None, stop=None)
 
+    # HIV programmes without a country. A country setup replaces all three with
+    # its own ART and VMMC coverage tables and the shared testing streams
+    # (country_hiv_tests), and rejects overrides of them.
     pars.hiv_test = sc.objdict(test_prob_data=0.3, start=2000)
     pars.art = sc.objdict(coverage=0.6)
     # Voluntary medical male circumcision. HIV carries eff_circ=0.6 already;
-    # this delivers it. coverage is site-specific (sti.VMMC accepts a year-indexed
-    # schedule of counts, or a scalar); None runs no VMMC.
+    # this delivers it. None runs no VMMC.
     pars.vmmc = sc.objdict(coverage=None)
     # STI-diagnosis-triggered PrEP (pathway D). eligibility: 'none' (off),
     # 'dx' (agents whose STI treatment fired this step), or 'random'.
@@ -239,7 +313,8 @@ def sim_pars(**kwargs):
 
     # Country setup. name=None runs the scalar pregnancy and deaths rates below;
     # a name loads that country's 1985 age structure, age-specific fertility and
-    # mortality from datafolder, in stisim's location-file layout.
+    # mortality from datafolder, in stisim's location-file layout, and its ART
+    # and VMMC coverage from {name}_art_coverage.csv and {name}_vmmc_coverage.csv.
     pars.country = sc.objdict(name=None, datafolder=_DATA_DIR)
 
     # 220 births per 1000 women 15-49 reproduces the SSA aggregate; the coupled
@@ -481,11 +556,22 @@ def build_sim(pars):
     magic_cure = (MagicCure(year=pars.magic_cure.year, diseases=[ng, ct, tp, tv])
                   if pars.magic_cure.year is not None else None)
 
-    hiv_test = sti.HIVTest(name="hiv_test", **pars.hiv_test)
-    art = sti.ART(**pars.art)
-    vmmc = sti.VMMC(coverage=pars.vmmc.coverage) if pars.vmmc.coverage is not None else None
+    country = pars.country
+    if country.name is None:
+        hiv_tests = [sti.HIVTest(name="hiv_test", **pars.hiv_test)]
+        art = sti.ART(**pars.art)
+        vmmc = sti.VMMC(coverage=pars.vmmc.coverage) if pars.vmmc.coverage is not None else None
+    else:
+        defaults = sim_pars()
+        for group in ("hiv_test", "art", "vmmc"):
+            if pars[group] != defaults[group]:
+                raise ValueError(f"'{group}' is set by the country setup; leave it at its default when country.name is set")
+        hiv_tests = country_hiv_tests()
+        art = sti.ART(coverage=country_coverage(country, "art"))
+        vmmc = sti.VMMC(coverage=country_coverage(country, "vmmc"))
 
-    tail = [magic_cure, prep, hiv_test, art, vmmc]
+    # testing precedes ART so agents diagnosed this step can start treatment in it
+    tail = [magic_cure, prep, *hiv_tests, art, vmmc]
     interventions.extend(i for i in tail if i is not None)
 
     connectors = make_connectors(hiv, ng=ng, ct=ct, syph=tp, tv=tv, bv=bv, pars=pars.connectors)
