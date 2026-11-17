@@ -33,9 +33,8 @@
   own sub-category.
 - **Pathway C**. Biological susceptibility: treating an STI ends the STI cofactor in the
   treated person.
-- **Pathway D**. Prevention targeting: a positive STI result leads the person into
-  prevention (PrEP, condoms, counseling), and every effect of that prevention on HIV
-  belongs to this pathway.
+- **Pathway D**. Prevention targeting: a positive STI result leads the person onto PrEP,
+  and every effect of that PrEP on HIV belongs to this pathway.
 - **Pathway E**. Network risk signal: the hypothesis that a positive STI result in an
   HIV-negative person marks someone more likely than average to acquire HIV later.
 - **Behavioral eligibility**. Qualifying for PrEP on self-reported sexual behavior, the
