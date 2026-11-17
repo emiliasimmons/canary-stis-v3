@@ -4,9 +4,8 @@ Custom interventions for canary-stis.
 The NG/CT/TV diagnostic arm (syndromic management vs POC panel) and the syphilis
 pipeline are assembled in ``sim.build_sim`` from stock stisim classes; this
 module holds the classes with no stisim equivalent: a gonorrhea-treatment
-subclass fixing an initial-seeding NaN, STI-diagnosis-triggered PrEP, the magic
-cure, and the demand-side levers (care-seeking scaler, condom counseling, FSW
-outreach).
+subclass fixing an initial-seeding NaN, the magic cure, and the demand-side
+levers (care-seeking scaler, condom counseling, FSW outreach).
 """
 
 import numpy as np
@@ -33,57 +32,6 @@ class GonorrheaTx(sti.GonorrheaTreatment):
                 self.rel_treat.raw[np.where(nan_mask)[0]] = 1.0
             self._rel_treat_fixed = True
         return super().step()
-
-
-class STIDxPrEP(ss.Intervention):
-    """
-    STI-diagnosis-triggered PrEP enrollment (pathway D).
-
-    Each timestep, agents selected by ``eligibility`` who are HIV-negative and
-    not already on PrEP are enrolled and given a per-timestep HIV susceptibility
-    reduction (rel_sus resets each step in starsim, so it is re-applied every
-    timestep). Eligibility is supplied by build_sim: STI treatment events for
-    the diagnosis-triggered arm, or a flat random draw for the comparator.
-    """
-
-    def __init__(self, eligibility=None, pars=None, **kwargs):
-        super().__init__(name="prep")
-        self.define_pars(eff_prep=0.70)
-        self.update_pars(pars, **kwargs)
-        self._eligibility = eligibility
-        self.define_states(
-            ss.BoolArr("on_prep", label="On PrEP"),
-            ss.FloatArr("ti_enrolled"),
-        )
-
-    def init_results(self):
-        super().init_results()
-        self.define_results(
-            ss.Result("n_on_prep", dtype=int, label="On PrEP"),
-            ss.Result("new_on_prep", dtype=int, label="New PrEP enrollees"),
-        )
-
-    def step(self):
-        sim = self.sim
-        ti = self.ti
-
-        candidates = self._eligibility(sim) if self._eligibility is not None else ss.uids()
-
-        eligible = candidates.remove(sim.diseases.hiv.infected.uids)
-        eligible = eligible.remove(self.on_prep.uids)
-        if len(eligible):
-            self.on_prep[eligible] = True
-            self.ti_enrolled[eligible] = ti
-
-        on_prep_uids = self.on_prep.uids
-        if len(on_prep_uids):
-            sim.diseases.hiv.rel_sus[on_prep_uids] *= (1 - self.pars.eff_prep)
-
-    def update_results(self):
-        super().update_results()
-        ti = self.ti
-        self.results["n_on_prep"][ti] = len(self.on_prep.uids)
-        self.results["new_on_prep"][ti] = len((self.ti_enrolled == ti).uids)
 
 
 class MagicCure(ss.Intervention):

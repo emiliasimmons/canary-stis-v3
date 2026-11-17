@@ -51,7 +51,6 @@ from .interventions import (
     FSWOutreach,
     GonorrheaTx,
     MagicCure,
-    STIDxPrEP,
 )
 
 _SYPH_DX_PATH = Path(__file__).parent / "data" / "syph_dx.csv"
@@ -93,14 +92,10 @@ def latent_seed_frame(init_prev, n_risk_groups=3):
     ])
 
 
-def random_prep_eligible(rate):
-    """Eligibility: a flat annual-rate random sample of alive agents."""
+def as_mask(eligibility):
+    """Wrap a uids-returning eligibility as the boolean-array callable sti.Prep documents."""
     def fn(sim):
-        if rate <= 0:
-            return ss.uids()
-        p = min(rate * sim.t.dt_year, 1.0)
-        mask = np.random.random(len(sim.people.auids)) < p
-        return sim.people.auids[mask]
+        return sim.people.alive & eligibility(sim)
     return fn
 
 
@@ -133,7 +128,7 @@ def sim_pars(**kwargs):
     pars.sim = sc.objdict(
         n_agents=10_000,
         start=1990,
-        dur=40,  # reaches 2030
+        stop=2040,  # 13 years past the 2027 intervention year
         dt=1 / 12,
         rand_seed=0,
         label=None,
@@ -197,9 +192,13 @@ def sim_pars(**kwargs):
     # this delivers it. coverage is site-specific (sti.VMMC accepts a year-indexed
     # schedule of counts, or a scalar); None runs no VMMC.
     pars.vmmc = sc.objdict(coverage=None)
-    # STI-diagnosis-triggered PrEP (pathway D). eligibility: 'none' (off),
-    # 'dx' (agents whose STI treatment fired this step), or 'random'.
-    pars.prep = sc.objdict(eff_prep=0.70, eligibility="none", random_rate=0.0)
+    # Daily oral PrEP cascade, sti.Prep. Eligibility is who is offered PrEP this
+    # step: 'none' (off) or 'dx' (STI treatment fired this step, pathway D).
+    # From lever_start, each step's offered group is topped up until coverage of
+    # it is on PrEP, chosen by a fixed per-person willingness score. Offered
+    # people already on a course count toward it, so fewer than that start.
+    pars.prep = sc.objdict(eligibility="none", coverage=0.30,
+                           dur_months=3, prep_eff=0.8, prep_adh=1.0)
     pars.magic_cure = sc.objdict(year=None)
 
     pars.connectors = sc.objdict(
@@ -461,14 +460,22 @@ def build_sim(pars):
         ))
 
     prep = None
-    if pars.prep.eligibility != "none" and pars.prep.eff_prep > 0:
+    if pars.prep.eligibility != "none":
         if pars.prep.eligibility == "dx":
             prep_elig = treated_this_step(["ng_tx", "ct_tx", "metronidazole", "syph_tx"])
-        elif pars.prep.eligibility == "random":
-            prep_elig = random_prep_eligible(pars.prep.random_rate)
         else:
             raise ValueError(f"unknown prep.eligibility '{pars.prep.eligibility}'")
-        prep = STIDxPrEP(eligibility=prep_elig, eff_prep=pars.prep.eff_prep)
+        # sti.Prep extends the first coverage value back to the sim start, so a
+        # zero one step before lever_start keeps PrEP off until then
+        prep = sti.Prep(
+            name="prep",
+            eligibility=as_mask(prep_elig),
+            coverage={"year": [lever_start - pars.sim.dt, lever_start],
+                      "value": [0, pars.prep.coverage]},
+            prep_dur=ss.months(pars.prep.dur_months),
+            prep_eff=pars.prep.prep_eff,
+            prep_adh=pars.prep.prep_adh,
+        )
 
     magic_cure = (MagicCure(year=pars.magic_cure.year, diseases=[ng, ct, tp, tv])
                   if pars.magic_cure.year is not None else None)
@@ -501,7 +508,7 @@ def build_sim(pars):
     sim = ss.Sim(
         n_agents=pars.sim.n_agents,
         start=pars.sim.start,
-        dur=pars.sim.dur,
+        stop=pars.sim.stop,
         dt=pars.sim.dt,
         rand_seed=pars.sim.rand_seed,
         label=pars.sim.label,

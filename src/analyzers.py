@@ -204,8 +204,8 @@ class CascadeTracker(ss.Analyzer):
             hd['treated'][ti] = len(hiv.on_art.uids)
 
         if self._prep is not None:
-            self._data['prep']['n_on_prep'][ti] = len(self._prep.on_prep.uids)
-            self._data['prep']['new_on_prep'][ti] = len((self._prep.ti_enrolled == ti).uids)
+            self._data['prep']['n_on_prep'][ti] = self._prep.results.n_on_prep[ti]
+            self._data['prep']['new_on_prep'][ti] = self._prep.results.new_prep[ti]
 
 
 class ExposureTracker(ss.Analyzer):

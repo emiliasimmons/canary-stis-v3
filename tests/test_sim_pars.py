@@ -4,7 +4,7 @@ import pytest
 
 from src.sim import build_sim, sim_pars
 
-TINY = dict(n_agents=500, start=2010, dur=1)
+TINY = dict(n_agents=500, start=2010, stop=2011)
 LEVERS = ["care_seek_scaler", "fsw_outreach", "condom_counseling", "prep", "magic_cure"]
 
 
@@ -60,11 +60,11 @@ def test_levers_default_to_off_states():
 
 def test_nested_override_is_deep_merged():
     default = sim_pars()
-    pars = sim_pars(poc=dict(sens=dict(ng=[0.5, 0.6])), sim=dict(dur=5))
+    pars = sim_pars(poc=dict(sens=dict(ng=[0.5, 0.6])), sim=dict(stop=2015))
     assert pars.poc.sens["ng"] == [0.5, 0.6]
     assert pars.poc.sens["ct"] == default.poc.sens["ct"]
     assert pars.poc.spec == default.poc.spec
-    assert pars.sim.dur == 5
+    assert pars.sim.stop == 2015
     assert pars.sim.n_agents == default.sim.n_agents
 
 
