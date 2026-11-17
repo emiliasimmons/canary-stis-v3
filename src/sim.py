@@ -204,7 +204,9 @@ def sim_pars(**kwargs):
 
     pars.connectors = sc.objdict(
         hiv_ng=sc.objdict(),
-        hiv_ct=sc.objdict(),
+        # stisim's 1 is a placeholder; 1.2 matches gonorrhoea, the same inflammation
+        # pathway (issue #12)
+        hiv_ct=sc.objdict(rel_sus_hiv_ct=1.2),
         hiv_tv=sc.objdict(),
         hiv_bv=sc.objdict(),
         hiv_syph=sc.objdict(),

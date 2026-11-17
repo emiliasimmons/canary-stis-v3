@@ -82,3 +82,10 @@ def test_unknown_group_raises():
 def test_non_dict_for_dict_group_raises():
     with pytest.raises(TypeError):
         sim_pars(ng=0.1)
+
+
+def test_chlamydia_raises_hiv_susceptibility_by_default():
+    # stisim leaves chlamydia at 1 as a placeholder; the per-act value is set in issue #12
+    sim = build_sim(sim_pars(sim=TINY))
+    sim.init(verbose=0)
+    assert sim.connectors.hivct.pars.rel_sus_hiv_ct == 1.2
