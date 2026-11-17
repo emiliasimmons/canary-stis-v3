@@ -11,19 +11,19 @@ calibration site.
 
 ## Tags
 
-- [care-seeking](tags/care-seeking.md) · 50 pages
+- [care-seeking](tags/care-seeking.md) · 52 pages
 - [coinfection](tags/coinfection.md) · 27 pages
-- [diagnostics](tags/diagnostics.md) · 22 pages
+- [diagnostics](tags/diagnostics.md) · 23 pages
 - [economics](tags/economics.md) · 9 pages
-- [hiv](tags/hiv.md) · 178 pages
+- [hiv](tags/hiv.md) · 179 pages
 - [immunity](tags/immunity.md) · 3 pages
-- [modeling](tags/modeling.md) · 34 pages
-- [partner-notification](tags/partner-notification.md) · 21 pages
+- [modeling](tags/modeling.md) · 36 pages
+- [partner-notification](tags/partner-notification.md) · 22 pages
 - [phylogenetics](tags/phylogenetics.md) · 5 pages
-- [prep](tags/prep.md) · 32 pages
+- [prep](tags/prep.md) · 33 pages
 - [rakai](tags/rakai.md) · 75 pages
 - [sexual-networks](tags/sexual-networks.md) · 83 pages
-- [sti](tags/sti.md) · 51 pages
+- [sti](tags/sti.md) · 52 pages
 - [study-concept](tags/study-concept.md) · 3 pages
 
 ## Syntheses
@@ -44,7 +44,7 @@ calibration site.
 ## Recent
 
 - 2026-11-17 [Partner notification implementation](pages/partner-notification-implementation.md)
+- 2026-11-17 [hivsim_eswatini: STIsim HIV model of Eswatini](pages/hivsim-eswatini.md)
+- 2026-11-17 [sti_notification](pages/sti-notification-zimbabwe-model.md)
 - 2026-11-17 [Zimbabwe DHS 2005-06, 2010-11 and 2015: men circumcised, by age](pages/dhs-zimbabwe-circumcision.md)
 - 2026-11-17 [Eswatini Population-based HIV Impact Assessment 3 2021 (SHIMS3 2021): Final Report](pages/shims3-2021-final-report.md)
-- 2026-11-17 [UNAIDS 2026 HIV estimates with uncertainty bounds, 1990-2025](pages/unaids-2026-hiv-estimates.md)
-- 2026-11-17 [Zimbabwe Population-based HIV Impact Assessment (ZIMPHIA) 2015-2016: Final Report](pages/zimphia-2015-16-final-report.md)
