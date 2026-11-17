@@ -81,16 +81,6 @@ SYNDROMIC_TX_MIX_NONCERV = dict(
 )
 
 
-# HIV testing shared by every country setup: annual testing probability among
-# the eligible, linear between the listed years, as both source models set it.
-HIV_TEST_RAMPS = dict(
-    fsw=dict(year=[1990, 2020, 2040], prob=[0.0, 0.75, 0.85]),
-    general=dict(year=[1990, 2020, 2040], prob=[0.0, 0.5, 0.6]),
-    low_cd4=dict(year=[1990, 2020, 2040], prob=[0.0, 0.85, 0.95]),
-)
-HIV_TEST_ANC_PROB = 0.9
-
-
 def _fsw_not_in_care(sim):
     hiv = sim.diseases.hiv
     return sim.networks.structuredsexual.fsw & ~hiv.diagnosed & ~hiv.on_art
@@ -111,44 +101,61 @@ def _antenatal_undiagnosed(sim):
     return tri1[~sim.diseases.hiv.diagnosed[tri1]]
 
 
+# HIV testing shared by every country setup: annual testing probability among
+# the eligible, linear between the listed years, as the Eswatini HIVsim model
+# sets it by hand (hivsim_eswatini interventions.py).
+HIV_TEST_RAMP_YEARS = [1990, 2020, 2040]
+HIV_TEST_RAMPS = dict(
+    fsw=dict(prob=[0.0, 0.75, 0.85], eligibility=_fsw_not_in_care),
+    general=dict(prob=[0.0, 0.5, 0.6], eligibility=_others_not_in_care),
+    low_cd4=dict(prob=[0.0, 0.85, 0.95], eligibility=_low_cd4_undiagnosed),
+)
+# probability per time step in the first trimester, as the Eswatini model sets it
+HIV_TEST_ANC_PROB = 0.9
+
+
 def country_hiv_tests():
     """The four HIV testing streams every country setup shares."""
-    eligibility = dict(fsw=_fsw_not_in_care, general=_others_not_in_care, low_cd4=_low_cd4_undiagnosed)
-    tests = []
-    for stream, ramp in HIV_TEST_RAMPS.items():
-        # HIVTest takes the listed year nearest the current one, so the ramp
-        # goes in annually
-        years = np.arange(ramp["year"][0], ramp["year"][-1] + 1)
-        test = sti.HIVTest(
+    # HIVTest takes the listed year nearest the current one, so the ramps go in
+    # annually
+    years = np.arange(HIV_TEST_RAMP_YEARS[0], HIV_TEST_RAMP_YEARS[-1] + 1)
+    tests = [
+        sti.HIVTest(
             name=f"hiv_test_{stream}", label=f"hiv_test_{stream}",
             years=years,
-            test_prob_data=np.interp(years, ramp["year"], ramp["prob"]),
-            eligibility=eligibility[stream],
+            test_prob_data=np.interp(years, HIV_TEST_RAMP_YEARS, ramp["prob"]),
+            eligibility=ramp["eligibility"],
         )
-        test.stop = _NO_STOP
-        tests.append(test)
-    anc = sti.HIVTest(
+        for stream, ramp in HIV_TEST_RAMPS.items()
+    ]
+    tests.append(sti.HIVTest(
         name="hiv_test_anc", label="hiv_test_anc",
         test_prob_data=HIV_TEST_ANC_PROB,
         eligibility=_antenatal_undiagnosed,
         dt_scale=False,
-    )
-    anc.stop = _NO_STOP
-    return tests + [anc]
+    ))
+    # set after construction: HIVTest builds its timeline from a stop passed to
+    # the constructor, which fails on infinity
+    for test in tests:
+        test.stop = _NO_STOP
+    return tests
 
 
 def country_coverage(country, programme):
     """A country's coverage table for 'art' or 'vmmc', checked to be proportions.
 
     Counts fail when a simulation's HIV prevalence or population differs from
-    the real country's, so a table with an n_ column, or without its p_ column,
-    is rejected.
+    the real country's. stisim reads the first numeric column outside Year,
+    Gender, AgeBin, lb and ub as the coverage, so p_<programme> must be the only
+    one.
     """
     path = Path(country.datafolder) / f"{country.name}_{programme}_coverage.csv"
     table = pd.read_csv(path)
-    p, n = f"p_{programme}", f"n_{programme}"
-    if p not in table or n in table or not table[p].between(0, 1).all():
-        raise ValueError(f"{path} must give coverage as proportions in a {p} column, with no {n} column")
+    p = f"p_{programme}"
+    extra = set(table) - {"Year", "Gender", "AgeBin", "lb", "ub", p}
+    if p not in table or extra or not table[p].between(0, 1).all():
+        raise ValueError(f"{path} must give coverage as proportions between 0 and 1 in a {p} column, "
+                         f"and no other value column (found {sorted(extra)})")
     return table
 
 

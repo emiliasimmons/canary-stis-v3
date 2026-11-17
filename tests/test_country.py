@@ -1,4 +1,5 @@
-"""Country setup: demographics loaded from a country's files, or scalar rates when off."""
+"""Country setup: demographics and HIV programmes loaded from a country's files, or scalar
+rates and programmes when off."""
 
 import shutil
 from pathlib import Path
@@ -17,6 +18,7 @@ TINY = dict(n_agents=500, start=2010, dur=1)
 # for women and 0.3 per year for men.
 TESTLAND = dict(name="testland", datafolder=Path(__file__).parent / "data")
 TESTLAND_SIM = dict(n_agents=2000, start=1985, dur=1)
+STREAMS = ["hiv_test_fsw", "hiv_test_general", "hiv_test_low_cd4", "hiv_test_anc"]
 
 
 def run_testland():
@@ -80,9 +82,6 @@ def test_country_vmmc_circumcises_to_its_coverage_table():
     assert np.mean(circumcised[men & (age >= 30) & (age < 35)]) < 0.05
 
 
-STREAMS = ["hiv_test_fsw", "hiv_test_general", "hiv_test_low_cd4", "hiv_test_anc"]
-
-
 @pytest.mark.parametrize("name, levels", [
     ("hiv_test_fsw", {1990: 0.0, 2005: 0.375, 2020: 0.75, 2030: 0.8, 2040: 0.85}),
     ("hiv_test_general", {1990: 0.0, 2005: 0.25, 2020: 0.5, 2030: 0.55, 2040: 0.6}),
@@ -103,7 +102,6 @@ def test_country_attaches_four_testing_streams():
     assert list(tests) == STREAMS
     anc = tests["hiv_test_anc"]
     assert anc.test_prob_data == 0.9
-    # per pregnancy, not an annual rate
     assert anc.pars.dt_scale is False
 
 
@@ -113,7 +111,7 @@ def eligible(sim, name):
 
 
 def test_country_testing_streams_select_the_undiagnosed():
-    # about 1 in 1000 testland agents is an active sex worker; three are needed
+    # about 1 in 1000 testland agents is an active sex worker, and the test needs three
     sim = build_sim(sim_pars(sim=dict(TESTLAND_SIM, n_agents=10_000), country=TESTLAND))
     sim.init(verbose=0)
     hiv = sim.diseases.hiv
@@ -128,7 +126,7 @@ def test_country_testing_streams_select_the_undiagnosed():
         low_cd4_diagnosed=dict(cd4=150, diagnosed=True),
     )
     # sex work status derives from age and the network's draws, so agents are
-    # picked by it rather than assigned it
+    # picked by their status
     pool = {True: fsw.uids.tolist(), False: (~fsw & sim.people.alive).uids.tolist()}
     uid = {name: pool[state.get("fsw", False)].pop() for name, state in agents.items()}
     for name, state in agents.items():
@@ -182,9 +180,8 @@ def test_country_rejects_programme_overrides(override):
 
 
 @pytest.mark.parametrize("name", ["eswatini", "zimbabwe"])
-def test_real_countries_supply_coverage_proportions(name):
-    sim = build_sim(sim_pars(country=dict(name=name)))
-    assert isinstance(sim.pars.interventions[-1], sti.VMMC)
+def test_real_country_tables_pass_the_proportion_check(name):
+    build_sim(sim_pars(country=dict(name=name)))
 
 
 def test_country_sets_starting_age_structure():
