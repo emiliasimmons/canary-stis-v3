@@ -29,6 +29,7 @@ from .analyzers import (
     InfectionTracker,
     NetworkPositionTracker,
     SusceptibilityExposureTracker,
+    TreatmentLog,
 )
 from .connectors import make_connectors
 from .diagnostics import (
@@ -447,7 +448,8 @@ def build_sim(pars):
         )
         detection.insert(0, fsw)
 
-    interventions = detection + treatments
+    # TreatmentLog first: it snapshots infection status before any treatment
+    interventions = [TreatmentLog()] + detection + treatments
     interventions.extend(_syphilis_pipeline(pars, use_poc, intv_year))
 
     if not isinstance(pars.care_seek_mult, (int, float)) or float(pars.care_seek_mult) != 1.0:

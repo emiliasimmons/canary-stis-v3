@@ -1,6 +1,8 @@
 import numpy as np
+import pandas as pd
 import sciris as sc
 import starsim as ss
+import stisim as sti
 
 
 def _ti_infection(disease):
@@ -62,6 +64,81 @@ class DiagnosisTracker(ss.Analyzer):
         # analyzer's update_results runs before its step, so a ti_diagnosed == ti
         # check there would miss the stamps set this step.
         self.results['new_diagnoses_total'][ti] = len(new_dx)
+
+
+class TreatmentLog(ss.Intervention):
+    """
+    One row per STI treatment: when, who, which drug, which channels flagged the
+    person that step, and whether they carried each of ``diseases`` at the time.
+
+    Built as an intervention so it can read infection status before the step's
+    treatments clear it. ``step`` runs first among the interventions and
+    snapshots status. ``update_results`` runs once every intervention has
+    stepped and reads who was treated. Status is as of presentation, so a
+    person given ng_tx and syph_tx on one step shows NG on both rows.
+
+    Drugs are every STITreatment in the sim. A drug's channels are the testing
+    modules that enqueue onto it (syndromic, panel, outreach) and, for a drug
+    treating syphilis, every syphilis test. ``channel`` joins with "+" every one
+    of the drug's channels that flagged the person that step, so a person
+    reached by two channels on one step carries both on each drug's row, and an
+    antenatal treatment after the confirmatory RPR starts reads
+    "syph_anc_rdt+syph_anc_confirm".
+    """
+
+    def __init__(self, diseases=("ng", "ct", "tv", "syph"), name="treatment_log"):
+        super().__init__(name=name)
+        self.status_diseases = list(diseases)
+        self._infected = {}
+        self._drugs = []
+        self._channels = {}
+        self._rows = []
+
+    def init_post(self):
+        super().init_post()
+        intvs = list(self.sim.interventions())
+        if intvs[0] is not self:
+            raise ValueError("TreatmentLog must be the first intervention, or it reads status after treatment")
+        self._drugs = [i for i in intvs if isinstance(i, sti.STITreatment)]
+        syph_tests = [i for i in intvs if isinstance(i, sti.SyphTest)]
+        for tx in self._drugs:
+            channels = [i for i in intvs if any(t is tx for t in getattr(i, "treatments", ()))]
+            if "syph" in tx.diseases:
+                channels += syph_tests
+            self._channels[tx.name] = channels
+
+    def step(self):
+        self._infected = {d: self.sim.diseases[d].infected.uids for d in self.status_diseases}
+
+    def _flagged(self, channel):
+        # syphilis tests call a result; NG/CT/TV channels refer to treatment
+        stamp = channel.ti_positive if isinstance(channel, sti.SyphTest) else channel.ti_referred
+        return (stamp == self.ti).uids
+
+    def update_results(self):
+        super().update_results()
+        channels = {ch.name: ch for chs in self._channels.values() for ch in chs}
+        flagged = {name: self._flagged(ch) for name, ch in channels.items()}
+        for tx in self._drugs:
+            treated = (tx.ti_treated == self.ti).uids
+            if not len(treated):
+                continue
+            channel = np.full(len(treated), "", dtype=object)
+            for ch in self._channels[tx.name]:
+                hit = np.isin(treated, flagged[ch.name])
+                channel[hit] = np.where(channel[hit] == "", ch.name, channel[hit] + "+" + ch.name)
+            row = dict(year=np.full(len(treated), self.sim.t.now("year")), uid=np.array(treated),
+                       drug=np.full(len(treated), tx.name, dtype=object), channel=channel)
+            for d, infected in self._infected.items():
+                row[d] = np.isin(treated, infected)
+            self._rows.append(row)
+
+    def to_df(self):
+        """All treatments so far, one row each."""
+        cols = ["year", "uid", "drug", "channel", *self.status_diseases]
+        if not self._rows:
+            return pd.DataFrame(columns=cols)
+        return pd.DataFrame({c: np.concatenate([r[c] for r in self._rows]) for c in cols})
 
 
 class InfectionTracker(ss.Analyzer):
