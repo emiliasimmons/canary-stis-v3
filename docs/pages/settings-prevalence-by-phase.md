@@ -3,7 +3,7 @@ type: decision
 title: Settings are hypothetical epidemics crossed by prevalence and phase
 description: Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, each an ensemble of simulations selected on prevalence at ages 15-49 in 2026, with STI and HIV biology shared and STI burden left to the model.
 tags: [hiv, sti, modeling, study-concept]
-updated: 2026-11-16 10:50
+updated: 2026-11-17 11:26
 ---
 
 The study runs four settings: high (about 25%) or medium (about 15%) HIV prevalence, each
@@ -62,7 +62,8 @@ country's simulations fill only that country's cells, so a Zimbabwe simulation t
 reaches high prevalence is discarded. A country setup carries demography and ART and VMMC
 coverage. Demography is the 1985 age structure, age-specific fertility and mortality from
 UN World Population Prospects, with migration off and simulations starting in 1985 to
-match the age structure. Mortality excludes HIV deaths, which the model simulates itself.
+match the age structure. Simulations end in 2040, 13 years after the intervention year,
+which bounds the longest horizon an experiment can report. Mortality excludes HIV deaths, which the model simulates itself.
 ART coverage is by sex and age and VMMC coverage by age. Both enter as coverage
 proportions, which scale with each simulation's own epidemic: an explored simulation's
 prevalence differs from the real country's, and a real count of people on ART could exceed
