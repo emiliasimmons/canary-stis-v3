@@ -10,7 +10,7 @@ description: Mathematical and computational modeling methods, including agent-ba
 ## Members
 
 ### Decisions (2)
-- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
+- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm sharing one oral PrEP cascade with STI-triggered PrEP, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 - [Settings are hypothetical epidemics crossed by prevalence and phase](../pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, each an ensemble of simulations selected on prevalence at ages 15-49 in 2026, with STI and HIV biology shared and STI burden left to the model.
 
 ### Entries (29)

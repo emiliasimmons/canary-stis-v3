@@ -10,7 +10,7 @@ description: Tracing and notifying sexual partners of diagnosed individuals, its
 ## Members
 
 ### Decisions (1)
-- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
+- [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm sharing one oral PrEP cascade with STI-triggered PrEP, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 
 ### Entries (18)
 - [Improving HIV Case Finding Through Index Testing: Findings from Health Facilities in 12 Districts of South Africa, October 2019-September 2021](../pages/aheron-2024-index-testing-south-africa.md) -- PEPFAR programme data on the HIV index-testing cascade in 371 South African facilities; 2.6% of tests but 17.8% positivity, 1.0 contacts elicited per client, 51% of contacts tested.
