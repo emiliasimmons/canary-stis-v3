@@ -1,0 +1,25 @@
+Characteristic,Men.Percentage who had ever taken PrEP,Men.Number,Women.Percentage who had ever taken PrEP,Women.Number,Total.Percentage who had ever taken PrEP,Total.Number
+Residence,,,,,,
+Urban,8.2,318,11.7,437,10.1,755
+Rural,10.0,"1,132",12.9,"1,702",11.6,"2,834"
+Region,,,,,,
+Hhohho,10.9,461,11.9,614,11.4,"1,075"
+Lubombo,7.8,281,16.3,418,12.1,699
+Manzini,8.9,467,12.2,734,10.8,"1,201"
+Shiselweni,9.9,241,9.8,373,9.8,614
+Marital status,,,,,,
+Never married,9.4,882,10.9,"1,106",10.2,"1,988"
+Married or living together,10.0,481,14.0,815,12.2,"1,296"
+Divorced or separated,7.1,68,24.9,87,16.7,155
+Widowed,*,16,7.0,120,6.5,136
+Education,,,,,,
+No education,2.1,56,12.8,75,7.6,131
+Primary,11.4,240,15.4,356,13.6,596
+Secondary,9.2,860,12.8,"1,334",11.1,"2,194"
+More than secondary,9.9,294,9.6,373,9.7,667
+Wealth quintile,,,,,,
+Lowest,10.4,276,17.5,424,14.2,700
+Second,9.3,359,12.3,534,10.9,893
+Middle,8.1,329,12.7,440,10.5,769
+Fourth,11.0,233,12.1,388,11.6,621
+Highest,8.9,253,9.0,353,9.0,606

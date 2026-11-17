@@ -1,0 +1,43 @@
+NO.,QUESTIONS AND INSTRUCTIONS,CODING CATEGORIES,SKIP
+HOUSEHOLD CHARACTERISTICS,HOUSEHOLD CHARACTERISTICS,HOUSEHOLD CHARACTERISTICS,HOUSEHOLD CHARACTERISTICS
+201,What is the main source of drinking water for members of your household?,PIPED WATER PIPED INTO DWELLING.................................................................11,21 31 32 41 42 51 61 81
+201,What is the main source of drinking water for members of your household?,PIPED TO YARD/PLOT.......................................................................12,
+201,What is the main source of drinking water for members of your household?,PUBLIC TAP/STANDPIPE ............................................................13,
+201,What is the main source of drinking water for members of your household?,TUBE WELL OR BOREHOLE,
+201,What is the main source of drinking water for members of your household?,,..................................................
+201,What is the main source of drinking water for members of your household?,DUG WELL,
+201,What is the main source of drinking water for members of your household?,PROTECTED WELL.............................................................................,
+201,What is the main source of drinking water for members of your household?,UNPROTECTED WELL....................................................................,
+201,What is the main source of drinking water for members of your household?,WATER FROM SPRING,
+201,What is the main source of drinking water for members of your household?,PROTECTED SPRING.......................................................................,
+201,What is the main source of drinking water for members of your household?,UNPROTECTED SPRING.............................................................,
+201,What is the main source of drinking water for members of your household?,RAINWATER.................................................................................................,
+201,What is the main source of drinking water for members of your household?,TANKER TRUCK.......................................................................................,
+201,What is the main source of drinking water for members of your household?,CART WITH SMALL TANK...........................................................71,
+201,What is the main source of drinking water for members of your household?,SURFACE WATER (RIVER/DAM/LAKE/POND,/
+201,What is the main source of drinking water for members of your household?,STREAM/CANAL).................................................................................,
+201,What is the main source of drinking water for members of your household?,BOTTLED WATER...................................................................................91,
+201,What is the main source of drinking water for members of your household?,OTHER (SPECIFY)................................................................................96,
+201,What is the main source of drinking water for members of your household?,______________________________________________________,
+201,What is the main source of drinking water for members of your household?,DON'T KNOW........................................................................................... REFUSED........................................................................................................,-8 -9
+202,What kind of toilet facility do members of your household usually use?,FLUSH OR POUR FLUSH TOILET........................................11,"IF NO FACILITY/ BUSH/ FIELD = DK, R204"
+202,What kind of toilet facility do members of your household usually use?,TRADITIONAL PIT LATRINE.....................................................,21
+202,What kind of toilet facility do members of your household usually use?,VENTILATED IMPROVED PIT LATRINE (VIP)......,22
+202,What kind of toilet facility do members of your household usually use?,NO FACILITY/BUSH/FIELD.......................................................61,
+202,What kind of toilet facility do members of your household usually use?,OTHER (SPECIFY)................................................................................96,
+202,What kind of toilet facility do members of your household usually use?,______________________________________________________.,
+202,What kind of toilet facility do members of your household usually use?,DON'T KNOW...........................................................................................,-8
+202,What kind of toilet facility do members of your household usually use?,REFUSED........................................................................................................,-9
+203,Do you share this toilet facility with other households?,YES ..........................................................................................................................,1 2
+203,Do you share this toilet facility with other households?,NO.............................................................................................................................,
+203,Do you share this toilet facility with other households?,DON'T KNOW...........................................................................................,-8
+203,Do you share this toilet facility with other households?,REFUSED........................................................................................................,-9
+204,Does your household have:,ELECTRICITY................................................................................................,A
+204,Does your household have:,A WORKING RADIO............................................................................,B
+204,Does your household have:,A WORKING TELEVISION...........................................................,C
+204,Does your household have:,A WORKING TELEPHONE/MOBILE,
+204,Does your household have:,TELE-PHONE..............................................................................................D,
+204,Does your household have:,A WORKING REFRIGERATOR..................................................E,
+204,Does your household have:,NONE OF THE ABOVE.....................................................................F,
+204,Does your household have:,DON'T KNOW..............................................................................................Y,
+204,Does your household have:,REFUSED..........................................................................................................,Z

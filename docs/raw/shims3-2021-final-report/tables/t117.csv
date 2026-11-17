@@ -1,0 +1,15 @@
+Age (years),Weighted estimate,Standard error,Design effect,Relative standard error,Lower confidence limit,Upper confidence limit
+Number of new infections annually,Number of new infections annually,Number of new infections annually,Number of new infections annually,Number of new infections annually,Number of new infections annually,Number of new infections annually
+15-24,"1,906",650.72,3.31,0.34,563,"3,249"
+25-34,"1,413",501.38,2.51,0.35,378,"2,448"
+35-49,182,88.29,0.60,0.48,0,554
+50+,0,0,0,0,0,667
+15-49,"3,503",847.63,2.97,0.24,"1,754","5,252"
+15+,"3,504",848.34,3.06,0.24,"1,753","5,254"
+People living with HIV,People living with HIV,People living with HIV,People living with HIV,People living with HIV,People living with HIV,People living with HIV
+15-24,"17,125",1027.1,0.98,0.06,"15,010","19,241"
+25-34,"43,283",1628.1,1.17,0.04,"39,930","46,636"
+35-49,"80,878",2162.6,1.53,0.03,"76,424","85,331"
+50+,"43,614",1573.3,1.33,0.04,"40,374","46,854"
+15-49,"141,286",3408.6,1.57,0.02,"134,266","148,306"
+15+,"184,900",3983.4,1.71,0.02,"176,696","193,104"
