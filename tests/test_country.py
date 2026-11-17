@@ -157,6 +157,16 @@ def test_country_antenatal_stream_selects_undiagnosed_pregnant_women():
     assert eligible(sim, "hiv_test_anc") == first - {one}
 
 
+def test_behavioral_prep_screens_at_every_country_testing_stream():
+    sim = build_sim(sim_pars(sim=TESTLAND_SIM, country=TESTLAND, prep=dict(eligibility="behavioral")))
+    sim.init(verbose=0)
+    agents = sim.people.auids[:len(STREAMS)]
+    for name, uid in zip(STREAMS, agents):
+        sim.interventions[name].ti_tested[uid] = sim.ti
+    contacts = sim.interventions.behavioral_screen.contacts(sim)
+    assert set(contacts.tolist()) == set(agents.tolist())
+
+
 @pytest.mark.parametrize("programme", ["art", "vmmc"])
 def test_country_rejects_coverage_tables_in_counts(programme, tmp_path):
     for path in TESTLAND["datafolder"].glob("testland_*.csv"):

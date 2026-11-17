@@ -116,6 +116,8 @@ HIV_TEST_RAMPS = dict(
 )
 # probability per time step in the first trimester, as the Eswatini model sets it
 HIV_TEST_ANC_PROB = 0.9
+# every HIV test build_sim attaches, with or without a country
+HIV_TEST_NAMES = ["hiv_test", *(f"hiv_test_{stream}" for stream in HIV_TEST_RAMPS), "hiv_test_anc"]
 
 
 def country_hiv_tests():
@@ -576,7 +578,7 @@ def build_sim(pars):
             prep_elig = treated_this_step(["ng_tx", "ct_tx", "metronidazole", "syph_tx"])
         elif pars.prep.eligibility == "behavioral":
             screen = BehavioralScreen(
-                contacts=tested_this_step(["hiv_test", "syndromic_vds", "syndromic_uds", "panel",
+                contacts=tested_this_step([*HIV_TEST_NAMES, "syndromic_vds", "syndromic_uds", "panel",
                                            "syph_symp_test", "syph_rash_test",
                                            "syph_symp_test_poc"]),
                 start=prep_start,
