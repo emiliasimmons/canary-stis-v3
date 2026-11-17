@@ -1,0 +1,11 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+319,"When you were pregnant with (NAME), were you offered a test for syphilis?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+320,"When you were pregnant with (NAME), were you tested for syphilis?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED → 323"
+321,Did you test positive for syphilis during your pregnancy with (NAME)?,YES = 1 NO = 2 DID NOT GET RESULT = 3 DON'T KNOW = -8 REFUSED = -9,"NO, NO RESULT, DK, REFUSED → 323"
+322,Did you get treatment for syphilis during your pregnancy with (NAME)?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+323,Where did you give birth to (NAME)?,AT HOME = 1 AT A HEALTH FACILITY = 2 IN TRANSIT = 3 OTHER = 96 DON'T KNOW = -8 REFUSED = -9,"HOME, TRANSIT, OTHER, DK, REFUSED →329"
+324,Were you offered an HIV test during labor?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+325,Did you test for HIV during labor?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"SKIP IF HIV POSITIVE NO, DK, REFUSED →329"
+326,What was the result of that test?,POSITIVE = 1 NEGATIVE = 2 UNKNOWN/INDETERMINATE = 3 DID NOT RECEIVE RESULTS = 4 DON'T KNOW = -8 REFUSED = -9,"NEGATIVE, UNKNOWN, DID NOT RECEIVE RESULTS, DON'T KNOW, REFUSED →329 SKIP IF HIV POSITIVE"
+327,"During labor, did you take ARVs to protect (NAME) against HIV?","YES = 1 NO,OFFERED BUT DID NOT TAKE = 2 NO, NOT OFFERED = 3 DON'T KNOW = -8 REFUSED = -9","NO, DK, REFUSED →329 INCLUDE GRAPHIC OF ARVS."
+328,Did you continue to take the ARVs after delivery?,YES = 1 NO= 2 DON'T KNOW =-8 REFUSED = -9,

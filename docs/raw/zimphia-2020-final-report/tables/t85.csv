@@ -1,0 +1,20 @@
+Characteristic,Men.Percentage who had sex before the age of 15 years,Men.Number,Women.Percentage who had sex before the age of 15 years,Women.Number,Total.Percentage who had sex before the age of 15 years,Total.Number
+Residence,,,,,,
+Urban,5.1,391,1.9,677,3.3,"1,068"
+Rural,11.3,"1,074",5.4,"1,483",8.3,"2,557"
+Province,,,,,,
+Bulawayo,6.5,133,2.0,200,4.2,333
+Manicaland,11.4,134,4.6,249,7.6,383
+Mashonaland Central,14.0,173,9.3,215,11.8,388
+Mashonaland East,8.0,123,0.5,176,4.2,299
+Mashonaland West,7.2,185,3.9,255,5.5,440
+Matabeleland North,14.6,165,6.1,217,10.6,382
+Matabeleland South,13.5,177,5.5,206,9.8,383
+Midlands,8.0,128,6.6,228,7.2,356
+Masvingo,8.8,150,4.8,181,6.9,331
+Harare,4.2,97,1.8,233,2.7,330
+Marital status,,,,,,
+Never married,10.2,"1,136",4.0,568,8.6,"1,704"
+Married or living together,6.3,267,3.8,"1,357",4.3,"1,624"
+Divorced or separated,10.0,58,6.5,222,7.4,280
+Widowed,*,0,*,13,*,13

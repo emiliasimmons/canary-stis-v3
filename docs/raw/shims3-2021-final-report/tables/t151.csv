@@ -1,0 +1,12 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+"MODULE SEVEN: HIV STATUS, CARE AND TREATMENT (continued)","MODULE SEVEN: HIV STATUS, CARE AND TREATMENT (continued)","MODULE SEVEN: HIV STATUS, CARE AND TREATMENT (continued)","MODULE SEVEN: HIV STATUS, CARE AND TREATMENT (continued)"
+723,Did you ever have a viral load test? This is a test that measure how much HIV is in your blood.,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO, DON'T KNOW, REFUSED  726"
+724,When did you last have a viral load test?,,
+724,Month,MONTH____________ DON'T KNOW MONTH=-8 REFUSED MONTH=-9,
+724,Year,YEAR_______________ DON'T KNOW YEAR=-8 REFUSED YEAR=-9,
+725,Did you receive the results of your last viral load test?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+726,"At your last HIV medical care visit, were you asked if you had any of the following tuberculosis or TB symptoms: (INTERVIWER: Read all responses aloud. Select all that apply.)",PERSISTENT COUGH=A FEVER=B NIGHT SWEATS=C WEIGHT LOSS=D NONE OF THE ABOVE=E DON'T KNOW=Y REFUSED=Z,
+727,Have you ever taken medicine or a pill to prevent you from coming down with TB? This is sometimes known as TB Preventative Therapy or TPT.,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO, DON'T KNOW, REFUSED  801"
+727,"An example of TPT is Isoniazid, IPT or INH, which is medication that prevents TB. It is given to people with HIV or people who are in contact with someone with TB. It is not treatment for TB.",,"IF NO, DON'T KNOW, REFUSED  801"
+728,"Are you currently taking TPT? By currently, I mean that you may have missed some doses but you are still taking TPT.",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO, DON'T KNOW, REFUSED  801"
+729,How many months have you taken TPT?,MONTHS____________ DON'T KNOW=-8 REFUSED=-9,

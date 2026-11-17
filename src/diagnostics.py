@@ -95,6 +95,18 @@ def treated_this_step(treatment_names):
     return eligibility
 
 
+def tested_this_step(test_names):
+    """Agents any of *test_names* tested this step; absent tests are skipped."""
+    def contacts(sim):
+        uids = ss.uids()
+        for name in test_names:
+            test = sim.interventions.get(name)
+            if test is not None:
+                uids = uids | (test.ti_tested == sim.ti).uids
+        return uids
+    return contacts
+
+
 def syph_ulcer_eligibility(sim):
     """Anyone presenting with a genital ulcer, whatever is causing it.
 
@@ -102,12 +114,16 @@ def syph_ulcer_eligibility(sim):
     chancre at a visible site *or* a non-syphilitic ulcer (the gudp module).
     The second arm is the only route by which the ulcer channel reaches latent
     syphilis, and the source of presumptive over-treatment.
+
+    The chancre side reads ``ulcerative``: stisim draws ``chancre_visible`` at
+    infection and clears it only on treatment or death, so on its own it also
+    covers the incubation, secondary and latent stages.
     """
     syph = sim.diseases.syph
     gudp = sim.diseases.get("gudp")
     if gudp is None:
-        return syph.chancre_visible.uids
-    return (syph.chancre_visible | gudp.symptomatic).uids
+        return syph.ulcerative.uids
+    return (syph.ulcerative | gudp.symptomatic).uids
 
 
 def syph_rash_eligibility(sim):

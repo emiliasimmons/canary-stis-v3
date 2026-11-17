@@ -1,0 +1,31 @@
+,Weighted estimate (%),Unweighted number,Standard error (%),Design effect,Relative standard error,Lower confidence limit (%),Upper confidence limit (%)
+Women,Women,Women,Women,Women,Women,Women,Women
+Residence,,,,,,,
+Urban,75.61,582,2.11,1.40,0.03,71.27,79.96
+Rural,81.81,"1,469",1.10,1.18,0.01,79.55,84.06
+Province,,,,,,,
+Bulawayo,75.27,196,4.33,1.96,0.06,66.36,84.18
+Manicaland,84.42,202,2.69,1.10,0.03,78.88,89.96
+Mashonaland Central,76.35,202,3.47,1.34,0.05,69.20,83.51
+Mashonaland East,80.32,173,2.21,0.53,0.03,75.77,84.86
+Mashonaland West,82.51,235,2.97,1.43,0.04,76.39,88.63
+Matabeleland North,81.89,205,3.14,1.36,0.04,75.42,88.35
+Matabeleland South,80.59,231,2.63,1.01,0.03,75.18,86.00
+Midlands,79.82,238,2.97,1.29,0.04,73.71,85.92
+Masvingo,81.68,211,3.12,1.36,0.04,75.26,88.10
+Harare,74.51,158,3.90,1.26,0.05,66.47,82.55
+Total,Total,Total,Total,Total,Total,Total,Total
+Residence,,,,,,,
+Urban,74.17,806,2.13,1.91,0.03,69.78,78.56
+Rural,78.65,"2,151",0.97,1.21,0.01,76.65,80.65
+Province,,,,,,,
+Bulawayo,73.67,274,3.08,1.34,0.04,67.33,80.02
+Manicaland,80.89,279,2.56,1.18,0.03,75.61,86.17
+Mashonaland Central,70.08,309,2.56,0.96,0.04,64.81,75.35
+Mashonaland East,78.80,255,2.52,0.97,0.03,73.60,83.99
+Mashonaland West,78.39,338,2.30,1.05,0.03,73.66,83.13
+Matabeleland North,81.46,302,2.70,1.45,0.03,75.90,87.02
+Matabeleland South,82.19,324,2.16,1.03,0.03,77.73,86.64
+Midlands,78.04,345,2.39,1.15,0.03,73.11,82.96
+Masvingo,76.50,310,3.30,1.88,0.04,69.70,83.31
+Harare,73.50,221,4.10,1.89,0.06,65.06,81.93

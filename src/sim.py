@@ -44,18 +44,23 @@ from .diagnostics import (
     syph_anc_eligibility,
     syph_rash_eligibility,
     syph_ulcer_eligibility,
+    tested_this_step,
     treated_this_step,
 )
 from .interventions import (
+    BehavioralScreen,
     CareSeekScaler,
     CondomCounseling,
     FSWOutreach,
     GonorrheaTx,
     MagicCure,
-    STIDxPrEP,
 )
 
-_SYPH_DX_PATH = Path(__file__).parent / "data" / "syph_dx.csv"
+_DATA_DIR = Path(__file__).parent / "data"
+
+# proportion of people with HIV on ART when no country is set
+NO_COUNTRY_ART_COVERAGE = 0.6
+_SYPH_DX_PATH = _DATA_DIR / "syph_dx.csv"
 
 # stisim's testing modules default stop to the run's last year and only act
 # while now < stop, so they would skip the final step. Syndromic and panel
@@ -81,6 +86,94 @@ SYNDROMIC_TX_MIX_NONCERV = dict(
 )
 
 
+def _fsw_not_in_care(sim):
+    hiv = sim.diseases.hiv
+    return sim.networks.structuredsexual.fsw & ~hiv.diagnosed & ~hiv.on_art
+
+
+def _others_not_in_care(sim):
+    hiv = sim.diseases.hiv
+    return ~sim.networks.structuredsexual.fsw & ~hiv.diagnosed & ~hiv.on_art
+
+
+def _low_cd4_undiagnosed(sim):
+    hiv = sim.diseases.hiv
+    return (hiv.cd4 < 200) & ~hiv.diagnosed
+
+
+def _antenatal_undiagnosed(sim):
+    tri1 = sim.demographics.pregnancy.tri1_uids
+    return tri1[~sim.diseases.hiv.diagnosed[tri1]]
+
+
+# HIV testing shared by every country setup: annual testing probability among
+# the eligible, linear between the listed years, as the Eswatini HIVsim model
+# sets it by hand (hivsim_eswatini interventions.py).
+HIV_TEST_RAMP_YEARS = [1990, 2020, 2040]
+HIV_TEST_RAMPS = dict(
+    fsw=dict(prob=[0.0, 0.75, 0.85], eligibility=_fsw_not_in_care),
+    general=dict(prob=[0.0, 0.5, 0.6], eligibility=_others_not_in_care),
+    low_cd4=dict(prob=[0.0, 0.85, 0.95], eligibility=_low_cd4_undiagnosed),
+)
+# probability per time step in the first trimester, as the Eswatini model sets it
+HIV_TEST_ANC_PROB = 0.9
+# every HIV test build_sim attaches, with or without a country
+HIV_TEST_NAMES = ["hiv_test", *(f"hiv_test_{stream}" for stream in HIV_TEST_RAMPS), "hiv_test_anc"]
+
+
+def country_hiv_tests():
+    """The four HIV testing streams every country setup shares."""
+    # HIVTest takes the listed year nearest the current one, so the ramps go in
+    # annually
+    years = np.arange(HIV_TEST_RAMP_YEARS[0], HIV_TEST_RAMP_YEARS[-1] + 1)
+    tests = [
+        sti.HIVTest(
+            name=f"hiv_test_{stream}", label=f"hiv_test_{stream}",
+            years=years,
+            test_prob_data=np.interp(years, HIV_TEST_RAMP_YEARS, ramp["prob"]),
+            eligibility=ramp["eligibility"],
+        )
+        for stream, ramp in HIV_TEST_RAMPS.items()
+    ]
+    tests.append(sti.HIVTest(
+        name="hiv_test_anc", label="hiv_test_anc",
+        test_prob_data=HIV_TEST_ANC_PROB,
+        eligibility=_antenatal_undiagnosed,
+        dt_scale=False,
+    ))
+    # set after construction: HIVTest builds its timeline from a stop passed to
+    # the constructor, which fails on infinity
+    for test in tests:
+        test.stop = _NO_STOP
+    return tests
+
+
+def proportion_coverage(coverage, programme, source):
+    """Coverage for 'art' or 'vmmc', checked to be a proportion or a table of them.
+
+    Counts fail when a simulation's HIV prevalence or population differs from
+    the real country's. stisim reads the first numeric column outside Year,
+    Gender, AgeBin, lb and ub as the coverage, so p_<programme> must be a
+    table's only one.
+    """
+    p = f"p_{programme}"
+    if isinstance(coverage, pd.DataFrame):
+        extra = set(coverage) - {"Year", "Gender", "AgeBin", "lb", "ub", p}
+        valid = p in coverage and not extra and coverage[p].between(0, 1).all()
+    else:
+        valid = isinstance(coverage, (int, float)) and 0 <= coverage <= 1
+    if not valid:
+        raise ValueError(f"{source} must give coverage as proportions between 0 and 1: "
+                         f"a number, or a table whose only value column is {p}")
+    return coverage
+
+
+def country_coverage(country, programme):
+    """A country's coverage table for 'art' or 'vmmc', checked to be proportions."""
+    path = Path(country.datafolder) / f"{country.name}_{programme}_coverage.csv"
+    return proportion_coverage(pd.read_csv(path), programme, path)
+
+
 def latent_seed_frame(init_prev, n_risk_groups=3):
     """One row per risk group, sex and sex-work status, all at the same rate.
 
@@ -94,14 +187,10 @@ def latent_seed_frame(init_prev, n_risk_groups=3):
     ])
 
 
-def random_prep_eligible(rate):
-    """Eligibility: a flat annual-rate random sample of alive agents."""
+def as_mask(eligibility):
+    """Wrap a uids-returning eligibility as the boolean-array callable sti.Prep documents."""
     def fn(sim):
-        if rate <= 0:
-            return ss.uids()
-        p = min(rate * sim.t.dt_year, 1.0)
-        mask = np.random.random(len(sim.people.auids)) < p
-        return sim.people.auids[mask]
+        return sim.people.alive & eligibility(sim)
     return fn
 
 
@@ -124,17 +213,21 @@ def sim_pars(**kwargs):
         pars = sim_pars(intv_year=2027)                 # run the POC arm
         pars = sim_pars(care_seek_mult=1.5)             # care-seeking lever
         pars = sim_pars(bundled_prevention=dict(coverage=0.5))
+        pars = sim_pars(country=dict(name="eswatini"))  # country setup
 
     Off-states are sentinels, not flags: ``intv_year=None`` (SOC throughout),
     ``care_seek_mult=1.0``, ``bundled_prevention=None``,
-    ``fsw_outreach.rate=0.0``, ``prep.eligibility='none'``, ``magic_cure.year=None``.
+    ``fsw_outreach.rate=0.0``, ``prep.eligibility='none'``, ``magic_cure.year=None``,
+    ``country.name=None`` (scalar birth and death rates, and the HIV programmes
+    in ``hiv_test``, ``art`` and ``vmmc``), ``art.coverage=None`` and
+    ``vmmc.coverage=None`` (the setup's coverage).
     """
     pars = sc.objdict()
 
     pars.sim = sc.objdict(
         n_agents=10_000,
-        start=1990,
-        dur=40,  # reaches 2030
+        start=1985,  # the year of the country age structures
+        stop=2040,  # 13 years past the 2027 intervention year
         dt=1 / 12,
         rand_seed=0,
         label=None,
@@ -192,20 +285,32 @@ def sim_pars(**kwargs):
     pars.bundled_prevention = None            # dict(coverage=, eff=, dur_months=); CondomCounseling
     pars.fsw_outreach = sc.objdict(rate=0.0, start=None, stop=None)
 
+    # hiv_test applies without a country. A country setup runs the shared
+    # testing streams (country_hiv_tests) and rejects an override of hiv_test.
     pars.hiv_test = sc.objdict(test_prob_data=0.3, start=2000)
-    pars.art = sc.objdict(coverage=0.6)
-    # Voluntary medical male circumcision. HIV carries eff_circ=0.6 already;
-    # this delivers it. coverage is site-specific (sti.VMMC accepts a year-indexed
-    # schedule of counts, or a scalar); None runs no VMMC.
+    # ART and voluntary medical male circumcision coverage. None takes the
+    # setup's coverage: NO_COUNTRY_ART_COVERAGE and no VMMC without a country,
+    # the country's tables with one. A value set here replaces either, and with
+    # a country must be a proportion (proportion_coverage). HIV carries
+    # eff_circ=0.6 already; VMMC delivers it.
+    pars.art = sc.objdict(coverage=None)
     pars.vmmc = sc.objdict(coverage=None)
-    # STI-diagnosis-triggered PrEP (pathway D). eligibility: 'none' (off),
-    # 'dx' (agents whose STI treatment fired this step), or 'random'.
-    pars.prep = sc.objdict(eff_prep=0.70, eligibility="none", random_rate=0.0)
+    # Daily oral PrEP cascade, sti.Prep. Eligibility is who is offered PrEP this
+    # step: 'none' (off), 'dx' (STI treatment fired this step, pathway D), or
+    # 'behavioral' (qualified on the national eligibility screen at an HIV
+    # testing or STI clinic visit this step). From start (None follows
+    # lever_start), each step's offered group is topped up until coverage of
+    # it is on PrEP, chosen by a fixed per-person willingness score. Offered
+    # people already on a course count toward it, so fewer than that start.
+    pars.prep = sc.objdict(eligibility="none", start=None, coverage=0.30,
+                           dur_months=3, prep_eff=0.8, prep_adh=1.0)
     pars.magic_cure = sc.objdict(year=None)
 
     pars.connectors = sc.objdict(
         hiv_ng=sc.objdict(),
-        hiv_ct=sc.objdict(),
+        # stisim's 1 is a placeholder; 1.2 matches gonorrhoea, the same inflammation
+        # pathway (issue #12)
+        hiv_ct=sc.objdict(rel_sus_hiv_ct=1.2),
         hiv_tv=sc.objdict(),
         hiv_bv=sc.objdict(),
         hiv_syph=sc.objdict(),
@@ -234,6 +339,12 @@ def sim_pars(**kwargs):
             ("fsw", "client"): dict(year=[1990], val=[0.55]),
         },
     )
+
+    # Country setup. name=None runs the scalar pregnancy and deaths rates below;
+    # a name loads that country's 1985 age structure, age-specific fertility and
+    # mortality from datafolder, in stisim's location-file layout, and its ART
+    # and VMMC coverage from {name}_art_coverage.csv and {name}_vmmc_coverage.csv.
+    pars.country = sc.objdict(name=None, datafolder=_DATA_DIR)
 
     # 220 births per 1000 women 15-49 reproduces the SSA aggregate; the coupled
     # fertility_rate=10 / death_rate=10 default drains the sexually active
@@ -462,24 +573,58 @@ def build_sim(pars):
             start=lever_start, dur=ss.months(dur_months), **bp,
         ))
 
-    prep = None
-    if pars.prep.eligibility != "none" and pars.prep.eff_prep > 0:
+    prep_start = pars.prep.start if pars.prep.start is not None else lever_start
+    screen = prep = None
+    if pars.prep.eligibility != "none":
         if pars.prep.eligibility == "dx":
             prep_elig = treated_this_step(["ng_tx", "ct_tx", "metronidazole", "syph_tx"])
-        elif pars.prep.eligibility == "random":
-            prep_elig = random_prep_eligible(pars.prep.random_rate)
+        elif pars.prep.eligibility == "behavioral":
+            screen = BehavioralScreen(
+                contacts=tested_this_step([*HIV_TEST_NAMES, "syndromic_vds", "syndromic_uds", "panel",
+                                           "syph_symp_test", "syph_rash_test",
+                                           "syph_symp_test_poc"]),
+                start=prep_start,
+            )
+            # looked up by name: the sim runs a copy of the screen object built here
+            def prep_elig(sim):
+                return (sim.interventions.behavioral_screen.ti_qualified == sim.ti).uids
         else:
             raise ValueError(f"unknown prep.eligibility '{pars.prep.eligibility}'")
-        prep = STIDxPrEP(eligibility=prep_elig, eff_prep=pars.prep.eff_prep)
+        # sti.Prep extends the first coverage value back to the sim start, so a
+        # zero one step before prep_start keeps PrEP off until then
+        prep = sti.Prep(
+            name="prep",
+            eligibility=as_mask(prep_elig),
+            coverage={"year": [prep_start - pars.sim.dt, prep_start],
+                      "value": [0, pars.prep.coverage]},
+            prep_dur=ss.months(pars.prep.dur_months),
+            prep_eff=pars.prep.prep_eff,
+            prep_adh=pars.prep.prep_adh,
+        )
 
     magic_cure = (MagicCure(year=pars.magic_cure.year, diseases=[ng, ct, tp, tv])
                   if pars.magic_cure.year is not None else None)
 
-    hiv_test = sti.HIVTest(name="hiv_test", **pars.hiv_test)
-    art = sti.ART(**pars.art)
-    vmmc = sti.VMMC(coverage=pars.vmmc.coverage) if pars.vmmc.coverage is not None else None
+    country = pars.country
+    art_coverage, vmmc_coverage = pars.art.coverage, pars.vmmc.coverage
+    if country.name is None:
+        hiv_tests = [sti.HIVTest(name="hiv_test", **pars.hiv_test)]
+        if art_coverage is None:
+            art_coverage = NO_COUNTRY_ART_COVERAGE
+    else:
+        if pars.hiv_test != sim_pars().hiv_test:
+            raise ValueError("'hiv_test' is set by the country setup; leave it at its default when country.name is set")
+        hiv_tests = country_hiv_tests()
+        art_coverage = (country_coverage(country, "art") if art_coverage is None
+                        else proportion_coverage(art_coverage, "art", "art.coverage"))
+        vmmc_coverage = (country_coverage(country, "vmmc") if vmmc_coverage is None
+                         else proportion_coverage(vmmc_coverage, "vmmc", "vmmc.coverage"))
+    art = sti.ART(**dict(pars.art, coverage=art_coverage))
+    vmmc = sti.VMMC(coverage=vmmc_coverage) if vmmc_coverage is not None else None
 
-    tail = [magic_cure, prep, hiv_test, art, vmmc]
+    # the screen reads this step's HIV tests, PrEP reads the screen, and testing
+    # precedes ART so agents diagnosed this step can start treatment in it
+    tail = [magic_cure, *hiv_tests, screen, prep, art, vmmc]
     interventions.extend(i for i in tail if i is not None)
 
     connectors = make_connectors(hiv, ng=ng, ct=ct, syph=tp, tv=tv, bv=bv, pars=pars.connectors)
@@ -500,19 +645,32 @@ def build_sim(pars):
         ss.infection_log(),
     ]
 
-    sim = ss.Sim(
-        n_agents=pars.sim.n_agents,
-        start=pars.sim.start,
-        dur=pars.sim.dur,
-        dt=pars.sim.dt,
-        rand_seed=pars.sim.rand_seed,
+    if pars.country.name is None:
+        demographics = dict(demographics=[ss.Pregnancy(**pars.pregnancy), ss.Deaths(**pars.deaths)])
+    else:
+        # a location string has stisim build Pregnancy, Deaths and the starting
+        # People from the country's files, and sets total_pop from the age
+        # structure, which UN WPP counts in people; migration stays at stisim's
+        # default, off
+        demographics = dict(demographics=pars.country.name, datafolder=pars.country.datafolder)
+
+    # sim settings go in as sim_pars: passed flat, sti.Sim would also route dt
+    # to the diseases and reject them for arriving as built modules
+    sim = sti.Sim(
+        sim_pars=dict(
+            n_agents=pars.sim.n_agents,
+            start=pars.sim.start,
+            stop=pars.sim.stop,
+            dt=pars.sim.dt,
+            rand_seed=pars.sim.rand_seed,
+        ),
         label=pars.sim.label,
         diseases=diseases,
         networks=[sti.StructuredSexual(**pars.network), ss.MaternalNet()],
-        demographics=[ss.Pregnancy(**pars.pregnancy), ss.Deaths(**pars.deaths)],
         interventions=interventions,
         analyzers=analyzers,
         connectors=connectors,
+        **demographics,
     )
     sim.metadata = sc.objdict(pars=pars)
     return sim

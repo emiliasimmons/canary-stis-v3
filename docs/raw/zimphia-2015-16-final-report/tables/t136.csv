@@ -1,0 +1,9 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+348,"Thank you for the information regarding (name). DID THE RESPONDENT HAVE MORE THAN ONE CHILD (I.E. TWINS, TRIPLETS)?",YES = 1 NO = 2,"YES, RETURN TO 330 FOR MULTIPLES"
+"Interviewer says: ""I will now ask about current pregnancies.""","Interviewer says: ""I will now ask about current pregnancies.""","Interviewer says: ""I will now ask about current pregnancies.""",SKIP TO 351 IF MALE
+349,Are you pregnant now?,YES = 1 NO = 2 DON'T KNOW/UNSURE = -8 REFUSED = -9,"NO, DK, REFUSED →351"
+350,How many months pregnant are you?,MONTHS _ _ DON'T KNOW / UNSURE = -8 REFUSED = -9,NOT MORE THAN 10 MONTHS.
+"Inverviewer says: ""I will now ask you about family planning.""","Inverviewer says: ""I will now ask you about family planning.""","Inverviewer says: ""I will now ask you about family planning.""",SKIP TO 353 IF CURRENTLY PREGNANT.
+351,Are you or your partner currently doing something or using any method to delay or avoid getting pregnant?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED → 353"
+352,Which method are you or your partner using? SELECT ALL THAT APPLY.,"FEMALE STERILIZATION = A MALE STERILIZATION = B PILL = C IUD/""COIL"" = D INJECTIONS = E IMPLANT = F CONDOM = G FEMALE CONDOM = H RHYTHM/NATURAL METHODS = I WITHDRAWAL = J NOT HAVING SEX = K OTHER = X DON'T KNOW = Y REFUSED = Z",
+353,"While receiving HIV care, has a health care provider or outreach worker spoken to you about family planning methods or contraceptives?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,IN HIV CARE ONLY.

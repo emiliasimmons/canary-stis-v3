@@ -1,0 +1,7 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+3008,Why did (NAME) miss school? SELECT ALL THAT APPLY.,"NO MONEY FOR SCHOOL MATERIALS, TRANSPORT = A CHILD WAS TOO SICK TO ATTEND SCHOOL = B SCHOOL IS TOO FAR AWAY/NO SCHOOL = C CHILD HAS TO WORK = D CHILD HAS TO CARE FOR HOUSEHOLD MEMBERS = E CHILD DOES NOT LIKE/WANT TO GO TO SCHOOL = F SCHOOL WAS NOT IN SESSION = G OTHER = X DON'T' KNOW = Y REFUSED = Z",
+3009,What grade/form/year is (NAME) in now?,GRADE/FORM/YEAR _____ DON'T KNOW = -8 REFUSED = -9,ALL → 3013
+3010,Was (NAME) enrolled in school during the previous school year?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO →3012 DK, REFUSED →3013"
+3011,What grade/form/year was (NAME) during the previous school year?,GRADE/FORM/YEAR _____ DON'T KNOW = -8 REFUSED = -9,ALL→3013
+3012,What is the highest grade/form/year that (NAME) has completed?,GRADE/FORM/YEAR _____ DON'T KNOW = -8 REFUSED = -9,
+3013,Is (NAME) circumcised? Circumcision is the complete removal of the foreskin from the penis. I have a picture to show you what a completely circumcised penis looks like.,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO → 3016 IF DK, REFUSED → 3017 SKIP IF FEMALE CHILD. SHOW PICTURE OF CIRCUMCISED PENIS."

@@ -1,0 +1,5 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+809,What is the main reason you have never taken ARVs?,NOT ELIGIBLE FOR TREATMENT=1 HEALTH CARE PROVIDER DID NOT PRESCRIBE = 2 HIV MEDICINES NOT AVAILABLE = 3 I FEEL HEALTHY/NOT SICK = 4 COST OF MEDICATIONS = 5 COST OF TRANSPORT = 6 RELIGIOUS REASONS = 7 TAKING TRADITIONAL MEDICATIONS = 8 NOT ATTENDING HIV CLINIC = 9 OTHER = 96 DON'T KNOW = -8 REFUSED = -9,ALL→815
+810,What month and year did you first start taking ARVs? PROBE TO VERIFY DATE.,MONTH _____ DON'T KNOW MONTH = -8 REFUSED MONTH = -9 YEAR _____ DON'T KNOW YEAR = -8 REFUSED YEAR = -9,
+811,What month and year did you last receive ARVs?,MONTH _____ DON'T KNOW MONTH = -8 REFUSED MONTH = -9 YEAR _____ DON'T KNOW YEAR = -8 REFUSED YEAR = -9,
+812,"Are you currently taking ARVs, that is, antiretroviral medications? By currently, I mean that you may have missed some doses but you are still taking ARVs",YES = 1 NO=2 DON'T KNOW = -8 REFUSED = -9,"IF YES →814 DK, REFUSED → 815"

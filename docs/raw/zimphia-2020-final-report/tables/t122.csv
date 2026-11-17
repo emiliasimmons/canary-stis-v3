@@ -1,0 +1,38 @@
+Age (years),Weighted estimate (%),Unweighted number,Standard error (%),Design effect,Relative standard error,Lower confidence limit (%),Upper confidence limit (%)
+Men,Men,Men,Men,Men,Men,Men,Men
+Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed
+15-24,71.88,64,6.10,1.16,0.08,59.32,84.45
+25-34,64.34,117,4.65,1.09,0.07,54.76,73.93
+35-49,87.34,405,2.03,1.50,0.02,83.17,91.51
+50+,93.16,320,1.55,1.21,0.02,89.96,96.36
+15-49,80.63,586,1.97,1.45,0.02,76.57,84.69
+15+,84.32,906,1.52,1.57,0.02,81.20,87.44
+On treatment,On treatment,On treatment,On treatment,On treatment,On treatment,On treatment,On treatment
+15-24,68.82,64,6.11,1.10,0.09,56.23,81.42
+25-34,58.02,117,4.75,1.08,0.08,48.23,67.81
+35-49,84.44,405,2.39,1.76,0.03,79.52,89.36
+50+,90.09,320,1.89,1.28,0.02,86.19,93.98
+15-49,77.00,586,2.11,1.47,0.03,72.65,81.34
+15+,80.85,906,1.69,1.66,0.02,77.38,84.32
+Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression
+15-24,49.22,64,7.84,1.55,0.16,33.08,65.37
+25-34,49.75,117,4.97,1.15,0.10,39.51,59.98
+35-49,75.56,405,2.59,1.46,0.03,70.23,80.89
+50+,84.04,320,2.16,1.11,0.03,79.59,88.49
+15-49,66.94,586,2.32,1.42,0.03,62.15,71.72
+15+,71.97,906,1.79,1.44,0.02,68.28,75.67
+Women,Women,Women,Women,Women,Women,Women,Women
+Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed
+15-24,77.16,183,3.33,1.15,0.04,70.30,84.02
+25-34,81.94,425,2.14,1.32,0.03,77.53,86.36
+35-49,92.01,915,1.08,1.45,0.01,89.78,94.23
+50+,92.98,529,1.23,1.23,0.01,90.45,95.52
+15-49,87.03,"1,523",0.98,1.30,0.01,85.01,89.05
+15+,88.31,"2,052",0.80,1.26,0.01,86.67,89.96
+On treatment,On treatment,On treatment,On treatment,On treatment,On treatment,On treatment,On treatment
+15-24,73.38,183,3.49,1.14,0.05,66.18,80.58
+25-34,79.66,425,2.17,1.23,0.03,75.19,84.13
+35-49,89.54,915,1.17,1.33,0.01,87.13,91.95
+50+,92.51,529,1.24,1.16,0.01,89.97,95.06
+15-49,84.44,"1,523",1.06,1.30,0.01,82.26,86.62
+15+,86.18,"2,052",0.86,1.28,0.01,84.41,87.96

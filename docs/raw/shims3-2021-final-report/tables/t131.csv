@@ -1,0 +1,12 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+MODULE ONE: RESPONDENT BACKGROUND (continued),MODULE ONE: RESPONDENT BACKGROUND (continued),MODULE ONE: RESPONDENT BACKGROUND (continued),MODULE ONE: RESPONDENT BACKGROUND (continued)
+105,"Just before you moved here, did you live in an urban area or in a rural area?",CITY=1 TOWN=2 RURAL AREA=3 DON'T KNOW=-8 REFUSED=-9,
+106,"Before you moved here, which REGION did you live in? If you lived outside of Eswatini, which country did you live in?",HHOHHO = 1 UBOMBO = 2 MANZINI = 3 SHISELWENI = 4 SOUTH AFRICA = 5 MOZAMBIQUE = 6 ZIMBABWE = 7 LESOTHO = 8 OTHER COUNTRY (SPECIFY) =96 ____________________________________________ DON'T KNOW=-8 REFUSED =-9,IF OTHER  107
+107,Have you ever lived away from home for more than 1 month at a time?,YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED  112"
+108,When was the last time you lived away from home for over a month?,,IF > 1 YEAR AGO  110
+,Month,(VALUE LIST JANUARY - DECEMBER) DONT KNOW MONTH = -8 REFUSED MONTH= -9,"IF DON'T KNOW, REFUSED MONTH /YEAR  110"
+,Year,[COMBO BOX RESPONSE] = 9999 DON'T KNOW YEAR = -8 REFUSED YEAR = -9,
+109,How many times have you been away from home for one or more months IN THE PAST YEAR?,[COMBO BOX RESPONSE] INTEGER: 0-12 DON'T KNOW=-8 REFUSED=-9,
+110,"The last time you were away from home for more than one month, where were you?",ANOTHER COMMUNITY IN THIS INKHUNDLA = 1 ANOTHER INKHUNDLA IN THIS REGION = 2 HHOHHO = 3 LUBOMBO = 4 MANZINI = 5,IF OTHER  111
+,"If you were in more than one place while you were away, please give the place you spent the most time (INTERVIEWER: PROBE TO GET SPECIFIC INFORMATION.)",SHISELWENI = 6 SOUTH AFRICA = 7 MOZAMBIQUE = 8 ZIMBABWE = 9 LESOTHO = 10 OTHER (SPECIFY) =96 ____________________________________________,
+,,DON'T KNOW=-8 REFUSED =-9,

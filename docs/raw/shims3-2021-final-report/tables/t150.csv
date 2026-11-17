@@ -1,0 +1,9 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+MODULE TREATMENT (continued),MODULE TREATMENT (continued),MODULE TREATMENT (continued),MODULE TREATMENT (continued)
+716,"SEVEN: HIV STATUS, CARE AND The last time you picked up or received your ARVs, how much supply were you given? You should include both your prescription and any extra you were given. (INTERVIEWER: Use weeks if less than one month. Swipe forward to enter DON'T KNOW or REFUSED.) Number of Weeks or Months of Supply Units",_________WEEKS=1 _________MONTHS=2 DON'T KNOW=-8 REFUSED=-9,
+717,"The last time you picked up or received your ART, were you told that you were being given a longer refill because of the COVID-19 partial lockdown?",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,
+718,Have your ARVs ever been changed or modified?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO, DON'T KNOW, REFUSED  720"
+719,Why were your ARVs changed?,I WAS NOT RESPONDING TO MY FIRST TREATMENT=1 MY VIRAL LOAD WASN'T SUPPRESSED=2 I WANTED TO GET PREGNANT OR WAS PREGNANT=3 I WAS HAVING/WORRIED ABOUT SERIOUS SIDE EFFECTS=4 NATIONAL ART REGIMAN CHANGE = 5 OTHER (SPECIFY) =96 ____________________________________________ DON'T KNOW=-8 REFUSED=-9,IF ANYTHING BUT OTHER  720
+720,"You said before that you had been away from home during the past year. At any point in the past year were you away from home, was there any period when you interrupted your ARV treatment?",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,ONLY ASK IF 109 >= 1
+721,"Since March 2020, the COVID-19 pandemic has affected many medical services including HIV testing and HIV care and ART clinics. Was there any period since March 2020 when your ART due to the COVID-19 partial lockdown?",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,
+722,"People sometimes forget to take all of their ARVs every day. In the last 30 days, how many days have you missed taking any of your ARV pills? (INTERVIEWER: ENTER '0' if NONE.)",NUMBER OF DAYS_______ DON'T KNOW=-8 REFUSED=-9,

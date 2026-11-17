@@ -1,0 +1,13 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+720,Did you ever have a viral load test? This is a test that measure how much HIV is in your blood.,YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED  723"
+721,When did you last have a viral load test? Month,MONTH____________ DON'T KNOW MONTH=-8 REFUSED MONTH=-9,
+722,Year Did you receive the results of your last viral load test?,YEAR_______________ DON'T KNOW YEAR=-8 REFUSED YEAR=-9 YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,
+723,"At your last HIV medical care visit, were you asked if you had any of the following tuberculosis or TB symptoms: (Read all responses aloud. Select all that apply.)",PERSISTENT COUGH?=A FEVER?=B NIGHT SWEATS?=C WEIGHT LOSS?=D NONE OF THE ABOVE=E DON'T KNOW=Y REFUSED=Z,
+724,"Have you ever taken medicine or a pill to prevent you from coming down with TB? This is sometimes known as TB Preventative Therapy or TPT. An example of TPT is Isoniazid, IPT or INH, which is medication that prevents TB. It is given to people with HIV or people who",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED  801"
+725,"are in contact with someone with TB. It is not treatment for TB. Are you currently taking TPT? By currently, I mean that you may have missed some doses but you are still taking TPT.",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED  801"
+726,How many months have you taken TPT?,MONTHS____________ DON'T KNOW=-8 REFUSED=-9,
+MODULE EIGHT: TUBERCULOSIS AND OTHER HEALTH ISSUES,MODULE EIGHT: TUBERCULOSIS AND OTHER HEALTH ISSUES,,
+"Interviewer says: ""Now we will ask you about tuberculosis or TB.""","Interviewer says: ""Now we will ask you about tuberculosis or TB.""","Interviewer says: ""Now we will ask you about tuberculosis or TB.""",
+801,"In the last 12 months, did you visit a clinic for TB diagnosis or treatment?",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED AND MALE  812 IF NO, DON'T KNOW, REFUSED AND FEMALE=2"
+802,"When you visited a TB clinic in the last 12 months, were you tested for HIV?","YES=1 NO, WAS NOT TESTED FOR HIV=2 NO, ALREADY KNOW I AM HIV POSITIVE=3 DON'T KNOW=-8 REFUSED=-9", 807
+803,"In the last 12 months, were you told by a doctor, clinical officer or nurse that you had TB?",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED AND MALE  812 IF NO, DON'T KNOW, REFUSED AND FEMALE=2  807"

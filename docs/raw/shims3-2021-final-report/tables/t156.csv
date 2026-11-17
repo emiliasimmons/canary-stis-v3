@@ -1,0 +1,10 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+MODULE TEN: EXPOSURE TO PREVENTION INTERVENTION AMONG 15-24 YEARS,MODULE TEN: EXPOSURE TO PREVENTION INTERVENTION AMONG 15-24 YEARS,MODULE TEN: EXPOSURE TO PREVENTION INTERVENTION AMONG 15-24 YEARS,MODULE TEN: EXPOSURE TO PREVENTION INTERVENTION AMONG 15-24 YEARS
+"Interviewer says: ""We will now ask you about your experience with HIV prevention program.""","Interviewer says: ""We will now ask you about your experience with HIV prevention program.""","Interviewer says: ""We will now ask you about your experience with HIV prevention program.""","Interviewer says: ""We will now ask you about your experience with HIV prevention program."""
+1001,Where can you get condoms? (INTERVIEWER: Select all that apply.),CLINIC/HOSPITAL=A KIOSK/SHOP=B PHARMACY=C LOCAL FREE DISPENSER=D FRIENDS/PEER=E SEXUAL PARTNER(S)=F OTHER (SPECIFY) =X ____________________________________________ DON'T KNOW=-Y REFUSED=-Z,
+1002,"If you wanted a condom, would it be easy for you to get one?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF YES, DON'T KNOW, REFUSED  1004"
+1003,Why is it not easy for you to get a condom?,CONDOMS NOT AVAILABLE/TOO FAR=A NOT CONVENIENT=B COSTS TOO MUCH=C EMBARRASED TO GET CONDOMS=D DO NOT WANT OTHERS TO KNOW=E DO NOT KNOW WHERE TO GET CONDOMS=F COVID-19 PARTIAL LOCKDOWN =G OTHER (SPECIFY) =X ____________________________________________ DON'T KNOW=Y REFUSED=Z,
+1004,How confident would you feel to negotiate condom use with a sexual partner?,HIGH CONFIDENCE = 1 MODERATE CONFIDENCE = 2 SLIGHT CONFIDENCE= 3 NO CONFIDENCE = 4 DON'T KNOW = -8 REFUSED = -9,
+1005,Have you ever talked with a parent or guardian about sex?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+1006,Have you ever discussed HIV with your parents or guardians?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+1007,Have you taken part in any of the following prevention or treatment programs? (INTERVIEWER: SELECT ALL THAT APPLY.),DREAMS = A SITAKHELA LIKUSASA = B KWAKHA INDVODZA = C TEEN CLUBS = D STEPPINGSTONES = E K1-BOYS = F GLOW BRO = G NONE = W OTHER (SPECIFY) =X ____________________________________________ DON'T KNOW=Y REFUSED=Z,

@@ -4,9 +4,9 @@ Custom interventions for canary-stis.
 The NG/CT/TV diagnostic arm (syndromic management vs POC panel) and the syphilis
 pipeline are assembled in ``sim.build_sim`` from stock stisim classes; this
 module holds the classes with no stisim equivalent: a gonorrhea-treatment
-subclass fixing an initial-seeding NaN, STI-diagnosis-triggered PrEP, the magic
-cure, and the demand-side levers (care-seeking scaler, condom counseling, FSW
-outreach).
+subclass fixing an initial-seeding NaN, the magic cure, the behavioral PrEP
+eligibility screen, and the demand-side levers (care-seeking scaler, condom
+counseling, FSW outreach).
 """
 
 import numpy as np
@@ -33,57 +33,6 @@ class GonorrheaTx(sti.GonorrheaTreatment):
                 self.rel_treat.raw[np.where(nan_mask)[0]] = 1.0
             self._rel_treat_fixed = True
         return super().step()
-
-
-class STIDxPrEP(ss.Intervention):
-    """
-    STI-diagnosis-triggered PrEP enrollment (pathway D).
-
-    Each timestep, agents selected by ``eligibility`` who are HIV-negative and
-    not already on PrEP are enrolled and given a per-timestep HIV susceptibility
-    reduction (rel_sus resets each step in starsim, so it is re-applied every
-    timestep). Eligibility is supplied by build_sim: STI treatment events for
-    the diagnosis-triggered arm, or a flat random draw for the comparator.
-    """
-
-    def __init__(self, eligibility=None, pars=None, **kwargs):
-        super().__init__(name="prep")
-        self.define_pars(eff_prep=0.70)
-        self.update_pars(pars, **kwargs)
-        self._eligibility = eligibility
-        self.define_states(
-            ss.BoolArr("on_prep", label="On PrEP"),
-            ss.FloatArr("ti_enrolled"),
-        )
-
-    def init_results(self):
-        super().init_results()
-        self.define_results(
-            ss.Result("n_on_prep", dtype=int, label="On PrEP"),
-            ss.Result("new_on_prep", dtype=int, label="New PrEP enrollees"),
-        )
-
-    def step(self):
-        sim = self.sim
-        ti = self.ti
-
-        candidates = self._eligibility(sim) if self._eligibility is not None else ss.uids()
-
-        eligible = candidates.remove(sim.diseases.hiv.infected.uids)
-        eligible = eligible.remove(self.on_prep.uids)
-        if len(eligible):
-            self.on_prep[eligible] = True
-            self.ti_enrolled[eligible] = ti
-
-        on_prep_uids = self.on_prep.uids
-        if len(on_prep_uids):
-            sim.diseases.hiv.rel_sus[on_prep_uids] *= (1 - self.pars.eff_prep)
-
-    def update_results(self):
-        super().update_results()
-        ti = self.ti
-        self.results["n_on_prep"][ti] = len(self.on_prep.uids)
-        self.results["new_on_prep"][ti] = len((self.ti_enrolled == ti).uids)
 
 
 class MagicCure(ss.Intervention):
@@ -214,6 +163,106 @@ class CondomCounseling(ss.Intervention):
         ti = self.ti
         self.results["n_protected"][ti] = int((self.ti_protect_end > ti).sum())
         self.results["new_enrolled"][ti] = int((self.ti_protect_end == ti + self._window_steps).sum())
+        return
+
+
+class BehavioralScreen(ss.Intervention):
+    """Uganda's national PrEP eligibility tool, asked of HIV-negative people at a contact.
+
+    A person qualifies on any one item in the past 12 months: more than one
+    partner (the model carries no disclosure, so every partner is of unknown
+    status), a condomless act in a non-stable partnership, a sex-work
+    partnership as sex worker or client, or a visible syphilis chancre. Every
+    item is something a person could report, so the screen never reads the
+    network's risk group.
+
+    The network keeps only current edges, so the screen keeps its own record
+    from the sim start: per person, the last step with a non-stable
+    partnership, with a sex-work partnership, and with a visible chancre, and
+    the last active step of their two most recently ended partnerships.
+    Condoms cover a fraction of a partnership's acts, so any non-stable
+    partnership with condom use below 1 has condomless acts.
+
+    ``contacts`` is a callable returning the uids at a contact this step. People
+    who qualify at a contact have ``ti_qualified`` set to this step.
+    """
+
+    def __init__(self, contacts, start, name="behavioral_screen"):
+        super().__init__(name=name)
+        self.contacts = contacts
+        self.start = start
+        self._window_steps = None
+        self.define_states(
+            ss.FloatArr("ti_nonstable"),
+            ss.FloatArr("ti_sw"),
+            ss.FloatArr("ti_ulcer"),
+            ss.FloatArr("ti_ended"),
+            ss.FloatArr("ti_ended_prev"),
+            ss.FloatArr("ti_screened"),
+            ss.FloatArr("ti_qualified"),
+        )
+        return
+
+    def init_pre(self, sim):
+        super().init_pre(sim)
+        self._window_steps = int(round(1 / sim.t.dt_year))
+        # the record learns of ended partnerships from the network's expiry buffer
+        sim.networks.structuredsexual.record_expired = True
+        return
+
+    def init_results(self):
+        super().init_results()
+        self.define_results(
+            ss.Result("n_screened", dtype=int, label="Screened", auto_plot=False),
+            ss.Result("n_qualified", dtype=int, label="Qualified", auto_plot=False),
+        )
+        return
+
+    def _record(self, net):
+        ti = self.ti
+        ended = net.expired_this_loop
+        if len(ended.get("p1", [])):
+            # every expired edge was last active in the previous step: end_pairs
+            # ran earlier this step, and deaths were appended after last step's
+            # analyzers
+            uids, n = np.unique(np.concatenate([ended["p1"], ended["p2"]]), return_counts=True)
+            uids = ss.uids(uids)
+            self.ti_ended_prev[uids] = np.where(n > 1, ti - 1, self.ti_ended[uids])
+            self.ti_ended[uids] = ti - 1
+
+        e = net.edges
+        nonstable = (e.edge_type != net.edge_types["stable"]) & (e.condoms < 1)
+        sw = e.edge_type == net.edge_types["sw"]
+        self.ti_nonstable[ss.uids(np.concatenate([e.p1[nonstable], e.p2[nonstable]]))] = ti
+        self.ti_sw[ss.uids(np.concatenate([e.p1[sw], e.p2[sw]]))] = ti
+        self.ti_ulcer[self.sim.diseases.syph.ulcerative.uids] = ti
+        return
+
+    def _qualifies(self, net, uids):
+        since = self.ti - self._window_steps + 1
+        e = net.edges
+        n_current = np.bincount(np.concatenate([e.p1, e.p2]), minlength=len(self.ti_sw.raw))
+        n_partners = (n_current[uids]
+                      + (self.ti_ended[uids] >= since)
+                      + (self.ti_ended_prev[uids] >= since))
+        return ((n_partners > 1)
+                | (self.ti_nonstable[uids] >= since)
+                | (self.ti_sw[uids] >= since)
+                | (self.ti_ulcer[uids] >= since))
+
+    def step(self):
+        net = self.sim.networks.structuredsexual
+        self._record(net)
+        if self.sim.now < self.start:
+            return
+        hiv = self.sim.diseases.hiv
+        uids = self.contacts(self.sim)
+        uids = uids[~hiv.infected[uids]]
+        qualified = uids[self._qualifies(net, uids)]
+        self.ti_screened[uids] = self.ti
+        self.ti_qualified[qualified] = self.ti
+        self.results["n_screened"][self.ti] = len(uids)
+        self.results["n_qualified"][self.ti] = len(qualified)
         return
 
 

@@ -1,0 +1,4 @@
+0,1,2,3
+913,Have you ever been tested for cervical cancer?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO, DK → 918 USE GRAPHIC TO SHOW CERVIX."
+914,What month and year was your last test for cervical cancer?,MONTH ___ ___ DON'T KNOW MONTH = -8 REFUSED MONTH = -9 YEAR ___ ___ ___ ___ DON'T KNOW YEAR = -8 REFUSED YEAR = -9,
+915,What was the result of your last test for cervical cancer?,NORMAL/NEGATIVE = 1 ABNORMAL/POSITIVE = 2 SUSPECT CANCER = 3 UNCLEAR/INCONCLUSIVE = 4 DID NOT RECEIVE RESULTS = 5 DON'T KNOW = -8 REFUSED = -9,"NORMAL, UNCLEAR, DID NOT RECEIVE, DK, REFUSED → 918"

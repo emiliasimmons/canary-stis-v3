@@ -1,0 +1,11 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+MODULE EIGHT: TUBERCULOSIS (continued),MODULE EIGHT: TUBERCULOSIS (continued),MODULE EIGHT: TUBERCULOSIS (continued),MODULE EIGHT: TUBERCULOSIS (continued)
+808,What month and year was your last test for cervical cancer? Month Year,MONTH____________ DON'T KNOW MONTH=-8 REFUSED MONTH=-9 YEAR_______________ DON'T KNOW YEAR=-8 REFUSED YEAR=-9,
+809,What was the result of your last test for cervical cancer?,NORMAL/NEGATIVE=1 ABNORMAL/POSITIVE=2 SUSPECT CANCER=3 UNCLEAR/INCONCLUSIVE=4 DID NOT RECEIVE RESULTS=5 DON'T KNOW=-8 REFUSED=-9,"IF NORMAL/NEGATIVE, DON'T KNOW, REFUSED  811"
+810,Did you receive treatment after your last test for cervical cancer? Did you receive treatment on the same day or on a different day?,"YES, I WAS TREATED ON THE SAME DAY=1 YES, I RECEIVED TREATMENT ON A DIFFERENT DAY=2 NO=3 DON'T KNOW=-8 REFUSED=-9",
+811,Have you ever been vaccinated to prevent cervical cancer? This would be the HPV vaccine.,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+"Interviewer says: ""I am now going to ask you about other aspects of health.""","Interviewer says: ""I am now going to ask you about other aspects of health.""","Interviewer says: ""I am now going to ask you about other aspects of health.""","Interviewer says: ""I am now going to ask you about other aspects of health."""
+812,"Over the past two weeks, how often have you been bothered by having little interest in doing things?",NOT AT ALL=1 1-7 DAYS=2 8-11 DAYS=-3 12-14 DAYS=-4 DON'T KNOW=-8 REFUSED=-9,
+813,"Over the past two weeks, how often have you felt down, depressed or hopeless?",NOT AT ALL=1 1-7 DAYS=2 8-11 DAYS=-3 12-14 DAYS=-4 DON'T KNOW=-8 REFUSED=-9,
+814,"Over the past two weeks, how often have you felt nervous, anxious or on edge?",NOT AT ALL=1 1-7 DAYS=2 8-11 DAYS=-3 12-14 DAYS=-4 DON'T KNOW=-8 REFUSED=-9,
+815,"Over the past two weeks, how often have you not been able to stop or control worrying?",NOT AT ALL=1 1-7 DAYS=2 8-11 DAYS=-3 12-14 DAYS=-4 DON'T KNOW=-8 REFUSED=-9,

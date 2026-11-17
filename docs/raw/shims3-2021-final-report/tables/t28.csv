@@ -1,0 +1,33 @@
+Characteristic,Among all adults.Percentage who had ever received an HIV test,Among all adults.Percentage who received an HIV test in the 12 months before the survey1,Among all adults.Number,Among adults who did not report an HIV-positive status.Percentage who had ever received an HIV test,Among adults who did not report an HIV-positive status.Percentage who received an HIV test in the 12 months before the survey1,Among adults who did not report an HIV-positive status.Number
+Marital status,,,,,,
+Never married,88.2,50.5,"5,763",86.6,54.1,"4,940"
+Married or living together,95.4,51.6,"4,148",94.1,62.7,"2,884"
+Divorced or separated,95.4,47.9,609,92.4,60.6,350
+Widowed,88.2,35.5,893,83.2,43.8,587
+Education,,,,,,
+No education,87.9,40.5,780,82.5,51.3,497
+Primary,89.1,41.9,"2,708",85.4,49.2,"1,927"
+Secondary,91.1,51.0,"6,533",89.2,57.2,"5,111"
+More than secondary,95.7,61.0,"1,446",95.3,64.9,"1,269"
+Wealth quintile,,,,,,
+Lowest,89.9,45.3,"2,635",87.0,53.1,"1,912"
+Second,91.3,48.6,"2,939",89.3,55.7,"2,258"
+Middle,92.0,51.6,"2,384",89.8,58.0,"1,776"
+Fourth,92.2,53.4,"1,782",90.5,60.8,"1,410"
+Highest,90.2,50.7,"1,741",88.6,55.5,"1,460"
+Age (years),,,,,,
+15-19,77.3,38.1,"1,917",76.7,38.5,"1,853"
+20-24,93.0,63.3,"1,670",92.4,65.6,"1,533"
+25-29,96.1,64.8,"1,456",95.7,70.2,"1,218"
+30-34,96.8,59.4,"1,293",96.1,72.9,915
+35-39,96.2,50.0,"1,162",94.5,63.1,712
+40-44,96.2,41.7,841,93.5,54.9,453
+45-49,94.8,42.9,688,93.3,60.1,371
+50-54,95.1,41.2,568,94.3,53.0,312
+55-59,94.1,42.3,536,91.4,49.2,357
+60-64,89.2,35.6,482,86.3,40.8,366
+65+,82.4,37.7,869,79.1,40.8,726
+Total 15-24,84.8,50.0,"3,587",83.9,51.0,"3,386"
+Total 15-49,91.6,52.3,"9,027",89.7,59.1,"7,055"
+Total 50+,89.2,39.2,"2,455",85.8,44.8,"1,761"
+Total 15+,91.1,49.8,"11,482",89.0,56.5,"8,816"

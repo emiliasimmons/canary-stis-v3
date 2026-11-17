@@ -1,0 +1,13 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+707,Does travel time to health facility make it difficult for you to access care?,YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,
+708,"When did you last see a doctor, clinical officer, pharmacist or nurse for HIV treatment or care?",,
+,Month,MONTH____________ DON'T KNOW MONTH=-8 REFUSED MONTH=-9,
+,Year,YEAR_______________ DON'T KNOW YEAR=-8 REFUSED YEAR=-9,
+709,"Have you ever taken ARVs, that is, antiretroviral medications to treat HIV infection?",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF YES  711 IF DON'T KNOW, REFUSED AND 701 &lt;&gt; DON'T KNOW, REFUSED  720 IF DON'T KNOW, REFUSED AND 701 = DON'T KNOW, REFUSED 801
+
+<!-- image -->"
+710,What is the main reason you have never taken ARVs?,NOT ELIGIBLE FOR TREATMENT=1 HEALTH CARE PROVIDER DID NOT PRESCRIBE=2 HIV MEDICINES ARE NOT AVAILIBLE=3 I FEEL HEALTHY/NOT SICK=4 COST OF CARE=5 RELIGIOUS REASONS=6 TAKING TRADITIONAL MEDICATIONS=7 NOT ATTENDING HIV CLINIC=8 CLINIC IS TOO FAR=9 OTHER=96 ______________(SPECIFY) DON'T KNOW=-8 REFUSED=-9,
+711,What month and year did you first start taking ARVs? (Probe to verify date.),,
+,Month,MONTH____________ DON'T KNOW MONTH=-8 REFUSED MONTH=-9,
+,Year,YEAR_______________ DON'T KNOW YEAR=-8 REFUSED YEAR=-9,
+712,"Are you currently taking ARVs, that is, antiretroviral medications? By currently, I mean that you may have missed some doses but you are still taking ARVs.",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF YES  714 IF DON'T KNOW, REFUSED  720"

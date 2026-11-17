@@ -1,0 +1,5 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+707,You mentioned earlier you received an HIV positive result while you were pregnant with (NAME). What was the month and year of your first HIV positive test result? Please give your best guess. This will be the very first HIV positive test result that you have received PROBE TO VERIFY DATE.,MONTH ___ ___ DON'T KNOW MONTH = -8 REFUSED MONTH =-9 YEAR ___ ___ ___ ____ DON'T KNOW YEAR = -8 REFUSED YEAR =-9,ALL→712 SKIP IF HIV NEGATIVE DURING PREGNANCY WITH (NAME). SKIP IF NO LAST BIRTH IN THE LAST 3 YEARS. SKIP IF MALE.
+708,What month and year was your last HIV test?,MONTHS _____ _____ DON'T KNOW MONTH = -8 REFUSED MONTH = -9 YEAR ____ DON'T KNOW YEAR = -8 REFUSED YEAR = -9,
+709,Where was the last test done?,VCT FACILITY = 1 MOBILE VCT = 2 AT HOME = 3 HEALTH CLINIC / FACIITY = 4 HOSPITAL OUTPATIENT CLINIC = 5 TB CLINIC = 6 STI CLINIC = 7 HOSPITAL INPATIENT WARDS = 8 BLOOD DONATING CENTER = 9 OTHER = 96 DON'T KNOW = -8 REFUSED = -9,
+710,What was the result of that HIV test?,POSITIVE = 1 NEGATIVE = 2 UNCERTAIN/INDETERMINATE = 3 DID NOT RECEIVE THE RESULT = 4 DON'T KNOW = 8 REFUSED = -9,"NEGATIVE, UNCERTAIN, DK, REFUSED → 801"

@@ -1,0 +1,12 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+322,"After [CHILD NAME] was born, was he/she tested for HIV?","YES=1 NO, NOT TESTED FOR HIV=2 NO, CHILD DIED BEFORE TESTING=3 DON'T KNOW=-8 REFUSED=-9","IF NO, NOT TESTED FOR HIV; NO, CHILD DIED BEFORE TESTING; DON'T KNOW, REFUSED  328"
+323,How old was [CHILD NAME] when he/she first tested for HIV? (ONLY ONE OPTION MAY BE ENTERED),LESS THAN 1 WEEK=0 WEEKS ___ = 1 MONTHS ___ = 2 YEARS ___ = 3,
+324,What was the result of [CHILD NAME]'s first HIV test?,POSITIVE; CHILD HAS HIV=1 NEGATIVE; CHILD DOES NOT HAVE HIV=2 UNKNOWN/INCONCLUSIVE=3 DID NOT RECEIVE RESULTS=4 DON'T KNOW=-8 REFUSED=-9,
+325,Was [CHILD NAME] tested for HIV after you stopped breastfeeding?,YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"SKIP IF 320 = NO, NEVER BREASTFEED; NO, CHILD DIED BEFORE BREASTFEED- ING; DON'T KNOW; REFUSED"
+326,How old was [CHILD NAME] when he/she last tested for HIV?,LESS THAN 1 WEEK=0 WEEKS ___ = 1 MONTHS ___ = 2 YEARS ___ = 3 CHILD ONLY TESTED ONCE FOR HIV (FIRST TEST IS THE SAME AS LAST TEST)=4 DON'T KNOW=-8 REFUSED=-9,"IF CHILD ONLY TESTED ONCE FOR HIV (FIRST TEST IS THE SAME AS LAST TEST), DON'T KNOW, REFUSED  328"
+327,What was the result of [CHILD NAME]'s most recent HIV test?,POSITIVE; CHILD HAS HIV=1 NEGATIVE; CHILD DOES NOT HAVE HIV=2 UNKNOWN/INCONCLUSIVE=3 DID NOT RECEIVE RESULTS=4 DON'T KNOW=-8 REFUSED=-9,SKIP IF 324 = POSITIVE; CHILD HAS HIV
+328,"Interviewer says: ""Thank you for the information regarding [CHILD NAME].""",,"IF 303 = YES, RETURN TO 317 FOR EACH VALUE OF 304"
+"Interviewer says: ""I will now ask about current pregnancies.""","Interviewer says: ""I will now ask about current pregnancies.""","Interviewer says: ""I will now ask about current pregnancies.""","Interviewer says: ""I will now ask about current pregnancies."""
+329,Are you pregnant now?,YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,IF YES  END OF MODULE
+"Interviewer says: ""I will now ask you about family planning.""","Interviewer says: ""I will now ask you about family planning.""","Interviewer says: ""I will now ask you about family planning.""","Interviewer says: ""I will now ask you about family planning."""
+330,Are you or your partner currently doing something or using any method to delay or avoid getting pregnant?,YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED  END OF MODULE"
