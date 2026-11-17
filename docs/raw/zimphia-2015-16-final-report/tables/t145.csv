@@ -1,0 +1,8 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+3044,Has (NAME) ever visited a tuberculosis or TB clinic for TB diagnosis or treatment?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO, DK, REFUSED → 3045"
+3045,Was (NAME) tested for HIV at the TB clinic?,"YES = 1 NO, WAS NOT TESTED FOR HIV = 2 NO, WAS ALREADY HIV POSITIVE = 3 DON'T KNOW = -8 REFUSED = -9",
+3046,Have you ever been told by a doctor or clinical officer that (NAME) had TB?,YES = 1 NO=2 DON'T KNOW = -8 REFUSED = -9,"IF NO,DK, REFUSED → 3050"
+3047,What month and year did a doctor or clinical officer diagnose (NAME) with TB? RECORD THE MOST RECENT TIME IF DIAGNOSED WITH TB MORE THAN ONCE.,MONTH ___ ___ DON'T KNOW MONTH = -8 REFUSED MONTH = -9 YEAR __ __ __ __ DON'T KNOW YEAR = -8 REFUSED YEAR = -9,
+3048,Was (NAME) ever treated for TB?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO, DK, REFUSED → 3050"
+3049,"The last time (NAME) was treated for TB, did (NAME) complete at least 6 months of treatment for TB?","YES = 1 NO, THE MEDICINE WAS STOPPED IN LESS THAN 6 MONTHS = 2 NO, CHILD IS STILL ON TREATMENT = 3 DON'T KNOW = -8 REFUSED = -9",
+3050,Thank you for this information about (NAME). DOES RESPONDENT HAVE ANOTHER CHILD AGED 0-14 YEARS?,Yes = 1 no = 2,YES = RETURN TO 3002

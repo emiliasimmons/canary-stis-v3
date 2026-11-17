@@ -1,0 +1,6 @@
+Age,Male.Number HIV negative 1 (N),Male.Number HIV positive 1 (P),Male.Number tested on LAg* assay 1 (Q),Male.Number HIV recent 1 (R),Female.Number HIV negative 1 (N),Female.Number HIV positive 1 (P),Female.Number tested on LAg assay 1 (Q),Female.Number HIV recent 1 (R),Total.Number HIV negative 1 (N),Total.Number HIV positive 1 (P),Total.Number tested on LAg assay 1 (Q),Total.Number HIV recent 1 (R)
+15-24,3074.98,95.02,95.02,1.58,3701.02,229.98,228.86,6.02,6785.78,315.22,314.20,7.25
+25-34,1740.91,180.09,180.09,2.95,2586.23,565.77,564.44,8.81,4360.50,712.50,711.34,11.28
+35-49,1644.37,505.63,504.63,2.23,2255.32,882.68,882.22,2.14,3920.71,1367.29,1365.69,4.53
+15-49,6466.26,774.74,773.78,6.92,8600.23,1620.77,1617.80,17.50,15127.12,2334.88,2331.13,23.53
+15-64,7388.64,1006.36,1005.00,8.58,10231.07,1950.93,1947.83,18.27,17675.98,2901.02,2896.69,26.19

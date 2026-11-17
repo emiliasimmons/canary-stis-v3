@@ -1,0 +1,10 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+MODULE 11: GENDER NORMS,MODULE 11: GENDER NORMS,MODULE 11: GENDER NORMS,MODULE 11: GENDER NORMS
+"Interviewer says: ""Now I would like to ask you questions on decision-making in your home.""","Interviewer says: ""Now I would like to ask you questions on decision-making in your home.""","Interviewer says: ""Now I would like to ask you questions on decision-making in your home.""","Interviewer says: ""Now I would like to ask you questions on decision-making in your home."""
+1101,"Who usually makes decisions about health care for yourself: you, your (spouse/partner), you and your (spouse/partner) together, or someone else?",I DO = 1 SPOUSE/PARTNER = 2 WE BOTH DO = 3 SOMEONE ELSE = 4 DON'T KNOW = -8 REFUSED = -9,SKIP IF NOT MARRIED/LIVING TOGETHER
+1102,"Who generally decides about how the money you receive is spent: you, your (spouse/partner), you and your (spouse/partner) together, or someone else?",I DO = 1 SPOUSE/PARTNER = 2 WE BOTH DO = 3 SOMEONE ELSE = 4 DON'T KNOW = -8 REFUSED = -9,SKIP IF NOT MARRIED/LIVING TOGETHER
+1103,Do you believe it is right for a man to hit or beat his wife if she refuses to have sex with him?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+1104,Do you believe a person should tolerate violence to keep the family together?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+1105,"Who should decide when to have sex-men, women or together?",MEN ONLY = 1 WOMEN ONLY = 2 TOGETHER = 3 DON'T KNOW = -8 REFUSED = -9,
+1106,"Do you believe married men need to have sex with women they are not married to, even if they have good relationships with their wives?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+1107,Do you believe women who carry condoms have sex with a lot of men?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,

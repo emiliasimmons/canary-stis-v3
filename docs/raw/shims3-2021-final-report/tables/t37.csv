@@ -1,0 +1,33 @@
+Characteristic.,Men.Percentage with VLS 1,Men.Number,Women.Percentage with VLS 1,Women.Number,Total.Percentage with VLS 1,Total.Number
+HIV diagnosis and treatment status2,,,,,,
+Unaware of HIV status,11.9,68,10.5,93,11.1,161
+Aware of HIV status and not on ART,(0.0),31,(11.2),33,5.2,64
+Aware of HIV status and on ART,96.7,775,95.9,"1,885",96.2,"2,660"
+Residence,,,,,,
+Urban,86.4,180,86.9,391,86.7,571
+Rural,86.0,694,91.5,"1,620",89.5,"2,314"
+Region,,,,,,
+Hhohho,87.0,206,90.4,480,89.2,686
+Lubombo,87.8,189,89.7,424,88.9,613
+Manzini,84.3,288,89.4,697,87.7,985
+Shiselweni,86.3,191,91.6,410,89.6,601
+Marital status,,,,,,
+Never married,78.6,229,86.2,685,84.0,914
+Married or living together,89.8,512,91.1,838,90.5,"1,350"
+Divorced or separated,85.7,84,94.0,198,91.1,282
+Widowed,(84.5),43,95.9,276,94.2,319
+Education,,,,,,
+No education,87.2,101,96.3,203,92.7,304
+Primary,90.1,271,93.5,570,92.2,841
+Secondary,84.0,447,87.7,"1,103",86.4,"1,550"
+More than secondary,83.9,54,88.9,132,87.3,186
+Wealth quintile,,,,,,
+Lowest,87.3,230,91.3,550,89.9,780
+Second,87.6,219,92.0,517,90.4,736
+Middle,83.6,195,89.8,455,87.6,650
+Fourth,83.0,122,87.9,296,86.2,418
+Highest,88.8,107,87.8,193,88.2,300
+Total 15-24 years,80.5,56,76.1,193,77.1,249
+Total 15-49 years,82.4,582,88.6,"1,575",86.6,"2,157"
+Total 50+ years,94.3,292,96.3,436,95.3,728
+Total 15+ years,86.1,874,90.1,"2,011",88.6,"2,885"

@@ -1,0 +1,29 @@
+Result,Residence.Urban.Male,Residence.Urban.Female,Residence.Rural.Male,Residence.Rural.Female,Total.Male,Total.Female
+"Eligible individuals, age 0-9 years",,,,,,
+Number of eligible individuals,795,841,"2,455","2,508","3,250","3,349"
+Blood draw response rate (unweighted),69.7,65.9,73.6,74.6,72.7,72.4
+Blood draw response rate (weighted),68.2,64.4,73.8,74.8,72.2,71.9
+"Eligible individuals, age 10-14 years",,,,,,
+Number of eligible individuals,283,308,"1,211","1,198","1,494","1,506"
+Interview response rate (unweighted),74.6,76.3,79.7,80.5,78.7,79.6
+Interview response rate (weighted),72.5,75.9,79.6,80.7,78.0,79.6
+Blood draw response rate (unweighted),91.5,92.8,95.3,94.9,94.6,94.5
+Blood draw response rate (weighted),91.5,92.6,95.1,95.0,94.3,94.5
+"Eligible individuals, age 15-24 years",,,,,,
+Number of eligible individuals,"1,112","1,603","3,041","2,987","4,153","4,590"
+Interview response rate (unweighted),81.9,93.4,84.6,92.4,83.9,92.7
+Interview response rate (weighted),81.0,92.8,85.1,92.5,83.8,92.6
+Blood draw response rate (unweighted),89.6,91.9,91.5,92.6,91.0,92.3
+Blood draw response rate (weighted),89.3,91.8,91.4,92.4,90.7,92.2
+"Eligible individuals, age 15-49 years",,,,,,
+Number of eligible individuals,"2,955","4,129","6,747","7,677","9,702","11,806"
+Interview response rate (unweighted),72.9,92.7,86.9,94.6,82.7,93.9
+Interview response rate (weighted),71.1,92.1,87.0,94.6,81.5,93.6
+Blood draw response rate (unweighted),89.0,91.4,90.8,92.6,90.3,92.2
+Blood draw response rate (weighted),88.9,91.2,90.6,92.4,90.0,91.9
+"Eligible individuals, age 15-64 years",,,,,,
+Number of eligible individuals,"3,294","4,638","7,804","9,395","11,098","14,033"
+Interview response rate (unweighted),73.3,92.9,87.9,94.8,83.5,94.2
+Interview response rate (weighted),71.5,92.2,87.8,94.9,82.3,93.9
+Blood draw response rate (unweighted),89.0,91.0,91.1,92.7,90.6,92.2
+Blood draw response rate (weighted),88.7,90.6,90.9,92.5,90.2,91.8

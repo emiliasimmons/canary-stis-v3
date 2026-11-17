@@ -1,0 +1,6 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+1209,"The first time this happened, what was your relationship to the person who did this? If it was more than one person, what was your relationship with the person you knew the best?",BOYFRIEND/GIRLFRIEND/LIV E-IN PARTNER/SPOUSE = 1 EX-BOYFRIEND/GIRLFRIEND/ PARTNER/SPOUSE = 2 RELATIVE/FAMILY MEMBER = 3 CLASSMATE/SCHOOLMATE = 4 TEACHER = 5 POLICE/SECURITY OFFICER/MILITARY= 6 EMPLOYER = 7 NEIGHBOR = 8 COMMUNITY/ RELIGIOUS LEADER = 9 FRIEND = 10 STRANGER = 11 OTHER = 96 DON'T KNOW = -8,
+1210,"How many times in your life has anyone tried to make you have sex against your will but did not succeed? This includes someone using harassment, threats, tricks, or physical force. CODE '00' IF NONE.",REFUSED = -9 NUMBER OF TIMES ____ DON'T KNOW = -8 REFUSED = -9,"NONE, DK, REFUSED→1212"
+1211,How old were you the first time someone tried to make you have sex against your will but did not succeed?,AGE IN YEARS ____ DON'T KNOW = -8 REFUSED = -9,
+1212,How many times in your life have you been physically forced to have sex? CODE '00' IF NONE.,NUMBER OF TIMES ____ DON'T KNOW = -8 REFUSED = -9,"NONE, DK, REFUSED→1217"
+1213,How old were you the first time someone physically forced you to have sex?,AGE IN YEARS _____ DON'T KNOW = -8 REFUSED = -9,

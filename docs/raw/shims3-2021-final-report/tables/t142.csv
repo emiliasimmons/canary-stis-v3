@@ -1,0 +1,4 @@
+0,1,2,3
+504,Is the person that you had sex with a spouse or a partner who lives in this household?,YES = 1 NO = 2,IF NO  506
+505,Please select the name below from the household membership list. Please identify the person you had sex with.,HOUSEHOLD QUESTIONNAIRE LINE NO. _____ NOT LISTED IN HOUSEHOLD=96,
+506,I would like to ask you for the initials of this person so I can keep track [INITIALS]. They do not have to be the actual initials of this person. Is [INITIALS] the most recent person you had sex with?,[INITIALS] _________ YES = 1 NO = 2,DISPLAY IF [FIRST REPORTED PARTNER] (I.E. QUESTION TO ONLY APPEAR FOR FIRST ENTERED PARTNER.)

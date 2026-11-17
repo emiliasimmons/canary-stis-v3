@@ -1,0 +1,13 @@
+LINE NO.,IF AGED 15-17 YEARS EMANCIPATION STATUS,LAST TIME USUAL RESIDENT SLEPT IN HOUSEHOLD,LIVES AWAY,COUNTRY OR PROVINCE,SICK PERSON
+,"Is (NAME) a child with special circumstances? A child with special circumstances is defined as: a minor between the ages of 15-17 years who is married or has a child of their own and is not currently living with parents, or a minor who is the decision maker in a household where there is no identified adult head of household.","CHECK COLUMN 6, IF NO, when was the last time, (NAME) slept the night in the household? MONTH (SEE CODES BELOW) YEAR",Is (NAME) in another district or country?,Which district or country is (NAME) in currently? (SEE CODES BELOW),"Has (NAME) been very sick for at least 3 months during the past 12 months, that is (NAME) was too sick to work or do normal activities?"
+(1),(9) (10),(9) (10),(11),(12),(13)
+1,Y N,_____ DK = -8 REFUSED,= -9 Y N,,Y N
+2,Y N,_____ DK = -8 REFUSED,= -9 Y N,,Y N
+3,Y N,_____ DK = -8 REFUSED,= -9 Y N,,Y N
+4,Y N,_____ DK = -8 REFUSED,= -9 Y N,,Y N
+5,Y N,_____ DK = -8 REFUSED,= -9 Y N,,Y N
+6,Y N,_____ DK = -8 REFUSED,= -9 Y N,,Y N
+7,Y N,_____ DK = -8 REFUSED =,-9 Y N,,Y N
+8,Y N,_____ DK = -8 REFUSED =,-9 Y N,,Y N
+9,Y N,_____ DK = -8 REFUSED,= -9 Y N,,Y N
+10,Y N,_____ DK = -8 REFUSED,= -9 Y N,,Y N

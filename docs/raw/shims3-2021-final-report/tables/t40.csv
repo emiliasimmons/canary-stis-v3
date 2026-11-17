@@ -1,0 +1,40 @@
+Characteristic,Men.Percentage with VL < 200 copies/ mL,Men.Number,Women Percentage with VL < 200 copies/ mL,Number,Total.Percentage with VL < 200 copies/ mL,Total.Number
+HIV diagnosis and treatment status1,,,,,,
+Unaware of HIV status,7.1,68,5.1,93,6.1,161
+Aware of HIV status and not on ART,(0.0),31,(6.6),33,3.1,64
+Aware of HIV status and on ART,93.1,771,93.1,"1,879",93.1,"2,650"
+Number of years since initiating ART,,,,,,
+Less than 12 months,88.6,50,90.5,127,89.9,177
+12 months or more,91.9,689,93.2,"1,707",92.7,"2,396"
+1 to less than 5 years,89.2,188,91.4,472,90.7,660
+5 to less than 10 years,94.2,229,94.6,609,94.5,838
+More than 10 years,91.4,262,93.6,603,92.8,865
+Residence,,,,,,
+Urban,81.9,179,84.2,389,83.3,568
+Rural,82.7,691,88.4,"1,616",86.4,"2,307"
+Region,,,,,,
+Hhohho,85.2,205,88.3,479,87.2,684
+Lubombo,80.7,188,85.7,423,83.7,611
+Manzini,80.6,287,87.1,694,84.9,981
+Shiselweni,84.8,190,87.1,409,86.3,599
+Marital status,,,,,,
+Never married,76.5,229,83.0,682,81.1,911
+Married or living together,85.6,508,88.2,835,87.0,"1,343"
+Divorced or separated,81.1,84,91.3,198,87.8,282
+Widowed,(81.0),43,93.5,276,91.7,319
+Education,,,,,,
+No education,84.7,101,94.9,200,90.9,301
+Primary,87.6,270,91.4,569,90.0,839
+Secondary,80.7,444,84.1,"1,101",82.9,"1,545"
+More than secondary,71.1,54,86.0,132,81.2,186
+Wealth quintile,,,,,,
+Lowest,84.3,230,87.5,548,86.4,778
+Second,85.1,217,89.9,515,88.1,732
+Middle,81.0,194,86.5,455,84.5,649
+Fourth,78.8,122,85.8,295,83.4,417
+Highest,81.6,106,84.6,192,83.4,298
+Age (years),,,,,,
+15-19,(83.9),28,69.3,54,74.6,82
+20-24,(68.7),28,72.2,139,71.5,167
+25-29,(57.9),33,75.8,249,73.2,282
+30-34,61.1,88,89.8,323,81.4,411

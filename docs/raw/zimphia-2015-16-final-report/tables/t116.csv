@@ -1,0 +1,31 @@
+NO.,QUESTIONS AND INSTRUCTIONS,CODING CATEGORIES,SKIP
+HOUSEHOLD CHARACTERISTICS (continued),HOUSEHOLD CHARACTERISTICS (continued),HOUSEHOLD CHARACTERISTICS (continued),HOUSEHOLD CHARACTERISTICS (continued)
+204,What kind of toilet facility do members of,FLUSH OR POUR FLUSH TOILET,NO
+204,your household usually use?,FLUSH TO PIPED SEWER,"FACILITY,"
+204,,SYSTEM…………………………….…………………11,OTHER
+204,,FLUSH TO SEPTIC TANK………………………….12,→ 207
+204,,FLUSH TO PIT LATRINE……….………………….13,
+204,,FLUSH TO SOMEWHERE ELSE…….............14,
+204,,"FLUSH, DON'T KNOW WHERE………………..15",
+,,PIT LATRINE,
+,,VENTILATED IMPROVED,
+,,PIT LATRINE (VIP)/BLAIR TOILET………….21,
+,,PIT LATRINE WITH SLAB…………………………22,
+,,PIT LATRINE WITHOUT SLAB/,
+,,OPEN PIT…………………………...………………23,
+,,BUCKET TOILET………………………...………………41,
+,,NO FACILITY/BUSH/FIELD…………......………..61,
+,,OTHER……………………………………………………….96,
+,,___________________________________ (SPECIFY),
+205,Do you share this toilet facility with other,YES………………………………………....…………………..1,
+205,households?,NO…………………………………………..…………………..2,
+206,How many households use this toilet facility?,NO. OF HOUSEHOLDS IF LESS THAN 10 ________,
+206,,10 OR MORE HOUSEHOLDS ……………………….96,
+206,,DON'T KNOW …………………………………………….98,
+PREFACE BEFORE QUESTIONS 207-215: Does your dwelling unit / household have:,PREFACE BEFORE QUESTIONS 207-215: Does your dwelling unit / household have:,PREFACE BEFORE QUESTIONS 207-215: Does your dwelling unit / household have:,PREFACE BEFORE QUESTIONS 207-215: Does your dwelling unit / household have:
+207,Electricity that is connected??,YES………………………………………....……………..1,
+207,,NO…………………………………………..……………..2,
+208,A radio in working condition?,YES………………………………………....……………..1,
+208,,NO…………………………………………..……………..2,
+209,A television in working condition?,YES………………………………………....……………..1,
+209,,NO…………………………………………..……………..2,

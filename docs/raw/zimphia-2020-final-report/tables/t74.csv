@@ -1,0 +1,27 @@
+care (ANC) visit for her most recent Characteristic,Percentage who attended at least one ANC visit,Number
+Marital status,Marital status,Marital status
+Never married,"characteristics, 95.1",196
+Married or living together,95.9,"2,451"
+Divorced or separated,96.7,259
+Widowed,(86.8),26
+Education,Education,Education
+No education,(94.7),45
+Primary,94.8,925
+Secondary,96.1,"1,817"
+More than secondary,99.1,145
+Wealth quintile,Wealth quintile,Wealth quintile
+Lowest,94.9,825
+Second,96.1,617
+Middle,95.6,536
+Fourth,95.8,495
+Highest,97.5,460
+Age,Age,Age
+15-19,93.8,284
+20-24,96.4,800
+25-29,96.1,739
+30-34,96.5,537
+35-39,96.4,428
+40-44,93.9,127
+45-49,*,18
+Total 15-24,95.7,"1,084"
+Total 15-49,95.9,"2,933"

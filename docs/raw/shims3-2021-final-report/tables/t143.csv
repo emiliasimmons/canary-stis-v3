@@ -1,0 +1,10 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+MODULE FIVE: SEXUAL ACTIVITY (continued),MODULE FIVE: SEXUAL ACTIVITY (continued),MODULE FIVE: SEXUAL ACTIVITY (continued),
+507,What is your relationship with [INITIALS]?,"HUSBAND/WIFE=1 LIVE-IN PARTNER=2 PARTNER, NOT LIVE-IN=3 EX-SPOUSE/EX-PARTNER=4 FRIEND/ACQUAINTANCE=5 SEX WORKER=6 SEX WORKER CLIENT=7 STRANGER=8 OTHER (SPECIFY) =96 ____________________________________________ DON'T KNOW=-8 REFUSED=-9",
+508,Is [INITIALS] male or female?,MALE=1 FEMALE=2 DON'T KNOW=-8 REFUSED=-9,
+509,How old is [INITIALS]? Please give your best guess.,_____YEARS OLD DON'T KNOW=-8 REFUSED=-9,
+510,"The last time you had sex with [INITIALS], was a condom used?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+511,"The last time you had sex with [INITIALS], did either of you drink alcohol beforehand?",ONLY I WAS DRINKING=1 ONLY PARTNER WAS DRINKING=2 BOTH WERE DRINKING=3 NEITHER=4 DON'T KNOW=-8 REFUSED=-9,
+512,Does [INITIALS] know your HIV status? HIV status could mean you are HIV negative or HIV positive.,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+513,What is the HIV status of [INITIALS]? (INTERVIEWER: Read responses aloud).,"HE/SHE IS POSITIVE (DID NOT TEST TOGETHER)=1 HE/SHE IS POSITIVE, TESTED TOGETHER=2 HE/SHE IS NEGATIVE (DID NOT TEST TOGETHER)=3 HE/SHE IS NEGATIVE, TESTED TOGETHER=4 DON'T KNOW STATUS=-8 REFUSED=-9",
+514 END:,"Interviewer says: ""I will now ask you about the person you have had sex with previous to [INITIALS]."" PARTNERS OF LAST 12 MONTHS",,SKIP IF 503 <= 1 IF 503 > 1  504 SKIP IF FINAL LOOP

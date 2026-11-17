@@ -1,0 +1,9 @@
+0,1,2,3,4,5,6
+Table 5.3.A,Annual HIV incidence using LAg/VL testing algorithm,Annual HIV incidence using LAg/VL testing algorithm,"and aged 15-64 years,","by sex and age,",the limiting antigen,(LAg)/viral load
+"Annual incidence of HIV among persons aged 15-49 (VL) algorithm, ZIMPHIA 2015-2016","Annual incidence of HIV among persons aged 15-49 (VL) algorithm, ZIMPHIA 2015-2016","Annual incidence of HIV among persons aged 15-49 (VL) algorithm, ZIMPHIA 2015-2016",Women,Women,Total,Total
+Age,Men Percentage annual incidence 1,95% CI,Percentage annual incidence 1,95% CI,Percentage annual incidence 1,95% CI
+15-24,0.14,"(0.00, 0.37)",0.53,"(0.14, 0.92)",0.34,"(0.11, 0.57)"
+25-34,0.48,"(0.00, 1.05)",1.11,"(0.42, 1.80)",0.81,"(0.35, 1.26)"
+35-49,0.38,"(0.00, 0.91)",0.42,"(0.00, 0.92)",0.40,"(0.03, 0.77)"
+15-49,0.30,"(0.07, 0.53)",0.69,"(0.38, 1.00)",0.50,"(0.30, 0.69)"
+15-64,0.33,"(0.10, 0.55)",0.60,"(0.33, 0.88)",0.47,"(0.29, 0.65)"

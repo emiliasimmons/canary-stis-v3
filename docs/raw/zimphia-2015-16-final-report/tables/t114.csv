@@ -1,0 +1,5 @@
+0,1,2,3,4
+111,"In the last 12 months, has your household received any social support for (NAME) such as help in household work, training for a caregiver, or legal services, for which you did not have to pay?","YES…………………1 NO…………………..2 DON'T KNOW……..8 NO, DK → 113","YES…………………1 NO…………………..2 DON'T KNOW……..8 NO, DK → 113","YES…………………1 NO…………………..2 DON'T KNOW……..8 NO, DK → 113"
+112,Did your household receive any of this social support for (NAME) in the past 3 months?,YES…………………1 NO…………………..2 DON'T KNOW……..8,YES…………………1 NO…………………..2 DON'T KNOW……..8,YES…………………1 NO…………………..2 DON'T KNOW……..8
+113,"In the last 12 months, has your household received any support for (NAME)'s schooling, such as allowance, free admission, books, or supplies, for which you did not have to pay?","YES…………………1 NO, DID NOT RECEIVE SUPPORT...………..2 NO, CHILD DOES NOT ATTEND SCHOOL…………...3 DON'T KNOW……..8","YES…………………1 NO, DID NOT RECEIVE SUPPORT...………..2 NO, CHILD DOES NOT ATTEND SCHOOL…………...3 DON'T KNOW……..8","YES…………………1 NO, DID NOT RECEIVE SUPPORT...………..2 NO, CHILD DOES NOT ATTEND SCHOOL…………...3 DON'T KNOW……..8"
+,,SKIP IF CHILD<5 YEARS,SKIP IF CHILD<5 YEARS,SKIP IF CHILD<5 YEARS

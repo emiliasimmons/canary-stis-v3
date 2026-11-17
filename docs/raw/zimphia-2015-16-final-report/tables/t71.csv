@@ -1,0 +1,44 @@
+Characteristic,Can the risk of HIV transmission be reduced by having sex with only one uninfected partner who has no other partners?,Can a person reduce the risk of getting HIV by using a condom every time they have sex?,Can a healthy- looking person have HIV?,Can a person get HIV from mosquito bites?,Can a person get HIV by sharing food with someone who is infected?,All five questions,Number 2
+Residence,,,,,,,
+Urban,79.9,75.1,88.7,87.4,92.4,51.1,754
+Rural,74.3,68.0,82.7,81.7,87.8,40.7,"1,391"
+Province,,,,,,,
+Bulawayo,82.1,80.1,89.2,82.6,92.3,54.9,258
+Manicaland,80.7,68.8,86.9,87.9,92.2,47.4,220
+Mashonaland Central,76.5,66.5,87.5,81.2,92.8,41.4,192
+Mashonaland East,73.3,75.3,83.1,83.7,91.4,43.6,184
+Mashonaland West,74.6,67.2,87.5,85.2,88.2,44.8,227
+Matabeleland North,72.0,73.8,78.6,76.1,84.5,42.1,194
+Matabeleland South,76.5,72.8,78.2,69.5,79.6,39.8,168
+Midlands,72.3,69.2,81.1,80.7,85.8,37.1,230
+Masvingo,75.8,66.5,84.9,83.8,87.8,41.6,227
+Harare,78.2,71.8,86.6,90.7,92.7,49.7,245
+Marital status,,,,,,,
+Never married Married or living,73.5,69.1,83.7,84.4,90.3,43.2,"1,216"
+together,81.4,72.9,87.1,83.7,87.9,47.3,807
+Divorced or separated,74.3,73.8,82.7,80.9,92.7,44.0,112
+Widowed,*,*,*,*,*,*,7
+Education,,,,,,,
+No education,*,*,*,*,*,*,19
+Primary,68.0,63.2,77.0,74.1,79.4,32.0,421
+Secondary,77.8,71.7,86.4,85.9,91.6,46.6,"1,614"
+More than secondary,91.5,83.5,93.3,90.7,99.0,66.0,91
+Wealth quintile,,,,,,,
+Lowest,74.8,64.6,78.8,78.4,84.4,38.2,477
+Second,70.5,68.4,81.0,81.2,88.5,38.9,405
+Middle,75.8,71.2,83.9,86.4,86.7,41.6,379
+Fourth,78.4,72.6,89.2,85.2,93.3,50.0,385
+Highest,81.0,75.4,90.0,87.4,93.3,52.1,499
+Religion,,,,,,,
+Traditional,*,*,*,*,*,*,16
+Roman Catholic,79.3,73.4,84.1,84.7,87.9,48.6,164
+Protestant,78.1,73.7,88.8,86.2,93.9,48.6,365
+Pentecostal,78.4,72.6,87.1,85.5,91.0,48.4,532
+Apostolic Sect,73.6,67.7,83.5,81.0,86.4,39.8,759
+Other Christian,76.8,72.9,78.9 *,86.4,,46.2,206
+Muslim,*,,*,*,91.2,,
+Other,*,* *,,*,* *,* *,2 8
+None Age,76.2,64.7,81.6,77.4,86.8,35.8,93
+15-19,72.7,65.9,82.4,84.2,89.5,40.3,"1,169"
+20-24,80.9,76.6,88.1,83.6,89.6,50.0,976
+Total 15-24,76.4,70.8,85.0,83.9,89.5,44.7,"2,145"

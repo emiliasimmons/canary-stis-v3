@@ -1,0 +1,7 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+515,The last time you had sex with (INITIALS) was a condom used?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+516,"The last time you had sex with (INITIALS), did either of you drink alcohol beforehand?",ONLY I WAS DRINKING = 1 ONLY PARTNER WAS DRINKING= 2 BOTH WERE DRINKING= 3 NEITHER = 4 DON'T KNOW = -8 REFUSED = -9,
+517,"Did you enter into a sexual relationship with (INITIALS) because (INITIALS) provided or you expected that (INITIALS) would provide you with material support in other ways? Material support means helping you to pay for things, or giving you gifts or other items you needed or requested.","YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9 NO, DK, REFUSED → 519 SKIP IF SEX WORKER OR CLIENT",
+518,"In the last 12 months, what all did you receive? SELECT ALL THAT APPLY.","DID NOT RECEIVE ANYTHING = A MONEY = B FOOD = C SCHOOL FEES = D EMPLOYMENT = E GIFTS/FAVORS = F TRANSPORT = G SHELTER/RENT = H PROTECTION = I OTHER = X DON'T KNOW = Y REFUSED = Z SKIP IF SPOUSE, LIVE-IN PARTNER, SEX WORKER OR CLIENT",
+519,Was (INITIALS) circumcised?,YES =1 NO =2 DON'T KNOW = -8 REFUSED = -9 SKIP IF PARTNER NOT MALE. SHOW PICTURE OF CIRCUMCISED PENIS.,
+520,Do you expect to have sex with (INITIALS) again?,YES =1 NO =2 DON'T KNOW = -8 REFUSED = -9,

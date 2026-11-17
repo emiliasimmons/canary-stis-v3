@@ -1,0 +1,48 @@
+0,1,2,3,4,5
+"Table C.3 Sampling errors: HIV prevalence by residence and Province, ages 15-64 years, ZIMPHIA 2015-2016","Table C.3 Sampling errors: HIV prevalence by residence and Province, ages 15-64 years, ZIMPHIA 2015-2016","Table C.3 Sampling errors: HIV prevalence by residence and Province, ages 15-64 years, ZIMPHIA 2015-2016","Table C.3 Sampling errors: HIV prevalence by residence and Province, ages 15-64 years, ZIMPHIA 2015-2016","Table C.3 Sampling errors: HIV prevalence by residence and Province, ages 15-64 years, ZIMPHIA 2015-2016","Table C.3 Sampling errors: HIV prevalence by residence and Province, ages 15-64 years, ZIMPHIA 2015-2016"
+Characteristic,Weighted estimate (%),Unweighted number,Standard error (%),Lower confidence limit (%),Upper confidence limit (%)
+,TOTAL,TOTAL,TOTAL,TOTAL,TOTAL
+Residence,,,,,
+Urban,14.5,6070,0.6,13.4,15.7
+Rural,13.8,14507,0.4,13.0,14.7
+Province,,,,,
+Bulawayo,17.9,1937,0.8,16.3,19.5
+Manicaland,11.0,2238,0.8,9.5,12.6
+Mashonaland Central,13.0,2101,1.0,10.9,15.1
+Mashonaland East,13.5,1947,1.0,11.3,15.6
+Mashonaland West,12.3,2465,1.1,10.1,14.6
+Matabeleland North,19.5,1974,1.2,17.0,21.9
+Matabeleland South,21.7,1599,1.2,19.2,24.2
+Midlands,13.5,2025,1.0,11.4,15.5
+Masvingo,14.5,2203,1.1,12.2,16.8
+Harare,13.7,2088,0.8,12.0,15.3
+MALE,MALE,MALE,MALE,MALE,MALE
+Residence,,,,,
+Urban,12.3,2150,0.8,10.7,14.0
+Rural,11.8,6245,0.5,10.8,12.8
+Province,,,,,
+Bulawayo,16.1,674,1.3,13.3,18.8
+Manicaland,9.2,942,1.0,7.2,11.3
+Mashonaland Central,10.6,958,1.0,8.5,12.6
+Mashonaland East,12.1,902,1.2,9.6,14.6
+Mashonaland West,11.0,1137,1.2,8.4,13.5
+Matabeleland North,15.7,784,1.7,12.2,19.3
+Matabeleland South,19.4,631,2.1,15.2,23.7
+Midlands,11.7,767,1.2,9.2,14.3
+Masvingo,12.3,850,1.3,9.6,14.9
+Harare,11.1,750,1.2,8.7,13.6
+FEMALE,FEMALE,FEMALE,FEMALE,FEMALE,FEMALE
+Residence,,,,,
+Urban,16.4,3920,0.6,15.1,17.6
+Rural,15.8,8262,0.4,14.9,16.7
+Province,,,,,
+Bulawayo,19.3,1263,1.0,17.3,21.3
+Manicaland,12.6,1296,0.8,10.9,14.3
+Mashonaland Central,15.7,1143,1.3,12.9,18.4
+Mashonaland East,14.9,1045,1.2,12.4,17.4
+Mashonaland West,13.9,1328,1.3,11.2,16.5
+Matabeleland North,22.5,1190,1.3,19.9,25.1
+Matabeleland South,23.5,968,1.1,21.2,25.8
+Midlands,14.9,1258,1.3,12.3,17.5
+Masvingo,16.3,1353,1.3,13.5,19.0
+Harare,15.8,1338,0.8,14.2,17.5

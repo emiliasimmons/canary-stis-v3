@@ -1,0 +1,40 @@
+NO..HOUSEHOLD CHARACTERISTICS,QUESTIONS AND INSTRUCTIONS.HOUSEHOLD CHARACTERISTICS,CODING CATEGORIES.HOUSEHOLD CHARACTERISTICS,SKIP.HOUSEHOLD CHARACTERISTICS
+"INTERVIEWER SAY: ""Now I would like to ask you more questions about your household.""","INTERVIEWER SAY: ""Now I would like to ask you more questions about your household.""","INTERVIEWER SAY: ""Now I would like to ask you more questions about your household.""","INTERVIEWER SAY: ""Now I would like to ask you more questions about your household."""
+201,What is the main source of drinking water for members of your household?,PIPED WATER,.............................................................. 11
+201,What is the main source of drinking water for members of your household?,PIPED INTO DWELLING PIPED TO YARD/PLOT.....................................................................,12
+201,What is the main source of drinking water for members of your household?,PUBLIC TAP/STANDPIPE ...........................................................,13
+201,What is the main source of drinking water for members of your household?,TUBE WELL OR BOREHOLE ..................................................,21
+DUG WELL,DUG WELL,DUG WELL,DUG WELL
+,,PROTECTED WELL .............................................................................,31
+,,UNPROTECTED WELL ..................................................................,32
+WATER FROM SPRING,WATER FROM SPRING,WATER FROM SPRING,WATER FROM SPRING
+,,PROTECTED SPRING......................................................................,41
+,,UNPROTECTED SPRING............................................................,42
+,,RAINWATER ..............................................................................................,51
+,,TANKER TRUCK,.................................................................................... 61
+,,CART WITH SMALL TANK.........................................................,71
+,,SURFACE WATER (RIVER/DAM/LAKE/POND,/
+,,STREAM/CANAL)............................................................................... BOTTLED WATER ...............................................................................,81 91
+,,OTHER (SPECIFY),96
+,,DON'T KNOW ........................................................................................ REFUSED .....................................................................................................,-9
+,,,-8
+HOUSEHOLD CHARACTERISTICS (continued),HOUSEHOLD CHARACTERISTICS (continued),HOUSEHOLD CHARACTERISTICS (continued),HOUSEHOLD CHARACTERISTICS (continued)
+202,What kind of toilet facility do members of your household usually use?,FLUSH OR POUR FLUSH TOILET .......................................,"11 IF NO FACILITY/ BUSH/ FIELD. DK, R 204"
+,What kind of toilet facility do members of your household usually use?,TRADITIONAL PIT LATRINE ....................................................,21
+,What kind of toilet facility do members of your household usually use?,VENTILATED IMPROVED PIT LATRINE (VIP),..................................................................................................................... 22
+,What kind of toilet facility do members of your household usually use?,NO FACILITY/BUSH/FIELD .....................................................,61
+,What kind of toilet facility do members of your household usually use?,BUCKET ..........................................................................................................,62
+,What kind of toilet facility do members of your household usually use?,OTHER (SPECIFY),96
+,What kind of toilet facility do members of your household usually use?,DON'T KNOW ........................................................................................,-8
+,What kind of toilet facility do members of your household usually use?,REFUSED .......................................................................................................,-9
+203,Do you share this toilet facility with other households?,YES ..........................................................................................................................,1
+203,Do you share this toilet facility with other households?,NO ............................................................................................................................,2
+203,Do you share this toilet facility with other households?,DON'T KNOW ........................................................................................,-8
+203,Do you share this toilet facility with other households?,REFUSED .......................................................................................................,-9
+204,Does your household have:,Electricity ..........................................................................................................,A
+204,Does your household have:,A working radio .........................................................................................,B
+204,Does your household have:,A working television .............................................................................,C
+204,Does your household have:,A working telephone/mobile telephone .......................................................................................................,D
+204,Does your household have:,A working refrigerator ......................................................................,E
+204,Does your household have:,NONE OF THE ABOVE ................................................................,F
+204,Does your household have:,DON'T KNOW REFUSED........................................................................................................,......................................................................................... Y Z

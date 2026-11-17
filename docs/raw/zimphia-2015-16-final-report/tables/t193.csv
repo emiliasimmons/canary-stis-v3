@@ -1,0 +1,7 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIPS
+1102,"Has anyone ever touched your [penis or buttock / vagina, buttock, or breast when you did not want them to? This could be pinching, grabbing, or touching you on or around your [penis or buttock / vagina, buttock, or breast].",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+1103,"Has anyone ever touched you in a sexual way without your permission, but did not try and force you to have sex? Touching in a sexual way without permission includes fondling, pinching, grabbing, or touching you on or around your sexual body parts.",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO, DK, REFUSED → 1105"
+1104,"The first time this happened, what was your relationship to the person who did this? If it was more than one person, what was your relationship with the person you knew the best?",BOYFRIEND/GIRLFRIEND/ SPOUSE = 1 RELATIVE/FAMILY MEMBER = 2 CLASSMATE/SCHOOLMATE = 3 TEACHER = 4 POLICE/SECURITY OFFICER/MILITARY= 5 EMPLOYER = 6 NEIGHBOR = 7 COMMUNITY RELIGIOUS LEADER = 8 FRIEND = 9 STRANGER = 10 OTHER = -6 DON'T KNOW = -8 REFUSED = -9,
+1105,Has anyone ever tried to make you have sex against your will but did not succeed?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+1106,"Has anyone ever pressured you to have sex, through harassment, threats or tricks and did succeed?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+1107,Has anyone ever physically forced you to have sex and did succeed?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,

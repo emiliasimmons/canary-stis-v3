@@ -1,0 +1,58 @@
+Characteristic,Percentage who ever received HIV testing and received their results,Percentage who received HIV testing in the past 12 months and received their results 1,Number
+Result of PHIA survey HIV test,,,
+HIV positive,91.2,22.6,"3,364"
+HIV negative,71.6,37.6,"17,086"
+Not tested,65.7,38.7,"1,891"
+Residence,,,
+Urban,75.7,35.9,"6,683"
+Rural,72.6,35.6,"15,658"
+Province,,,
+Bulawayo,75.2,34.5,"2,090"
+Manicaland,70.4,37.9,"2,380"
+Mashonaland Central,70.7,34.5,"2,347"
+Mashonaland East,70.7,35.1,"2,108"
+Mashonaland West,75.4,36.6,"2,675"
+Matabeleland North,75.1,35.8,"2,113"
+Matabeleland South,77.9,37.0,"1,717"
+Midlands,72.4,32.8,"2,229"
+Masvingo,73.9,36.2,"2,383"
+Harare,76.6,35.8,"2,299"
+Marital status,,,
+Never married,51.0,25.2,"6,588"
+Married or living together,84.3,41.5,"12,803"
+Divorced or separated,86.6,42.9,"1,520"
+Widowed,82.2,27.2,"1,398"
+Education,,,
+No education,66.8,27.2,677
+Primary,70.6,30.9,"6,720"
+Secondary,74.1,37.4,"13,470"
+More than secondary,82.5,40.0,"1,457"
+Wealth quintile,,,
+Lowest,71.7,34.0,"5,219"
+Second,69.9,34.3,"4,726"
+Middle,74.6,35.9,"4,342"
+Fourth,76.6,38.8,"3,725"
+Highest,75.5,35.4,"4,329"
+Religion,,,
+Traditional,68.7,33.0,429
+Roman Catholic,73.5,34.5,"1,763"
+Protestant,75.9,36.9,"3,581"
+Pentecostal,75.3,36.2,"4,359"
+Apostolic Sect,73.5,35.8,"7,293"
+Other Christian,73.0,36.8,"1,974"
+Muslim,75.8,36.2,96
+Other,75.7,34.1,174
+None,69.8,33.2,"2,658"
+Age,,,
+15-19,45.3,24.5,"4,355"
+20-24,75.1,43.2,"3,335"
+25-29,86.5,46.9,"2,786"
+30-34,85.7,42.2,"2,756"
+35-39,85.6,37.6,"2,378"
+40-44,84.4,33.4,"1,962"
+45-49,81.3,32.7,"1,419"
+50-54,73.6,26.6,"1,157"
+55-59,70.0,23.0,"1,164"
+60-64,63.0,23.1,"1,029"
+Total 15-24,58.7,32.9,"7,690 18,991"
+Total 15-49 Total 15-64,74.3 73.7,37.1 35.7,"22,341"

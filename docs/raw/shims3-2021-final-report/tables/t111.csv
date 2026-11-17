@@ -1,0 +1,27 @@
+Characteristic,Weighted estimate (%),Unweighted number,Standard error (%),Design effect,Relative standard error,Lower confidence limit (%),Upper confidence limit (%)
+Residence,,,,,,,
+Urban,86.35,180,2.22,0.75,0.03,81.79,90.92
+Rural,85.96,694,1.40,1.13,0.02,83.06,88.85
+Region,,,,,,,
+Hhohho,87.00,206,2.03,0.74,0.02,82.83,91.18
+Lubombo,87.75,189,2.65,1.23,0.03,82.29,93.22
+Manzini,84.33,288,2.02,0.88,0.02,80.18,88.49
+Shiselweni,86.34,191,3.05,1.49,0.04,80.07,92.61
+,Women,Women,Women,Women,Women,Women,Women
+Residence,,,,,,,
+Urban,86.86,391,1.64,0.92,0.02,83.48,90.23
+Rural,91.53,"1,620",0.66,0.90,0.01,90.17,92.88
+Region,,,,,,,
+Hhohho,90.38,480,0.98,0.53,0.01,88.36,92.39
+Lubombo,89.67,424,2.06,1.93,0.02,85.44,93.90
+Manzini,89.40,697,1.03,0.78,0.01,87.28,91.53
+Shiselweni,91.56,410,1.55,1.27,0.02,88.38,94.75
+,Total,Total,Total,Total,Total,Total,Total
+Residence,,,,,,,
+Urban,86.67,571,1.22,0.74,0.01,84.16,89.19
+Rural,89.54,"2,314",0.74,1.35,0.01,88.02,91.06
+Region,,,,,,,
+Hhohho,89.21,686,0.98,0.69,0.01,87.18,91.23
+Lubombo,88.89,613,1.60,1.58,0.02,85.61,92.18
+Manzini,87.69,985,1.05,1.01,0.01,85.52,89.85
+Shiselweni,89.65,601,1.71,1.90,0.02,86.12,93.18

@@ -1,0 +1,35 @@
+Characteristic,Men.Percentage with VL < 200 copies/ mL,Men.Number,Women.Percentage with VL < 200 copies/ mL,Women.Number,Total.Percentage with VL < 200 copies/ mL,Total.Number
+HIV diagnosis and treatment status 1,,,,,,
+Unaware of HIV status,3.0,129,3.2,211,3.1,340
+Aware of HIV status and not on ART,(9.6),29,(4.4),41,6.9,70
+Aware of HIV status and on ART,86.6,747,89.5,"1,797",88.4,"2,544"
+Number of years since initiating ART,,,,,,
+Less than 12 months,85.3,76,85.0,144,85.1,220
+12 months or more,86.5,631,89.2,"1,583",88.2,"2,214"
+1 to less than 5 years,89.6,206,89.4,510,89.5,716
+5 to less than 10 years,83.4,276,89.1,687,87.2,963
+10 years or more,89.3,142,89.4,358,89.4,500
+Residence,,,,,,
+Urban,69.5,224,72.8,581,71.6,805
+Rural,71.4,681,79.9,"1,468",76.6,"2,149"
+Province,,,,,,
+Bulawayo,66.8,78,71.3,195,69.7,273
+Manicaland,74.3,77,82.9,202,79.9,279
+Mashonaland Central,59.1,107,73.3,202,67.4,309
+Mashonaland East,74.7,82,77.9,173,76.6,255
+Mashonaland West,69.2,103,81.6,235,77.1,338
+Matabeleland North,78.7,97,80.8,205,80.0,302
+Matabeleland South,81.8,93,79.4,231,80.3,324
+Midlands,71.9,106,76.1,238,74.5,344
+Masvingo,65.8,99,80.0,210,74.7,309
+Harare,69.5,63,71.8,158,71.0,221
+Marital status,,,,,,
+Never married,54.6,93,69.7,185,63.2,278
+Married or living together,74.2,671,76.0,988,75.1,"1,659"
+Divorced or separated,61.8,87,77.7,373,73.9,460
+Widowed,77.9,54,84.2,501,83.5,555
+Education,,,,,,
+No education,(79.8),26,86.4,120,85.2,146
+Primary,70.0,346,83.7,899,79.1,"1,245"
+Secondary,69.8,490,71.5,964,70.8,"1,454"
+More than secondary,(83.6),41,82.2,63,82.9,104
