@@ -24,8 +24,12 @@ To watch: each country's simulations fill only that country's cells, so a Zimbab
 simulation reaching high prevalence is discarded. If many are, letting either country fill
 either cell (with country recorded on each simulation) may be the better rule.
 
+Simulations start in 1985 and select their demographics with
+`sim_pars(country=dict(name="eswatini"))` or `"zimbabwe"`: the 1985 age structure,
+fertility, and mortality with HIV deaths removed, from UN WPP files in `src/data`
+(`scripts/download_wpp.py`, `scripts/remove_hiv_mortality.py`). HIV is still seeded at the
+simulation start.
+
 Before the first exploration: the per-pathogen STI-to-HIV multipliers (issue 12), the
-model change that loads Eswatini and Zimbabwe demographics from UN WPP and moves the
-simulation start year to 1985, the year of their age structure (issue 16), the model change
-that loads country ART and VMMC coverage and the four shared testing streams (issue 18),
-and Zimbabwe's coverage data (issue 17).
+model change that loads country ART and VMMC coverage and the four shared testing streams
+(issue 18), and Zimbabwe's coverage data (issue 17).
