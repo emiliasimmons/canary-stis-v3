@@ -54,7 +54,9 @@ from .interventions import (
     STIDxPrEP,
 )
 
-_SYPH_DX_PATH = Path(__file__).parent / "data" / "syph_dx.csv"
+_DATA_DIR = Path(__file__).parent / "data"
+_SYPH_DX_PATH = _DATA_DIR / "syph_dx.csv"
+_WPP_PEOPLE_PER_UNIT = 1000
 
 # stisim's testing modules default stop to the run's last year and only act
 # while now < stop, so they would skip the final step. Syndromic and panel
@@ -123,17 +125,19 @@ def sim_pars(**kwargs):
         pars = sim_pars(intv_year=2027)                 # run the POC arm
         pars = sim_pars(care_seek_mult=1.5)             # care-seeking lever
         pars = sim_pars(bundled_prevention=dict(coverage=0.5))
+        pars = sim_pars(country=dict(name="eswatini"))  # country demographics
 
     Off-states are sentinels, not flags: ``intv_year=None`` (SOC throughout),
     ``care_seek_mult=1.0``, ``bundled_prevention=None``,
-    ``fsw_outreach.rate=0.0``, ``prep.eligibility='none'``, ``magic_cure.year=None``.
+    ``fsw_outreach.rate=0.0``, ``prep.eligibility='none'``, ``magic_cure.year=None``,
+    ``country.name=None`` (scalar birth and death rates).
     """
     pars = sc.objdict()
 
     pars.sim = sc.objdict(
         n_agents=10_000,
-        start=1990,
-        dur=40,  # reaches 2030
+        start=1985,  # the year of the country age structures
+        dur=45,  # reaches 2030
         dt=1 / 12,
         rand_seed=0,
         label=None,
@@ -233,6 +237,11 @@ def sim_pars(**kwargs):
             ("fsw", "client"): dict(year=[1990], val=[0.55]),
         },
     )
+
+    # Country setup. name=None runs the scalar pregnancy and deaths rates below;
+    # a name loads that country's 1985 age structure, age-specific fertility and
+    # mortality from datafolder, in stisim's location-file layout.
+    pars.country = sc.objdict(name=None, datafolder=_DATA_DIR)
 
     # 220 births per 1000 women 15-49 reproduces the SSA aggregate; the coupled
     # fertility_rate=10 / death_rate=10 default drains the sexually active
@@ -498,19 +507,34 @@ def build_sim(pars):
         ss.infection_log(),
     ]
 
-    sim = ss.Sim(
-        n_agents=pars.sim.n_agents,
-        start=pars.sim.start,
-        dur=pars.sim.dur,
-        dt=pars.sim.dt,
-        rand_seed=pars.sim.rand_seed,
+    if pars.country.name is None:
+        demographics = dict(demographics=[ss.Pregnancy(**pars.pregnancy), ss.Deaths(**pars.deaths)])
+    else:
+        # a location string has stisim build Pregnancy, Deaths and the starting
+        # People from the country's files; migration stays at stisim's default, off.
+        # UN WPP age structures count thousands of people, and age_scale converts
+        # the total_pop stisim derives from them to people.
+        demographics = dict(demographics=pars.country.name,
+                            datafolder=pars.country.datafolder,
+                            age_scale=_WPP_PEOPLE_PER_UNIT)
+
+    # sim settings go in as sim_pars: passed flat, sti.Sim would also route dt
+    # to the diseases and reject them for arriving as built modules
+    sim = sti.Sim(
+        sim_pars=dict(
+            n_agents=pars.sim.n_agents,
+            start=pars.sim.start,
+            dur=pars.sim.dur,
+            dt=pars.sim.dt,
+            rand_seed=pars.sim.rand_seed,
+        ),
         label=pars.sim.label,
         diseases=diseases,
         networks=[sti.StructuredSexual(**pars.network), ss.MaternalNet()],
-        demographics=[ss.Pregnancy(**pars.pregnancy), ss.Deaths(**pars.deaths)],
         interventions=interventions,
         analyzers=analyzers,
         connectors=connectors,
+        **demographics,
     )
     sim.metadata = sc.objdict(pars=pars)
     return sim
