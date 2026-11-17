@@ -63,22 +63,29 @@ def test_referrals_treated_after_fsw_outreach_stops(intv_year):
 PAST_PRIMARY = {**SMALL, "syph_test": dict(symp_test_prob=0.15)}
 
 
-def _steps_with_past_primary(sim):
-    """Step sim, yielding (ti, people past primary syphilis when step ti began).
+def _steps(sim):
+    """Step sim, yielding (ti, ulcer, past) with syphilis stages bounded from the previous step.
 
-    Stages only advance at the start of a step and infection only enters the
-    primary stage, so state at the end of the previous step is a lower bound on
-    who is past primary when the step's tests run.
+    ulcer: everyone who can be in primary with a visible chancre when step ti's
+    tests run. Stages advance at the start of a step, and new infections (and
+    their chancre draws) land after the tests, so only incubating agents due
+    to turn primary on ti join the primary agents.
+
+    past: people who are certainly past primary then. The secondary, latent
+    and tertiary stages are left only by treatment or death.
     """
     sim.init(verbose=0)
     syph = sim.diseases.syph
     for ti in range(len(sim.t.yearvec)):
+        entering = syph.exposed & (syph.ti_primary <= ti)
+        ulcer = (syph.chancre_visible & (syph.primary | entering)).uids
         past = (syph.secondary | syph.latent | syph.tertiary).uids
         sim.run(until=sim.t.yearvec[ti], verbose=0)
-        yield ti, past
+        yield ti, ulcer, past
 
 
-def _stamped(sim, names, attr, ti):
+def _stamped_at(sim, names, attr, ti):
+    """Agents whose *attr* stamp equals *ti* on any of the interventions *names*."""
     uids = ss.uids()
     for name in names:
         test = sim.interventions.get(name)
@@ -88,12 +95,12 @@ def _stamped(sim, names, attr, ti):
 
 
 @pytest.mark.parametrize("intv_year", [None, 2010], ids=["soc", "poc"])
-def test_ulcer_test_skips_syphilis_past_primary(intv_year):
+def test_ulcer_test_reaches_only_primary_chancres(intv_year):
     sim = build_sim(sim_pars(**PAST_PRIMARY, intv_year=intv_year))
     n_tested = n_past = 0
-    for ti, past in _steps_with_past_primary(sim):
-        tested = _stamped(sim, ["syph_symp_test", "syph_symp_test_poc"], "ti_tested", ti)
-        assert len(np.intersect1d(past, tested)) == 0, ti
+    for ti, ulcer, past in _steps(sim):
+        tested = _stamped_at(sim, ["syph_symp_test", "syph_symp_test_poc"], "ti_tested", ti)
+        assert np.isin(tested, ulcer).all(), ti
         n_tested += len(tested)
         n_past += len(past)
     assert n_tested > 0 and n_past > 0
@@ -108,12 +115,14 @@ def test_ulcer_test_reaches_non_syphilitic_ulcers():
 
 @pytest.mark.parametrize("intv_year", [None, 2010], ids=["soc", "poc"])
 def test_syphilis_past_primary_treated_only_via_rash_or_antenatal(intv_year):
+    # gudp is off by default. A non-syphilitic ulcer in someone with latent
+    # syphilis is a third route, by design.
     sim = build_sim(sim_pars(**PAST_PRIMARY, intv_year=intv_year))
-    channels = ["syph_rash_test", "syph_anc_rpr", "syph_anc_rdt", "syph_anc_confirm"]
+    channels =["syph_rash_test", "syph_anc_rpr", "syph_anc_rdt", "syph_anc_confirm"]
     n_treated = 0
-    for ti, past in _steps_with_past_primary(sim):
+    for ti, _, past in _steps(sim):
         treated = np.intersect1d(past, (sim.interventions.syph_tx.ti_treated == ti).uids)
-        via = _stamped(sim, channels, "ti_positive", ti)
+        via = _stamped_at(sim, channels, "ti_positive", ti)
         assert np.isin(treated, via).all(), ti
         n_treated += len(treated)
     assert n_treated > 0
