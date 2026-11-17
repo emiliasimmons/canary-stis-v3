@@ -114,12 +114,16 @@ def syph_ulcer_eligibility(sim):
     chancre at a visible site *or* a non-syphilitic ulcer (the gudp module).
     The second arm is the only route by which the ulcer channel reaches latent
     syphilis, and the source of presumptive over-treatment.
+
+    The chancre side reads ``ulcerative``: stisim draws ``chancre_visible`` at
+    infection and clears it only on treatment or death, so on its own it also
+    covers the incubation, secondary and latent stages.
     """
     syph = sim.diseases.syph
     gudp = sim.diseases.get("gudp")
     if gudp is None:
-        return syph.chancre_visible.uids
-    return (syph.chancre_visible | gudp.symptomatic).uids
+        return syph.ulcerative.uids
+    return (syph.ulcerative | gudp.symptomatic).uids
 
 
 def syph_rash_eligibility(sim):
