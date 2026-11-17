@@ -1,0 +1,4 @@
+MODULE.901,"MODULE.9: TUBERCULOSIS AND OTHER Interviewer says: ""Now I will ask you about Can TB be cured in people living with HIV?","MODULE.HEALTH ISSUES Tuberculosis or TB."" YES = 1 NO = 2 DON'T KNOW = 3 REFUSED = -9",MODULE.
+902,Have you ever visited a TB clinic for TB diagnosis or treatment?,YES = 1 NO=2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED → 908"
+903,Were you tested for HIV at the TB clinic?,"YES = 1 NO, WAS NOT TESTED FOR HIV =2 NO, ALREADY HIV POSITIVE = 3 DON'T KNOW = -8 REFUSED = -9",
+904,"Have you ever been told by a doctor, clinical officer, or nurse that you had TB?",YES = 1 NO=2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED → 908"

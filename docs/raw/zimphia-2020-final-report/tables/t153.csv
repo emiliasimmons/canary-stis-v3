@@ -1,0 +1,9 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+804,"In the last 12 months, were you treated for TB?",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED AND MALE  812 IF NO, DON'T KNOW, REFUSED AND FEMALE=2  807"
+805,Are you currently on treatment for TB?,YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED AND MALE  812 IF NO, DON'T KNOW, REFUSED AND FEMALE=2  807"
+806,"The last time you were treated for TB, did you complete at least 6 months of treatment?",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,IF MALE  812
+"Interviewer says: ""Now I am going to ask you about tests a health care provider can do to check for cervical cancer. The cervix connects the uterus to the vagina. The tests a healthcare provider can do to check for cervical cancer are called a Pap smear, For a Pap","HIV test and VIA test."" smear and HPV test, a health care provider puts a small stick inside",the vagina to wipe the cervix and sends the,SKIP IF MALE
+sample color. 807,"the laboratory. For a VIA test, a healthcare worker puts vinegar on Have you ever been tested for cervical cancer?",the cervix and looks to see if the cervix changes YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,"IF NO, DON'T KNOW, REFUSED  812"
+808,What month and year was your last test for cervical cancer? Month Year,MONTH____________ DON'T KNOW MONTH=-8 REFUSED MONTH=-9 YEAR_______________ DON'T KNOW YEAR=-8 REFUSED YEAR=-9,
+809,What was the result of your last test for cervical cancer?,NORMAL/NEGATIVE=1 ABNORMAL/POSITIVE=2 SUSPECT CANCER=3 UNCLEAR/INCONCLUSIVE=4 DID NOT RECEIVE RESULTS=5 DON'T KNOW=-8 REFUSED=-9,"IF NORMAL/ NEGATIVE, DON'T KNOW, REFUSED  811"
+810,Did you receive treatment after your last test for cervical cancer? Did you receive treatment on the same day or on a different day?,"YES, I WAS TREATED ON THE SAME DAY=1 YES, I RECEIVED TREATMENT ON A DIFFERENT DAY=2 NO=3 DON'T KNOW=-8 REFUSED=-9",

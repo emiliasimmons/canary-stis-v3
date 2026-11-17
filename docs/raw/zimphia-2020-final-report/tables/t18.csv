@@ -1,0 +1,25 @@
+Characteristic.Characteristic,Men.Percentage HIV positive,Men.Number,Women.Percentage HIV positive,Women.Number,Total.Percentage HIV positive,Total.Number
+Residence,Residence,Residence,Residence,Residence,Residence,Residence
+Prevalence of HIV among adults Urban,"15-49 years, 8.4","and selected 1,586",demographic 13.8,"characteristics, ZIMPHIA 2,905",11.4,"4,491"
+Rural,8.6,"4,360",15.3,"6,183",12.0,"10,543"
+Province,Province,Province,Province,Province,Province,Province
+Bulawayo,8.0,509,15.8,855,12.1,"1,364"
+Manicaland,6.4,694,12.6,"1,117",9.6,"1,811"
+Mashonaland Central,9.7,737,15.6,948,12.5,"1,685"
+Mashonaland East,7.8,565,14.3,811,11.1,"1,376"
+Mashonaland West,8.5,780,15.7,"1,053",12.1,"1,833"
+Matabeleland North,10.7,502,16.2,779,13.5,"1,281"
+Matabeleland South,8.9,470,22.2,646,15.4,"1,116"
+Midlands,9.9,659,15.2,"1,088",12.7,"1,747"
+Masvingo,8.3,604,13.9,932,11.3,"1,536"
+Harare,9.1,426,13.2,859,11.5,"1,285"
+Marital status,Marital status,Marital status,Marital status,Marital status,Marital status,Marital status
+Never married,3.0,"2,618",6.1,"2,109",4.2,"4,727"
+Married or living together,12.2,"2,924",13.5,"5,650",12.9,"8,574"
+Divorced or separated,17.6,365,29.6,942,25.5,"1,307"
+Widowed,(63.4),31,53.9,380,54.8,411
+Education,Education,Education,Education,Education,Education,Education
+No education,11.8,51,21.8,131,18.4,182
+Primary,11.4,"1,681",20.3,"2,730",16.2,"4,411"
+Secondary,7.7,"3,809",13.1,"5,661",10.5,"9,470"
+More than secondary,6.1,400,7.2,559,6.6,959

@@ -1,0 +1,12 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+MODULE 1: RESPONDENT BACKGROUND,MODULE 1: RESPONDENT BACKGROUND,MODULE 1: RESPONDENT BACKGROUND,MODULE 1: RESPONDENT BACKGROUND
+"Interviewer says: ""Thank you for agreeing to participate in this survey. The first set of questions is about your life in general. Afterwards, we will move on to other topics.""","Interviewer says: ""Thank you for agreeing to participate in this survey. The first set of questions is about your life in general. Afterwards, we will move on to other topics.""","Interviewer says: ""Thank you for agreeing to participate in this survey. The first set of questions is about your life in general. Afterwards, we will move on to other topics.""","Interviewer says: ""Thank you for agreeing to participate in this survey. The first set of questions is about your life in general. Afterwards, we will move on to other topics."""
+101,IS THE RESPONDENT MALE OR FEMALE?,MALE = 1 FEMALE = 2,
+102,How old were you at your last birthday?,AGE IN COMPLETED YEARS _ _ DON'T KNOW AGE = -8 REFUSED = -9,
+103,Have you ever attended school?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED →107"
+104,Are you enrolled in school?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"DK, REFUSED →107"
+105,"What is the highest level of school you attended: primary, secondary or higher?",PRIMARY = 1 SECONDARY = 2 HIGHER = 3 DON'T KNOW = -8 REFUSED = -9,ADAPT RESPONSES TO COUNTRY CONTEXT.
+106,What is the highest[class/form/year] you completed at that level?,CLASS/FORM/YEAR _____ DON'T KNOW = -8 REFUSED = -9,
+107,"In the last 12 months, how many times have you been away from home for one or more nights? CODE '00' IF NONE.",NUMBER OF TRIPS _ _ DON'T KNOW = -8 REFUSED = -9,"NONE, DK, REFUSED→109"
+108,"In the last 12 months, have you been away from home for more than one month at a time?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+109,"Have you done any work in the last 12 months for which you received a paycheck, cash or goods as payment?",YES = 1 NO = 2 DON'T KNOW = -8,

@@ -1,0 +1,36 @@
+Characteristic,Men.Percentage still receiving ART 1,Men.Number,Women.Percentage still receiving ART 1,Women.Number,Total.Percentage still receiving ART 1,Total.Number
+Presence of detectable ARVs,,,,,,
+Detectable,99.6,586,99.6,1231,99.6,1817
+Not detectable,(80.8),37,78.7,97,79.4,134
+Residence,,,,,,
+Urban,98.4,170,97.0,418,97.5,588
+Rural,98.3,459,98.4,919,98.3,1378
+Province,,,,,,
+Bulawayo,98.3,69,97.8,154,98.0,223
+Manicaland,(97.7),46,99.0,111,98.6,157
+Mashonaland Central,98.3,61,100.0,125,99.3,186
+Mashonaland East,(100.0),49,94.2,111,96.2,160
+Mashonaland West,100.0,70,98.0,112,98.9,182
+Matabeleland North,98.2,70,98.2,186,98.2,256
+Matabeleland South,100.0,83,99.4,154,99.6,237
+Midlands,100.0,57,99.1,119,99.4,176
+Masvingo,96.4,69,98.4,134,97.6,203
+Harare,96.3,55,96.2,131,96.2,186
+Marital status,,,,,,
+Never married,98.1,56,100.0,107,99.2,163
+Married or living together,98.6,491,96.9,672,97.7,1163
+Divorced or separated,(96.0),48,98.2,170,97.6,218
+Widowed,(100.0),34,98.8,383,98.9,417
+Education,,,,,,
+No education,*,12,100.0,56,100.0,68
+Primary,98.9,228,98.5,539,98.7,767
+Secondary,98.0,360,97.1,701,97.5,1061
+More than secondary,(100.0),28,(100.0),41,100.0,69
+Wealth quintile,,,,,,
+Lowest,99.1,160,98.2,343,98.5,503
+Second,100.0,142,99.5,260,99.7,402
+Middle,95.7,126,98.4,234,97.3,360
+Fourth,99.3,98,95.7,245,97.0,343
+Highest,97.7,103,97.8,255,97.7,358
+Religion,,,,,,
+Traditional,(100.0),25,*,8,(100.0),33

@@ -1,0 +1,8 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIPS
+412,Sometimes people have sex to get material support. Material support means helping you to pay for things or giving you gifts or things. Have you ever had sex with someone because you expected material support?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+413,Have you ever been pregnant?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+414,Have you ever had oral sex? Oral sex is when a person puts his/her mouth on the penis or vagina of another person,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+415,Have you ever talked with a parent or guardian about sex?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+MODULE 5: HIV RISK PERCEPTION,MODULE 5: HIV RISK PERCEPTION,MODULE 5: HIV RISK PERCEPTION,MODULE 5: HIV RISK PERCEPTION
+501,How likely do you think it is for you to get HIV?,VERY LIKELY = 1 SOMEWHAT LIKELY = 2 NOT LIKELY = 3 I ALREADY HAVE HIV = 4 DON'T KNOW = -8 REFUSED = -9,"IF NOT LIKELY, I HAVE HIV, DK, REFUSED → 503 SKIP IF 201=NO, DK, REFUSED"
+502,What is the main reason you think you are likely to get HIV?,I HAVE HAD SEX WITHOUT A CONDOM = 1 I HAVE OR HAD MANY BOY/GIRL FRIEND = 2 I HAVE HAD BLOOD TRANSFUSIONS = 3 MY MOTHER/FATHER/CLOSE RELATIVE HAS HIV = 4 I DON'T TRUST MY BOY/GIRLFRIEND = 5 I AM SICK = 6 MY BOY/GIRL FRIEND IS SICK OR HAS DIED= 7 I DESERVE IT/I AM A BAD PERSON = 8 OTHER = 96 DON'T KNOW = -8 REFUSED = -9,"SKIP IF 201=NO, DK, REFUSED ALL → NEXT MODULE"

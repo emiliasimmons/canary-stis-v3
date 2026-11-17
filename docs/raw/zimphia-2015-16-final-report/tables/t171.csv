@@ -1,0 +1,4 @@
+0,1,2,3
+1201,"Has anyone ever done any of these things to you: - Punched, kicked, whipped, or beat you with an object - Slapped you, threw something at you that could hurt you, pushed you or shoved you - Choked, smothered, tried to drown you, or burned you intentionally - Used or threatened you with a knife, gun or other weapon?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED → 1207"
+1202,How old were you the first time one of these things happened to you?,AGE IN YEARS _____ DON'T KNOW = -8 REFUSED = -9,
+1203,"In the last 12 months, how many times did someone: - Punch, kick, whip, or beat you with an object - Slapped you, threw something at you that could hurt you, pushed you or shoved you - Choke smother, try to drown you or burn you intentionally - Use or threaten you with a knife, gun or other weapon?",NOT IN LAST 12 MONTHS = 1 ONCE = 2 FEW = 3 MANY = 4 DON'T KNOW = -8 REFUSED = -9,"not IN LAST 12 MONTHS, DK, REFUSED → 1205"

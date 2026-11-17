@@ -1,0 +1,4 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+1206,What was the main reason that you did not try to seek professional help or services?,DID NOT KNOW SERVICES WERE AVAILABLE = 1 SERVICES NOT AVAILABLE = 2 AFRAID OF GETTING IN TROUBLE = 3 ASHAMED FOR SELF/FAMILY = 4 COULD NOT AFFORD SERVICES = 5 DID NOT THINK IT WAS A PROBLEM = 6 FELT IT WAS MY FAULT = 7 AFRAID OF BEING ABANDONED = 8 DID NOT NEED/WANT SERVICES = 9 AFRAID OF MAKING SITUATION WORSE = 10 OTHER = 96 DON'T KNOW = -8,SKIP IF NEVER EXPERIENCED.
+1207,"How many times has anyone ever touched you in a sexual way without your permission, but did not try and force you to have sex? Touching in a sexual way without permission includes fondling, pinching, grabbing, or touching you on or around your sexual body parts. CODE '00' IF NONE.",REFUSED = -9 NUMBER OF TIMES____ DON'T KNOW = -8 REFUSED = -9,"NONE, DK, REFUSED→1210"
+1208,How old were you the first time this happened?,AGE IN YEARS ____ DON'T KNOW = -8,

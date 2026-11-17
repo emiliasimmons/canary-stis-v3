@@ -1,0 +1,11 @@
+Chronic health conditions.,HIV negative.Percentage,HIV negative.Number,HIV positive.Unaware of HIV status1.Percentage,HIV positive.Unaware of HIV status1.Number,HIV positive.Aware of HIV status and not on ART1.Percentage,HIV positive.Aware of HIV status and not on ART1.Number,HIV positive.Aware of HIV status and on ART1.Percentage,HIV positive.Aware of HIV status and on ART1.Number,Total.Percentage,Total.Number
+Cancer or tumor,,,,,,,,,,
+Yes,0.4,33,0.0,0,1.0,1,0.7,18,0.6,19
+No,99.6,"8,185",100.0,161,99.0,63,99.3,"2,612",99.4,"2,847"
+Lung disease or chronic lung condition,,,,,,,,,,
+Yes,0.8,68,1.9,3,0.0,0,0.9,24,1.0,27
+No,99.2,"8,150",98.1,158,100.0,64,99.1,"2,606",99.0,"2,839"
+Depression or mental health condition,,,,,,,,,,
+Yes,0.7,53,1.3,2,0.0,0,0.8,21,0.8,23
+No,99.3,"8,165",98.7,159,100.0,64,99.2,"2,609",99.2,"2,843"
+Total 15+ years,100.0,"8,218",100.0,161,100.0,64,100.0,"2,630",100.0,"2,866"

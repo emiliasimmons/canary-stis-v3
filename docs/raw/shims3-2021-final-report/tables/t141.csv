@@ -1,0 +1,4 @@
+0,1,2,3
+501,"How old were you when you had sex for the very first time? If they are unsure, confirm if they have had vaginal sex. If they said an age less than 12 years: Confirm age at first sex. Are you sure this is what the participant said?",AGE AT FIRST SEX_____ NEVER HAD SEX=-96 DON'T KNOW=-8 REFUSED=-9 YES=1 NO=2,IF NEVER HAD SEX  NEXT MODULE
+502,"People often have sex with different people over their lifetime. In total, with how many different people have you had sex in your lifetime? Please give your best guess.",NUMBER OF PEOPLE ___ ______________________________ DON'T KNOW=-8 REFUSED=-9,
+503,"How many different people have you had sex with in the last 12 months? (If none, code 'O'. If number of partners is greater than 100, enter '100.')",NUMBER OF PEOPLE___ ______________________________ DON'T KNOW=-8 REFUSED=-9,"IF 0, DON'T KNOW, REFUSED  NEXT MODULE"

@@ -1,0 +1,6 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+608,Do you think people hesitate to take an HIV test because they are afraid of how other people will react if the test result is positive for HIV?,YES = 1 NO = 2 DON'T KNOW/NOT SURE/DEPENDS = -8 REFUSED = -9,
+609,Do people talk badly about people who are living with HIV or who are thought to be living with HIV?,YES = 1 NO = 2 DON'T KNOW/NOT SURE/DEPENDS = -8 REFUSED = -9,
+610,"Do people living with HIV, or thought to be living with HIV, lose the respect of other people?",YES = 1 NO = 2 DON'T KNOW/NOT SURE/DEPENDS = -8 REFUSED = -9,
+611,Do you fear that you could get HIV if you come into contact with the saliva of a person living with HIV?,YES = 1 NO =2 ALREADY HAS HIV = 3 DON'T KNOW/NOT SURE/DEPENDS = -8 REFUSED = -9,POSSIBLY SKIP IF ALREADY HIV+
+612,Do you agree or disagree with the following statement: I would be ashamed if someone in my family had HIV.,AGREE = 1 DISAGREE = 2 DON'T KNOW/NOT SURE/DEPENDS = -8 REFUSED = -9,

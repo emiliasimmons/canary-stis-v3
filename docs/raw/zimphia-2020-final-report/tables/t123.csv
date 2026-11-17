@@ -1,0 +1,31 @@
+Age (years),Weighted estimate (%),Unweighted number,Standard error (%),Design effect,Relative standard error,Lower confidence limit (%),Upper confidence limit (%)
+Women,Women,Women,Women,Women,Women,Women,Women
+Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression
+15-24,62.59,183,3.91,1.19,0.06,54.54,70.64
+25-34,68.52,425,2.60,1.33,0.04,63.16,73.87
+35-49,81.86,915,1.51,1.41,0.02,78.74,84.98
+50+,89.89,529,1.40,1.14,0.02,87.00,92.78
+15-49,75.31,"1,523",1.29,1.37,0.02,72.65,77.97
+15+,78.46,"2,052",1.08,1.41,0.01,76.24,80.68
+Total,Total,Total,Total,Total,Total,Total,Total
+Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed,Diagnosed
+15-24,75.43,247,3.09,1.27,0.04,69.07,81.79
+25-34,77.14,542,2.06,1.31,0.03,72.88,81.39
+35-49,90.21,"1,320",1.06,1.67,0.01,88.03,92.38
+50+,93.06,849,1.01,1.35,0.01,90.98,95.15
+15-49,84.80,"2,109",0.99,1.62,0.01,82.76,86.85
+15+,86.83,"2,958",0.81,1.68,0.01,85.17,88.49
+On treatment,On treatment,On treatment,On treatment,On treatment,On treatment,On treatment,On treatment
+15-24,71.89,247,2.95,1.06,0.04,65.80,77.97
+25-34,73.75,542,2.06,1.18,0.03,69.51,77.99
+35-49,87.58,"1,320",1.26,1.92,0.01,84.98,90.17
+50+,91.43,849,1.11,1.33,0.01,89.14,93.71
+15-49,81.85,"2,109",1.07,1.64,0.01,79.64,84.06
+15+,84.20,"2,958",0.88,1.73,0.01,82.38,86.02
+Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression,Viral load suppression
+15-24,58.21,247,3.28,1.09,0.06,51.46,64.97
+25-34,63.39,542,2.38,1.32,0.04,58.50,68.28
+35-49,79.43,"1,320",1.47,1.75,0.02,76.40,82.46
+50+,87.27,849,1.33,1.34,0.02,84.54,90.01
+15-49,72.40,"2,109",1.26,1.67,0.02,69.81,74.99
+15+,76.05,"2,958",1.03,1.71,0.01,73.93,78.16

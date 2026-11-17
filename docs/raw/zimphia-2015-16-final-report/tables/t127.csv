@@ -1,0 +1,3 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+217,Does your husband or partner have other wives or does he live with other women as if married?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSE TO ANSWER = -9,"NO, DK, REFUSED→ 301"
+218,"Including yourself, in total, how many wives or live-in partners does your husband or partner have?",NUMBER OF WIVES OR LIVE-IN PARTNERS _ _ DON'T KNOW = -8 REFUSE TO ANSWER = -9,

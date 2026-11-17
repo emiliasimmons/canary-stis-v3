@@ -1,0 +1,3 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+1006,Have you taken part in any of the following HIV prevention programs?,VOLUNTARY MEDICAL MALE CIRCUMCISION (VMMC)=A PRE-EXPOSURE PROPHYLAXIS (PrEP)=B POST-EXPOSURE PROPHYLAXIS (PEP)=C HIV TESTING AND COUNSELING (HTS)=D PREVENTION OF MOTHER-TO-CHILD TRANSMISSION (PMTCT)=E OTHER=X ______________(SPECIFY) DON'T KNOW=Y REFUSED=Z,IF OTHER  1007
+1007,"In the past 12 months, how many times have you participated in a school meeting or class period where they talked about HIV/ AIDS? If you are not certain, give your best guess.",NONE=0 1-4 TIMES=1 5-9 TIMES=2 10 OR MORE TIMES=3 DON'T KNOW=-8 REFUSED=-9,

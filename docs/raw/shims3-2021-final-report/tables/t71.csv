@@ -1,0 +1,22 @@
+Characteristic,Percentage who attended at least one ANC visit,Number
+Education,,
+No education,(95.2),43
+Primary,97.4,221
+Secondary,97.9,790
+More than secondary,100.0,169
+Wealth quintile,,
+Lowest,97.9,357
+Second,97.8,330
+Middle,98.5,221
+Fourth,98.2,166
+Highest,97.9,149
+Age (years),,
+15-19,98.3,103
+20-24,98.2,308
+25-29,98.6,319
+30-34,97.6,275
+35-39,99.5,160
+40-44,92.5,52
+45-49,*,6
+Total 15-24 years,98.3,411
+Total 15-49 years,98.0,"1,223"

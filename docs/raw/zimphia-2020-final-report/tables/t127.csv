@@ -1,0 +1,2 @@
+HOUSEHOLD SCHEDULE (for minors-skip if emancipated).,HOUSEHOLD SCHEDULE (for minors-skip if emancipated).,HOUSEHOLD SCHEDULE (for minors-skip if emancipated).IF (NAME) IS 0-17 YEARS,HOUSEHOLD SCHEDULE (for minors-skip if emancipated).IF NAME IS 15-17 YEARS)
+LINE NO.,SCHOOL,ORPHAN STATUS / PARENT OR GUARDIAN,WRITTEN PERMISSION TO PARTICIPATE

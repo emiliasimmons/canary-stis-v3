@@ -1,0 +1,4 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIPS
+1110,What was the main reason that you did not try to seek professional help or services?,DID NOT KNOW SERVICES WERE AVAILABLE = 1 SERVICES NOT AVAILABLE = 2 AFRAID OF GETTING IN TROUBLE = 1 ASHAMED FOR SELF/FAMILY = 2 COULD NOT AFFORD SERVICES = 3 DID NOT THINK IT WAS A PROBLEM = 5 FELT IT WAS MY FAULT = 6 AFRAID OF BEING ABANDONED = 7 DID NOT NEED/WANT SERVICES = 8 OTHER = -6 DON'T KNOW = -8,
+1111,"After any of these unwanted sexual experiences, did you tell anyone about it?",REFUSED = -9 YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED →END"
+1112,Which of the following describes who you told about any of these unwanted sexual experience? SELECT ALL THAT APPLY,PARENT/GUARDIAN = A SIBLING = B TEACHER = C FRIEND/CLASSMATE = D OTHER FAMILY MEMBER = E RELIGIOUS LEADER = F OTHER = X DON'T KNOW = Y REFUSED = Z,

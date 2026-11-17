@@ -1,0 +1,13 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+528,"In the last 12-months, have you paid money for sex?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED →NEXT MODULE"
+529,"The last time you paid money for sex, was a condom used?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+MODULE 6: HIV/AIDS KNOWLEDGE AND ATTITUDES,MODULE 6: HIV/AIDS KNOWLEDGE AND ATTITUDES,MODULE 6: HIV/AIDS KNOWLEDGE AND ATTITUDES,MODULE 6: HIV/AIDS KNOWLEDGE AND ATTITUDES
+"Interviewer says: ""Now I will ask you questions on your knowledge of HIV.""","Interviewer says: ""Now I will ask you questions on your knowledge of HIV.""","Interviewer says: ""Now I will ask you questions on your knowledge of HIV.""","Interviewer says: ""Now I will ask you questions on your knowledge of HIV."""
+601,Can the risk of HIV transmission be reduced by having sex with only one uninfected partner who has no other partners?,YES = 1 NO = 2 DON'T KNOW = 3 REFUSED = -9,
+602,Can a person get HIV from mosquito bites?,YES = 1 NO = 2 DON'T KNOW = 3 REFUSED = -9,
+603,Can a person reduce their risk of getting HIV by using a condom every time they have sex?,YES = 1 NO = 2 DON'T KNOW = 3 REFUSED = -9,
+604,Can a person get HIV by sharing food with someone who has HIV?,YES = 1 NO = 2 DON'T KNOW = 3 REFUSED = -9,
+605,Can a healthy-looking person have HIV?,YES = 1 NO = 2 DON'T KNOW = 3 REFUSED = -9,
+"Interviewer says: ""Now I would like to ask you some questions about people's attitudes towards people living with HIV.""","Interviewer says: ""Now I would like to ask you some questions about people's attitudes towards people living with HIV.""","Interviewer says: ""Now I would like to ask you some questions about people's attitudes towards people living with HIV.""","Interviewer says: ""Now I would like to ask you some questions about people's attitudes towards people living with HIV."""
+606,Would you buy fresh vegetables from a shop keeper or vendor if you knew the person had HIV?,YES = 1 NO = 2 DON'T KNOW/NOT SURE/DEPENDS = -8 REFUSED = -9,
+607,Do you think children living with HIV should be allowed to attend school with children who do not have HIV?,YES = 1 NO = 2 DON'T KNOW/NOT SURE/DEPENDS = -8 REFUSED = -9,

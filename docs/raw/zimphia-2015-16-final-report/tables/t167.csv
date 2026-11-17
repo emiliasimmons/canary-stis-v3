@@ -1,0 +1,3 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+924,Did you get treatment for these problems?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED → END MODULE ONLY YES TO SYMPTOMS; YES TO STD"
+925,"Where did you go to get treatment? Did you go to a public facility, a private facility or a pharmacy? SELECT ALL THAT APPLY.",PUBLIC CLINIC/HOSPITAL= A PRIVATE CLINIC/HOSPITAL = B PHARMACY = C OTHER = X DON'T KNOW = Y REFUSED = Z,"ONLY YES TO SYMPTOMS, YES TO STD"

@@ -1,0 +1,6 @@
+0,1,2,3
+401,Do you know what sex is?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF AGE <13 & RESPONSE = NO, DK, REFUSED →415"
+402,"Have you ever had sex? By sex, we mean vaginal sex. With vaginal sex, we mean a penis enters a vagina.",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED →414"
+403,How old were you when you had sex for the first time?,AGE IN YEARS __ __ DON'T KNOW = -8 REFUSED = -9,
+404,"The first time you had sex, was it because you wanted to or because you were forced?",WANTED TO = 1 FORCED = 2 DON'T KNOW = -8 REFUSED = -9,"WANTED, DK, REFUSED → 406"
+405,"The first time you had sex, were you physically forced or were you pressured into having sex through harassment, threats or tricks?",PHYSICALLY FORCED= 1 PRESSURED = 2 DON'T KNOW = -8 REFUSED = -9,ALL → 407

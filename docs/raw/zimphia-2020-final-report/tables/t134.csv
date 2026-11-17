@@ -1,0 +1,7 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+LANGUAGE,LANGUAGE,LANGUAGE,LANGUAGE
+"Interviewer says: ""Thank you for agreeing to participate in this survey. The first set of questions is about your life in general. Afterwards, we will move on to other topics.""","Interviewer says: ""Thank you for agreeing to participate in this survey. The first set of questions is about your life in general. Afterwards, we will move on to other topics.""","Interviewer says: ""Thank you for agreeing to participate in this survey. The first set of questions is about your life in general. Afterwards, we will move on to other topics.""","Interviewer says: ""Thank you for agreeing to participate in this survey. The first set of questions is about your life in general. Afterwards, we will move on to other topics."""
+L1,LANGUAGE OF QUESTIONNAIRE,ENGLISH=1 SHONA=2 NDEBELE=3,IF OTHER  L3
+L2,LANGUAGE OF INTERVIEW,ENGLISH=1 SHONA=2 NDEBELE=3 OTHER =96 _______________ (SPECIFY) SHONA=1 NDEBELE=2 ENGLISH=3 TONGA=4 KALANGA=5 CHEWA=6 CHIBARWE=7 NAMBYA=8 NDAU=9 TSWANA=10 VENDA=11 XHOSA=12 SHANGANI=13 SOTHO=14 KOISAN=15 SIGN LANGUAGE=16 OTHER=96,
+L3,NATIVE LANGUAGE OF PARTICIPANT,ENGLISH=1 SHONA=2 NDEBELE=3 OTHER =96 (SPECIFY FROM BELOW): _______________ SHONA=1 NDEBELE=2 ENGLISH=3 TONGA=4 KALANGA=5 CHEWA=6 CHIBARWE=7 NAMBYA=8 NDAU=9 TSWANA=10 VENDA=11 XHOSA=12 SHANGANI=13 SOTHO=14 KOISAN=15 SIGN LANGUAGE=16 OTHER=96,IF OTHER  L4
+L4,TRANSLATION USED,YES=1 NO=2,

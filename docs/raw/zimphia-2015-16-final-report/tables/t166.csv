@@ -1,0 +1,10 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+916,Did you receive treatment after your last test for cervical cancer? Did you receive treatment on the same day or on a different day?,"YES, I WAS TREATED ON THE SAME DAY = 1 YES, I RECEIVED TREATMENT ON A DIFFERENT DAY = 2 NO = 3 DON'T KNOW = -8 REFUSED = -9",
+917,Did you have any follow up visits because of your test results?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+"Interviewer says: ""Now I would like to ask you questions about sexual","Interviewer says: ""Now I would like to ask you questions about sexual","Interviewer says: ""Now I would like to ask you questions about sexual",SKIP TO NEXT MODULE IF NEVER HAD SEX.
+"health."" 918","During the last 12 months, have you had an ulcer or sore on or near your vagina?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,SKIP IF MALE.
+919,"During the last 12 months, have you had an abnormal discharge from your penis?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,SKIP IF FEMALE.
+920,"During the last 12 months, have you had an ulcer or sore on or near your penis?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,SKIP IF FEMALE.
+921,"During the last 12 months, have you had pain on urination?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,SKIP IF FEMALE.
+922,"Did you see a doctor, clinical officer, or nurse because of these problems?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,SKIP IF NO TO QUESTIONS ABOVE
+923,"In the last 12 months, did a doctor, clinical officer, or nurse tell you that you had a sexually transmitted disease other than HIV?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,

@@ -1,0 +1,18 @@
+0,1,2,3,4,5,6
+"Percent distribution of the household population by age, sex, and residence, SHIMS3 2021","Percent distribution of the household population by age, sex, and residence, SHIMS3 2021","Percent distribution of the household population by age, sex, and residence, SHIMS3 2021","Percent distribution of the household population by age, sex, and residence, SHIMS3 2021","Percent distribution of the household population by age, sex, and residence, SHIMS3 2021","Percent distribution of the household population by age, sex, and residence, SHIMS3 2021","Percent distribution of the household population by age, sex, and residence, SHIMS3 2021"
+,,,Urban,Urban,,
+,,,Women,Women,Total,Total
+Age,Percent,Number,Percent,Number,Percent,Number
+0-4,11.0,183,10.1,204,10.5,387
+5-14,16.9,295,16.7,329,16.8,624
+15-49,63.7,"1,068",63.8,"1,256",63.8,"2,324"
+50+,8.4,143,9.4,197,8.9,340
+Total,100.0,"1,689",100.0,"1,986",100.0,"3,675"
+,Rural,Rural,Rural,Rural,Rural,Rural
+Age,Men,Men,Women,Women,Total,Total
+,Percent,Number,Percent,Number,Percent,Number
+0-4,12.6,"1,072",11.9,"1,172",12.2,"2,244"
+5-14,26.9,"2,297",24.4,"2,406",25.5,"4,703"
+15-49,49.0,"4,135",47.2,"4,599",48.0,"8,734"
+50+,11.5,969,16.6,"1,647",14.2,"2,616"
+Total,100.0,"8,473",100.0,"9,824",100.0,"18,297"
