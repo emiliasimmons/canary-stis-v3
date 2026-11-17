@@ -55,6 +55,9 @@ from .interventions import (
 )
 
 _DATA_DIR = Path(__file__).parent / "data"
+
+# proportion of people with HIV on ART when no country is set
+NO_COUNTRY_ART_COVERAGE = 0.6
 _SYPH_DX_PATH = _DATA_DIR / "syph_dx.csv"
 
 # stisim's testing modules default stop to the run's last year and only act
@@ -141,22 +144,30 @@ def country_hiv_tests():
     return tests
 
 
-def country_coverage(country, programme):
-    """A country's coverage table for 'art' or 'vmmc', checked to be proportions.
+def proportion_coverage(coverage, programme, source):
+    """Coverage for 'art' or 'vmmc', checked to be a proportion or a table of them.
 
     Counts fail when a simulation's HIV prevalence or population differs from
     the real country's. stisim reads the first numeric column outside Year,
-    Gender, AgeBin, lb and ub as the coverage, so p_<programme> must be the only
-    one.
+    Gender, AgeBin, lb and ub as the coverage, so p_<programme> must be a
+    table's only one.
     """
-    path = Path(country.datafolder) / f"{country.name}_{programme}_coverage.csv"
-    table = pd.read_csv(path)
     p = f"p_{programme}"
-    extra = set(table) - {"Year", "Gender", "AgeBin", "lb", "ub", p}
-    if p not in table or extra or not table[p].between(0, 1).all():
-        raise ValueError(f"{path} must give coverage as proportions between 0 and 1 in a {p} column, "
-                         f"and no other value column (found {sorted(extra)})")
-    return table
+    if isinstance(coverage, pd.DataFrame):
+        extra = set(coverage) - {"Year", "Gender", "AgeBin", "lb", "ub", p}
+        valid = p in coverage and not extra and coverage[p].between(0, 1).all()
+    else:
+        valid = isinstance(coverage, (int, float)) and 0 <= coverage <= 1
+    if not valid:
+        raise ValueError(f"{source} must give coverage as proportions between 0 and 1: "
+                         f"a number, or a table whose only value column is {p}")
+    return coverage
+
+
+def country_coverage(country, programme):
+    """A country's coverage table for 'art' or 'vmmc', checked to be proportions."""
+    path = Path(country.datafolder) / f"{country.name}_{programme}_coverage.csv"
+    return proportion_coverage(pd.read_csv(path), programme, path)
 
 
 def latent_seed_frame(init_prev, n_risk_groups=3):
@@ -208,7 +219,8 @@ def sim_pars(**kwargs):
     ``care_seek_mult=1.0``, ``bundled_prevention=None``,
     ``fsw_outreach.rate=0.0``, ``prep.eligibility='none'``, ``magic_cure.year=None``,
     ``country.name=None`` (scalar birth and death rates, and the HIV programmes
-    in ``hiv_test``, ``art`` and ``vmmc``).
+    in ``hiv_test``, ``art`` and ``vmmc``), ``art.coverage=None`` and
+    ``vmmc.coverage=None`` (the setup's coverage).
     """
     pars = sc.objdict()
 
@@ -273,13 +285,15 @@ def sim_pars(**kwargs):
     pars.bundled_prevention = None            # dict(coverage=, eff=, dur_months=); CondomCounseling
     pars.fsw_outreach = sc.objdict(rate=0.0, start=None, stop=None)
 
-    # HIV programmes without a country. A country setup replaces all three with
-    # its own ART and VMMC coverage tables and the shared testing streams
-    # (country_hiv_tests), and rejects overrides of them.
+    # hiv_test applies without a country. A country setup runs the shared
+    # testing streams (country_hiv_tests) and rejects an override of hiv_test.
     pars.hiv_test = sc.objdict(test_prob_data=0.3, start=2000)
-    pars.art = sc.objdict(coverage=0.6)
-    # Voluntary medical male circumcision. HIV carries eff_circ=0.6 already;
-    # this delivers it. None runs no VMMC.
+    # ART and voluntary medical male circumcision coverage. None takes the
+    # setup's coverage: NO_COUNTRY_ART_COVERAGE and no VMMC without a country,
+    # the country's tables with one. A value set here replaces either, and with
+    # a country must be a proportion (proportion_coverage). HIV carries
+    # eff_circ=0.6 already; VMMC delivers it.
+    pars.art = sc.objdict(coverage=None)
     pars.vmmc = sc.objdict(coverage=None)
     # STI-diagnosis-triggered PrEP (pathway D). eligibility: 'none' (off),
     # 'dx' (agents whose STI treatment fired this step), or 'random'.
@@ -564,18 +578,21 @@ def build_sim(pars):
                   if pars.magic_cure.year is not None else None)
 
     country = pars.country
+    art_coverage, vmmc_coverage = pars.art.coverage, pars.vmmc.coverage
     if country.name is None:
         hiv_tests = [sti.HIVTest(name="hiv_test", **pars.hiv_test)]
-        art = sti.ART(**pars.art)
-        vmmc = sti.VMMC(coverage=pars.vmmc.coverage) if pars.vmmc.coverage is not None else None
+        if art_coverage is None:
+            art_coverage = NO_COUNTRY_ART_COVERAGE
     else:
-        defaults = sim_pars()
-        for group in ("hiv_test", "art", "vmmc"):
-            if pars[group] != defaults[group]:
-                raise ValueError(f"'{group}' is set by the country setup; leave it at its default when country.name is set")
+        if pars.hiv_test != sim_pars().hiv_test:
+            raise ValueError("'hiv_test' is set by the country setup; leave it at its default when country.name is set")
         hiv_tests = country_hiv_tests()
-        art = sti.ART(coverage=country_coverage(country, "art"))
-        vmmc = sti.VMMC(coverage=country_coverage(country, "vmmc"))
+        art_coverage = (country_coverage(country, "art") if art_coverage is None
+                        else proportion_coverage(art_coverage, "art", "art.coverage"))
+        vmmc_coverage = (country_coverage(country, "vmmc") if vmmc_coverage is None
+                         else proportion_coverage(vmmc_coverage, "vmmc", "vmmc.coverage"))
+    art = sti.ART(**dict(pars.art, coverage=art_coverage))
+    vmmc = sti.VMMC(coverage=vmmc_coverage) if vmmc_coverage is not None else None
 
     # testing precedes ART so agents diagnosed this step can start treatment in it
     tail = [magic_cure, prep, *hiv_tests, art, vmmc]

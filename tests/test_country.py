@@ -169,14 +169,28 @@ def test_country_rejects_coverage_tables_in_counts(programme, tmp_path):
         build_sim(sim_pars(sim=TESTLAND_SIM, country=dict(TESTLAND, datafolder=tmp_path)))
 
 
+@pytest.mark.parametrize("programme", ["art", "vmmc"])
+def test_country_coverage_override_in_proportions_replaces_its_table(programme):
+    sim = build_sim(sim_pars(sim=TESTLAND_SIM, country=TESTLAND, **{programme: dict(coverage=0.37)}))
+    sim.init(verbose=0)
+    module = sim.interventions[programme]
+    assert module.coverage_format == "p"
+    assert np.all(module.coverage == 0.37)
+
+
 @pytest.mark.parametrize("override", [
+    dict(art=dict(coverage=50_000)),
     dict(art=dict(coverage=dict(year=[2000, 2020], value=[10_000, 80_000]))),
     dict(vmmc=dict(coverage=dict(year=[2000, 2020], value=[0, 50_000]))),
-    dict(hiv_test=dict(test_prob_data=0.5)),
 ])
-def test_country_rejects_programme_overrides(override):
-    with pytest.raises(ValueError, match="country"):
+def test_country_rejects_coverage_overrides_in_counts(override):
+    with pytest.raises(ValueError, match="proportion"):
         build_sim(sim_pars(sim=TESTLAND_SIM, country=TESTLAND, **override))
+
+
+def test_country_rejects_hiv_test_override():
+    with pytest.raises(ValueError, match="country"):
+        build_sim(sim_pars(sim=TESTLAND_SIM, country=TESTLAND, hiv_test=dict(test_prob_data=0.5)))
 
 
 @pytest.mark.parametrize("name", ["eswatini", "zimbabwe"])
