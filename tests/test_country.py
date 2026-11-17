@@ -11,13 +11,13 @@ import stisim as sti
 
 from src.sim import build_sim, sim_pars
 
-TINY = dict(n_agents=500, start=2010, dur=1)
+TINY = dict(n_agents=500, start=2010, stop=2011)
 
 # testland's 1985 age structure is 60% under 15 and 4% aged 75 or over, in
 # people summing to 1,000,000, as UN WPP files count them. Its fertility is zero, and its mortality is zero
 # for women and 0.3 per year for men.
 TESTLAND = dict(name="testland", datafolder=Path(__file__).parent / "data")
-TESTLAND_SIM = dict(n_agents=2000, start=1985, dur=1)
+TESTLAND_SIM = dict(n_agents=2000, start=1985, stop=1986)
 STREAMS = ["hiv_test_fsw", "hiv_test_general", "hiv_test_low_cd4", "hiv_test_anc"]
 
 
@@ -146,7 +146,7 @@ def test_country_testing_streams_select_the_undiagnosed():
 
 def test_country_antenatal_stream_selects_undiagnosed_pregnant_women():
     # testland has no births, so this uses Zimbabwe's fertility
-    sim = build_sim(sim_pars(sim=dict(n_agents=2000, start=1985, dur=0.5), country=dict(name="zimbabwe")))
+    sim = build_sim(sim_pars(sim=dict(n_agents=2000, start=1985, stop=1985.5), country=dict(name="zimbabwe")))
     sim.run(verbose=0)
     pregnancy = sim.demographics.pregnancy
     first = eligible(sim, "hiv_test_anc")
