@@ -7,13 +7,13 @@ import pytest
 
 from src.sim import build_sim, sim_pars
 
-TINY = dict(n_agents=500, start=2010, dur=1)
+TINY = dict(n_agents=500, start=2010, stop=2011)
 
 # testland's 1985 age structure is 60% under 15 and 4% aged 75 or over, in
 # people summing to 1,000,000, as UN WPP files count them. Its fertility is zero, and its mortality is zero
 # for women and 0.3 per year for men.
 TESTLAND = dict(name="testland", datafolder=Path(__file__).parent / "data")
-TESTLAND_SIM = dict(n_agents=2000, start=1985, dur=1)
+TESTLAND_SIM = dict(n_agents=2000, start=1985, stop=1986)
 
 
 def run_testland():

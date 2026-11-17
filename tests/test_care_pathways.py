@@ -7,7 +7,7 @@ from src.sim import build_sim, sim_pars
 # antenatal RDT era from the first step, syphilis common and every presentation
 # tested, so each channel has care-seekers on every step
 SMALL = dict(
-    sim=dict(n_agents=2000, start=2010, dur=2),
+    sim=dict(n_agents=2000, start=2010, stop=2012),
     rdt_year=2010,
     syph=dict(init_prev=0.05),
     syph_latent=dict(init_prev=0.2),

@@ -95,6 +95,18 @@ def treated_this_step(treatment_names):
     return eligibility
 
 
+def tested_this_step(test_names):
+    """Agents any of *test_names* tested this step; absent tests are skipped."""
+    def contacts(sim):
+        uids = ss.uids()
+        for name in test_names:
+            test = sim.interventions.get(name)
+            if test is not None:
+                uids = uids | (test.ti_tested == sim.ti).uids
+        return uids
+    return contacts
+
+
 def syph_ulcer_eligibility(sim):
     """Anyone presenting with a genital ulcer, whatever is causing it.
 

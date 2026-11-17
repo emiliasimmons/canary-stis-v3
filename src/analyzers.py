@@ -123,6 +123,10 @@ class CascadeTracker(ss.Analyzer):
 
     def init_pre(self, sim):
         super().init_pre(sim)
+        # sti.Sim runs copies of the modules build_sim passed in, so read the sim's own
+        self._diseases = [sim.diseases[d.name] for d in self._diseases]
+        if self._prep is not None:
+            self._prep = sim.interventions[self._prep.name]
         self._tx_map = {
             dname: sim.interventions[tname]
             for dname, tname in self._treatment_names.items()
@@ -204,8 +208,8 @@ class CascadeTracker(ss.Analyzer):
             hd['treated'][ti] = len(hiv.on_art.uids)
 
         if self._prep is not None:
-            self._data['prep']['n_on_prep'][ti] = len(self._prep.on_prep.uids)
-            self._data['prep']['new_on_prep'][ti] = len((self._prep.ti_enrolled == ti).uids)
+            self._data['prep']['n_on_prep'][ti] = self._prep.results.n_on_prep[ti]
+            self._data['prep']['new_on_prep'][ti] = self._prep.results.new_prep[ti]
 
 
 class ExposureTracker(ss.Analyzer):
