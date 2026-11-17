@@ -1,0 +1,11 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+207,Is [NAME] your wife/partner?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REF → 209 SKIP IF FEMALE"
+208,Does [NAME] live in the household?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,SKIP IF FEMALE
+209,Do you have additional spouse(s)/partner(s) that live with you?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REF→ 212 SKIP IF FEMALE"
+210,How many additional spouses(s)/partner(s) live with you?,NUMBER OF ADDITIONAL PARTNERS ____ DON'T KNOW = -8 REFUSED = -9,ALL → 301 SKIP IF FEMALE
+211,Please enter name of your spouse/partner that lives with you.,NAME OF SPOUSE/PARTNER ____ DON'T KNOW = -8 REFUSED = 9,SKIP IF FEMALE
+212,How many wives/partners do you have who live elsewhere?,NUMBER OF ADDITIONAL SPOUSE(S)/PARTNERS_____ DON'TKNOW = -8 REFUSED = -9,ALL → 301 SKIP IF FEMALE
+213,Is your husband or partner living with you now or is he staying elsewhere?,LIVING TOGETHER = 1 STAYING ELSEWHERE = 2 DON'T KNOW = -8 REFUSE TO ANSWER = -9,"STAYING ELSEWHERE, DK, REFUSED →212"
+214,The household schedule listed [NAME OF HUSBAND/PARTNER] as your husband/partner who is living here. Is that correct?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+215,Please select the spouse/partner that lives with you.,,
+216,Please enter the name of your spouse/partner that lives with you.,NAME OF SPOUSE/PARTNER ____ DON'T KNOW = -8 REFUSED = 9,

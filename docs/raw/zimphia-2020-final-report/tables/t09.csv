@@ -1,0 +1,10 @@
+"Percent distribution of households by sex of head of household; median (quartile 1, quartile 3 [Q1, Q3]) size of household and median (Q1, Q3) number of children under 18 years of age, by residence, ZIMPHIA 2020.Characteristic.Characteristic.Characteristic","Percent distribution of households by sex of head of household; median (quartile 1, quartile 3 [Q1, Q3]) size of household and median (Q1, Q3) number of children under 18 years of age, by residence, ZIMPHIA 2020.Residence.Urban.Percent","Percent distribution of households by sex of head of household; median (quartile 1, quartile 3 [Q1, Q3]) size of household and median (Q1, Q3) number of children under 18 years of age, by residence, ZIMPHIA 2020.Residence.Urban.Number","Percent distribution of households by sex of head of household; median (quartile 1, quartile 3 [Q1, Q3]) size of household and median (Q1, Q3) number of children under 18 years of age, by residence, ZIMPHIA 2020.Residence.Rural.Percent","Percent distribution of households by sex of head of household; median (quartile 1, quartile 3 [Q1, Q3]) size of household and median (Q1, Q3) number of children under 18 years of age, by residence, ZIMPHIA 2020.Residence.Rural.Number","Percent distribution of households by sex of head of household; median (quartile 1, quartile 3 [Q1, Q3]) size of household and median (Q1, Q3) number of children under 18 years of age, by residence, ZIMPHIA 2020..Total.Percent","Percent distribution of households by sex of head of household; median (quartile 1, quartile 3 [Q1, Q3]) size of household and median (Q1, Q3) number of children under 18 years of age, by residence, ZIMPHIA 2020..Total.Number"
+Head of household,,,,,,
+Male,39.6,"1,239",47.0,"3,518",44.5,"4,757"
+Female,60.4,"1,890",53.0,"3,852",55.5,"5,742"
+Total,100.0,"3,129",100.0,"7,370",100.0,"10,499"
+Residence,Residence,Residence,Residence,Residence,,
+Characteristic,Urban,Urban,Rural,Rural,Total,Total
+Characteristic,Median,"Q1, Q3",Median,"Q1, Q3",Median,"Q1, Q3"
+Size of households,3,"2, 4",4,"2, 5",3,"2, 5"
+Number of children under 18 years of age,0,"0, 2",1,"0, 3",1,"0, 2"

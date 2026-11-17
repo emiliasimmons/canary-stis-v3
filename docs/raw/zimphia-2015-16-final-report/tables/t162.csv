@@ -1,0 +1,5 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+"Interviewer says: ""Now I will ask you about HIV care and Tuberculosis or TB.""","Interviewer says: ""Now I will ask you about HIV care and Tuberculosis or TB.""","Interviewer says: ""Now I will ask you about HIV care and Tuberculosis or TB.""",SKIP TO 901 IF NOT IN HIV CARE
+821,"At your last HIV medical care visit, were you asked if you had any of the following TB symptoms: cough, fever, night sweats and weight loss?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+822,"In the last 12 months, have you experienced any of the following TB symptoms: cough, fever, night sweats and weight loss?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"NO, DK, REFUSED → 901"
+823,"In the last 12 months, did you receive a chest x-ray or sputum test to look for TB? A sputum test is when the patient has to cough and collect the sample in a cup. SELECT ALL THAT APPLY.",CHEST X-RAY = A SPUTUM TEST = B NONE OF THESE = C DON'T KNOW = Y REFUSED = Z,"NONE, DK, REF → 901"

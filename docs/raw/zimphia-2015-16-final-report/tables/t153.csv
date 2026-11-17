@@ -1,0 +1,4 @@
+"MODULE 7: HIV TESTING Interviewer says: ""I would now like to ask you some questions about HIV testing.""","MODULE 7: HIV TESTING Interviewer says: ""I would now like to ask you some questions about HIV testing.""","MODULE 7: HIV TESTING Interviewer says: ""I would now like to ask you some questions about HIV testing.""","MODULE 7: HIV TESTING Interviewer says: ""I would now like to ask you some questions about HIV testing."""
+701,"Have you seen a doctor, clinical officer, or nurse in a health facility in the last 12 months?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF NO, DK, REFUSED→ 703"
+702,"During any of your visits to the health facility in the last 12 months, did a doctor, clinical officer, or nurse offer you an HIV test?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+703,Have you ever tested for HIV?,YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,"IF YES → 705 DK, REFUSED → 801"

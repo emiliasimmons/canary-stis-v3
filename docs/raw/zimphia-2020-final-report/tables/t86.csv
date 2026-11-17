@@ -1,0 +1,16 @@
+Characteristic,Men.Percentage who had sex before the age of 15 years,Men.Number,Women.Percentage who had sex before the age of 15 years,Women.Number,Total.Percentage who had sex before the age of 15 years,Total.Number
+Education,,,,,,
+No education,*,9,*,20,13.2,29
+Primary,13.4,415,8.8,560,11.1,975
+Secondary,8.4,960,2.6,"1,491",5.3,"2,451"
+More than secondary,3.0,80,1.0,89,2.1,169
+Wealth quintile,,,,,,
+Lowest,10.8,334,8.1,565,9.3,899
+Second,11.9,329,4.4,428,8.2,757
+Middle,11.6,324,4.6,385,8.3,709
+Fourth,5.3,220,1.4,393,3.0,613
+Highest,6.3,258,2.0,389,4.0,647
+Age,,,,,,
+15-19,15.2,518,7.1,675,10.8,"1,193"
+20-24,6.8,947,2.7,"1,485",4.7,"2,432"
+Total 15-24,9.4,"1,465",4.1,"2,160",6.6,"3,625"

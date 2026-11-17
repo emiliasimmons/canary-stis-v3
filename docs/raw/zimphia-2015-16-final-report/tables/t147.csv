@@ -1,0 +1,7 @@
+NO,QUESTIONS,CODING CATEGORIES,SKIPS
+501,"If you wanted a condom, would it be easy for you to get one?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+502,How old were you when you had sex for the very first time?,AGE IN YEARS _ _ NEVER HAD SEX = 96 DON'T KNOW = -8 REFUSED = -9,"NEVER, DK, REF → 601"
+503,"The first time you had sex, was a condom used?",YES = 1 NO = 2 DON'T KNOW = -8 REFUSED = -9,
+504,"The first time you had sex, was it because you wanted to or because you were you forced?",WANTED TO = 1 FORCED = 2 DON'T KNOW = -8 REFUSED = -9,"WANTED, DK, REF →505"
+505,"The first time you had sex, were you physically forced or were you pressured into having sex through harassment, threats or tricks?",PHYSICALLY FORCED = 1 PRESSURED = 2 DON'T KNOW = -8 REFUSED = -9,
+506,"People often have sex with different partners over their lifetime. In total, with how many different people have you had sex in the last 12 months? IF NONE CODE '00'. IF NUMBER OF PARTNERS IS GREATER THAN 100, WRITE ' 100'.",NUMBER OF PARTNERS IN LAST 12 MONTHS __ __ __ DON'T KNOW = -8 REFUSED = -9,IF 00 PARTNERS IN LAST 12 MONTHS → 601

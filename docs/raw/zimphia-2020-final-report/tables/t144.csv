@@ -1,0 +1,6 @@
+NO.,QUESTIONS,CODING CATEGORIES,SKIP PATTERNS
+510,"The last time you had sex with [INITIALS], was a condom used?",YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,
+511,"The last time you had sex with [INITIALS], did either of you drink alcohol beforehand?",ONLY I WAS DRINKING=1 ONLY PARTNER WAS DRINKING=2 BOTH WERE DRINKING=3 NEITHER=4 DON'T KNOW=-8 REFUSED=-9,
+512,Does [INITIALS] know your HIV status? HIV status could mean you are HIV negative or HIV positive.,YES=1 NO=2 DON'T KNOW=-8 REFUSED=-9,
+513,What is the HIV status of [INITIALS]? (Read responses aloud).,"He/she is positive (did not test together)=1 He/she is positive, tested together=2 He/she is negative (did not test together)=3 He/she is negative, tested together=4 DON'T KNOW STATUS=-8 REFUSED=-9",
+514,"Interviewer says: ""I will now ask you about the person you have had sex with previous to [INITIALS].""",,SKIP IF 503 <= 1 IF 503 > 1  504

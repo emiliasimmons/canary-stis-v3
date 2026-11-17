@@ -1,0 +1,21 @@
+"Percent distribution of care and treatment outcomes among HIV positive adults by mental health screening symptoms, ZIMPHIA 2020.Characteristic.Characteristic","Percent distribution of care and treatment outcomes among HIV positive adults by mental health screening symptoms, ZIMPHIA 2020.Screened likely depressive symptoms.Percentage","Percent distribution of care and treatment outcomes among HIV positive adults by mental health screening symptoms, ZIMPHIA 2020.Screened likely depressive symptoms.for Number","Percent distribution of care and treatment outcomes among HIV positive adults by mental health screening symptoms, ZIMPHIA 2020.2 Did not screen likely depressive symptoms.Percentage","Percent distribution of care and treatment outcomes among HIV positive adults by mental health screening symptoms, ZIMPHIA 2020.2 Did not screen likely depressive symptoms.Number","Percent distribution of care and treatment outcomes among HIV positive adults by mental health screening symptoms, ZIMPHIA 2020.for Screened likely generalized anxiety symptoms 3.Percentage","Percent distribution of care and treatment outcomes among HIV positive adults by mental health screening symptoms, ZIMPHIA 2020.for Screened likely generalized anxiety symptoms 3.for Number","Percent distribution of care and treatment outcomes among HIV positive adults by mental health screening symptoms, ZIMPHIA 2020.Did not screen likely for generalized anxiety symptoms.Percentage","Percent distribution of care and treatment outcomes among HIV positive adults by mental health screening symptoms, ZIMPHIA 2020.Did not screen likely for generalized anxiety symptoms.Number"
+HIV diagnosis and treatment status 1,,,,,,,,
+Unaware of HIV status,9.7,19,13.4,319,11.0,17,13.2,319
+Aware of HIV status and not on antiretroviral therapy (ART),4.3,9,2.5,60,6.2,10,2.4,58
+Aware of HIV status and on ART,86.1,185,84.1,"2,351",82.8,141,84.4,"2,396"
+Presence of a detectable antiretroviral (ARV),,,,,,,,
+Detectable,82.7,178,82.0,"2,282",78.7,133,82.4,"2,328"
+Not detectable,17.3,35,18.0,440,21.3,34,17.6,438
+Viral load suppression (VLS),,,,,,,,
+Yes,75.8,163,77.4,"2,171",72.4,124,77.6,"2,210"
+No,24.2,50,22.6,558,27.6,44,22.4,562
+Ever on ART,,,,,,,,
+Yes,95.7,174,98.1,"2,279",94.4,134,98.1,"2,319"
+No,4.3,7,1.9,40,5.6,7,1.9,39
+Retention (among those who reported ever initiating ART),,,,,,,,
+Reported current ART use 1,97.6,170,98.3,"2,245",96.0,129,98.3,"2,286"
+Reported initiating but not on ART at time of the survey 1,2.4,4,1.7,34,4.0,5,1.7,33
+Adherence (among those who reported current ART use),,,,,,,,
+Adherent,91.5,154,95.0,"2,129",92.9,120,94.8,"2,163"
+Non-adherent,8.5,14,5.0,105,7.1,9,5.2,110
+Total 15+,100.0,213,100.0,"2,730",100.0,168,100.0,"2,773"
