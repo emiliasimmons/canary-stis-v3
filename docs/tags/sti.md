@@ -9,7 +9,8 @@ description: Epidemiology, natural history, treatment, and prevalence of the fou
 
 ## Members
 
-### Decisions (1)
+### Decisions (2)
+- [Partner notification implementation](../pages/partner-notification-implementation.md) -- Current partners of every treated person are notified through upstream stisim PartnerNotification from intv_year, attendees get the POC panel, a syphilis test and an HIV test at one visit, and diagnosed partners join the same coverage-targeted ART as everyone else.
 - [Settings are hypothetical epidemics crossed by prevalence and phase](../pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, each an ensemble of simulations selected on prevalence at ages 15-49 in 2026, with STI and HIV biology shared and STI burden left to the model.
 
 ### Entries (46)

@@ -43,6 +43,7 @@
 - **Direct treatment**. Pathways A and C together, the HIV effect of treating curable STIs
   at the care-seeking door, reported separately for symptomatic and asymptomatic
   infections.
+- **Index**. A person whose STI treatment triggers notification of their sexual partners.
 - **Prevented fraction**. The proportion of incidence that an intervention, or one pathway
   of it, averts, out of the incidence that would occur without it.
 - **PAF**. Population attributable fraction: the proportion of incidence caused by a risk

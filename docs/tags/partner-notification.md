@@ -9,7 +9,8 @@ description: Tracing and notifying sexual partners of diagnosed individuals, its
 
 ## Members
 
-### Decisions (1)
+### Decisions (2)
+- [Partner notification implementation](../pages/partner-notification-implementation.md) -- Current partners of every treated person are notified through upstream stisim PartnerNotification from intv_year, attendees get the POC panel, a syphilis test and an HIV test at one visit, and diagnosed partners join the same coverage-targeted ART as everyone else.
 - [Pathway decomposition and arm design](../pages/pathway-decomposition-arm-design.md) -- Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm sharing one oral PrEP cascade with STI-triggered PrEP, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 
 ### Entries (18)

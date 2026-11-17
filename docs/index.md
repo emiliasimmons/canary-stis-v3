@@ -15,15 +15,15 @@ calibration site.
 - [coinfection](tags/coinfection.md) · 27 pages
 - [diagnostics](tags/diagnostics.md) · 22 pages
 - [economics](tags/economics.md) · 9 pages
-- [hiv](tags/hiv.md) · 177 pages
+- [hiv](tags/hiv.md) · 178 pages
 - [immunity](tags/immunity.md) · 3 pages
-- [modeling](tags/modeling.md) · 33 pages
-- [partner-notification](tags/partner-notification.md) · 20 pages
+- [modeling](tags/modeling.md) · 34 pages
+- [partner-notification](tags/partner-notification.md) · 21 pages
 - [phylogenetics](tags/phylogenetics.md) · 5 pages
 - [prep](tags/prep.md) · 32 pages
 - [rakai](tags/rakai.md) · 75 pages
 - [sexual-networks](tags/sexual-networks.md) · 83 pages
-- [sti](tags/sti.md) · 50 pages
+- [sti](tags/sti.md) · 51 pages
 - [study-concept](tags/study-concept.md) · 3 pages
 
 ## Syntheses
@@ -37,13 +37,14 @@ calibration site.
 
 ## Decisions
 
+- [Partner notification implementation](pages/partner-notification-implementation.md) -- Current partners of every treated person are notified through upstream stisim PartnerNotification from intv_year, attendees get the POC panel, a syphilis test and an HIV test at one visit, and diagnosed partners join the same coverage-targeted ART as everyone else.
 - [Pathway decomposition and arm design](pages/pathway-decomposition-arm-design.md) -- Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm sharing one oral PrEP cascade with STI-triggered PrEP, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 - [Settings are hypothetical epidemics crossed by prevalence and phase](pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, each an ensemble of simulations selected on prevalence at ages 15-49 in 2026, with STI and HIV biology shared and STI burden left to the model.
 
 ## Recent
 
+- 2026-11-17 [Partner notification implementation](pages/partner-notification-implementation.md)
 - 2026-11-17 [Zimbabwe DHS 2005-06, 2010-11 and 2015: men circumcised, by age](pages/dhs-zimbabwe-circumcision.md)
 - 2026-11-17 [Eswatini Population-based HIV Impact Assessment 3 2021 (SHIMS3 2021): Final Report](pages/shims3-2021-final-report.md)
 - 2026-11-17 [UNAIDS 2026 HIV estimates with uncertainty bounds, 1990-2025](pages/unaids-2026-hiv-estimates.md)
 - 2026-11-17 [Zimbabwe Population-based HIV Impact Assessment (ZIMPHIA) 2015-2016: Final Report](pages/zimphia-2015-16-final-report.md)
-- 2026-11-17 [Zimbabwe Population-based HIV Impact Assessment 2020 (ZIMPHIA 2020): Final Report](pages/zimphia-2020-final-report.md)
