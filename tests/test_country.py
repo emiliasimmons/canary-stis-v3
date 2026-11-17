@@ -10,7 +10,7 @@ from src.sim import build_sim, sim_pars
 TINY = dict(n_agents=500, start=2010, dur=1)
 
 # testland's 1985 age structure is 60% under 15 and 4% aged 75 or over, in
-# thousands summing to 1000. Its fertility is zero, and its mortality is zero
+# people summing to 1,000,000, as UN WPP files count them. Its fertility is zero, and its mortality is zero
 # for women and 0.3 per year for men.
 TESTLAND = dict(name="testland", datafolder=Path(__file__).parent / "data")
 TESTLAND_SIM = dict(n_agents=2000, start=1985, dur=1)
@@ -57,7 +57,6 @@ def test_country_takes_fertility_and_mortality_from_files():
 
 
 def test_country_population_counts_are_people():
-    # testland's age file records 1000 thousand people; the first record comes
-    # after one month of male deaths
+    # the first record comes after one month of male deaths
     sim = run_testland()
     assert sim.results.n_alive[0] == pytest.approx(1_000_000, rel=0.03)

@@ -56,7 +56,6 @@ from .interventions import (
 
 _DATA_DIR = Path(__file__).parent / "data"
 _SYPH_DX_PATH = _DATA_DIR / "syph_dx.csv"
-_WPP_PEOPLE_PER_UNIT = 1000
 
 # stisim's testing modules default stop to the run's last year and only act
 # while now < stop, so they would skip the final step. Syndromic and panel
@@ -511,12 +510,10 @@ def build_sim(pars):
         demographics = dict(demographics=[ss.Pregnancy(**pars.pregnancy), ss.Deaths(**pars.deaths)])
     else:
         # a location string has stisim build Pregnancy, Deaths and the starting
-        # People from the country's files; migration stays at stisim's default, off.
-        # UN WPP age structures count thousands of people, and age_scale converts
-        # the total_pop stisim derives from them to people.
-        demographics = dict(demographics=pars.country.name,
-                            datafolder=pars.country.datafolder,
-                            age_scale=_WPP_PEOPLE_PER_UNIT)
+        # People from the country's files, and sets total_pop from the age
+        # structure, which UN WPP counts in people; migration stays at stisim's
+        # default, off
+        demographics = dict(demographics=pars.country.name, datafolder=pars.country.datafolder)
 
     # sim settings go in as sim_pars: passed flat, sti.Sim would also route dt
     # to the diseases and reject them for arriving as built modules
