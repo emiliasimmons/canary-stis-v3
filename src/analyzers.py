@@ -245,6 +245,91 @@ class STIPrevalence1549(ss.Analyzer):
         return pd.DataFrame(rows)
 
 
+class NetworkSummary(ss.Analyzer):
+    """
+    Sexual network summary at ages 15-49 in one year, as JSON-ready aggregates.
+
+    Taken at the step nearest the start of year. Partner histograms are agent
+    counts in bins 0, 1, ... with the last bin open-ended. Lifetime partners
+    include sex-work partners, which stisim counts apart from the rest. New
+    partners in the last year are the rise in that count since the step nearest
+    the start of the year before. Debut quantiles are among those past their
+    debut age. Age gaps are male age minus female age in current stable and
+    casual partnerships, grouped by the female partner's age.
+    """
+
+    LIFETIME_BINS = 20
+    NEW_BINS = 10
+    DEBUT_QUANTILES = (10, 25, 50, 75, 90)
+    GAP_QUANTILES = (5, 25, 50, 75, 95)
+    FEMALE_AGE_GROUPS = dict(f15_20=(15, 20), f20_25=(20, 25), f25_50=(25, 50))
+
+    def __init__(self, year, name="network_summary"):
+        super().__init__(name=name)
+        self.year = year
+        self._ti_before = self._ti_snapshot = None
+        self._partners_before = None
+        self._summary = None
+
+    def init_results(self):
+        super().init_results()
+        yearvec = self.t.yearvec
+        nearest = lambda y: int(np.argmin(np.abs(yearvec - y)))
+        # a sim that ends before the year never takes the snapshot
+        if yearvec[0] <= self.year - 1 and self.year <= yearvec[-1]:
+            self._ti_before, self._ti_snapshot = nearest(self.year - 1), nearest(self.year)
+
+    def _lifetime_partners(self):
+        nw = self.sim.networks.structuredsexual
+        return np.asarray(nw.lifetime_partners.raw) + np.asarray(nw.lifetime_sw_partners.raw)
+
+    def step(self):
+        if self.ti == self._ti_before:
+            self._partners_before = self._lifetime_partners()
+        if self.ti == self._ti_snapshot:
+            self._summary = self._snapshot()
+
+    def _snapshot(self):
+        ppl, nw = self.sim.people, self.sim.networks.structuredsexual
+        adult = ppl.alive & (ppl.age >= 15) & (ppl.age < 50)
+        lifetime = self._lifetime_partners()
+        before = np.zeros_like(lifetime)
+        before[:len(self._partners_before)] = self._partners_before
+        new = lifetime - before
+
+        def histogram(values, top):
+            return np.bincount(np.minimum(values, top).astype(int), minlength=top + 1).tolist()
+
+        out = dict(year=self.year, lifetime_partners={}, new_partners_last_year={}, debut_age_quantiles={},
+                   risk_group={})
+        for sex in ("female", "male"):
+            uids = (adult & ppl[sex]).uids
+            out["lifetime_partners"][sex] = histogram(lifetime[uids], self.LIFETIME_BINS)
+            out["new_partners_last_year"][sex] = histogram(new[uids], self.NEW_BINS)
+            debut = np.asarray(nw.debut[uids])
+            debut = debut[np.asarray(ppl.age[uids]) >= debut]
+            out["debut_age_quantiles"][sex] = (np.percentile(debut, self.DEBUT_QUANTILES).tolist()
+                                               if len(debut) else None)
+            rg = np.asarray(nw.risk_group[uids])
+            out["risk_group"][sex] = [float(np.mean(rg == g)) if len(rg) else None
+                                      for g in range(nw.pars.n_risk_groups)]
+
+        e = nw.edges
+        current = (e.edge_type == nw.edge_types["stable"]) | (e.edge_type == nw.edge_types["casual"])
+        f_age = np.asarray(ppl.age[e.p2[current]])
+        gap = np.asarray(ppl.age[e.p1[current]]) - f_age
+        out["age_gap"] = {}
+        for key, (lo, hi) in self.FEMALE_AGE_GROUPS.items():
+            g = gap[(f_age >= lo) & (f_age < hi)]
+            out["age_gap"][key] = dict(n=int(len(g)),
+                                       quantiles=np.percentile(g, self.GAP_QUANTILES).tolist() if len(g) else None)
+        return out
+
+    def summary(self):
+        """The snapshot's aggregates, or None if the sim did not reach the year."""
+        return self._summary
+
+
 class InfectionTracker(ss.Analyzer):
     """
     Track per-agent STI infections for incidence analysis.

@@ -10,10 +10,11 @@ tolerance: 0.03
 # either sex, are resampled
 min_middle_group: 0.05
 
-# draws per country in each stage. The batch is sized from the pilot's landing
-# fractions so each country's mature cell gets about 30 landing draws (N ≈ 30 / p).
+# draws per country in each stage. One batch, no pilot: sized from 38.2's batch
+# landing fractions (21 of 110 Eswatini draws, 19 of 300 Zimbabwe), about 76
+# Eswatini and 25 Zimbabwe landing draws.
 stages:
-  pilot: {eswatini: 30, zimbabwe: 30}
+  batch: {eswatini: 400, zimbabwe: 400}
 
 ranges:
   prop_f0: [0.40, 0.94]
@@ -24,7 +25,8 @@ ranges:
   f2_conc: [0.09, 0.28]
   m1_conc: [0.13, 0.22]
   hiv_beta_m2f: [0.003, 0.012]
-  rel_init_prev: [0.1, 1.5]
+  rel_init_prev: [0.3, 1.5]
+  seed_year: [1993, 2000]
   syph_beta_m2f: [0.01, 0.12]
   ng_beta_m2f: [0.019, 0.33]
   ct_beta_m2f: [0.03, 0.16]

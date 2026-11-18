@@ -30,6 +30,7 @@ from .analyzers import (
     InfectionTracker,
     STIPrevalence1549,
     NetworkPositionTracker,
+    NetworkSummary,
     SusceptibilityExposureTracker,
     TreatmentLog,
 )
@@ -56,6 +57,7 @@ from .interventions import (
     CondomCounseling,
     FSWOutreach,
     GonorrheaTx,
+    HIVSeed,
     MagicCure,
     NotificationVisit,
     STIScreeningAtHIVTesting,
@@ -231,6 +233,7 @@ def sim_pars(**kwargs):
     Off-states are sentinels, not flags: ``intv_year=None`` (SOC throughout),
     ``care_seek_mult=1.0``, ``bundled_prevention=None``,
     ``fsw_outreach.rate=0.0``, ``prep.eligibility='none'``, ``magic_cure.year=None``,
+    ``hiv_seed.year=None`` (HIV seeded at the start),
     ``country.name=None`` (scalar birth and death rates, and the HIV programmes
     in ``hiv_test``, ``art`` and ``vmmc``), ``art.coverage=None`` and
     ``vmmc.coverage=None`` (the setup's coverage).
@@ -256,6 +259,9 @@ def sim_pars(**kwargs):
     pars.syph = sc.objdict(beta_m2f=0.18, rel_beta_f2m=0.5, init_prev=0.005)
     pars.tv = sc.objdict(beta_m2f=0.09, rel_beta_f2m=0.5, init_prev=0.05)
     pars.hiv = sc.objdict(beta_m2f=0.035, rel_beta_f2m=0.5, init_prev=0.05)
+    # None seeds HIV at the start; a year seeds it then instead, with the same
+    # init_prev or init_prev_data, and no HIV before it
+    pars.hiv_seed = sc.objdict(year=None)
 
     # Non-syphilitic genital ulcers (HSV-2, chancroid) at a fixed background
     # prevalence. Transmits nothing; widens the pool syndromic ulcer management
@@ -318,6 +324,8 @@ def sim_pars(**kwargs):
     pars.prep = sc.objdict(eligibility="none", start=None, coverage=0.30,
                            dur_months=3, prep_eff=0.8, prep_adh=1.0)
     pars.magic_cure = sc.objdict(year=None)
+    # the year NetworkSummary takes its snapshot; None leaves it out
+    pars.network_summary = sc.objdict(year=None)
     # Partner notification, POC arms only, from intv_year: None (off), or
     # dict(notify_rates=, attendance_rates=) in sti.pn_rates' shape, keyed by
     # partnership type (stable, casual), attendance optionally by partner sex.
@@ -530,7 +538,13 @@ def build_sim(pars):
     bv = sti.SimpleBV()
     # named 'gudp', not 'gud', so stisim's gud_syph auto-connector cannot match it
     gudp = sti.GUDPlaceholder(name="gudp", **pars.gudp)
-    hiv = sti.HIV(**pars.hiv)
+    hiv_seed = None
+    if pars.hiv_seed.year is None:
+        hiv = sti.HIV(**pars.hiv)
+    else:
+        hiv_seed = HIVSeed(pars.hiv_seed.year, init_prev=pars.hiv.init_prev,
+                           init_prev_data=pars.hiv.get("init_prev_data"))
+        hiv = sti.HIV(**dict(pars.hiv, init_prev=0, init_prev_data=None))
     diseases = [ng, ct, tp, tv, bv, gudp, hiv]
 
     ng_tx = GonorrheaTx(name="ng_tx", base_treat_eff=pars.ng_tx.treat_eff)
@@ -707,7 +721,7 @@ def build_sim(pars):
     # the screens read this step's HIV tests, PrEP reads the behavioral screen,
     # and testing precedes ART so agents diagnosed this step can start
     # treatment in it
-    tail = [magic_cure, *hiv_tests, hiv_test_pn, sti_screening, screen, prep, art, vmmc]
+    tail = [hiv_seed, magic_cure, *hiv_tests, hiv_test_pn, sti_screening, screen, prep, art, vmmc]
     interventions.extend(i for i in tail if i is not None)
 
     connectors = make_connectors(hiv, ng=ng, ct=ct, syph=tp, tv=tv, bv=bv, pars=pars.connectors)
@@ -729,6 +743,8 @@ def build_sim(pars):
         STIPrevalence1549(),
         ss.infection_log(),
     ]
+    if pars.network_summary.year is not None:
+        analyzers.append(NetworkSummary(year=pars.network_summary.year))
 
     if pars.country.name is None:
         demographics = dict(demographics=[ss.Pregnancy(**pars.pregnancy), ss.Deaths(**pars.deaths)])

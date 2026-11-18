@@ -46,9 +46,9 @@ the age gap between partners by female age group. Condom use by partnership type
 input and comes from the parameters. A model-features figure per country shows these for
 a few landing draws.
 
-One zebra batch runs 300 draws per country. At 38.2's batch landing fractions (21 landing
-of 110 Eswatini draws, 19 landing of 300 Zimbabwe draws) that gives about 57 Eswatini and 19 Zimbabwe landing
-draws, and the proportion of Zimbabwe draws inside its 38.2 landing HIV `beta_m2f` values of
+One zebra batch runs 400 draws per country. At 38.2's batch landing fractions (21
+landing of 110 Eswatini draws, 19 landing of 300 Zimbabwe draws) that gives about 76
+Eswatini and 25 Zimbabwe landing draws, and the proportion of Zimbabwe draws inside its 38.2 landing HIV `beta_m2f` values of
 0.004-0.0075 rises from about 16% under 38.2's range of 0.003-0.025 to about 39% under
 this one of 0.003-0.012.
 

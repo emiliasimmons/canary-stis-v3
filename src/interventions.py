@@ -4,9 +4,9 @@ Custom interventions for canary-stis.
 The NG/CT/TV diagnostic arm (syndromic management vs POC panel) and the syphilis
 pipeline are assembled in ``sim.build_sim`` from stock stisim classes; this
 module holds the classes with no stisim equivalent: a gonorrhea-treatment
-subclass fixing an initial-seeding NaN, the magic cure, the behavioral PrEP
-eligibility screen, and the demand-side levers (care-seeking scaler, condom
-counseling, FSW outreach).
+subclass fixing an initial-seeding NaN, the magic cure, a later HIV seed, the
+behavioral PrEP eligibility screen, and the demand-side levers (care-seeking
+scaler, condom counseling, FSW outreach).
 """
 
 import numpy as np
@@ -72,6 +72,38 @@ class MagicCure(ss.Intervention):
             else:
                 disease.clear_infection(to_cure)
                 disease.wipe_dates(to_cure)
+
+
+class HIVSeed(ss.Intervention):
+    """Seed HIV at the first step at or after year, as sti.HIV seeds it at the start.
+
+    sti.HIV's init_post draws its initial cases from init_prev, or from
+    init_prev_data scaled by rel_init_prev when given, and backdates their
+    infection by dist_ti_init_infected. This repeats that draw at year, so the
+    disease must be built with nobody seeded at the start.
+    """
+
+    def __init__(self, year, init_prev=None, init_prev_data=None, name="hiv_seed"):
+        super().__init__(name=name)
+        self.seed_year = year
+        self.init_prev = init_prev
+        self.init_prev_data = init_prev_data
+        self._seeded = False
+
+    def step(self):
+        if self._seeded or self.sim.now < self.seed_year:
+            return
+        self._seeded = True
+        hiv = self.sim.diseases.hiv
+        p = self.init_prev if self.init_prev_data is None else hiv.make_init_prev(data=self.init_prev_data)
+        hiv.pars.init_prev.set(p)
+        cases = hiv.pars.init_prev.filter()
+        ti = self.ti + hiv.pars.dist_ti_init_infected.rvs(cases).astype(int)
+        hiv.set_prognoses(cases, ti=ti)
+        diagnosed = hiv.pars.init_diagnosed.filter(cases)
+        hiv.diagnosed[diagnosed] = True
+        hiv.ti_diagnosed[diagnosed] = self.ti
+        hiv.ti_art[diagnosed] = self.ti
 
 
 class CondomCounseling(ss.Intervention):

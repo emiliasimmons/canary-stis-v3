@@ -29,6 +29,7 @@ PARAMETERS = dict(
     m1_conc=("network", "m1_conc"),
     hiv_beta_m2f=("hiv", "beta_m2f"),
     rel_init_prev=("hiv", "rel_init_prev"),
+    seed_year=("hiv_seed", "year"),
     syph_beta_m2f=("syph", "beta_m2f"),
     ng_beta_m2f=("ng", "beta_m2f"),
     ct_beta_m2f=("ct", "beta_m2f"),
@@ -40,8 +41,9 @@ def setting_pars(draw, country, **overrides):
     """sim_pars for one draw on a country setup, ending with 2026.
 
     draw maps names in PARAMETERS to values. HIV is seeded from the risk-group
-    table scaled by rel_init_prev, which replaces the scalar hiv.init_prev.
-    overrides are further sim_pars groups, applied last.
+    table scaled by rel_init_prev, which replaces the scalar hiv.init_prev, at
+    the start or, when the draw has one, at seed_year. overrides are further
+    sim_pars groups, applied last.
     """
     unknown = set(draw) - set(PARAMETERS)
     if unknown:
@@ -50,6 +52,7 @@ def setting_pars(draw, country, **overrides):
         country=dict(name=country),
         sim=dict(stop=STOP),
         hiv=dict(init_prev_data=pd.read_csv(HIV_SEED_PATH)),
+        network_summary=dict(year=SELECTION_YEAR),
     )
     for name, value in draw.items():
         group, key = PARAMETERS[name]
@@ -62,7 +65,8 @@ def summarize(sim):
 
     Prevalence and incidence are at ages 15-49. Each year's HIV prevalence is the
     mean of its monthly values. The prevalence-to-incidence ratio is in years.
-    STI prevalence is both sexes pooled.
+    STI prevalence is both sexes pooled. network is the selection year's
+    NetworkSummary.
     """
     year = np.floor(sim.t.yearvec).astype(int)
     years = np.arange(year[0], SELECTION_YEAR + 1)
@@ -85,6 +89,7 @@ def summarize(sim):
         years=years.tolist(),
         hiv_prevalence=hiv_prev.tolist(),
         **{f"hiv_incidence_{sex}": inc[sex].tolist() for sex in ("all", "female", "male")},
+        network=sim.analyzers["network_summary"].summary() if "network_summary" in sim.analyzers else None,
     )
     out.update({f"{d}_prevalence_2026": float(sti[d]) for d in sti.index})
     return out
