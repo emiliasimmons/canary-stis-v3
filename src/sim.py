@@ -38,6 +38,7 @@ from .diagnostics import (
     gate_poc,
     gate_soc,
     make_syph_tx_eligibility,
+    notification_indexes,
     seeking_care_any,
     seeking_care_uds,
     seeking_care_vds,
@@ -55,6 +56,7 @@ from .interventions import (
     FSWOutreach,
     GonorrheaTx,
     MagicCure,
+    NotificationVisit,
 )
 
 _DATA_DIR = Path(__file__).parent / "data"
@@ -192,6 +194,10 @@ def latent_seed_frame(init_prev, n_risk_groups=3):
     ])
 
 
+def _nobody(sim):
+    return ss.uids()
+
+
 def as_mask(eligibility):
     """Wrap a uids-returning eligibility as the boolean-array callable sti.Prep documents."""
     def fn(sim):
@@ -310,6 +316,12 @@ def sim_pars(**kwargs):
     pars.prep = sc.objdict(eligibility="none", start=None, coverage=0.30,
                            dur_months=3, prep_eff=0.8, prep_adh=1.0)
     pars.magic_cure = sc.objdict(year=None)
+    # Partner notification, POC arms only, from intv_year: None (off), or
+    # dict(notify_rates=, attendance_rates=) in sti.pn_rates' shape, keyed by
+    # partnership type (stable, casual), attendance optionally by partner sex.
+    # Partnership types left out, one-off and sex work among them, are never
+    # notified.
+    pars.pn = None
 
     pars.connectors = sc.objdict(
         hiv_ng=sc.objdict(),
@@ -467,6 +479,23 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
         confirm_name = "syph_anc_confirm"
         intvs.extend([symp_test_poc, anc_confirm])
 
+        if pars.pn is not None:
+            # notified partners are mostly in early syphilis, where the
+            # non-treponemal RPR is sensitive, and it reads negative after a
+            # cure, where the treponemal dual test would re-treat; it tests
+            # only the attendees partner notification passes it
+            pn_test = sti.SyphTest(
+                name="syph_pn_test", label="syph_pn_test",
+                product=product("rpr", label="syph_dx_rpr_pn"),
+                test_prob_data=1.0,
+                eligibility=_nobody,
+                stop=_NO_STOP,
+                dt_scale=False,
+            )
+            pn_test.start = intv_year
+            treat_tests.append("syph_pn_test")
+            intvs.append(pn_test)
+
     syph_tx = sti.SyphTx(
         name="syph_tx", label="syph_tx",
         eligibility=make_syph_tx_eligibility(
@@ -567,6 +596,26 @@ def build_sim(pars):
 
     # TreatmentLog first: it snapshots infection status before any treatment
     interventions = [TreatmentLog()] + detection + treatments
+
+    hiv_test_pn = None
+    if pars.pn is not None:
+        if not use_poc:
+            raise ValueError("partner notification acts on POC diagnoses; set intv_year")
+        # after the NG/CT/TV treatments, so this step's are indexes, and before
+        # syph_tx, so syphilis-positive attendees are treated this step
+        interventions.append(NotificationVisit(
+            name="pn", label="pn",
+            eligibility=gate_poc(notification_indexes, use_poc, intv_year),
+            pars=dict(
+                p_notify_current=ss.bernoulli(p=sti.pn_rates(pars.pn["notify_rates"])),
+                p_attends_current=ss.bernoulli(p=sti.pn_rates(pars.pn["attendance_rates"])),
+                p_notify_previous=ss.bernoulli(p=0),
+                p_attends_previous=ss.bernoulli(p=0),
+            ),
+        ))
+        hiv_test_pn = sti.HIVTest(name="hiv_test_pn", label="hiv_test_pn",
+                                  test_prob_data=1.0, dt_scale=False, eligibility=_nobody)
+        hiv_test_pn.stop = _NO_STOP
     interventions.extend(_syphilis_pipeline(pars, use_poc, intv_year))
 
     if not isinstance(pars.care_seek_mult, (int, float)) or float(pars.care_seek_mult) != 1.0:
@@ -635,7 +684,7 @@ def build_sim(pars):
 
     # the screen reads this step's HIV tests, PrEP reads the screen, and testing
     # precedes ART so agents diagnosed this step can start treatment in it
-    tail = [magic_cure, *hiv_tests, screen, prep, art, vmmc]
+    tail = [magic_cure, *hiv_tests, hiv_test_pn, screen, prep, art, vmmc]
     interventions.extend(i for i in tail if i is not None)
 
     connectors = make_connectors(hiv, ng=ng, ct=ct, syph=tp, tv=tv, bv=bv, pars=pars.connectors)

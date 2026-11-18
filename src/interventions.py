@@ -273,6 +273,30 @@ class BehavioralScreen(ss.Intervention):
         return
 
 
+class NotificationVisit(sti.PartnerNotification):
+    """Partner notification whose attendees get the POC panel, a syphilis test and an HIV test.
+
+    Upstream ``notify_attendees`` schedules one test, and separate notification
+    instances would draw attendees independently, so a partner could get the
+    panel without the HIV test. The visit runs all three on the same attendees
+    in the index's treatment month. The modules are looked up by name because
+    the sim runs copies of the objects built in ``build_sim``.
+    """
+
+    VISIT = ("panel", "syph_pn_test", "hiv_test_pn")
+
+    def notify_attendees(self, uids):
+        hiv = self.sim.diseases.hiv
+        for name in self.VISIT:
+            test_uids = uids[~hiv.diagnosed[uids]] if name == "hiv_test_pn" else uids
+            if len(test_uids):
+                test = self.sim.interventions[name]
+                test.step(uids=test_uids)
+                # upstream stamps ti_tested only on testers it picks itself, and
+                # new_tests counts from it
+                test.ti_tested[test_uids] = self.ti
+
+
 class CareSeekScaler(ss.Intervention):
     """Scale symptomatic care-seeking from ``start`` on (care-seeking lever).
 

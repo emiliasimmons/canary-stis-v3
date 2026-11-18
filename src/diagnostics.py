@@ -95,6 +95,17 @@ def treated_this_step(treatment_names):
     return eligibility
 
 
+def notification_indexes(sim):
+    """People whose NG/CT/TV treatment fired this step, or syphilis treatment last step.
+
+    Partner notification runs before syph_tx in each step, so a syphilis
+    treatment makes its index the step after.
+    """
+    ti = sim.ti
+    uids = treated_this_step(["ng_tx", "ct_tx", "metronidazole"])(sim)
+    return uids | (sim.interventions.syph_tx.ti_treated == ti - 1).uids
+
+
 def tested_this_step(test_names):
     """Agents any of *test_names* tested this step; absent tests are skipped."""
     def contacts(sim):
