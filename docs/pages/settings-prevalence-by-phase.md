@@ -3,7 +3,7 @@ type: decision
 title: Settings are hypothetical epidemics crossed by prevalence and phase
 description: Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, each an ensemble of simulations selected on prevalence at ages 15-49 in 2026, with STI and HIV biology shared and STI burden left to the model.
 tags: [hiv, sti, modeling, study-concept]
-updated: 2026-11-17 11:26
+updated: 2026-11-17 19:04
 ---
 
 The study runs four settings: high (about 25%) or medium (about 15%) HIV prevalence, each
@@ -68,14 +68,21 @@ ART coverage is by sex and age and VMMC coverage by age. Both enter as coverage
 proportions, which scale with each simulation's own epidemic: an explored simulation's
 prevalence differs from the real country's, and a real count of people on ART could exceed
 the people living with HIV in a low-prevalence run. Viral suppression among people on ART
-stays at stisim's default, with everyone on ART suppressed, until measured series are
-sourced for both countries.
+follows each country's survey measurements by sex, as in [hivsim_eswatini](hivsim-eswatini.md),
+with the first survey's value held back to 1985. Eswatini's women and men were 91.8% and
+90.5% suppressed in 2016 and 95.9% and 96.7% in 2021, Zimbabwe's 87.0% and 82.5% in 2016
+and 91.0% and 89.0% in 2020. stisim's default of everyone on ART suppressed overstated
+Eswatini's population suppression by 8.8 percentage points in 2016 in hivsim_eswatini,
+which favours prevention over treatment in any comparison between them.
 
 HIV testing is shared by both countries: four streams (sex workers, general population,
-CD4 below 200, antenatal). The first three ramp linearly from 0 in 1990 to 0.75, 0.5 and
-0.85 in 2020 respectively, as both source models set them by hand, and the antenatal
-stream is held at 0.9, Eswatini's value. A difference between countries in
-partner-notification yield then cannot come from testing.
+CD4 below 200, antenatal). The first three are annual testing probabilities among people
+not yet diagnosed, ramping linearly from 0 in 1990 to 0.75, 0.5 and 0.85 in 2020 as both
+source models set them by hand, then to 0.85, 0.6 and 0.95 in 2040 as hivsim_eswatini
+continues them. None has a lower age limit. The antenatal stream, Eswatini's, tests an
+undiagnosed pregnant woman with probability 0.9 in each month of the first trimester, so
+nearly every pregnancy is tested. A difference between countries in partner-notification
+yield then cannot come from testing.
 
 Each prevalence level resembles a real country's epidemic, which the settings have to be
 recognisable as. The cost is that the high-versus-medium contrast also carries
