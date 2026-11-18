@@ -43,8 +43,8 @@ calibration site.
 
 ## Recent
 
+- 2026-11-17 [Pathway decomposition and arm design](pages/pathway-decomposition-arm-design.md)
 - 2026-11-17 [Partner notification implementation](pages/partner-notification-implementation.md)
 - 2026-11-17 [hivsim_eswatini: STIsim HIV model of Eswatini](pages/hivsim-eswatini.md)
 - 2026-11-17 [sti_notification](pages/sti-notification-zimbabwe-model.md)
 - 2026-11-17 [Zimbabwe DHS 2005-06, 2010-11 and 2015: men circumcised, by age](pages/dhs-zimbabwe-circumcision.md)
-- 2026-11-17 [Eswatini Population-based HIV Impact Assessment 3 2021 (SHIMS3 2021): Final Report](pages/shims3-2021-final-report.md)

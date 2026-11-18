@@ -3,7 +3,7 @@ type: decision
 title: Pathway decomposition and arm design
 description: Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm sharing one oral PrEP cascade with STI-triggered PrEP, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 tags: [study-concept, modeling, diagnostics, partner-notification, prep, hiv]
-updated: 2026-11-17 11:27
+updated: 2026-11-17 19:03
 ---
 
 The study reports four pathways from point-of-care STI diagnostics to HIV incidence:
@@ -90,11 +90,17 @@ STI signal than real screening has.
 Both PrEP arms share one delivery cascade, so comparing them measures who each rule
 selects. The product is daily oral PrEP, the only product with delivered uptake and
 persistence data from Eastern and Southern Africa in the
-[PrEP synthesis](prep-delivered-vs-efficacy.md). Each offer starts PrEP with probability
-0.30, the routine uptake measured in SEARCH (27%,
-[Koss 2020](koss-2020-prep-uptake-adherence-search.md)) and a Kampala AGYW cohort (30.6%,
-[Mayanja 2022](mayanja-2022-prep-uptake-agyw-kampala.md)). A course lasts 3 months and
-then ends, and a person restarts only at a new offer. Efficacy while on PrEP is 0.80.
+[PrEP synthesis](prep-delivered-vs-efficacy.md). Uptake is set at 0.30, the routine
+uptake measured in SEARCH (27%, [Koss 2020](koss-2020-prep-uptake-adherence-search.md))
+and a Kampala AGYW cohort (30.6%, [Mayanja 2022](mayanja-2022-prep-uptake-agyw-kampala.md)).
+The model applies it as a coverage target, the way [hivsim_eswatini](hivsim-eswatini.md)
+runs PrEP: each month the people offered PrEP that month are topped up until 30% of them
+are on PrEP, starting those with the highest score on a fixed random willingness. Offered
+people already partway through a course count toward the 30%, and the target rounds down,
+so about 20-27% of offered people start and a month with 3 or fewer offers starts nobody.
+Experiments report uptake as the proportion of offered people who start. A course lasts 3
+months and then ends, and a person restarts only at a new offer. Efficacy while on PrEP is
+0.80.
 
 The model runs PrEP through stisim's `sti.Prep`, and the course length and efficacy are
 its defaults, kept for simplicity. A 3-month course sits near the 2.5-month median time on
@@ -102,9 +108,9 @@ drug in Kampala and the 20% still on PrEP at 6 months in POWER
 ([Celum 2022](celum-2022-power-prep-agyw.md)). An efficacy of 0.80 is above the 54%
 reduction pooled across real adherence levels and the 73% at adherence of 70% or more
 ([Chou 2019](chou-2019-prep-systematic-review.md)), so both PrEP arms give each user more
-protection than delivered adherence supports, and by the same factor. Who accepts an offer
-is set by a fixed per-person willingness score drawn at random, so uptake is unrelated to
-risk and a person who declines once tends to decline again. Uptake, persistence, and
+protection than delivered adherence supports, and by the same factor. Because willingness
+is random and fixed for life, uptake is unrelated to risk and a person who declines once
+tends to decline again. Uptake, persistence, and
 uptake that varies with risk are left for exploration (issue 22).
 
 ## Figures
