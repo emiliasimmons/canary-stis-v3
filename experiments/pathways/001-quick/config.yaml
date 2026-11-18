@@ -37,7 +37,7 @@ labels:
   5_poc_sti_prep: POC + STI-triggered PrEP
   6_poc_sti_prep_pn: POC + STI-triggered PrEP + notification
   7_poc_screening: POC + screening at HIV testing
-  2_soc_behavioral_prep: SOC + behavioral PrEP
+  2_soc_behavioral_prep: SOC + idealized behavioral PrEP
   8_soc_magic_cure: SOC + Magic cure
 # arms drawn in grey in Fig 4
 broken: []
