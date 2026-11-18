@@ -132,16 +132,17 @@ HIV_TEST_ANC_PROB = 0.9
 HIV_TEST_NAMES = ["hiv_test", *(f"hiv_test_{stream}" for stream in HIV_TEST_RAMPS), "hiv_test_anc"]
 
 
-def country_hiv_tests():
-    """The four HIV testing streams every country setup shares."""
+def country_hiv_tests(delay=0.0):
+    """The four HIV testing streams every country setup shares, ramps moved later by delay."""
+    ramp_years = np.add(HIV_TEST_RAMP_YEARS, delay)
     # HIVTest takes the listed year nearest the current one, so the ramps go in
     # annually
-    years = np.arange(HIV_TEST_RAMP_YEARS[0], HIV_TEST_RAMP_YEARS[-1] + 1)
+    years = np.arange(ramp_years[0], ramp_years[-1] + 1)
     tests = [
         sti.HIVTest(
             name=f"hiv_test_{stream}", label=f"hiv_test_{stream}",
             years=years,
-            test_prob_data=np.interp(years, HIV_TEST_RAMP_YEARS, ramp["prob"]),
+            test_prob_data=np.interp(years, ramp_years, ramp["prob"]),
             eligibility=ramp["eligibility"],
         )
         for stream, ramp in HIV_TEST_RAMPS.items()
@@ -200,6 +201,17 @@ def stretched_coverage(coverage, stretch):
     return stretched
 
 
+def delayed_coverage(coverage, years, programme):
+    """A coverage table with every year moved later by years."""
+    if years == 0:
+        return coverage
+    if not isinstance(coverage, pd.DataFrame):
+        raise ValueError(f"hiv_delay moves the {programme} coverage table's years and needs a table")
+    delayed = coverage.copy()
+    delayed["Year"] = delayed.Year + years
+    return delayed
+
+
 def latent_seed_frame(init_prev, n_risk_groups=3):
     """One row per risk group, sex and sex-work status, all at the same rate.
 
@@ -248,7 +260,7 @@ def sim_pars(**kwargs):
     Off-states are sentinels, not flags: ``intv_year=None`` (SOC throughout),
     ``care_seek_mult=1.0``, ``bundled_prevention=None``,
     ``fsw_outreach.rate=0.0``, ``prep.eligibility='none'``, ``magic_cure.year=None``,
-    ``hiv_seed.year=None`` (HIV seeded at the start),
+    ``hiv_seed.year=None`` (HIV seeded at the start), ``hiv_delay.years=0``,
     ``country.name=None`` (scalar birth and death rates, and the HIV programmes
     in ``hiv_test``, ``art`` and ``vmmc``), ``art.coverage=None`` and
     ``vmmc.coverage=None`` (the setup's coverage).
@@ -331,6 +343,11 @@ def sim_pars(**kwargs):
     # being the table's first year, with coverage values unchanged.
     pars.art = sc.objdict(coverage=None, stretch=1.0)
     pars.vmmc = sc.objdict(coverage=None)
+    # hiv_delay.years moves the HIV epidemic and its programmes later in
+    # calendar time: the HIV seed (from the start when hiv_seed.year is None),
+    # the ART coverage table after any stretch, viral suppression on ART, the
+    # VMMC table and the HIV testing ramps
+    pars.hiv_delay = sc.objdict(years=0.0)
     # Daily oral PrEP cascade, sti.Prep. Eligibility is who is offered PrEP this
     # step: 'none' (off), 'dx' (STI treatment fired this step, pathway D), or
     # 'behavioral' (qualified on the national eligibility screen at an HIV
@@ -556,10 +573,12 @@ def build_sim(pars):
     # named 'gudp', not 'gud', so stisim's gud_syph auto-connector cannot match it
     gudp = sti.GUDPlaceholder(name="gudp", **pars.gudp)
     hiv_seed = None
-    if pars.hiv_seed.year is None:
+    delay = pars.hiv_delay.years
+    if pars.hiv_seed.year is None and delay == 0:
         hiv = sti.HIV(**pars.hiv)
     else:
-        hiv_seed = HIVSeed(pars.hiv_seed.year, init_prev=pars.hiv.init_prev,
+        seed_year = pars.hiv_seed.year if pars.hiv_seed.year is not None else pars.sim.start
+        hiv_seed = HIVSeed(seed_year + delay, init_prev=pars.hiv.init_prev,
                            init_prev_data=pars.hiv.get("init_prev_data"))
         hiv = sti.HIV(**dict(pars.hiv, init_prev=0, init_prev_data=None))
     diseases = [ng, ct, tp, tv, bv, gudp, hiv]
@@ -710,7 +729,7 @@ def build_sim(pars):
     else:
         if pars.hiv_test != sim_pars().hiv_test:
             raise ValueError("'hiv_test' is set by the country setup; leave it at its default when country.name is set")
-        hiv_tests = country_hiv_tests()
+        hiv_tests = country_hiv_tests(delay)
         art_coverage = (country_coverage(country, "art") if art_coverage is None
                         else proportion_coverage(art_coverage, "art", "art.coverage"))
         vmmc_coverage = (country_coverage(country, "vmmc") if vmmc_coverage is None
@@ -719,11 +738,14 @@ def build_sim(pars):
     vls = None
     if country.name is not None:
         vls_path = Path(country.datafolder) / f"{country.name}_vls.csv"
-        vls = proportion_coverage(pd.read_csv(vls_path), "vls", vls_path)
+        vls = delayed_coverage(proportion_coverage(pd.read_csv(vls_path), "vls", vls_path),
+                               delay, "vls")
     art_pars = dict(pars.art)
-    art_coverage = stretched_coverage(art_coverage, art_pars.pop("stretch"))
+    art_coverage = delayed_coverage(stretched_coverage(art_coverage, art_pars.pop("stretch")),
+                                    delay, "art")
     art = sti.ART(**dict(art_pars, coverage=art_coverage), vls_coverage=vls)
-    vmmc = sti.VMMC(coverage=vmmc_coverage) if vmmc_coverage is not None else None
+    vmmc = (sti.VMMC(coverage=delayed_coverage(vmmc_coverage, delay, "vmmc"))
+            if vmmc_coverage is not None else None)
 
     sti_screening = None
     if pars.sti_screening is not None:
