@@ -1,39 +1,33 @@
 # Settings status
 
-No experiment has run. The first experiment sets the agent count and replicate count from
-the model's measured run time and run-to-run variance, through calib's `model-setup`
-(story 18 on issue 1).
+The first approach to the parameter exploration closed on its 60-draw pilot
+([38_explore_parameters](38_explore_parameters/SUMMARY.md)). On the network, HIV and STI
+ranges in its [config.yaml](38_explore_parameters/config.yaml), 9 of 30 Eswatini draws
+land in the high cell, all as mature epidemics, and no Zimbabwe draw falls below 18.9%
+HIV prevalence at 15-49 in 2026. Every draw carries 2026 syphilis prevalence at 15-49 of
+25-45%, including at the lowest syphilis beta. Issue 38 stays open for the next approach.
 
-Questions that depend on simulation results, and are settled by experiments on this
-track:
+What the next approach needs settled before it draws:
 
-- What produces a mature or an expanding epidemic at the same prevalence and country
-  setup: the HIV seed year, the network, or both. ART, VMMC and HIV testing are fixed by
-  the country setup and shared testing streams.
-- Which network parameters separate the settings, condom use included. Risk-group
-  proportions and concurrency are the first candidates. Issue 5 compares the Eswatini
-  model's network inputs with this model's defaults.
-- How HIV is seeded.
-- Which setting the shared STI transmission parameters are first set on, given that the
-  current values were set by hand on the default network and moving the network moves STI
-  prevalence.
-- Whether the shared biology and care parameters are fixed at single values or explored
-  over the same ranges for every setting. Fixed is the current lean.
+- An HIV `beta_m2f` range reaching down to Zimbabwe's target of 15% HIV prevalence at
+  15-49 in 2026. The pilot's lowest `beta_m2f`, 0.0086, gave 19% in a Zimbabwe draw, and
+  HIV `beta_m2f` drives 2026 prevalence more than any other parameter (rank correlation
+  0.77 over the 60 draws).
+- What can produce an expanding epidemic. HIV incidence at 15-49 takes off within three years of 1985
+  in nearly every pilot draw, and `rel_init_prev` over 0.1-1.5 moves the peak earlier but
+  barely moves 2026 prevalence.
+
+Measured for planning: a simulation at 10,000 agents from 1985 to the end of 2026 takes
+about 165 s, so 60 run in about 10 minutes on the laptop's 18 workers. A batch sized by
+the issue's rule (about 30 landing draws in the hardest cell) goes to Coiled. The
+experiment workflow covers VM runs only, so `run.py`'s dispatch and the return of results
+to `outputs/` still have to be adapted for it.
+
+The tools the next approach reuses are in `src/settings.py`: `setting_pars` builds a
+draw's simulation with HIV seeded from the risk-group table, and `summarize` returns its
+2026 outcomes and annual curves. STI prevalence at 15-49 is the `sti_prevalence_15_49`
+analyzer.
 
 To watch: each country's simulations fill only that country's cells, so a Zimbabwe
-simulation reaching high prevalence is discarded. If many are, letting either country fill
-either cell (with country recorded on each simulation) may be the better rule.
-
-Simulations start in 1985 and select their demographics with
-`sim_pars(country=dict(name="eswatini"))` or `"zimbabwe"`: the 1985 age structure,
-fertility, and mortality with HIV deaths removed, from UN WPP files in `src/data`
-(`scripts/download_wpp.py`, `scripts/remove_hiv_mortality.py`). HIV is still seeded at the
-simulation start.
-
-Phase is judged from `sim.analyzers.hiv_incidence_15_49.annual()`: HIV incidence at ages
-15-49 per 100 person-years by year, pooled and by sex. Prevalence at 15-49 is stisim's
-`hiv.prevalence_15_49` result.
-
-Before the first exploration: the per-pathogen STI-to-HIV multipliers (issue 12), the
-model change that loads country ART and VMMC coverage and the four shared testing streams
-(issue 18), and Zimbabwe's coverage data (issue 17).
+simulation reaching high prevalence is discarded. 3 of the pilot's 30 Zimbabwe draws
+landed in the high cell.
