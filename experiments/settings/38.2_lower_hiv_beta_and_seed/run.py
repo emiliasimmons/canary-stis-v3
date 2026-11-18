@@ -142,18 +142,27 @@ def plot(df):
     fig.savefig(FIGURES / "prevalence_2026.png", dpi=150)
     plt.close(fig)
 
+    plot_curves(df, "hiv_incidence_all", 1, "HIV incidence at 15-49 per 100 PY", "incidence_curves.png")
+    plot_curves(df, "hiv_prevalence", 100, "HIV prevalence at 15-49 (%)", "prevalence_curves.png", band=True)
+
+
+def plot_curves(df, column, scale, ylabel, name, band=False):
+    """Annual curves per country, landing draws in blue, the target band shaded if band."""
+    countries, tol = CONFIG["countries"], CONFIG["tolerance"]
     fig, axes = plt.subplots(1, len(countries), figsize=(10, 3.5), sharey=True)
     for ax, (country, spec) in zip(axes, countries.items()):
         sub = df[df.country == country]
         for _, row in sub.iterrows():
             lands = abs(row.hiv_prevalence_2026 - spec["target"]) <= tol
-            ax.plot(row.years, row.hiv_incidence_all, lw=1.2 if lands else 0.5,
+            ax.plot(row.years, np.asarray(row[column]) * scale, lw=1.2 if lands else 0.5,
                     color="tab:blue" if lands else "0.75", zorder=2 if lands else 1)
+        if band:
+            ax.axhspan(100 * (spec["target"] - tol), 100 * (spec["target"] + tol), color="tab:blue", alpha=0.15)
         ax.set_title(f"{country.title()}: landing draws in blue")
         ax.set_xlabel("Year")
-    axes[0].set_ylabel("HIV incidence at 15-49 per 100 PY")
+    axes[0].set_ylabel(ylabel)
     fig.tight_layout()
-    fig.savefig(FIGURES / "incidence_curves.png", dpi=150)
+    fig.savefig(FIGURES / name, dpi=150)
     plt.close(fig)
 
 
