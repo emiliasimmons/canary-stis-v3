@@ -36,6 +36,9 @@ Two places carry state between sessions:
   Link issues that wait on others with GitHub's native blocking relationship.
 - `experiments/<track>/STATUS.md` holds what the track's next experiment needs.
 
+Files in the repository link only to other files in the repository, never to GitHub
+issues.
+
 `docs/ledger.md` stays unused. Where a canonize skill would write to the ledger, write to
 an issue instead.
 
