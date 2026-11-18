@@ -1,10 +1,12 @@
 """
 Exp 38.3: Latin hypercube draws over the 14 explored parameters, one run each, per
 country, appended to outputs/results.jsonl as each finishes. Each result carries
-the draw's 2026 network summary.
+the draw's 2026 network summary. --network reruns landing draws on their batch seeds
+with the current network summary, for the model-features figures.
 
     uv run python experiments/settings/38.3_seed_year_lower_sti_beta/run.py --stage batch --workers 80
     uv run python experiments/settings/38.3_seed_year_lower_sti_beta/run.py --plot-only
+    uv run python experiments/settings/38.3_seed_year_lower_sti_beta/run.py --network 10
 
 A stage's draws are fixed by its name, so rerunning a stage skips the draws
 already in the results and runs the rest.
@@ -37,6 +39,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 CONFIG = yaml.safe_load((HERE / "config.yaml").read_text())
 RESULTS = HERE / "outputs" / "results.jsonl"
 FAILURES = HERE / "outputs" / "failures.jsonl"
+NETWORK = HERE / "outputs" / "network.jsonl"
 FIGURES = HERE / "figures"
 
 
@@ -128,7 +131,7 @@ def plot(df):
     FIGURES.mkdir(exist_ok=True)
     countries, tol = CONFIG["countries"], CONFIG["tolerance"]
 
-    fig, axes = plt.subplots(1, len(countries), figsize=(10, 3.5), sharey=True)
+    fig, axes = plt.subplots(1, len(countries), figsize=(10, 3.8), sharey=True, layout="constrained")
     for ax, (country, spec) in zip(axes, countries.items()):
         prev = df[df.country == country].hiv_prevalence_2026 * 100
         ax.hist(prev, bins=np.arange(0, 51, 2), color="0.5")
@@ -136,17 +139,24 @@ def plot(df):
         ax.set_title(f"{country.title()} (n = {len(prev)})")
         ax.set_xlabel("HIV prevalence at 15-49 in 2026 (%)")
     axes[0].set_ylabel("Draws")
-    fig.tight_layout()
-    fig.savefig(FIGURES / "prevalence_2026.png", dpi=150)
-    plt.close(fig)
+    save(fig, 3, "prevalence_2026", "HIV prevalence at 15-49 in 2026, each country's cell shaded")
 
-    plot_curves(df, "hiv_incidence_all", 1, "HIV incidence at 15-49 per 100 PY", "incidence_curves.png")
-    plot_curves(df, "hiv_prevalence", 100, "HIV prevalence at 15-49 (%)", "prevalence_curves.png", band=True)
+    plot_curves(df, "hiv_incidence_all", 1, "HIV incidence at 15-49 per 100 PY", 1, "incidence_curves",
+                "HIV incidence at 15-49 by year, landing draws in blue")
+    plot_seed_peak(df)
     plot_beta_prevalence(df)
     plot_sti_bands(df)
-    plot_seed_peak(df)
-    for country in countries:
-        plot_network(df, country)
+    for n, country in enumerate(countries, 6):
+        plot_model_features(country, n)
+    plot_curves(df, "hiv_prevalence", 100, "HIV prevalence at 15-49 (%)", 8, "prevalence_curves",
+                "HIV prevalence at 15-49 by year, landing draws in blue, cell shaded", band=True)
+
+
+def save(fig, n, name, title):
+    """Number a figure in its title and file name, so a figure seen alone says which one it is."""
+    fig.suptitle(f"Fig {n}: {title}")
+    fig.savefig(FIGURES / f"fig{n}_{name}.png", dpi=150)
+    plt.close(fig)
 
 
 def landing(df, country):
@@ -169,89 +179,130 @@ def plot_seed_peak(df):
         ax.yaxis.set_major_locator(matplotlib.ticker.MaxNLocator(integer=True))
         ax.set_xlabel("HIV seed_year")
     axes[0].set_ylabel("Year HIV incidence at 15-49 peaks")
-    fig.savefig(FIGURES / "seed_year_peak_year.png", dpi=150)
-    plt.close(fig)
+    save(fig, 2, "seed_year_peak_year", "Year HIV incidence peaks against seed_year, landing draws in blue")
 
 
-def plot_network(df, country, n_draws=3):
-    """Network summary of up to n_draws landing draws, with the condom use the model takes as input."""
-    sub, lands = landing(df, country)
-    shown = sub[lands].sort_values("draw_id").head(n_draws)
-    sexes = dict(female="tab:red", male="tab:blue")
-    styles = ["-", "--", ":"]
-    fig, axes = plt.subplots(2, 3, figsize=(15, 8), layout="constrained")
-    (ax_life, ax_new, ax_debut), (ax_rg, ax_gap, ax_condom) = axes
+def rerun_network(df, n_draws):
+    """Rerun up to n_draws landing draws per country on their batch seeds, appending each network summary."""
+    jobs = {job["draw_id"]: job for country, n in CONFIG["stages"]["batch"].items()
+            for job in draws("batch", country, n)}
+    done = set(pd.read_json(NETWORK, lines=True).draw_id) if NETWORK.exists() else set()
+    todo = []
+    for country in CONFIG["countries"]:
+        sub, lands = landing(df, country)
+        todo += [jobs[i] for i in sub[lands].draw_id.sort_values()[:n_draws] if i not in done]
+    print(f"{len(todo)} landing draws to rerun for their network summary")
+    batch_prev = df.set_index("draw_id").hiv_prevalence_2026
+    with Pool(min(len(todo), os.cpu_count()) or 1) as pool:
+        for row in pool.imap_unordered(run_draw, todo):
+            if "error" in row:
+                print(f"{row['draw_id']} failed: {row['error']}", flush=True)
+                continue
+            # the batch seed must reproduce the batch run, or the figure describes a different epidemic
+            match = np.isclose(row["hiv_prevalence_2026"], batch_prev[row["draw_id"]])
+            with NETWORK.open("a") as f:
+                f.write(json.dumps(dict(draw_id=row["draw_id"], country=row["country"],
+                                        reproduces_batch=bool(match), network=row["network"])) + "\n")
+            print(f"{row['draw_id']} reproduces batch: {match}", flush=True)
 
-    for (_, row), ls in zip(shown.iterrows(), styles):
-        net = row.network
+
+def pooled_quantiles(counts, qs=(0.25, 0.5, 0.75)):
+    """Quantiles of an integer histogram, bin index as value."""
+    cum = np.cumsum(counts) / np.sum(counts)
+    return [int(np.searchsorted(cum, q)) for q in qs]
+
+
+def plot_model_features(country, n):
+    """Six model features pooled over the landing draws rerun for their network summary."""
+    rows = pd.read_json(NETWORK, lines=True) if NETWORK.exists() else pd.DataFrame(columns=["country", "network"])
+    nets = list(rows[rows.country == country].network)
+    sexes = dict(female="#d6604d", male="#4393c3")
+    fig, axes = plt.subplots(2, 3, figsize=(16, 9), layout="constrained")
+    (ax_debut, ax_rg, ax_condom), (ax_pair, ax_life, ax_new) = axes
+
+    def pool(key, sex):
+        return np.sum([net[key][sex] for net in nets], axis=0)
+
+    if nets:
         for sex, color in sexes.items():
-            for ax, key in ((ax_life, "lifetime_partners"), (ax_new, "new_partners_last_year")):
-                counts = np.asarray(net[key][sex], dtype=float)
-                ax.plot(np.arange(len(counts)), 100 * counts / counts.sum(), ls=ls, marker="o", ms=3,
-                        color=color, label=f"{sex}, {row.draw_id}")
-    for ax, key, title in ((ax_life, "lifetime_partners", "Lifetime partners"),
-                           (ax_new, "new_partners_last_year", "New partners in the last year")):
-        if shown.empty:
-            continue
-        n_bins = len(shown.iloc[0].network[key]["female"])
-        ax.set_xticks(range(n_bins), [*map(str, range(n_bins - 1)), f"{n_bins - 1}+"], fontsize=7)
-        ax.set_title(title)
-        ax.set_ylabel("People 15-49 (%)")
-    ax_new.set_yscale("log")
-    if not shown.empty:
-        ax_life.legend(fontsize=7)
+            counts = pool("debut_age", sex)
+            ages = np.arange(len(counts)) + 10
+            cdf = np.cumsum(counts) / counts.sum()
+            median = np.interp(0.5, cdf, ages + 1)
+            ax_debut.step(ages + 1, cdf, where="post", color=color, label=f"{sex.title()} (median {median:.1f})")
+        ax_debut.legend(frameon=False)
 
-    def quantile_box(ax, x, q, color):
-        ax.plot([x, x], [q[0], q[-1]], color=color, lw=1)
-        ax.plot([x, x], [q[1], q[-2]], color=color, lw=6, alpha=0.5)
-        ax.plot(x, q[len(q) // 2], "o", color=color, ms=4)
-
-    labels = []
-    for i, (_, row) in enumerate(shown.iterrows()):
-        for j, (sex, color) in enumerate(sexes.items()):
-            x = 2 * i + j
-            q = row.network["debut_age_quantiles"][sex]
-            if q is not None:
-                quantile_box(ax_debut, x, q, color)
+        cats = dict(low=("Low", "#4daf4a"), medium=("Medium", "#ff7f00"), high=("High", "#e41a1c"),
+                    sex_work=("FSW / client", "#984ea3"))
+        for x, sex in enumerate(sexes):
             bottom = 0
-            for g, prop in enumerate(row.network["risk_group"][sex]):
-                ax_rg.bar(x, 100 * (prop or 0), bottom=bottom, color=color, alpha=(0.3, 0.6, 1.0)[g])
-                bottom += 100 * (prop or 0)
-            labels.append(f"{sex[0].upper()}\n{row.draw_id[-4:]}")
-    for ax in (ax_debut, ax_rg):
-        ax.set_xticks(range(len(labels)), labels, fontsize=7)
-    ax_debut.set_title("Age at sexual debut, 10/25/50/75/90th centiles", fontsize=10)
-    ax_debut.set_ylabel("Age")
-    ax_rg.set_title("Risk groups 0, 1, 2, light to dark")
-    ax_rg.set_ylabel("People 15-49 (%)")
+            for key, (label, color) in cats.items():
+                share = 100 * np.mean([net["risk_group"][sex][key] for net in nets])
+                ax_rg.bar(x, share, bottom=bottom, color=color, label=label if x == 0 else None)
+                if share >= 3:
+                    ax_rg.text(x, bottom + share / 2, f"{share:.0f}%", ha="center", va="center", color="white",
+                               fontweight="bold")
+                bottom += share
+        ax_rg.set_xticks([0, 1], ["Female", "Male"])
+        ax_rg.legend(frameon=False, ncol=4, loc="upper center", bbox_to_anchor=(0.5, -0.06))
 
-    groups = dict(f15_20="15-19", f20_25="20-24", f25_50="25-49")
-    for i, (_, row) in enumerate(shown.iterrows()):
-        for k, key in enumerate(groups):
-            gap = row.network["age_gap"][key]
-            x = k + (i - 1) * 0.25
-            if gap["quantiles"] is not None:
-                quantile_box(ax_gap, x, gap["quantiles"], "0.3")
-                ax_gap.annotate(f"n={gap['n']}", (x, gap["quantiles"][-1]), ha="center", va="bottom", fontsize=6)
-    ax_gap.set_xticks(range(len(groups)), [f"Women {g}" for g in groups.values()])
-    ax_gap.axhline(0, color="0.8", lw=0.8)
-    ax_gap.set_title("Partner age gap, man minus woman, 5/25/50/75/95th centiles", fontsize=10)
-    ax_gap.set_ylabel("Years")
+        cells = np.concatenate([np.asarray(net["age_pairing"]) for net in nets])
+        grid = np.zeros((80, 80))
+        np.add.at(grid, (cells[:, 1], cells[:, 0]), cells[:, 2])
+        edges = np.arange(81)
+        mesh = ax_pair.pcolormesh(edges, edges, np.ma.masked_equal(grid, 0), cmap="viridis",
+                                  norm=matplotlib.colors.LogNorm())
+        fig.colorbar(mesh, ax=ax_pair, label="Partnerships (log)")
+        ax_pair.plot([15, 65], [15, 65], "w--", lw=1, label="y = x")
+        gaps = []
+        for lo, hi in ((15, 25), (25, 35), (35, 50)):
+            sel = (cells[:, 0] >= lo) & (cells[:, 0] < hi)
+            gap = cells[sel, 1] - cells[sel, 0]
+            order = np.argsort(gap)
+            q = np.interp([0.25, 0.5, 0.75], np.cumsum(cells[sel, 2][order]) / cells[sel, 2].sum(), gap[order])
+            gaps.append(f"F {lo}-{hi - 1}: Δ = {q[1]:+.1f} [{q[0]:+.1f}, {q[2]:+.1f}]")
+        ax_pair.text(0.03, 0.97, "\n".join(gaps), transform=ax_pair.transAxes, va="top", fontsize=9,
+                     bbox=dict(facecolor="0.4", alpha=0.8, edgecolor="none"), color="white")
+        ax_pair.set_xlim(15, 65)
+        ax_pair.set_ylim(15, 80)
 
-    condom = sim_pars().network.condom_data
-    names = ["sex work" if pair == ("fsw", "client") else f"M{pair[0]}-F{pair[1]}" for pair in condom]
-    use = [100 * np.interp(2026, data["year"], data["val"]) for data in condom.values()]
-    ax_condom.bar(range(len(use)), use, color="0.5")
-    ax_condom.set_xticks(range(len(use)), names, fontsize=7, rotation=45)
-    ax_condom.set_title("Condom use in 2026 by partners' risk groups (model input)", fontsize=10)
-    ax_condom.set_ylabel("Acts with a condom (%)")
+        for ax, key in ((ax_life, "lifetime_partners"), (ax_new, "new_partners_last_year")):
+            legend = []
+            for i, (sex, color) in enumerate(sexes.items()):
+                counts = pool(key, sex)
+                x = np.arange(len(counts))
+                ax.bar(x + (i - 0.5) * 0.4, counts / counts.sum(), 0.4, color=color, alpha=0.8)
+                q = pooled_quantiles(counts)
+                legend.append(f"{sex.title()}  {q[1]} [{q[0]}-{q[2]}]")
+            ax.legend(legend, title="median [IQR]", frameon=True, fontsize=9)
+            n_bins = len(counts)
+            ticks = list(range(0, n_bins, 5 if n_bins > 15 else 2))
+            ax.set_xticks(ticks, [f"{t}+" if t == n_bins - 1 else str(t) for t in ticks])
+    else:
+        for ax in (ax_debut, ax_rg, ax_pair, ax_life, ax_new):
+            ax.text(0.5, 0.5, "No network summaries", transform=ax.transAxes, ha="center", va="center")
 
-    if shown.empty:
-        for ax in axes.flat[:-1]:
-            ax.text(0.5, 0.5, "No landing draws", transform=ax.transAxes, ha="center", va="center")
-    fig.suptitle(f"{country.title()}: {len(shown)} of {lands.sum()} landing draws, 2026, ages 15-49")
-    fig.savefig(FIGURES / f"network_{country}.png", dpi=150)
-    plt.close(fig)
+    groups = {(0, 0): ("Low-Low", "#4daf4a"), (1, 1): ("Med-Med", "#ff7f00"), (2, 2): ("High-High", "#e41a1c"),
+              ("fsw", "client"): ("FSW-client", "#984ea3")}
+    condom, years = sim_pars().network.condom_data, np.arange(1985, 2027)
+    for pair, (label, color) in groups.items():
+        ax_condom.plot(years, np.interp(years, condom[pair]["year"], condom[pair]["val"]), color=color,
+                       label=label)
+    ax_condom.legend(frameon=False)
+
+    titles = [(ax_debut, "(A) Age at sexual debut", "Age (years)", "Cumulative proportion"),
+              (ax_rg, "(B) Risk-group composition, 2026", None, "Proportion (%)"),
+              (ax_condom, "(C) Condom use by partnership", "Year", "Condom use probability"),
+              (ax_pair, "(D) Age-pairing density, 2026", "Female age (years)", "Male partner age (years)"),
+              (ax_life, "(E) Lifetime partners (capped at 30)", "Number of lifetime partners", "Proportion"),
+              (ax_new, "(F) New partners in last year, 2026", "New partners in prior 12 months", "Proportion")]
+    for ax, title, xlabel, ylabel in titles:
+        ax.set_title(title)
+        ax.set_xlabel(xlabel)
+        ax.set_ylabel(ylabel)
+    ax_condom.set_ylim(0, 1)
+    save(fig, n, f"model_features_{country}",
+         f"{country.title()} model features, ages 15-49, pooled over {len(nets)} landing draws")
 
 
 def plot_sti_bands(df):
@@ -275,8 +326,7 @@ def plot_sti_bands(df):
         ax.set_xticks(range(len(bands)), ticks, fontsize=9)
         ax.set_title(f"{country.title()}: {lands.sum()} landing of {len(sub)} draws with HIV ≥ 1%")
     axes[0].set_ylabel("Prevalence at 15-49 in 2026 (%)")
-    fig.savefig(FIGURES / "sti_prevalence_vs_stips.png", dpi=150)
-    plt.close(fig)
+    save(fig, 5, "sti_prevalence_vs_stips", "STI prevalence at 15-49 in 2026 against the STIPS bands (grey)")
 
 
 def plot_beta_prevalence(df):
@@ -293,14 +343,13 @@ def plot_beta_prevalence(df):
         ax.set_xlabel("HIV beta_m2f")
     axes[0].set_ylabel("HIV prevalence at 15-49 in 2026 (%)")
     fig.colorbar(sc, ax=axes, label="rel_init_prev")
-    fig.savefig(FIGURES / "beta_prevalence_2026.png", dpi=150)
-    plt.close(fig)
+    save(fig, 4, "beta_prevalence_2026", "HIV prevalence at 15-49 in 2026 against HIV beta_m2f")
 
 
-def plot_curves(df, column, scale, ylabel, name, band=False):
+def plot_curves(df, column, scale, ylabel, n, name, title, band=False):
     """Annual curves per country, landing draws in blue, the target band shaded if band."""
     countries, tol = CONFIG["countries"], CONFIG["tolerance"]
-    fig, axes = plt.subplots(1, len(countries), figsize=(10, 3.5), sharey=True)
+    fig, axes = plt.subplots(1, len(countries), figsize=(10, 3.8), sharey=True, layout="constrained")
     for ax, (country, spec) in zip(axes, countries.items()):
         sub = df[df.country == country]
         for _, row in sub.iterrows():
@@ -312,9 +361,7 @@ def plot_curves(df, column, scale, ylabel, name, band=False):
         ax.set_title(f"{country.title()}: landing draws in blue")
         ax.set_xlabel("Year")
     axes[0].set_ylabel(ylabel)
-    fig.tight_layout()
-    fig.savefig(FIGURES / name, dpi=150)
-    plt.close(fig)
+    save(fig, n, name, title)
 
 
 def main():
@@ -323,8 +370,12 @@ def main():
     parser.add_argument("--n", type=int, help="draws per country, overriding the stage's sizes in config.yaml")
     parser.add_argument("--workers", type=int, default=os.cpu_count())
     parser.add_argument("--plot-only", action="store_true")
+    parser.add_argument("--network", type=int, metavar="N",
+                        help="rerun up to N landing draws per country for the model-features figures, then plot")
     args = parser.parse_args()
-    if not args.plot_only:
+    if args.network is not None:
+        rerun_network(load(), args.network)
+    elif not args.plot_only:
         if args.stage is None:
             parser.error("--stage is required unless --plot-only")
         if args.n is not None:

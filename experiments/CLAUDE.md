@@ -48,7 +48,9 @@ A different way of answering the same question is another approach on the same i
    a commit. `scripts/mirror` refuses to launch from a dirty tree.
 3. **Run.** Run locally with `uv run python experiments/<track>/<number>_<slug>/run.py`,
    or remotely per Remote runs below. `run.py` appends results to `outputs/` as each
-   simulation finishes and saves every figure as `figures/<name>.png`.
+   simulation finishes and saves every figure as `figures/figN_<name>.png`, numbered in
+   the order the SUMMARY embeds them. Each figure's title starts with `Fig N: `, so
+   a figure seen outside the SUMMARY still says which one it is.
 4. **Close.** When a run finishes, offer to close before diagnosing or fixing anything.
    Write the SUMMARY per `experiment-close`, run its validator, and rewrite STATUS.md.
    Show both and wait for approval. Commit them with the figures the SUMMARY embeds as
