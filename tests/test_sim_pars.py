@@ -40,6 +40,19 @@ def test_lever_override_adds_module():
         assert name in sim.interventions, name
 
 
+@pytest.mark.parametrize("overrides, intv, result", [
+    (dict(prep=dict(eligibility="behavioral")), "behavioral_screen", "n_screened"),
+    (dict(fsw_outreach=dict(rate=1.0)), "fsw_outreach", "new_tests"),
+], ids=["behavioral_prep", "fsw_outreach"])
+def test_soc_levers_without_a_start_begin_in_2027(overrides, intv, result):
+    sim = build_sim(sim_pars(sim=dict(n_agents=2000, start=2026, stop=2027.5), **overrides))
+    sim.run(verbose=0)
+    counts = sim.interventions[intv].results[result]
+    before = sim.t.yearvec < 2027
+    assert counts[before].sum() == 0
+    assert counts[~before].sum() > 0
+
+
 def test_defaults_add_no_lever_modules():
     sim = run()
     for name in LEVERS:

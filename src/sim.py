@@ -58,6 +58,10 @@ from .interventions import (
 
 _DATA_DIR = Path(__file__).parent / "data"
 
+# the POC arms' intervention year, so a lever added to SOC starts when it would
+# under POC and the arms match before it
+SOC_LEVER_START = 2027
+
 # proportion of people with HIV on ART when no country is set
 NO_COUNTRY_ART_COVERAGE = 0.6
 _SYPH_DX_PATH = _DATA_DIR / "syph_dx.csv"
@@ -476,7 +480,7 @@ def build_sim(pars):
     """Build a canary-stis simulation from parameters. Returns an unrun ss.Sim."""
     use_poc = pars.intv_year is not None
     intv_year = pars.intv_year
-    lever_start = intv_year if intv_year is not None else pars.sim.start
+    lever_start = intv_year if intv_year is not None else SOC_LEVER_START
 
     ng = sti.Gonorrhea(**pars.ng)
     ct = sti.Chlamydia(**pars.ct)

@@ -28,7 +28,7 @@ def run(**overrides):
               "syph_symp_test", "syph_rash_test", "syph_anc_rdt"]),
     (dict(intv_year=2010), ["panel", "syph_symp_test_poc", "syph_rash_test",
                             "syph_anc_rdt", "syph_anc_confirm"]),
-    (dict(fsw_outreach=dict(rate=1.0)), ["fsw_outreach"]),
+    (dict(fsw_outreach=dict(rate=1.0, start=2010)), ["fsw_outreach"]),
 ], ids=["soc", "poc", "fsw"])
 def test_default_stops_test_and_treat_on_last_step(overrides, channels):
     sim = run(**overrides)
@@ -51,7 +51,7 @@ def test_intv_year_switches_syndromic_to_panel():
 
 @pytest.mark.parametrize("intv_year", [None, 2010], ids=["syndromic", "panel"])
 def test_referrals_treated_after_fsw_outreach_stops(intv_year):
-    sim = run(intv_year=intv_year, fsw_outreach=dict(rate=1.0, stop=2011))
+    sim = run(intv_year=intv_year, fsw_outreach=dict(rate=1.0, start=2010, stop=2011))
     after = sim.t.yearvec >= 2011
     assert sim.interventions.fsw_outreach.results.new_tests[after].sum() == 0
     for name in ["ng_tx", "ct_tx", "metronidazole"]:
