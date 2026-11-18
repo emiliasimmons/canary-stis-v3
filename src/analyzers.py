@@ -197,6 +197,54 @@ class HIVIncidence1549(ss.Analyzer):
         return pd.DataFrame(rows)
 
 
+class STIPrevalence1549(ss.Analyzer):
+    """
+    Curable-STI prevalence at ages 15-49, both sexes pooled and by sex.
+
+    stisim's adult prevalence spans 15-64 for gonorrhoea, chlamydia and
+    trichomoniasis and counts only the sexually active for syphilis. Each step
+    adds one step of person-time for every 15-49-year-old and for every one
+    infected. Syphilis is counted at any stage ('syph') and as RPR-positive
+    ('syph_rpr'), the measure surveys report as active syphilis.
+    """
+
+    SEXES = ("all", "female", "male")
+    DISEASES = ("ng", "ct", "tv", "syph", "syph_rpr")
+
+    def __init__(self, name="sti_prevalence_15_49"):
+        super().__init__(name=name)
+        self._infected = {}
+        self._py = {}
+
+    def init_results(self):
+        super().init_results()
+        npts = self.t.npts
+        self._infected = {(s, d): np.zeros(npts) for s in self.SEXES for d in self.DISEASES}
+        self._py = {s: np.zeros(npts) for s in self.SEXES}
+
+    def step(self):
+        ppl, dis, ti = self.sim.people, self.sim.diseases, self.ti
+        adult = ppl.alive & (ppl.age >= 15) & (ppl.age < 50)
+        states = dict(ng=dis.ng.infected, ct=dis.ct.infected, tv=dis.tv.infected,
+                      syph=dis.syph.infected, syph_rpr=dis.syph.nontrep)
+        dt = self.t.dt_year
+        for sex, mask in zip(self.SEXES, (adult, adult & ppl.female, adult & ppl.male)):
+            self._py[sex][ti] = mask.count() * dt
+            for disease, state in states.items():
+                self._infected[(sex, disease)][ti] = (state & mask).count() * dt
+
+    def annual(self):
+        """One row per calendar year, sex and disease: person-years infected and at 15-49, prevalence."""
+        year = np.floor(self.t.yearvec).astype(int)
+        rows = []
+        for (sex, disease), infected in self._infected.items():
+            for y in np.unique(year):
+                inf, py = infected[year == y].sum(), self._py[sex][year == y].sum()
+                rows.append(dict(year=y, sex=sex, disease=disease, person_years_infected=inf,
+                                 person_years=py, prevalence=inf / py if py else np.nan))
+        return pd.DataFrame(rows)
+
+
 class InfectionTracker(ss.Analyzer):
     """
     Track per-agent STI infections for incidence analysis.
