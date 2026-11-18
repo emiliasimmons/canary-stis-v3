@@ -191,31 +191,43 @@ def plot_trajectories(df, years, n, name, measure, ylabel, scale):
 
 
 def prevented_fractions(df, years):
-    """Per contrast and draw: 1 - HIV infections at 15-49 in the arm / in its comparator, over the horizon."""
+    """Draws x arms: 1 - HIV infections at 15-49 in the arm / in the comparator, over the horizon."""
     lo, hi = CONFIG["horizon"]
     window = (years >= lo) & (years <= hi)
     infections = df.hiv.map(lambda t: np.asarray(t["all"]["new_infections"])[window].sum())
     totals = df.assign(n=infections).pivot(index="draw_id", columns="arm", values="n")
-    return pd.concat([
-        pd.DataFrame(dict(contrast=label, draw_id=totals.index,
-                          prevented_fraction=1 - totals[arm] / totals[comp]))
-        for arm, comp, label in CONFIG["contrasts"]
-    ], ignore_index=True)
+    return 1 - totals[list(CONFIG["labels"])].div(totals[CONFIG["comparator"]], axis=0)
 
 
-def plot_prevented(pf):
-    labels = [c[2] for c in CONFIG["contrasts"]]
-    lo, hi = CONFIG["horizon"]
-    fig, ax = plt.subplots(figsize=(7, 4.5), layout="constrained")
-    for i, label in enumerate(labels):
-        values = 100 * pf[pf.contrast == label].prevented_fraction
-        ax.scatter(values, np.full(len(values), i), s=14, color="0.5")
-        ax.scatter(values.mean(), i, marker="|", s=300, color="tab:blue")
+def components(pf):
+    """Draws x pathway contributions, in the same units as the prevented fractions."""
+    return pd.DataFrame({label: sum(c * pf[arm] for arm, c in coefs.items())
+                         for label, coefs in CONFIG["components"]})
+
+
+def strip(ax, table, greyed=()):
+    for i, col in enumerate(table):
+        values = 100 * table[col]
+        dot, bar = ("0.8", "0.75") if col in greyed else ("0.5", "tab:blue")
+        ax.scatter(values, np.full(len(values), i), s=14, color=dot)
+        ax.scatter(values.mean(), i, marker="|", s=300, color=bar)
     ax.axvline(0, color="k", lw=0.8)
-    ax.set_yticks(range(len(labels)), labels)
     ax.invert_yaxis()
-    ax.set_xlabel(f"HIV infections at 15-49 prevented, {lo}-{hi} (% of comparator)")
-    save(fig, 4, "prevented_fractions", "Prevented fraction per draw (dots) and mean (bar)")
+
+
+def plot_prevented(pf, comp):
+    lo, hi = CONFIG["horizon"]
+    labels, broken = CONFIG["labels"], CONFIG["broken"]
+    fig, (top, bottom) = plt.subplots(2, 1, figsize=(8, 7), sharex=True, layout="constrained",
+                                      gridspec_kw=dict(height_ratios=[len(labels), len(comp.columns)]))
+    strip(top, pf, greyed=broken)
+    top.set_yticks(range(len(labels)), [labels[a] + (" (broken)" if a in broken else "") for a in pf])
+    top.set_title("Each arm against SOC")
+    strip(bottom, comp)
+    bottom.set_yticks(range(len(comp.columns)), comp.columns)
+    bottom.set_title("Pathway contributions: differences between the arms above")
+    bottom.set_xlabel(f"HIV infections at 15-49 prevented, {lo}-{hi} (% of SOC's)")
+    save(fig, 4, "prevented_fractions", "Prevented fraction per draw (dots) and mean (bar), all against SOC")
 
 
 def plot():
@@ -226,9 +238,12 @@ def plot():
     plot_trajectories(df, years, 2, "incidence", "incidence", "Incidence per 100 PY", 1)
     plot_trajectories(df, years, 3, "new_infections", "new_infections", "New infections per year", 1)
     pf = prevented_fractions(df, years)
-    plot_prevented(pf)
-    pf.to_csv(OUTPUTS / "prevented_fractions.csv", index=False)
-    print(pf.groupby("contrast", sort=False).prevented_fraction.describe()[["mean", "min", "max"]].to_string())
+    comp = components(pf)
+    plot_prevented(pf, comp)
+    pf.to_csv(OUTPUTS / "prevented_fractions.csv")
+    comp.to_csv(OUTPUTS / "pathway_components.csv")
+    for table in (pf, comp):
+        print(table.describe().loc[["mean", "min", "max"]].T.to_string())
 
 
 def main():
