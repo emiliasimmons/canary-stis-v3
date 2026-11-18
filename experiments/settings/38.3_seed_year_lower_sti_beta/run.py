@@ -215,6 +215,8 @@ def pooled_quantiles(counts, qs=(0.25, 0.5, 0.75)):
 def plot_model_features(country, n):
     """Six model features pooled over the landing draws rerun for their network summary."""
     rows = pd.read_json(NETWORK, lines=True) if NETWORK.exists() else pd.DataFrame(columns=["country", "network"])
+    if "reproduces_batch" in rows:
+        rows = rows[rows.reproduces_batch]
     nets = list(rows[rows.country == country].network)
     sexes = dict(female="#d6604d", male="#4393c3")
     fig, axes = plt.subplots(2, 3, figsize=(16, 9), layout="constrained")
