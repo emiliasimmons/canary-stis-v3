@@ -339,7 +339,7 @@ def sim_pars(**kwargs):
     # it is on PrEP, chosen by a fixed per-person willingness score. Offered
     # people already on a course count toward it, so fewer than that start.
     pars.prep = sc.objdict(eligibility="none", start=None, coverage=0.30,
-                           dur_months=3, prep_eff=0.8, prep_adh=1.0)
+                           dur_months=3, prep_eff=0.75, prep_adh=1.0)
     pars.magic_cure = sc.objdict(year=None)
     # the year NetworkSummary takes its snapshot; None leaves it out
     pars.network_summary = sc.objdict(year=None)

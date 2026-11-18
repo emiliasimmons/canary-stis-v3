@@ -71,9 +71,9 @@ def test_a_course_ends_after_3_months_and_is_not_renewed(triggered):
     assert np.all(last_treated[on.uids] >= hiv.ti_prep_start[on])
 
 
-def test_prep_cuts_hiv_susceptibility_by_80_percent(triggered):
+def test_prep_cuts_hiv_susceptibility_by_75_percent(triggered):
     hiv = triggered.diseases.hiv
-    assert np.all(hiv.prep_eff[hiv.on_prep] == pytest.approx(0.8))
+    assert np.all(hiv.prep_eff[hiv.on_prep] == pytest.approx(0.75))
 
 
 def test_run_ends_in_2040_whatever_the_start():

@@ -3,7 +3,7 @@ type: decision
 title: Pathway decomposition and arm design
 description: Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm sharing one oral PrEP cascade with STI-triggered PrEP, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 tags: [study-concept, modeling, diagnostics, partner-notification, prep, hiv]
-updated: 2026-11-17 19:03
+updated: 2026-11-18 15:10
 ---
 
 The study reports four pathways from point-of-care STI diagnostics to HIV incidence:
@@ -104,15 +104,15 @@ people already partway through a course count toward the 30%, and the target rou
 so about 20-27% of offered people start and a month with 3 or fewer offers starts nobody.
 Experiments report uptake as the proportion of offered people who start. A course lasts 3
 months and then ends, and a person restarts only at a new offer. Efficacy while on PrEP is
-0.80.
+0.75.
 
-The model runs PrEP through stisim's `sti.Prep`, and the course length and efficacy are
-its defaults, kept for simplicity. A 3-month course sits near the 2.5-month median time on
-drug in Kampala and the 20% still on PrEP at 6 months in POWER
-([Celum 2022](celum-2022-power-prep-agyw.md)). An efficacy of 0.80 is above the 54%
-reduction pooled across real adherence levels and the 73% at adherence of 70% or more
-([Chou 2019](chou-2019-prep-systematic-review.md)), so both PrEP arms give each user more
-protection than delivered adherence supports, and by the same factor. Because willingness
+The model runs PrEP through stisim's `sti.Prep`, and the course length is its default,
+kept for simplicity. A 3-month course sits near the 2.5-month median time on drug in
+Kampala and the 20% still on PrEP at 6 months in POWER
+([Celum 2022](celum-2022-power-prep-agyw.md)). An efficacy of 0.75 sits near the 73%
+reduction at adherence of 70% or more and above the 54% pooled across real adherence levels
+([Chou 2019](chou-2019-prep-systematic-review.md)), so both PrEP arms give each user the
+protection of good adherence, and by the same factor. Because willingness
 is random and fixed for life, uptake is unrelated to risk and a person who declines once
 tends to decline again. Uptake, persistence, and
 uptake that varies with risk are left for exploration (issue 22).
