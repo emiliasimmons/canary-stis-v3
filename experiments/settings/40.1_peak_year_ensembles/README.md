@@ -17,7 +17,7 @@ biology across settings. This experiment departs from all three as an interim
 arrangement. Eswatini landed only at HIV `beta_m2f` 0.0102-0.0117, the top of 38.3's
 shared range, so it gets its own range.
 
-**Plan.** Two stages, both run locally.
+**Plan.** Two stages, both run on zebra.
 
 1. Eswatini batch: 200 draws over 38.3's ranges with HIV `beta_m2f` 0.010-0.020 in place
    of 0.003-0.012. In 38.3 Eswatini's median 2026 prevalence rose by about 1-1.5
@@ -31,8 +31,10 @@ shared range, so it gets its own range.
    15-49 is within 3 points of the target (25% Eswatini, 15% Zimbabwe). Its peak year is
    the year its replicate-averaged incidence at 15-49 is highest.
 
-At about 200 s per simulation on 16 workers, the Eswatini batch takes about 40 minutes and
-the replicates stage about 20 minutes. The result is a table of kept draws, each written as `sim_pars`
+[38.3](../38.3_seed_year_lower_sti_beta/SUMMARY.md) measured a mean run time of 211 s per
+simulation (10,000 agents, 1985 to the end of 2026) with 80 workers on zebra. At that
+rate the Eswatini batch of 200 simulations takes about 11 minutes and the replicates
+stage of 100 simulations about 7 minutes. The result is a table of kept draws, each written as `sim_pars`
 overrides with `intv_year` 2027 for the mature cell and its peak year for the expanding
 cell.
 
