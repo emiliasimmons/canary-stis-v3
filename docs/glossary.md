@@ -3,8 +3,8 @@
 - **POC arm**. The intervention arm: point-of-care. An etiological test-and-treat panel
   that replaces syndromic management at the same symptomatic care-seeking door, switched
   on at `pars.intv_year`. Not an asymptomatic screening programme.
-- **Screening door**. The POC panel offered to people without STI symptoms at an HIV
-  prevention contact, in addition to the symptomatic care-seeking door.
+- **STI screening at HIV testing**. The POC panel offered to people without STI symptoms
+  at an HIV testing visit, in addition to the symptomatic care-seeking door.
 - **SOC arm**. The comparator. Syndromic management for the whole run, selected by
   `pars.intv_year = None`.
 - **Syndromic management**. Treating on the presenting syndrome with a drug mix covering

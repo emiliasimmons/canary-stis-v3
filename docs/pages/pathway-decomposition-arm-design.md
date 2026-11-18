@@ -133,12 +133,14 @@ attributable risk suited to etiology.
 4. POC + partner notification
 5. POC + STI-triggered PrEP
 6. POC + STI-triggered PrEP + partner notification
-7. POC + screening door at background HIV testing visits
+7. POC + STI screening at HIV testing
 8. SOC + Magic cure
 
-The screening door attaches to background HIV testing because that is the only routine
-HIV contact present in every arm. An `include_men` switch restricts it to women, matching
-the population of the INSTEP trial.
+STI screening at HIV testing offers the POC panel to people without STI symptoms at a
+background HIV testing visit, the only routine HIV contact present in every arm. It
+screens women by default, matching the population of the INSTEP trial, and an
+`include_men` switch adds men. Everyone offered accepts by default. Experiments can lower
+acceptance to test how much the arm depends on it.
 
 The Magic cure clears gonorrhoea, chlamydia, trichomoniasis and syphilis at one instant,
 and nothing in `src/` reintroduces them, so the removal lasts for the rest of the run.
@@ -165,7 +167,7 @@ concept deck labelled this comparison D, alongside adding targeted PrEP to POC (
 people as well as by choosing higher-risk ones. An experiment that raises the volume of
 behavioral PrEP separates the two.
 
-The screening door is 7 against 3, and its effect falls in direct treatment's
+STI screening at HIV testing is 7 against 3, and its effect falls in direct treatment's
 asymptomatic sub-category.
 
 The cofactor PAF is 8 against 1, the maximum that direct treatment and partner
