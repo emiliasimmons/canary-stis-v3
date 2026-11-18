@@ -49,6 +49,11 @@ class MagicCure(ss.Intervention):
         self._diseases = diseases or []
         self._cured = False
 
+    def init_pre(self, sim):
+        super().init_pre(sim)
+        # the sim runs copies of the diseases passed in, so cure the sim's own
+        self._diseases = [sim.diseases[d.name] for d in self._diseases]
+
     def _cure_syphilis(self, disease, uids):
         disease.exposed[uids] = False
         disease.infected[uids] = False
