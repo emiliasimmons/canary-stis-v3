@@ -15,10 +15,10 @@ min_middle_group: 0.05
 
 # batch draws per cell; a cell with hiv_delay draws it, in years, alongside the ranges
 cells:
-  eswatini_mature: {country: eswatini, n: 100}
-  zimbabwe_mature: {country: zimbabwe, n: 125}
-  eswatini_high: {country: eswatini, n: 150, hiv_delay: [17, 23]}
-  zimbabwe_high: {country: zimbabwe, n: 150, hiv_delay: [17, 23]}
+  eswatini_mature: {country: eswatini, n: 140}
+  zimbabwe_mature: {country: zimbabwe, n: 180}
+  eswatini_high: {country: eswatini, n: 235, hiv_delay: [17, 23]}
+  zimbabwe_high: {country: zimbabwe, n: 245, hiv_delay: [17, 23]}
 
 # 40.1's ranges
 ranges:

@@ -14,18 +14,21 @@ the 2027 intervention.
 SOC arm, over 40.1's ranges (HIV `beta_m2f` 0.010-0.020 in Eswatini and 0.003-0.012 in
 Zimbabwe, `seed_year` 1993-2000, no ART stretch).
 
-- Mature cells: no delay, 100 Eswatini and 125 Zimbabwe draws.
-- High-incidence cells: `d` drawn uniformly over 17-23 years, 150 draws per country. The
+- Mature cells: no delay, 140 Eswatini and 180 Zimbabwe draws.
+- High-incidence cells: `d` drawn uniformly over 17-23 years, 235 Eswatini and 245
+  Zimbabwe draws. The
   model gains a delay that adds `d` to `seed_year` and moves the ART, viral suppression
   and VMMC coverage tables and the HIV testing ramp years later by `d`.
 
 A draw lands when its 2026 HIV prevalence at 15-49 is 22-28% (Eswatini) or 12-18%
 (Zimbabwe). Each cell's ensemble is its first 30 landing draws by draw index, written to
-`ensembles.json` as `sim_pars` overrides. Batch sizes give a 95% chance of 30 landing
-draws per cell, from landing fractions of 0.46 (40.1, Eswatini), 0.35 (40.2 at
-`art_stretch` 1-1.5, Zimbabwe), 0.27 (delayed, Eswatini) and 0.26 (delayed, Zimbabwe). The delayed
-fractions come from reading 40.1's Eswatini batch and 38.3's Zimbabwe batch at 2026 − `d`.
-At 40.1's 200 s per simulation with 80 workers, the 525 simulations take about 25 minutes.
+`ensembles.json` as `sim_pars` overrides. The 800 draws are split in inverse proportion
+to each cell's expected landing fraction, so every cell expects about 63 landing draws,
+twice the ensemble size. The expected fractions are 0.46 (40.1, Eswatini), 0.35 (40.2 at
+`art_stretch` 1-1.5, Zimbabwe), 0.27 (delayed, Eswatini) and 0.26 (delayed, Zimbabwe). The
+delayed fractions come from reading 40.1's Eswatini batch and 38.3's Zimbabwe batch at
+2026 − `d`. At 40.1's 200 s per simulation with 80 workers, the batch takes about 35
+minutes.
 
 **Success criteria.** 30 landing draws in every cell, with the high-incidence draws'
 incidence peaks mostly in 2020-2028 and their 2026 incidence a higher proportion of peak
