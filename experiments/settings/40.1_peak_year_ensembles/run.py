@@ -182,7 +182,7 @@ def save(fig, n, name, title):
 def plot_batch(df):
     spec, tol = CONFIG["countries"]["eswatini"], CONFIG["tolerance"]
     lands = (df.hiv_prevalence_2026 - spec["target"]).abs() <= tol
-    fig, ax = plt.subplots(figsize=(6, 4), layout="constrained")
+    fig, ax = plt.subplots(figsize=(9, 4.5), layout="constrained")
     ax.scatter(df.hiv_beta_m2f[~lands], df.hiv_prevalence_2026[~lands] * 100, s=12, color="0.6")
     ax.scatter(df.hiv_beta_m2f[lands], df.hiv_prevalence_2026[lands] * 100, s=16, color="tab:blue")
     ax.axhspan(100 * (spec["target"] - tol), 100 * (spec["target"] + tol), color="tab:blue", alpha=0.15)
