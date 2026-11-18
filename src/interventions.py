@@ -49,6 +49,11 @@ class MagicCure(ss.Intervention):
         self._diseases = diseases or []
         self._cured = False
 
+    def init_pre(self, sim):
+        super().init_pre(sim)
+        # the sim runs copies of the diseases passed in, so cure the sim's own
+        self._diseases = [sim.diseases[d.name] for d in self._diseases]
+
     def _cure_syphilis(self, disease, uids):
         disease.exposed[uids] = False
         disease.infected[uids] = False
@@ -211,7 +216,9 @@ class BehavioralScreen(ss.Intervention):
     The network keeps only current edges, so the screen keeps its own record
     from the sim start: per person, the last step with a non-stable
     partnership, with a sex-work partnership, and with a visible chancre, and
-    the last active step of their two most recently ended partnerships.
+    the last active step of their two most recently ended partnerships. A
+    partnership, a pair and the step it formed, has ended when it is missing
+    from this step's edges.
     Condoms cover a fraction of a partnership's acts, so any non-stable
     partnership with condom use below 1 has condomless acts.
 
@@ -238,8 +245,7 @@ class BehavioralScreen(ss.Intervention):
     def init_pre(self, sim):
         super().init_pre(sim)
         self._window_steps = int(round(1 / sim.t.dt_year))
-        # the record learns of ended partnerships from the network's expiry buffer
-        sim.networks.structuredsexual.record_expired = True
+        self._prev_keys = np.array([], dtype=np.uint64)
         return
 
     def init_results(self):
@@ -254,17 +260,26 @@ class BehavioralScreen(ss.Intervention):
 
     def _record(self, net):
         ti = self.ti
-        ended = net.expired_this_loop
-        if len(ended.get("p1", [])):
-            # every expired edge was last active in the previous step: end_pairs
-            # ran earlier this step, and deaths were appended after last step's
-            # analyzers
-            uids, n = np.unique(np.concatenate([ended["p1"], ended["p2"]]), return_counts=True)
+        e = net.edges
+        # the network's expiry buffer would do this, but switching it on changes
+        # the network's dynamics. The formation step tells apart two partnerships
+        # of the same pair in a row.
+        if len(self.sim.people.uid.raw) >= 2**24 or ti >= 2**16:
+            raise ValueError("partnership keys pack uids into 24 bits and steps into 16")
+        u64 = np.uint64
+        keys = np.unique((np.asarray(e.p1).astype(u64) << u64(40))
+                         | (np.asarray(e.p2).astype(u64) << u64(16))
+                         | np.asarray(e.ti_formed).astype(u64))
+        ended = np.setdiff1d(self._prev_keys, keys, assume_unique=True)
+        self._prev_keys = keys
+        if len(ended):
+            # a missing partnership was last active in the previous step
+            p1, p2 = ended >> u64(40), (ended >> u64(16)) & u64(0xFFFFFF)
+            uids, n = np.unique(np.concatenate([p1, p2]).astype(np.int64), return_counts=True)
             uids = ss.uids(uids)
             self.ti_ended_prev[uids] = np.where(n > 1, ti - 1, self.ti_ended[uids])
             self.ti_ended[uids] = ti - 1
 
-        e = net.edges
         nonstable = (e.edge_type != net.edge_types["stable"]) & (e.condoms < 1)
         sw = e.edge_type == net.edge_types["sw"]
         self.ti_nonstable[ss.uids(np.concatenate([e.p1[nonstable], e.p2[nonstable]]))] = ti

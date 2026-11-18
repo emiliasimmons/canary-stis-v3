@@ -48,12 +48,17 @@ def _by_item(sim, ti, screened):
     no_nonstable = (life["casual"] == 0) & (life["onetime"] == 0) & (life["sw"] == 0)
     one_partnership = sum(life.values()) == 1
     never_syph = syph.n_infections == 0
-    on_sw = syph.n_infections < 0
-    sw = net.edges.edge_type == net.edge_types["sw"]
-    on_sw.raw[np.concatenate([net.edges.p1[sw], net.edges.p2[sw]])] = True
+    on_sw, on_nonstable = syph.n_infections < 0, syph.n_infections < 0
+    e = net.edges
+    sw = e.edge_type == net.edge_types["sw"]
+    on_sw.raw[np.concatenate([e.p1[sw], e.p2[sw]])] = True
+    # the partner counters keep counting some partnerships after their edge is
+    # gone, so the group also needs the edge
+    nonstable = (e.edge_type == net.edge_types["casual"]) | (e.edge_type == net.edge_types["onetime"])
+    on_nonstable.raw[np.concatenate([e.p1[nonstable], e.p2[nonstable]])] = True
     return dict(
         partners=screened & no_nonstable & never_syph & (net.stable_partners >= 2),
-        nonstable=screened & one_partnership & never_syph
+        nonstable=screened & one_partnership & never_syph & on_nonstable
         & ((net.casual_partners + net.onetime_partners) == 1),
         sw=screened & one_partnership & never_syph & on_sw,
         ulcer=screened & no_nonstable & (life["stable"] <= 1)
@@ -135,6 +140,21 @@ def test_behavioral_prep_off_runs_no_screen():
                              prep=dict(eligibility="dx")))
     sim.run(verbose=0)
     assert "behavioral_screen" not in sim.interventions
+
+
+def test_the_screen_leaves_the_epidemic_unchanged_until_prep_starts():
+    def run(**prep):
+        sim = build_sim(sim_pars(sim=dict(n_agents=2_000, start=2010, stop=2012, rand_seed=3), **prep))
+        sim.run(verbose=0)
+        return sim
+
+    soc, screened = run(), run(prep=dict(eligibility="behavioral", start=2011.5))
+    before = soc.t.yearvec < 2011.5
+    for disease in ("hiv", "ng", "ct", "tv", "syph"):
+        a = np.asarray(soc.results[disease].prevalence)[before]
+        b = np.asarray(screened.results[disease].prevalence)[before]
+        assert a[-1] > 0
+        np.testing.assert_array_equal(a, b, err_msg=disease)
 
 
 def test_results_count_screened_and_qualified_from_the_start_year(behavioral):

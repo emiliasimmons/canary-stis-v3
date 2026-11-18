@@ -1,0 +1,52 @@
+country: zimbabwe
+n_agents: 10000
+# end of 2040, so 2027-2040 are whole years
+stop: 2041
+intv_year: 2027
+horizon: [2027, 2040]
+
+# the draws closest to the target among 38.3's Zimbabwe results
+draws:
+  source: ../../settings/38.3_seed_year_lower_sti_beta/outputs/results.jsonl
+  target: 0.15
+  n: 6
+
+# notify: Alam 2010 median for STI notification in LMICs; attend: about half of
+# notified contacts reach a testing door (partner notification synthesis)
+pn: &pn
+  notify_rates: {stable: 0.54, casual: 0.54}
+  attendance_rates: {stable: 0.5, casual: 0.5}
+
+# sim_pars overrides per arm, numbered as in the pathway decomposition decision
+arms:
+  1_soc: {}
+  2_soc_behavioral_prep: {prep: {eligibility: behavioral}}
+  3_poc: {intv_year: 2027}
+  4_poc_pn: {intv_year: 2027, pn: *pn}
+  5_poc_sti_prep: {intv_year: 2027, prep: {eligibility: dx}}
+  6_poc_sti_prep_pn: {intv_year: 2027, prep: {eligibility: dx}, pn: *pn}
+  7_poc_screening: {intv_year: 2027, sti_screening: {include_men: false, acceptance: 1.0}}
+  8_soc_magic_cure: {magic_cure: {year: 2027}}
+
+# every arm's prevented fraction shares this arm's infections as denominator,
+# so differences between arms add
+comparator: 1_soc
+labels:
+  3_poc: POC
+  4_poc_pn: POC + notification
+  5_poc_sti_prep: POC + STI-triggered PrEP
+  6_poc_sti_prep_pn: POC + STI-triggered PrEP + notification
+  7_poc_screening: POC + screening at HIV testing
+  2_soc_behavioral_prep: SOC + idealized behavioral PrEP
+  8_soc_magic_cure: SOC + Magic cure
+# arms drawn in grey in Fig 4
+broken: []
+
+# pathway contributions as sums of arms' prevented fractions; the first four
+# add to POC + STI-triggered PrEP + notification
+components:
+  - [Direct treatment, {3_poc: 1}]
+  - [Partner notification, {4_poc_pn: 1, 3_poc: -1}]
+  - [STI-triggered PrEP, {5_poc_sti_prep: 1, 3_poc: -1}]
+  - [Notification x STI-triggered PrEP, {6_poc_sti_prep_pn: 1, 4_poc_pn: -1, 5_poc_sti_prep: -1, 3_poc: 1}]
+  - [Screening at HIV testing, {7_poc_screening: 1, 3_poc: -1}]
