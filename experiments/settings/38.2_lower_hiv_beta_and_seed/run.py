@@ -2,7 +2,8 @@
 Exp 38.2: Latin hypercube draws over the 13 explored parameters, one run each, per
 country, appended to outputs/results.jsonl as each finishes.
 
-    uv run python experiments/settings/38.2_lower_hiv_beta_and_seed/run.py --stage pilot --n 30
+    uv run python experiments/settings/38.2_lower_hiv_beta_and_seed/run.py --stage pilot
+    uv run python experiments/settings/38.2_lower_hiv_beta_and_seed/run.py --stage batch --workers 40
     uv run python experiments/settings/38.2_lower_hiv_beta_and_seed/run.py --plot-only
 
 A stage's draws are fixed by its name, so rerunning a stage skips the draws
@@ -101,8 +102,8 @@ def done_ids():
     return {json.loads(line)["draw_id"] for line in RESULTS.read_text().splitlines() if line}
 
 
-def run(stage, n, workers):
-    jobs = [job for country in CONFIG["countries"] for job in draws(stage, country, n)]
+def run(stage, sizes, workers):
+    jobs = [job for country, n in sizes.items() for job in draws(stage, country, n)]
     done = done_ids()
     jobs = [job for job in jobs if job["draw_id"] not in done]
     print(f"{len(jobs)} simulations to run on {workers} workers ({len(done)} already in results)")
@@ -159,14 +160,20 @@ def plot(df):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--stage", help="name fixing the stage's draws, e.g. pilot")
-    parser.add_argument("--n", type=int, help="draws per country")
+    parser.add_argument("--n", type=int, help="draws per country, overriding the stage's sizes in config.yaml")
     parser.add_argument("--workers", type=int, default=os.cpu_count())
     parser.add_argument("--plot-only", action="store_true")
     args = parser.parse_args()
     if not args.plot_only:
-        if args.stage is None or args.n is None:
-            parser.error("--stage and --n are required unless --plot-only")
-        run(args.stage, args.n, args.workers)
+        if args.stage is None:
+            parser.error("--stage is required unless --plot-only")
+        if args.n is not None:
+            sizes = dict.fromkeys(CONFIG["countries"], args.n)
+        elif args.stage in CONFIG["stages"]:
+            sizes = CONFIG["stages"][args.stage]
+        else:
+            parser.error(f"stage {args.stage!r} has no sizes in config.yaml; pass --n")
+        run(args.stage, sizes, args.workers)
     plot(load())
 
 

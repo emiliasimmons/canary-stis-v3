@@ -10,6 +10,13 @@ tolerance: 0.03
 # either sex, are resampled
 min_middle_group: 0.05
 
+# draws per country in each stage. The batch is sized from the pilot's landing
+# fractions (8 of 30 Eswatini draws, 3 of 30 Zimbabwe) so each country's mature
+# cell gets about 30 landing draws (N ≈ 30 / p).
+stages:
+  pilot: {eswatini: 30, zimbabwe: 30}
+  batch: {eswatini: 110, zimbabwe: 300}
+
 ranges:
   prop_f0: [0.40, 0.94]
   prop_m0: [0.36, 0.88]
