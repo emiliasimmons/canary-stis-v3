@@ -39,9 +39,9 @@ labels:
   7_poc_screening: POC + screening at HIV testing
   2_soc_behavioral_prep: SOC + behavioral PrEP
   8_soc_magic_cure: SOC + Magic cure
-# drawn in grey: the Magic cure never fires, and the behavioral PrEP arm's
-# epidemic differs from SOC's before 2027 (SUMMARY observations 2 and 3)
-broken: [2_soc_behavioral_prep, 8_soc_magic_cure]
+# drawn in grey: the behavioral PrEP arm's epidemic differs from SOC's before
+# 2027 (SUMMARY observation 4)
+broken: [2_soc_behavioral_prep]
 
 # pathway contributions as sums of arms' prevented fractions; the first four
 # add to POC + STI-triggered PrEP + notification
