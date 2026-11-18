@@ -3,7 +3,7 @@ type: decision
 title: Pathway decomposition and arm design
 description: Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm sharing one oral PrEP cascade with STI-triggered PrEP, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 tags: [study-concept, modeling, diagnostics, partner-notification, prep, hiv]
-updated: 2026-11-17 11:27
+updated: 2026-11-17 19:03
 ---
 
 The study reports four pathways from point-of-care STI diagnostics to HIV incidence:
@@ -78,7 +78,11 @@ risk group. In the RCCS 29% of adults qualified, with HIV incidence of 0.91 per 
 person-years among them against 0.41 among the rest, which checks how many people the
 model's version qualifies and how much risk it concentrates. The screen is asked at
 background HIV testing visits and at STI clinic visits, the contacts where programmes
-offer PrEP. Offers run at the volume the screen produces.
+offer PrEP, of HIV-negative people aged 15 and over. HIV testing has no lower age limit,
+and without the age limit children would fill the count of people screened. The screen
+reports its counts for ages 15-49 as well, the RCCS age range. Offers run at the volume
+the screen produces. The screen and its PrEP start in 2027, the intervention year of the
+POC arms, so the two PrEP strategies run over the same years.
 
 In the model every genital ulcer is a syphilis chancre, since the non-syphilitic ulcer
 background (`gudp`) stays at zero. The ulcer item therefore marks a curable STI every time
@@ -90,11 +94,17 @@ STI signal than real screening has.
 Both PrEP arms share one delivery cascade, so comparing them measures who each rule
 selects. The product is daily oral PrEP, the only product with delivered uptake and
 persistence data from Eastern and Southern Africa in the
-[PrEP synthesis](prep-delivered-vs-efficacy.md). Each offer starts PrEP with probability
-0.30, the routine uptake measured in SEARCH (27%,
-[Koss 2020](koss-2020-prep-uptake-adherence-search.md)) and a Kampala AGYW cohort (30.6%,
-[Mayanja 2022](mayanja-2022-prep-uptake-agyw-kampala.md)). A course lasts 3 months and
-then ends, and a person restarts only at a new offer. Efficacy while on PrEP is 0.80.
+[PrEP synthesis](prep-delivered-vs-efficacy.md). Uptake is set at 0.30, the routine
+uptake measured in SEARCH (27%, [Koss 2020](koss-2020-prep-uptake-adherence-search.md))
+and a Kampala AGYW cohort (30.6%, [Mayanja 2022](mayanja-2022-prep-uptake-agyw-kampala.md)).
+The model applies it as a coverage target, the way [hivsim_eswatini](hivsim-eswatini.md)
+runs PrEP: each month the people offered PrEP that month are topped up until 30% of them
+are on PrEP, starting those with the highest score on a fixed random willingness. Offered
+people already partway through a course count toward the 30%, and the target rounds down,
+so about 20-27% of offered people start and a month with 3 or fewer offers starts nobody.
+Experiments report uptake as the proportion of offered people who start. A course lasts 3
+months and then ends, and a person restarts only at a new offer. Efficacy while on PrEP is
+0.80.
 
 The model runs PrEP through stisim's `sti.Prep`, and the course length and efficacy are
 its defaults, kept for simplicity. A 3-month course sits near the 2.5-month median time on
@@ -102,9 +112,9 @@ drug in Kampala and the 20% still on PrEP at 6 months in POWER
 ([Celum 2022](celum-2022-power-prep-agyw.md)). An efficacy of 0.80 is above the 54%
 reduction pooled across real adherence levels and the 73% at adherence of 70% or more
 ([Chou 2019](chou-2019-prep-systematic-review.md)), so both PrEP arms give each user more
-protection than delivered adherence supports, and by the same factor. Who accepts an offer
-is set by a fixed per-person willingness score drawn at random, so uptake is unrelated to
-risk and a person who declines once tends to decline again. Uptake, persistence, and
+protection than delivered adherence supports, and by the same factor. Because willingness
+is random and fixed for life, uptake is unrelated to risk and a person who declines once
+tends to decline again. Uptake, persistence, and
 uptake that varies with risk are left for exploration (issue 22).
 
 ## Figures
@@ -118,17 +128,19 @@ attributable risk suited to etiology.
 ## Arms
 
 1. SOC
-2. SOC + behavioral PrEP
+2. SOC + behavioral PrEP, from 2027
 3. POC
 4. POC + partner notification
 5. POC + STI-triggered PrEP
 6. POC + STI-triggered PrEP + partner notification
-7. POC + screening door at background HIV testing visits
+7. POC + STI screening at HIV testing
 8. SOC + Magic cure
 
-The screening door attaches to background HIV testing because that is the only routine
-HIV contact present in every arm. An `include_men` switch restricts it to women, matching
-the population of the INSTEP trial.
+STI screening at HIV testing offers the POC panel to people without STI symptoms at a
+background HIV testing visit, the only routine HIV contact present in every arm. It
+screens women by default, matching the population of the INSTEP trial, and an
+`include_men` switch adds men. Everyone offered accepts by default. Experiments can lower
+acceptance to test how much the arm depends on it.
 
 The Magic cure clears gonorrhoea, chlamydia, trichomoniasis and syphilis at one instant,
 and nothing in `src/` reintroduces them, so the removal lasts for the rest of the run.
@@ -155,7 +167,7 @@ concept deck labelled this comparison D, alongside adding targeted PrEP to POC (
 people as well as by choosing higher-risk ones. An experiment that raises the volume of
 behavioral PrEP separates the two.
 
-The screening door is 7 against 3, and its effect falls in direct treatment's
+STI screening at HIV testing is 7 against 3, and its effect falls in direct treatment's
 asymptomatic sub-category.
 
 The cofactor PAF is 8 against 1, the maximum that direct treatment and partner

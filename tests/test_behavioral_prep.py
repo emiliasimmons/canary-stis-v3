@@ -147,7 +147,7 @@ def test_results_count_screened_and_qualified_from_the_start_year(behavioral):
     assert 0 < qualified.sum() < screened.sum()
 
 
-def test_only_hiv_negative_people_at_a_testing_or_sti_clinic_visit_are_screened(behavioral):
+def test_only_hiv_negative_people_15_and_over_at_a_testing_or_sti_clinic_visit_are_screened(behavioral):
     sim = behavioral
     last = sim.t.npts - 1
     at_visit = sim.interventions.hiv_test.ti_tested == last
@@ -157,9 +157,24 @@ def test_only_hiv_negative_people_at_a_testing_or_sti_clinic_visit_are_screened(
     hiv = sim.diseases.hiv
     # infections from this step's transmission come after the screen
     negative_at_screen = ~(hiv.infected & (hiv.ti_infected < last))
+    # people age at the end of the step, after the screen
+    age = sim.people.age - sim.t.dt_year
+    assert (at_visit & negative_at_screen & (age < 15)).count() > 0
     screened = sim.interventions.behavioral_screen.ti_screened == last
     assert screened.count() >= 50
-    assert (screened == (at_visit & negative_at_screen)).all()
+    assert (screened == (at_visit & negative_at_screen & (age >= 15))).all()
+
+
+def test_results_count_screened_and_qualified_at_15_49(behavioral):
+    sim = behavioral
+    last = sim.t.npts - 1
+    screen = sim.interventions.behavioral_screen
+    # people age at the end of the step, after the screen
+    age = sim.people.age - sim.t.dt_year
+    adult = (age >= 15) & (age < 50)
+    assert (screen.ti_screened == last).count() > (adult & (screen.ti_screened == last)).count() > 0
+    assert screen.results.n_screened_15_49[last] == (adult & (screen.ti_screened == last)).count()
+    assert screen.results.n_qualified_15_49[last] == (adult & (screen.ti_qualified == last)).count()
 
 
 def test_prep_starts_only_in_a_step_the_person_qualified(behavioral):

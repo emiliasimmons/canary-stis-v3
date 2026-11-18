@@ -41,10 +41,14 @@ calibration site.
 - [Pathway decomposition and arm design](pages/pathway-decomposition-arm-design.md) -- Four reporting pathways from eight model arms, behavioral PrEP as its own SOC arm sharing one oral PrEP cascade with STI-triggered PrEP, the network risk signal tested inside the POC arm, and comparisons between arms suggested for experiments to settle.
 - [Settings are hypothetical epidemics crossed by prevalence and phase](pages/settings-prevalence-by-phase.md) -- Four settings cross high (about 25%) or medium (about 15%) HIV prevalence with a mature or expanding epidemic, each an ensemble of simulations selected on prevalence at ages 15-49 in 2026, with STI and HIV biology shared and STI burden left to the model.
 
+## Stale
+
+- [Pathway decomposition and arm design](pages/pathway-decomposition-arm-design.md) -- 1 newer dependency
+
 ## Recent
 
+- 2026-11-17 [Settings are hypothetical epidemics crossed by prevalence and phase](pages/settings-prevalence-by-phase.md)
+- 2026-11-17 [Pathway decomposition and arm design](pages/pathway-decomposition-arm-design.md)
 - 2026-11-17 [Partner notification implementation](pages/partner-notification-implementation.md)
 - 2026-11-17 [hivsim_eswatini: STIsim HIV model of Eswatini](pages/hivsim-eswatini.md)
 - 2026-11-17 [sti_notification](pages/sti-notification-zimbabwe-model.md)
-- 2026-11-17 [Zimbabwe DHS 2005-06, 2010-11 and 2015: men circumcised, by age](pages/dhs-zimbabwe-circumcision.md)
-- 2026-11-17 [Eswatini Population-based HIV Impact Assessment 3 2021 (SHIMS3 2021): Final Report](pages/shims3-2021-final-report.md)

@@ -167,7 +167,7 @@ class CondomCounseling(ss.Intervention):
 
 
 class BehavioralScreen(ss.Intervention):
-    """Uganda's national PrEP eligibility tool, asked of HIV-negative people at a contact.
+    """Uganda's national PrEP eligibility tool, asked of HIV-negative people 15 and over at a contact.
 
     A person qualifies on any one item in the past 12 months: more than one
     partner (the model carries no disclosure, so every partner is of unknown
@@ -215,6 +215,8 @@ class BehavioralScreen(ss.Intervention):
         self.define_results(
             ss.Result("n_screened", dtype=int, label="Screened", auto_plot=False),
             ss.Result("n_qualified", dtype=int, label="Qualified", auto_plot=False),
+            ss.Result("n_screened_15_49", dtype=int, label="Screened, 15-49", auto_plot=False),
+            ss.Result("n_qualified_15_49", dtype=int, label="Qualified, 15-49", auto_plot=False),
         )
         return
 
@@ -256,14 +258,43 @@ class BehavioralScreen(ss.Intervention):
         if self.sim.now < self.start:
             return
         hiv = self.sim.diseases.hiv
+        age = self.sim.people.age
         uids = self.contacts(self.sim)
-        uids = uids[~hiv.infected[uids]]
+        # HIV testing has no lower age limit, and PrEP is not offered to children
+        uids = uids[~hiv.infected[uids] & (age[uids] >= 15)]
         qualified = uids[self._qualifies(net, uids)]
         self.ti_screened[uids] = self.ti
         self.ti_qualified[qualified] = self.ti
         self.results["n_screened"][self.ti] = len(uids)
         self.results["n_qualified"][self.ti] = len(qualified)
+        # the RCCS age range, for comparison with its 29% qualifying
+        self.results["n_screened_15_49"][self.ti] = (age[uids] < 50).sum()
+        self.results["n_qualified_15_49"][self.ti] = (age[qualified] < 50).sum()
         return
+
+
+class NotificationVisit(sti.PartnerNotification):
+    """Partner notification whose attendees get the POC panel, a syphilis test and an HIV test.
+
+    Upstream ``notify_attendees`` schedules one test, and separate notification
+    instances would draw attendees independently, so a partner could get the
+    panel without the HIV test. The visit runs all three on the same attendees
+    in the index's treatment month. The modules are looked up by name because
+    the sim runs copies of the objects built in ``build_sim``.
+    """
+
+    VISIT = ("panel", "syph_pn_test", "hiv_test_pn")
+
+    def notify_attendees(self, uids):
+        hiv = self.sim.diseases.hiv
+        for name in self.VISIT:
+            test_uids = uids[~hiv.diagnosed[uids]] if name == "hiv_test_pn" else uids
+            if len(test_uids):
+                test = self.sim.interventions[name]
+                test.step(uids=test_uids)
+                # upstream stamps ti_tested only on testers it picks itself, and
+                # new_tests counts from it
+                test.ti_tested[test_uids] = self.ti
 
 
 class CareSeekScaler(ss.Intervention):
@@ -320,6 +351,35 @@ class CareSeekScaler(ss.Intervention):
                     intv.pars.rel_test = intv.pars.rel_test * mult_scalar
         self._fired = True
         return
+
+
+class STIScreeningAtHIVTesting(sti.SymptomaticTesting):
+    """The POC panel offered to women without discharge symptoms at an HIV testing visit.
+
+    ``contacts`` returns the uids at an HIV testing visit this step. Women are
+    offered the panel, men too with ``include_men``, and each offer is
+    accepted with probability ``acceptance``. People with NG, CT or TV
+    symptoms are left to the care-seeking door, which would otherwise test
+    and queue them for treatment a second time. Positives join the shared
+    treatment queues, which have already run this step, so treatment follows
+    the month after.
+    """
+
+    DISCHARGE = ("ng", "ct", "tv")
+
+    def __init__(self, contacts, include_men=False, acceptance=1.0, **kwargs):
+        super().__init__(eligibility=self._offered, **kwargs)
+        self.define_pars(acceptance=ss.bernoulli(p=acceptance))
+        self.contacts = contacts
+        self.include_men = include_men
+
+    def _offered(self, sim):
+        uids = self.contacts(sim)
+        if not self.include_men:
+            uids = uids[sim.people.female[uids]]
+        for name in self.DISCHARGE:
+            uids = uids[~sim.diseases[name].symptomatic[uids]]
+        return self.pars.acceptance.filter(uids)
 
 
 class FSWOutreach(sti.SymptomaticTesting):

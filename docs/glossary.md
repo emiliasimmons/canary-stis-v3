@@ -3,8 +3,8 @@
 - **POC arm**. The intervention arm: point-of-care. An etiological test-and-treat panel
   that replaces syndromic management at the same symptomatic care-seeking door, switched
   on at `pars.intv_year`. Not an asymptomatic screening programme.
-- **Screening door**. The POC panel offered to people without STI symptoms at an HIV
-  prevention contact, in addition to the symptomatic care-seeking door.
+- **STI screening at HIV testing**. The POC panel offered to people without STI symptoms
+  at an HIV testing visit, in addition to the symptomatic care-seeking door.
 - **SOC arm**. The comparator. Syndromic management for the whole run, selected by
   `pars.intv_year = None`.
 - **Syndromic management**. Treating on the presenting syndrome with a drug mix covering
@@ -33,9 +33,8 @@
   own sub-category.
 - **Pathway C**. Biological susceptibility: treating an STI ends the STI cofactor in the
   treated person.
-- **Pathway D**. Prevention targeting: a positive STI result leads the person into
-  prevention (PrEP, condoms, counseling), and every effect of that prevention on HIV
-  belongs to this pathway.
+- **Pathway D**. Prevention targeting: a positive STI result leads the person onto PrEP,
+  and every effect of that PrEP on HIV belongs to this pathway.
 - **Pathway E**. Network risk signal: the hypothesis that a positive STI result in an
   HIV-negative person marks someone more likely than average to acquire HIV later.
 - **Behavioral eligibility**. Qualifying for PrEP on self-reported sexual behavior, the

@@ -95,6 +95,27 @@ def treated_this_step(treatment_names):
     return eligibility
 
 
+def notification_indexes(intv_year):
+    """Eligibility: people whose NG/CT/TV treatment fired this step, or syphilis treatment last step.
+
+    Partner notification runs before syph_tx in each step, so a syphilis
+    treatment makes its index the step after. Only treatments from
+    *intv_year* on count, so a SOC-era syphilis treatment in the month before
+    triggers nothing.
+    """
+    discharge = treated_this_step(["ng_tx", "ct_tx", "metronidazole"])
+
+    def eligibility(sim):
+        ti = sim.ti
+        if sim.t.now("year") < intv_year:
+            return ss.uids()
+        uids = discharge(sim)
+        if ti > 0 and sim.t.yearvec[ti - 1] >= intv_year:
+            uids = uids | (sim.interventions.syph_tx.ti_treated == ti - 1).uids
+        return uids
+    return eligibility
+
+
 def tested_this_step(test_names):
     """Agents any of *test_names* tested this step; absent tests are skipped."""
     def contacts(sim):

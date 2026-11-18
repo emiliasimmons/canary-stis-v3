@@ -25,6 +25,7 @@ from .analyzers import (
     DemographicSnapshotAnalyzer,
     DiagnosisTracker,
     ExposureTracker,
+    HIVIncidence1549,
     HIVTransmissionLogger,
     InfectionTracker,
     NetworkPositionTracker,
@@ -37,6 +38,7 @@ from .diagnostics import (
     gate_poc,
     gate_soc,
     make_syph_tx_eligibility,
+    notification_indexes,
     seeking_care_any,
     seeking_care_uds,
     seeking_care_vds,
@@ -54,9 +56,15 @@ from .interventions import (
     FSWOutreach,
     GonorrheaTx,
     MagicCure,
+    NotificationVisit,
+    STIScreeningAtHIVTesting,
 )
 
 _DATA_DIR = Path(__file__).parent / "data"
+
+# the POC arms' intervention year, so a lever added to SOC starts when it would
+# under POC and the arms match before it
+SOC_LEVER_START = 2027
 
 # proportion of people with HIV on ART when no country is set
 NO_COUNTRY_ART_COVERAGE = 0.6
@@ -187,6 +195,10 @@ def latent_seed_frame(init_prev, n_risk_groups=3):
     ])
 
 
+def _nobody(sim):
+    return ss.uids()
+
+
 def as_mask(eligibility):
     """Wrap a uids-returning eligibility as the boolean-array callable sti.Prep documents."""
     def fn(sim):
@@ -305,6 +317,16 @@ def sim_pars(**kwargs):
     pars.prep = sc.objdict(eligibility="none", start=None, coverage=0.30,
                            dur_months=3, prep_eff=0.8, prep_adh=1.0)
     pars.magic_cure = sc.objdict(year=None)
+    # Partner notification, POC arms only, from intv_year: None (off), or
+    # dict(notify_rates=, attendance_rates=) in sti.pn_rates' shape, keyed by
+    # partnership type (stable, casual), attendance optionally by partner sex.
+    # Partnership types left out, one-off and sex work among them, are never
+    # notified.
+    pars.pn = None
+    # STI screening at HIV testing, POC arm only, from intv_year: None (off), or
+    # dict(include_men=False, acceptance=1.0). Offers the POC panel at every
+    # background HIV testing visit.
+    pars.sti_screening = None
 
     pars.connectors = sc.objdict(
         hiv_ng=sc.objdict(),
@@ -343,7 +365,8 @@ def sim_pars(**kwargs):
     # Country setup. name=None runs the scalar pregnancy and deaths rates below;
     # a name loads that country's 1985 age structure, age-specific fertility and
     # mortality from datafolder, in stisim's location-file layout, and its ART
-    # and VMMC coverage from {name}_art_coverage.csv and {name}_vmmc_coverage.csv.
+    # and VMMC coverage from {name}_art_coverage.csv and {name}_vmmc_coverage.csv,
+    # and viral suppression among people on ART from {name}_vls.csv.
     pars.country = sc.objdict(name=None, datafolder=_DATA_DIR)
 
     # 220 births per 1000 women 15-49 reproduces the SSA aggregate; the coupled
@@ -461,6 +484,23 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
         confirm_name = "syph_anc_confirm"
         intvs.extend([symp_test_poc, anc_confirm])
 
+        if pars.pn is not None:
+            # notified partners are mostly in early syphilis, where the
+            # non-treponemal RPR is sensitive, and it reads negative after a
+            # cure, where the treponemal dual test would re-treat. It tests
+            # only the attendees partner notification passes it.
+            pn_test = sti.SyphTest(
+                name="syph_pn_test", label="syph_pn_test",
+                product=product("rpr", label="syph_dx_rpr_pn"),
+                test_prob_data=1.0,
+                eligibility=_nobody,
+                stop=_NO_STOP,
+                dt_scale=False,
+            )
+            pn_test.start = intv_year
+            treat_tests.append("syph_pn_test")
+            intvs.append(pn_test)
+
     syph_tx = sti.SyphTx(
         name="syph_tx", label="syph_tx",
         eligibility=make_syph_tx_eligibility(
@@ -476,7 +516,7 @@ def build_sim(pars):
     """Build a canary-stis simulation from parameters. Returns an unrun ss.Sim."""
     use_poc = pars.intv_year is not None
     intv_year = pars.intv_year
-    lever_start = intv_year if intv_year is not None else pars.sim.start
+    lever_start = intv_year if intv_year is not None else SOC_LEVER_START
 
     ng = sti.Gonorrhea(**pars.ng)
     ct = sti.Chlamydia(**pars.ct)
@@ -527,15 +567,21 @@ def build_sim(pars):
         outcome_tx_map=outcome_tx_map,
         pars=syndromic_pars,
     )
+    def poc_panel():
+        """Arguments every POC panel shares, fresh for each module."""
+        return dict(
+            diseases=["ng", "ct", "tv"],
+            treatments=[ng_tx, ct_tx, metronidazole],
+            disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
+            negative_treatments=[],
+            pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
+        )
+
     panel = sti.SymptomaticTesting(
         name="panel", label="POC panel",
-        diseases=["ng", "ct", "tv"],
         eligibility=gate_poc(seeking_care_any, use_poc, intv_year),
         stop=_NO_STOP,
-        treatments=[ng_tx, ct_tx, metronidazole],
-        disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
-        pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
-        negative_treatments=[],
+        **poc_panel(),
     )
 
     # Detection modules precede treatment modules so a treatment sees eligibility
@@ -551,16 +597,32 @@ def build_sim(pars):
             name="fsw_outreach", label="fsw_outreach",
             start=pars.fsw_outreach.start if pars.fsw_outreach.start is not None else lever_start,
             stop=fsw_stop if fsw_stop is not None else _NO_STOP,
-            diseases=["ng", "ct", "tv"],
-            treatments=[ng_tx, ct_tx, metronidazole],
-            disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
-            negative_treatments=[],
-            pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
+            **poc_panel(),
         )
         detection.insert(0, fsw)
 
     # TreatmentLog first: it snapshots infection status before any treatment
     interventions = [TreatmentLog()] + detection + treatments
+
+    hiv_test_pn = None
+    if pars.pn is not None:
+        if not use_poc:
+            raise ValueError("partner notification acts on POC diagnoses; set intv_year")
+        # after the NG/CT/TV treatments, so this step's are indexes, and before
+        # syph_tx, so syphilis-positive attendees are treated this step
+        interventions.append(NotificationVisit(
+            name="pn", label="pn",
+            eligibility=notification_indexes(intv_year),
+            pars=dict(
+                p_notify_current=ss.bernoulli(p=sti.pn_rates(pars.pn["notify_rates"])),
+                p_attends_current=ss.bernoulli(p=sti.pn_rates(pars.pn["attendance_rates"])),
+                p_notify_previous=ss.bernoulli(p=0),
+                p_attends_previous=ss.bernoulli(p=0),
+            ),
+        ))
+        hiv_test_pn = sti.HIVTest(name="hiv_test_pn", label="hiv_test_pn",
+                                  test_prob_data=1.0, dt_scale=False, eligibility=_nobody)
+        hiv_test_pn.stop = _NO_STOP
     interventions.extend(_syphilis_pipeline(pars, use_poc, intv_year))
 
     if not isinstance(pars.care_seek_mult, (int, float)) or float(pars.care_seek_mult) != 1.0:
@@ -608,7 +670,9 @@ def build_sim(pars):
     country = pars.country
     art_coverage, vmmc_coverage = pars.art.coverage, pars.vmmc.coverage
     if country.name is None:
-        hiv_tests = [sti.HIVTest(name="hiv_test", **pars.hiv_test)]
+        hiv_test = sti.HIVTest(name="hiv_test", **pars.hiv_test)
+        hiv_test.stop = _NO_STOP
+        hiv_tests = [hiv_test]
         if art_coverage is None:
             art_coverage = NO_COUNTRY_ART_COVERAGE
     else:
@@ -619,12 +683,30 @@ def build_sim(pars):
                         else proportion_coverage(art_coverage, "art", "art.coverage"))
         vmmc_coverage = (country_coverage(country, "vmmc") if vmmc_coverage is None
                          else proportion_coverage(vmmc_coverage, "vmmc", "vmmc.coverage"))
-    art = sti.ART(**dict(pars.art, coverage=art_coverage))
+    # without a country stisim's default keeps everyone on ART suppressed
+    vls = None
+    if country.name is not None:
+        vls_path = Path(country.datafolder) / f"{country.name}_vls.csv"
+        vls = proportion_coverage(pd.read_csv(vls_path), "vls", vls_path)
+    art = sti.ART(**dict(pars.art, coverage=art_coverage), vls_coverage=vls)
     vmmc = sti.VMMC(coverage=vmmc_coverage) if vmmc_coverage is not None else None
 
-    # the screen reads this step's HIV tests, PrEP reads the screen, and testing
-    # precedes ART so agents diagnosed this step can start treatment in it
-    tail = [magic_cure, *hiv_tests, screen, prep, art, vmmc]
+    sti_screening = None
+    if pars.sti_screening is not None:
+        if not use_poc:
+            raise ValueError("STI screening at HIV testing uses the POC panel; set intv_year")
+        sti_screening = STIScreeningAtHIVTesting(
+            contacts=gate_poc(tested_this_step(HIV_TEST_NAMES), use_poc, intv_year),
+            **pars.sti_screening,
+            name="sti_screening", label="sti_screening",
+            stop=_NO_STOP,
+            **poc_panel(),
+        )
+
+    # the screens read this step's HIV tests, PrEP reads the behavioral screen,
+    # and testing precedes ART so agents diagnosed this step can start
+    # treatment in it
+    tail = [magic_cure, *hiv_tests, hiv_test_pn, sti_screening, screen, prep, art, vmmc]
     interventions.extend(i for i in tail if i is not None)
 
     connectors = make_connectors(hiv, ng=ng, ct=ct, syph=tp, tv=tv, bv=bv, pars=pars.connectors)
@@ -642,6 +724,7 @@ def build_sim(pars):
         NetworkPositionTracker(),
         DemographicSnapshotAnalyzer(),
         HIVTransmissionLogger(),
+        HIVIncidence1549(),
         ss.infection_log(),
     ]
 

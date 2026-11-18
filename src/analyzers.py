@@ -69,7 +69,8 @@ class DiagnosisTracker(ss.Analyzer):
 class TreatmentLog(ss.Intervention):
     """
     One row per STI treatment: when, who, which drug, which channels flagged the
-    person that step, and whether they carried each of ``diseases`` at the time.
+    person that step, and whether they carried each of ``diseases`` at the time
+    and had symptoms of it they could notice.
 
     Built as an intervention so it can read infection status before the step's
     treatments clear it. ``step`` runs first among the interventions and
@@ -90,6 +91,7 @@ class TreatmentLog(ss.Intervention):
         super().__init__(name=name)
         self.status_diseases = list(diseases)
         self._infected = {}
+        self._symptomatic = {}
         self._drugs = []
         self._channels = {}
         self._rows = []
@@ -109,6 +111,13 @@ class TreatmentLog(ss.Intervention):
 
     def step(self):
         self._infected = {d: self.sim.diseases[d].infected.uids for d in self.status_diseases}
+        self._symptomatic = {d: self._symptoms(self.sim.diseases[d]).uids for d in self.status_diseases}
+
+    @staticmethod
+    def _symptoms(disease):
+        # syphilis's symptomatic covers the primary and secondary stages even
+        # when the chancre or rash is not where the person would notice it
+        return getattr(disease, "visibly_symptomatic", disease.symptomatic)
 
     def _flagged(self, channel):
         # syphilis tests call a result; NG/CT/TV channels refer to treatment
@@ -131,14 +140,61 @@ class TreatmentLog(ss.Intervention):
                        drug=np.full(len(treated), tx.name, dtype=object), channel=channel)
             for d, infected in self._infected.items():
                 row[d] = np.isin(treated, infected)
+                row[f"{d}_symptomatic"] = np.isin(treated, self._symptomatic[d])
             self._rows.append(row)
 
     def to_df(self):
         """All treatments so far, one row each."""
-        cols = ["year", "uid", "drug", "channel", *self.status_diseases]
+        cols = ["year", "uid", "drug", "channel", *self.status_diseases,
+                *(f"{d}_symptomatic" for d in self.status_diseases)]
         if not self._rows:
             return pd.DataFrame(columns=cols)
         return pd.DataFrame({c: np.concatenate([r[c] for r in self._rows]) for c in cols})
+
+
+class HIVIncidence1549(ss.Analyzer):
+    """
+    HIV incidence at ages 15-49 per 100 person-years, both sexes pooled and by sex.
+
+    stisim reports incidence in age bands but not the number at risk in each,
+    so its bands cannot be pooled into one 15-49 rate. Each step adds the new
+    infections at 15-49 and one step of person-time for every 15-49-year-old
+    who was HIV-negative at its start.
+    """
+
+    SEXES = ("all", "female", "male")
+
+    def __init__(self, name="hiv_incidence_15_49"):
+        super().__init__(name=name)
+        self._new = {}
+        self._py = {}
+
+    def init_results(self):
+        super().init_results()
+        npts = self.t.npts
+        self._new = {s: np.zeros(npts, dtype=int) for s in self.SEXES}
+        self._py = {s: np.zeros(npts) for s in self.SEXES}
+
+    def step(self):
+        ppl, hiv, ti = self.sim.people, self.sim.diseases.hiv, self.ti
+        age = ppl.age
+        adult = ppl.alive & (age >= 15) & (age < 50)
+        new = hiv.ti_infected == ti
+        at_risk = adult & (~hiv.infected | new)
+        for sex, mask in zip(self.SEXES, (adult, adult & ppl.female, adult & ppl.male)):
+            self._new[sex][ti] = (new & mask).count()
+            self._py[sex][ti] = (at_risk & mask).count() * self.t.dt_year
+
+    def annual(self):
+        """One row per calendar year and sex: new infections, person-years, incidence per 100."""
+        year = np.floor(self.t.yearvec).astype(int)
+        rows = []
+        for sex in self.SEXES:
+            for y in np.unique(year):
+                n, py = self._new[sex][year == y].sum(), self._py[sex][year == y].sum()
+                rows.append(dict(year=y, sex=sex, new_infections=n, person_years=py,
+                                 incidence=100 * n / py if py else np.nan))
+        return pd.DataFrame(rows)
 
 
 class InfectionTracker(ss.Analyzer):

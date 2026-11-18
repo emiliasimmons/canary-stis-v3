@@ -71,6 +71,22 @@ def test_country_art_targets_its_coverage_table():
             assert art.coverage[(band, sex)][0] == pytest.approx(level)
 
 
+def test_country_art_targets_its_viral_suppression_from_the_first_survey_back():
+    # testland's first suppression survey, in 2000, found 70% of women and 60%
+    # of men on ART suppressed
+    sim = build_sim(sim_pars(sim=TESTLAND_SIM, country=TESTLAND))
+    sim.init(verbose=0)
+    vls = sim.interventions.art.vls_coverage
+    for sex, level in [(0, 0.7), (1, 0.6)]:
+        assert vls[("[15,100)", sex)][0] == pytest.approx(level)
+
+
+def test_no_country_keeps_everyone_on_art_suppressed():
+    sim = build_sim(sim_pars(sim=TINY))
+    sim.init(verbose=0)
+    assert sim.interventions.art.vls_coverage is None
+
+
 def test_country_vmmc_circumcises_to_its_coverage_table():
     # testland circumcises 80% of men aged 15-19 and no one else
     sim = build_sim(sim_pars(sim=dict(TESTLAND_SIM, n_agents=5000), country=TESTLAND))
