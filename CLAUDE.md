@@ -23,7 +23,7 @@ next settings experiment"), **immediately**:
 1. Load /canonize:canon and orient.
 2. Load /calib:project-workflow.
 3. Read `experiments/<track>/README.md` and `STATUS.md`, then the track's tracking issue
-   and its open experiment issues and pull requests.
+   and its open experiment issues.
 
 Model and harness changes go through `tdd`, then `code-review`.
 
