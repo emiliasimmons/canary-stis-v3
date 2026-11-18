@@ -347,7 +347,8 @@ def sim_pars(**kwargs):
     # Country setup. name=None runs the scalar pregnancy and deaths rates below;
     # a name loads that country's 1985 age structure, age-specific fertility and
     # mortality from datafolder, in stisim's location-file layout, and its ART
-    # and VMMC coverage from {name}_art_coverage.csv and {name}_vmmc_coverage.csv.
+    # and VMMC coverage from {name}_art_coverage.csv and {name}_vmmc_coverage.csv,
+    # and viral suppression among people on ART from {name}_vls.csv.
     pars.country = sc.objdict(name=None, datafolder=_DATA_DIR)
 
     # 220 births per 1000 women 15-49 reproduces the SSA aggregate; the coupled
@@ -623,7 +624,12 @@ def build_sim(pars):
                         else proportion_coverage(art_coverage, "art", "art.coverage"))
         vmmc_coverage = (country_coverage(country, "vmmc") if vmmc_coverage is None
                          else proportion_coverage(vmmc_coverage, "vmmc", "vmmc.coverage"))
-    art = sti.ART(**dict(pars.art, coverage=art_coverage))
+    # without a country stisim's default keeps everyone on ART suppressed
+    vls = None
+    if country.name is not None:
+        vls_path = Path(country.datafolder) / f"{country.name}_vls.csv"
+        vls = proportion_coverage(pd.read_csv(vls_path), "vls", vls_path)
+    art = sti.ART(**dict(pars.art, coverage=art_coverage), vls_coverage=vls)
     vmmc = sti.VMMC(coverage=vmmc_coverage) if vmmc_coverage is not None else None
 
     # the screen reads this step's HIV tests, PrEP reads the screen, and testing
