@@ -353,6 +353,29 @@ class CareSeekScaler(ss.Intervention):
         return
 
 
+class STIScreeningAtHIVTesting(sti.SymptomaticTesting):
+    """The POC panel offered to women at an HIV testing visit, symptoms or not.
+
+    ``contacts`` returns the uids at an HIV testing visit this step. Women are
+    offered the panel, men too with ``include_men``, and each offer is
+    accepted with probability ``acceptance``. Positives join the shared
+    treatment queues, which have already run this step, so treatment follows
+    the month after.
+    """
+
+    def __init__(self, contacts, include_men=False, acceptance=1.0, **kwargs):
+        super().__init__(eligibility=self._offered, **kwargs)
+        self.define_pars(acceptance=ss.bernoulli(p=acceptance))
+        self.contacts = contacts
+        self.include_men = include_men
+
+    def _offered(self, sim):
+        uids = self.contacts(sim)
+        if not self.include_men:
+            uids = uids[sim.people.female[uids]]
+        return self.pars.acceptance.filter(uids)
+
+
 class FSWOutreach(sti.SymptomaticTesting):
     """Periodic NG/CT/TV testing of currently-active FSW (outreach lever).
 

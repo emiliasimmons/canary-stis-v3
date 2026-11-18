@@ -57,6 +57,7 @@ from .interventions import (
     GonorrheaTx,
     MagicCure,
     NotificationVisit,
+    STIScreeningAtHIVTesting,
 )
 
 _DATA_DIR = Path(__file__).parent / "data"
@@ -322,6 +323,10 @@ def sim_pars(**kwargs):
     # Partnership types left out, one-off and sex work among them, are never
     # notified.
     pars.pn = None
+    # STI screening at HIV testing, POC arm only, from intv_year: None (off), or
+    # dict(include_men=False, acceptance=1.0). Offers the POC panel at every
+    # background HIV testing visit.
+    pars.sti_screening = None
 
     pars.connectors = sc.objdict(
         hiv_ng=sc.objdict(),
@@ -682,9 +687,26 @@ def build_sim(pars):
     art = sti.ART(**dict(pars.art, coverage=art_coverage), vls_coverage=vls)
     vmmc = sti.VMMC(coverage=vmmc_coverage) if vmmc_coverage is not None else None
 
-    # the screen reads this step's HIV tests, PrEP reads the screen, and testing
-    # precedes ART so agents diagnosed this step can start treatment in it
-    tail = [magic_cure, *hiv_tests, hiv_test_pn, screen, prep, art, vmmc]
+    sti_screening = None
+    if pars.sti_screening is not None:
+        if not use_poc:
+            raise ValueError("STI screening at HIV testing uses the POC panel; set intv_year")
+        sti_screening = STIScreeningAtHIVTesting(
+            contacts=gate_poc(tested_this_step(HIV_TEST_NAMES), use_poc, intv_year),
+            **pars.sti_screening,
+            name="sti_screening", label="sti_screening",
+            stop=_NO_STOP,
+            diseases=["ng", "ct", "tv"],
+            treatments=[ng_tx, ct_tx, metronidazole],
+            disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
+            negative_treatments=[],
+            pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
+        )
+
+    # the screens read this step's HIV tests, PrEP reads the behavioral screen,
+    # and testing precedes ART so agents diagnosed this step can start
+    # treatment in it
+    tail = [magic_cure, *hiv_tests, hiv_test_pn, sti_screening, screen, prep, art, vmmc]
     interventions.extend(i for i in tail if i is not None)
 
     connectors = make_connectors(hiv, ng=ng, ct=ct, syph=tp, tv=tv, bv=bv, pars=pars.connectors)
