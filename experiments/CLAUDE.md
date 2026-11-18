@@ -27,47 +27,46 @@ numbers.
 
 Calib's `project-workflow` and `experiment-close` skills govern experiments, with three
 changes: the question comes from an experiment issue, the issue number is the experiment
-number, and each experiment lives on its own branch and pull request. Where those skills
-say "the most recent experiment", read each open experiment pull request on the track.
-Where they say to commit, use the commits below.
+number, and each experiment lives on its own branch. Where those skills say "the most
+recent experiment", read each unmerged experiment branch on the track. Where they say to
+commit, use the commits below.
 
 Experiments address one experiment issue each. Each runs on its own branch,
-`exp/<number>-<slug>`, cut from the default branch, and merges back into it through a pull
-request. Several approaches to one experiment issue can run at the same time, each with
-its own slug, branch, folder at `experiments/<track>/<number>_<slug>/`, and pull request.
+`exp/<number>-<slug>`, cut from the default branch, and merges back into it locally.
+Several approaches to one experiment issue can run at the same time, each with its own
+slug, branch and folder at `experiments/<track>/<number>_<slug>/`.
 A change made in response to a result is a new question and gets a new experiment issue.
 A different way of answering the same question is another approach on the same issue.
 
 1. **Open.** Create the branch and the folder with empty `outputs/` and `figures/`. Draft
    the README from the issue: the question (linking the issue and the SUMMARY that
    motivated it), the plan, and the success criteria. Show it and wait for approval.
-   Commit it as `open-exp-<number>: <question>`, push to `origin`, and open a draft pull
-   request titled with the question, its body a link to the README and
-   `Closes #<number>`.
+   Commit it as `open-exp-<number>: <question>` and push to `origin`.
 2. **Build.** Write `config.yaml` and `run.py`. Code a second experiment would need goes
    into `src/`, through `tdd` then `code-review`. Commit as
    `exp-<number>: <scientific change>` and push before running, so every result traces to
    a commit. `scripts/mirror` refuses to launch from a dirty tree.
 3. **Run.** Run locally with `uv run python experiments/<track>/<number>_<slug>/run.py`,
    or remotely per Remote runs below. `run.py` appends results to `outputs/` as each
-   simulation finishes and saves every figure as `figures/<name>.png`.
+   simulation finishes and saves every figure as `figures/figN_<name>.png`, numbered in
+   the order the SUMMARY embeds them. Each figure's title starts with `Fig N: `, so
+   a figure seen outside the SUMMARY still says which one it is.
 4. **Close.** When a run finishes, offer to close before diagnosing or fixing anything.
    Write the SUMMARY per `experiment-close`, run its validator, and rewrite STATUS.md.
    Show both and wait for approval. Commit them with the figures the SUMMARY embeds as
    `close-exp-<number>: <result>` and push. When the result answers a well-defined
    question, propose a canon finding in `docs/findings/` to commit on the same branch.
-5. **Merge.** Replace the README link in the pull request body with a link to the
-   SUMMARY, keep `Closes #<number>`, and mark it ready. Merge with a merge commit once the
-   user approves, in the pull request or in chat, then switch the checkout to the
-   updated default branch. If the SUMMARY's Next section names a clear next experiment,
-   draft its issue and open it once the user confirms.
+5. **Merge.** Once the user approves, merge the branch into the default branch with a
+   merge commit and switch the checkout to it. Close the experiment issue unless the
+   SUMMARY leaves it open for another approach. If the SUMMARY's Next section names
+   a clear next experiment, draft its issue and open it once the user confirms.
 
 `outputs/` is git-ignored: it regenerates from the committed `run.py`, and remote outputs
 come back with `scripts/mirror-pull`. `figures/` is committed so SUMMARYs render them.
 pngs will have to be force-staged.
 
-At session start on a track, run `project-workflow`'s two checks on each open experiment
-pull request: a README before any code, and a SUMMARY wherever outputs or figures exist.
+At session start on a track, run `project-workflow`'s two checks on each unmerged
+experiment branch: a README before any code, and a SUMMARY wherever outputs or figures exist.
 
 Experiment branches share the main checkout by default, so open experiments take turns
 there. When the user asks to run one in true parallel, give it its own worktree and run

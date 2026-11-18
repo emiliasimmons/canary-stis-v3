@@ -1,39 +1,30 @@
 # Settings status
 
-No experiment has run. The first experiment sets the agent count and replicate count from
-the model's measured run time and run-to-run variance, through calib's `model-setup`
-(story 18 on issue 1).
+The parameter exploration closed on its third approach,
+[38.3_seed_year_lower_sti_beta](38.3_seed_year_lower_sti_beta/SUMMARY.md). Its landing
+draws fill both mature cells: 154 of 400 Zimbabwe draws land at 12-18% HIV prevalence at
+15-49 in 2026, and 10 of 400 Eswatini draws at 22-28%. Neither expanding cell has a draw.
+Seeding HIV in 1993-2000 instead of 1985 moved the median incidence peak only from about
+2005 to 2008 (SUMMARY observation 2), and `seed_year` is dropped.
 
-Questions that depend on simulation results, and are settled by experiments on this
-track:
+The lower STI ranges reach every STIPS band. Draws inside each band have chlamydia
+`beta_m2f` 0.06-0.141, gonorrhoea 0.137-0.33, trichomoniasis 0.022-0.067 and syphilis
+0.01-0.04 (SUMMARY observations 8-9).
 
-- What produces a mature or an expanding epidemic at the same prevalence and country
-  setup: the HIV seed year, the network, or both. ART, VMMC and HIV testing are fixed by
-  the country setup and shared testing streams.
-- Which network parameters separate the settings, condom use included. Risk-group
-  proportions and concurrency are the first candidates. Issue 5 compares the Eswatini
-  model's network inputs with this model's defaults.
-- How HIV is seeded.
-- Which setting the shared STI transmission parameters are first set on, given that the
-  current values were set by hand on the default network and moving the network moves STI
-  prevalence.
-- Whether the shared biology and care parameters are fixed at single values or explored
-  over the same ranges for every setting. Fixed is the current lean.
+The next experiment gives each setting its own HIV `beta_m2f` range. Eswatini lands only
+at the top of 38.3's shared HIV `beta_m2f` range of 0.003-0.012, so its range extends
+above HIV `beta_m2f` 0.012.
+Reduced ART scale-up in the high-incidence setting may join the same experiment. Separate
+HIV `beta_m2f` ranges depart from the
+[settings decision](../../docs/pages/settings-prevalence-by-phase.md), which shares HIV
+biology across the four settings, so the decision is revised alongside the issue.
 
-To watch: each country's simulations fill only that country's cells, so a Zimbabwe
-simulation reaching high prevalence is discarded. If many are, letting either country fill
-either cell (with country recorded on each simulation) may be the better rule.
+Choices for the next experiment's design:
 
-Simulations start in 1985 and select their demographics with
-`sim_pars(country=dict(name="eswatini"))` or `"zimbabwe"`: the 1985 age structure,
-fertility, and mortality with HIV deaths removed, from UN WPP files in `src/data`
-(`scripts/download_wpp.py`, `scripts/remove_hiv_mortality.py`). HIV is still seeded at the
-simulation start.
+- Each setting's HIV `beta_m2f` range.
+- Whether ART scale-up is reduced in the high-incidence setting, and by how much.
 
-Phase is judged from `sim.analyzers.hiv_incidence_15_49.annual()`: HIV incidence at ages
-15-49 per 100 person-years by year, pooled and by sex. Prevalence at 15-49 is stisim's
-`hiv.prevalence_15_49` result.
-
-Before the first exploration: the per-pathogen STI-to-HIV multipliers (issue 12), the
-model change that loads country ART and VMMC coverage and the four shared testing streams
-(issue 18), and Zimbabwe's coverage data (issue 17).
+Figures follow the `figN_` naming in [experiments/CLAUDE.md](../CLAUDE.md). The
+model-features figures (38.3's Fig 6 and 7) pool the network summary over landing draws
+rerun with `run.py --network N`, in the six-panel layout of Emilia's "Select model
+features" slide.

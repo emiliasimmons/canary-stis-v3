@@ -197,6 +197,150 @@ class HIVIncidence1549(ss.Analyzer):
         return pd.DataFrame(rows)
 
 
+class STIPrevalence1549(ss.Analyzer):
+    """
+    Curable-STI prevalence at ages 15-49, both sexes pooled and by sex.
+
+    stisim's adult prevalence spans 15-64 for gonorrhoea, chlamydia and
+    trichomoniasis and counts only the sexually active for syphilis. Each step
+    adds one step of person-time for every 15-49-year-old and for every one
+    infected. Syphilis is counted at any stage ('syph') and as RPR-positive
+    ('syph_rpr'), the measure surveys report as active syphilis.
+    """
+
+    SEXES = ("all", "female", "male")
+    DISEASES = ("ng", "ct", "tv", "syph", "syph_rpr")
+
+    def __init__(self, name="sti_prevalence_15_49"):
+        super().__init__(name=name)
+        self._infected = {}
+        self._py = {}
+
+    def init_results(self):
+        super().init_results()
+        npts = self.t.npts
+        self._infected = {(s, d): np.zeros(npts) for s in self.SEXES for d in self.DISEASES}
+        self._py = {s: np.zeros(npts) for s in self.SEXES}
+
+    def step(self):
+        ppl, dis, ti = self.sim.people, self.sim.diseases, self.ti
+        adult = ppl.alive & (ppl.age >= 15) & (ppl.age < 50)
+        states = dict(ng=dis.ng.infected, ct=dis.ct.infected, tv=dis.tv.infected,
+                      syph=dis.syph.infected, syph_rpr=dis.syph.nontrep)
+        dt = self.t.dt_year
+        for sex, mask in zip(self.SEXES, (adult, adult & ppl.female, adult & ppl.male)):
+            self._py[sex][ti] = mask.count() * dt
+            for disease, state in states.items():
+                self._infected[(sex, disease)][ti] = (state & mask).count() * dt
+
+    def annual(self):
+        """One row per calendar year, sex and disease: person-years infected and at 15-49, prevalence."""
+        year = np.floor(self.t.yearvec).astype(int)
+        rows = []
+        for (sex, disease), infected in self._infected.items():
+            for y in np.unique(year):
+                inf, py = infected[year == y].sum(), self._py[sex][year == y].sum()
+                rows.append(dict(year=y, sex=sex, disease=disease, person_years_infected=inf,
+                                 person_years=py, prevalence=inf / py if py else np.nan))
+        return pd.DataFrame(rows)
+
+
+class NetworkSummary(ss.Analyzer):
+    """
+    Sexual network summary at ages 15-49 in one year, as JSON-ready aggregates.
+
+    Taken at the step nearest the start of year. Partner histograms are agent
+    counts in bins 0, 1, ... with the last bin open-ended. Lifetime partners
+    include sex-work partners, which stisim counts apart from the rest. New
+    partners in the last year are the rise in that count since the step nearest
+    the start of the year before. Debut ages are the model's drawn debut age by
+    single year, 10 and under to 30 and over. Risk groups count sex workers
+    (women) and clients (men) as their own group. Age gaps are male age minus
+    female age in current stable and casual partnerships, grouped by the female
+    partner's age, and age pairing counts the same partnerships by single year of
+    each partner's age.
+    """
+
+    LIFETIME_BINS = 30
+    NEW_BINS = 10
+    DEBUT_MIN, DEBUT_MAX = 10, 30
+    GAP_QUANTILES = (5, 25, 50, 75, 95)
+    FEMALE_AGE_GROUPS = dict(f15_25=(15, 25), f25_35=(25, 35), f35_50=(35, 50))
+    PAIRING_AGES = (15, 64, 79)  # youngest age, oldest woman, oldest man
+
+    def __init__(self, year, name="network_summary"):
+        super().__init__(name=name)
+        self.year = year
+        self._ti_before = self._ti_snapshot = None
+        self._partners_before = None
+        self._summary = None
+
+    def init_results(self):
+        super().init_results()
+        yearvec = self.t.yearvec
+        nearest = lambda y: int(np.argmin(np.abs(yearvec - y)))
+        # a sim that ends before the year never takes the snapshot
+        if yearvec[0] <= self.year - 1 and self.year <= yearvec[-1]:
+            self._ti_before, self._ti_snapshot = nearest(self.year - 1), nearest(self.year)
+
+    def _lifetime_partners(self):
+        nw = self.sim.networks.structuredsexual
+        return np.asarray(nw.lifetime_partners.raw) + np.asarray(nw.lifetime_sw_partners.raw)
+
+    def step(self):
+        if self.ti == self._ti_before:
+            self._partners_before = self._lifetime_partners()
+        if self.ti == self._ti_snapshot:
+            self._summary = self._snapshot()
+
+    def _snapshot(self):
+        ppl, nw = self.sim.people, self.sim.networks.structuredsexual
+        adult = ppl.alive & (ppl.age >= 15) & (ppl.age < 50)
+        lifetime = self._lifetime_partners()
+        before = np.zeros_like(lifetime)
+        before[:len(self._partners_before)] = self._partners_before
+        new = lifetime - before
+
+        def histogram(values, top):
+            return np.bincount(np.minimum(values, top).astype(int), minlength=top + 1).tolist()
+
+        out = dict(year=self.year, lifetime_partners={}, new_partners_last_year={}, debut_age={},
+                   risk_group={})
+        for sex in ("female", "male"):
+            uids = (adult & ppl[sex]).uids
+            out["lifetime_partners"][sex] = histogram(lifetime[uids], self.LIFETIME_BINS)
+            out["new_partners_last_year"][sex] = histogram(new[uids], self.NEW_BINS)
+            debut = np.maximum(np.floor(np.asarray(nw.debut[uids])) - self.DEBUT_MIN, 0)
+            out["debut_age"][sex] = histogram(debut, self.DEBUT_MAX - self.DEBUT_MIN)
+            rg = np.asarray(nw.risk_group[uids])
+            sw = np.asarray((nw.fsw if sex == "female" else nw.client)[uids])
+            groups = dict(low=~sw & (rg == 0), medium=~sw & (rg == 1), high=~sw & (rg == 2), sex_work=sw)
+            out["risk_group"][sex] = {k: float(v.mean()) if len(rg) else None for k, v in groups.items()}
+
+        e = nw.edges
+        current = (e.edge_type == nw.edge_types["stable"]) | (e.edge_type == nw.edge_types["casual"])
+        f_age = np.asarray(ppl.age[e.p2[current]])
+        m_age = np.asarray(ppl.age[e.p1[current]])
+        gap = m_age - f_age
+        out["age_gap"] = {}
+        for key, (lo, hi) in self.FEMALE_AGE_GROUPS.items():
+            g = gap[(f_age >= lo) & (f_age < hi)]
+            out["age_gap"][key] = dict(n=int(len(g)),
+                                       quantiles=np.percentile(g, self.GAP_QUANTILES).tolist() if len(g) else None)
+
+        # sparse rows keep the full single-year grid to a few hundred cells
+        lo, f_hi, m_hi = self.PAIRING_AGES
+        keep = (f_age >= lo) & (f_age < f_hi + 1)
+        pairs = np.stack([np.floor(f_age[keep]), np.clip(np.floor(m_age[keep]), lo, m_hi)], axis=1).astype(int)
+        cells, counts = np.unique(pairs, axis=0, return_counts=True)
+        out["age_pairing"] = [[int(f), int(m), int(n)] for (f, m), n in zip(cells, counts)]
+        return out
+
+    def summary(self):
+        """The snapshot's aggregates, or None if the sim did not reach the year."""
+        return self._summary
+
+
 class InfectionTracker(ss.Analyzer):
     """
     Track per-agent STI infections for incidence analysis.
