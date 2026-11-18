@@ -1,0 +1,40 @@
+country: zimbabwe
+n_agents: 10000
+# end of 2040, so 2027-2040 are whole years
+stop: 2041
+intv_year: 2027
+horizon: [2027, 2040]
+
+# the draws closest to the target among 38.3's Zimbabwe results
+draws:
+  source: ../../settings/38.3_seed_year_lower_sti_beta/outputs/results.jsonl
+  target: 0.15
+  n: 6
+
+# notify: Alam 2010 median for STI notification in LMICs; attend: about half of
+# notified contacts reach a testing door (partner notification synthesis)
+pn: &pn
+  notify_rates: {stable: 0.54, casual: 0.54}
+  attendance_rates: {stable: 0.5, casual: 0.5}
+
+# sim_pars overrides per arm, numbered as in the pathway decomposition decision
+arms:
+  1_soc: {}
+  2_soc_behavioral_prep: {prep: {eligibility: behavioral}}
+  3_poc: {intv_year: 2027}
+  4_poc_pn: {intv_year: 2027, pn: *pn}
+  5_poc_sti_prep: {intv_year: 2027, prep: {eligibility: dx}}
+  6_poc_sti_prep_pn: {intv_year: 2027, prep: {eligibility: dx}, pn: *pn}
+  7_poc_screening: {intv_year: 2027, sti_screening: {include_men: false, acceptance: 1.0}}
+  8_soc_magic_cure: {magic_cure: {year: 2027}}
+
+# [arm, comparator, label]
+contrasts:
+  - [3_poc, 1_soc, "Direct treatment (3 vs 1)"]
+  - [4_poc_pn, 3_poc, "Partner notification (4 vs 3)"]
+  - [5_poc_sti_prep, 3_poc, "STI-triggered PrEP (5 vs 3)"]
+  - [6_poc_sti_prep_pn, 3_poc, "Notification + STI PrEP (6 vs 3)"]
+  - [7_poc_screening, 3_poc, "Screening at HIV testing (7 vs 3)"]
+  - [2_soc_behavioral_prep, 1_soc, "Behavioral PrEP (2 vs 1)"]
+  - [5_poc_sti_prep, 1_soc, "POC + STI PrEP (5 vs 1)"]
+  - [8_soc_magic_cure, 1_soc, "Magic cure (8 vs 1)"]
