@@ -26,6 +26,24 @@ def test_syndromic_treatment_without_sti_records_all_statuses_false():
     assert not syndromic[STIS].any().any()
 
 
+SYMPTOMS = [f"{d}_symptomatic" for d in STIS]
+
+
+def test_syndromic_treatment_without_sti_records_no_symptoms():
+    log = treatment_log(**NO_STI)
+    assert not log[SYMPTOMS].any().any()
+
+
+def test_panel_treats_symptomatic_and_asymptomatic_infections():
+    perfect = dict(ng=[1.0, 1.0], ct=[1.0, 1.0], tv=[1.0, 1.0])
+    log = treatment_log(intv_year=2010, poc=dict(sens=perfect, spec=perfect))
+    panel = log[log.channel == "panel"]
+    for d in ["ng", "ct", "tv"]:
+        infected = panel[panel[d]]
+        assert infected[f"{d}_symptomatic"].any() and not infected[f"{d}_symptomatic"].all(), d
+        assert not (panel[f"{d}_symptomatic"] & ~panel[d]).any(), d
+
+
 def test_perfect_panel_treats_exactly_the_recorded_infections():
     perfect = dict(ng=[1.0, 1.0], ct=[1.0, 1.0], tv=[1.0, 1.0])
     log = treatment_log(intv_year=2010, poc=dict(sens=perfect, spec=perfect))
@@ -60,3 +78,8 @@ def test_every_syphilis_channel_logs_its_treatments(intv_year, channels):
     assert channels <= set(syph.channel.str.split("+").explode())
     visible = syph[syph.channel.str.contains("syph_symp_test|syph_rash_test")]
     assert len(visible) > 0 and visible.syph.all()
+    # the ulcer and rash tests reach only visible symptoms; antenatal screening
+    # also finds latent syphilis
+    assert visible.syph_symptomatic.all()
+    antenatal_only = syph[~syph.channel.str.contains("syph_symp_test|syph_rash_test")]
+    assert (antenatal_only.syph & ~antenatal_only.syph_symptomatic).any()

@@ -69,7 +69,8 @@ class DiagnosisTracker(ss.Analyzer):
 class TreatmentLog(ss.Intervention):
     """
     One row per STI treatment: when, who, which drug, which channels flagged the
-    person that step, and whether they carried each of ``diseases`` at the time.
+    person that step, and whether they carried each of ``diseases`` at the time
+    and had symptoms of it they could notice.
 
     Built as an intervention so it can read infection status before the step's
     treatments clear it. ``step`` runs first among the interventions and
@@ -90,6 +91,7 @@ class TreatmentLog(ss.Intervention):
         super().__init__(name=name)
         self.status_diseases = list(diseases)
         self._infected = {}
+        self._symptomatic = {}
         self._drugs = []
         self._channels = {}
         self._rows = []
@@ -109,6 +111,13 @@ class TreatmentLog(ss.Intervention):
 
     def step(self):
         self._infected = {d: self.sim.diseases[d].infected.uids for d in self.status_diseases}
+        self._symptomatic = {d: self._symptoms(self.sim.diseases[d]).uids for d in self.status_diseases}
+
+    @staticmethod
+    def _symptoms(disease):
+        # syphilis's symptomatic covers the primary and secondary stages even
+        # when the chancre or rash is not where the person would notice it
+        return getattr(disease, "visibly_symptomatic", disease.symptomatic)
 
     def _flagged(self, channel):
         # syphilis tests call a result; NG/CT/TV channels refer to treatment
@@ -131,11 +140,13 @@ class TreatmentLog(ss.Intervention):
                        drug=np.full(len(treated), tx.name, dtype=object), channel=channel)
             for d, infected in self._infected.items():
                 row[d] = np.isin(treated, infected)
+                row[f"{d}_symptomatic"] = np.isin(treated, self._symptomatic[d])
             self._rows.append(row)
 
     def to_df(self):
         """All treatments so far, one row each."""
-        cols = ["year", "uid", "drug", "channel", *self.status_diseases]
+        cols = ["year", "uid", "drug", "channel", *self.status_diseases,
+                *(f"{d}_symptomatic" for d in self.status_diseases)]
         if not self._rows:
             return pd.DataFrame(columns=cols)
         return pd.DataFrame({c: np.concatenate([r[c] for r in self._rows]) for c in cols})
