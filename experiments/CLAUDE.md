@@ -103,6 +103,6 @@ arms, with the pathway decomposition (direct treatment, prevention targeting, ne
 identification) reported per setting to show how the split shifts across epidemics.
 Each setting is an ensemble of simulations selected from a parameter exploration by its
 2026 HIV prevalence, so no likelihood or posterior is needed. The model is the Starsim/STIsim simulation in `src/sim.py`
-(10,000 agents, 1985 to 2030, monthly step); run time per simulation is not yet measured.
+(10,000 agents, 1985 to 2040, monthly step); run time per simulation is not yet measured.
 Compute is the laptop for setup and small runs and zebra for sweeps. The environment is
 managed with `uv`.
