@@ -185,6 +185,21 @@ def country_coverage(country, programme):
     return proportion_coverage(pd.read_csv(path), programme, path)
 
 
+def stretched_coverage(coverage, stretch):
+    """A coverage table with its years spread out from its first by stretch."""
+    if stretch <= 0:
+        raise ValueError(f"art.stretch must be positive, got {stretch}")
+    if stretch == 1:
+        return coverage
+    if not isinstance(coverage, pd.DataFrame):
+        raise ValueError("art.stretch moves a coverage table's years and needs one: "
+                         "a country setup's table or a table in art.coverage")
+    stretched = coverage.copy()
+    first = stretched.Year.min()
+    stretched["Year"] = first + stretch * (stretched.Year - first)
+    return stretched
+
+
 def latent_seed_frame(init_prev, n_risk_groups=3):
     """One row per risk group, sex and sex-work status, all at the same rate.
 
@@ -311,8 +326,10 @@ def sim_pars(**kwargs):
     # setup's coverage: NO_COUNTRY_ART_COVERAGE and no VMMC without a country,
     # the country's tables with one. A value set here replaces either, and with
     # a country must be a proportion (proportion_coverage). HIV carries
-    # eff_circ=0.6 already; VMMC delivers it.
-    pars.art = sc.objdict(coverage=None)
+    # eff_circ=0.6 already; VMMC delivers it. art.stretch slows the ART table's
+    # ramp-up: each table year moves to first + stretch * (year - first), first
+    # being the table's first year, with coverage values unchanged.
+    pars.art = sc.objdict(coverage=None, stretch=1.0)
     pars.vmmc = sc.objdict(coverage=None)
     # Daily oral PrEP cascade, sti.Prep. Eligibility is who is offered PrEP this
     # step: 'none' (off), 'dx' (STI treatment fired this step, pathway D), or
@@ -703,7 +720,9 @@ def build_sim(pars):
     if country.name is not None:
         vls_path = Path(country.datafolder) / f"{country.name}_vls.csv"
         vls = proportion_coverage(pd.read_csv(vls_path), "vls", vls_path)
-    art = sti.ART(**dict(pars.art, coverage=art_coverage), vls_coverage=vls)
+    art_pars = dict(pars.art)
+    art_coverage = stretched_coverage(art_coverage, art_pars.pop("stretch"))
+    art = sti.ART(**dict(art_pars, coverage=art_coverage), vls_coverage=vls)
     vmmc = sti.VMMC(coverage=vmmc_coverage) if vmmc_coverage is not None else None
 
     sti_screening = None

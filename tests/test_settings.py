@@ -37,6 +37,16 @@ def test_rel_init_prev_scales_the_seed():
     assert high / low == pytest.approx(4, rel=0.3)
 
 
+def test_art_stretch_draw_slows_the_country_art_table():
+    # Eswatini's women aged 25-34 go from 0 in 2004 to 0.32 in 2011, so stretched
+    # twice from 2004 they reach 0.32 in 2018 and half of it in 2011
+    sim = build_sim(setting_pars(dict(art_stretch=2.0), "eswatini", sim=dict(n_agents=500, stop=2019)))
+    sim.init(verbose=0)
+    years = np.asarray(sim.t.yearvec)
+    coverage = sim.interventions.art.coverage[("[25,35)", 0)]
+    assert [coverage[np.argmin(np.abs(years - y))] for y in (2011, 2018)] == pytest.approx([0.16, 0.32])
+
+
 def run(draw, **sim):
     built = build_sim(setting_pars(draw, "eswatini", sim=dict(n_agents=1000, stop=1990, **sim)))
     built.run(verbose=0)

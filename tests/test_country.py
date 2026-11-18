@@ -71,6 +71,37 @@ def test_country_art_targets_its_coverage_table():
             assert art.coverage[(band, sex)][0] == pytest.approx(level)
 
 
+def women_15_24_art_coverage(stretch):
+    sim = build_sim(sim_pars(sim=dict(n_agents=500, start=1985, stop=2020), country=TESTLAND,
+                             art=dict(stretch=stretch)))
+    sim.init(verbose=0)
+    years = np.asarray(sim.t.yearvec)
+    coverage = sim.interventions.art.coverage[("[15,25)", 0)]
+    return {year: coverage[np.argmin(np.abs(years - year))] for year in (1985, 2000, 2007.5, 2015)}
+
+
+@pytest.mark.parametrize("stretch, expected", [
+    # testland's women aged 15-24 go from 0.11 in 1985 to 0.5 in 2000, held after
+    (1, {1985: 0.11, 2000: 0.5, 2007.5: 0.5, 2015: 0.5}),
+    # stretched from 1985, the 2000 row moves to 2015
+    (2, {1985: 0.11, 2000: 0.305, 2007.5: 0.4025, 2015: 0.5}),
+])
+def test_art_stretch_slows_the_country_table_from_its_first_year(stretch, expected):
+    assert women_15_24_art_coverage(stretch) == pytest.approx(expected)
+
+
+@pytest.mark.parametrize("country", [TESTLAND, dict(name=None)])
+def test_art_stretch_needs_a_coverage_table(country):
+    with pytest.raises(ValueError, match="stretch"):
+        build_sim(sim_pars(sim=TESTLAND_SIM, country=country, art=dict(coverage=0.37, stretch=2)))
+
+
+@pytest.mark.parametrize("stretch", [0, -1])
+def test_art_stretch_must_be_positive(stretch):
+    with pytest.raises(ValueError, match="stretch"):
+        build_sim(sim_pars(sim=TESTLAND_SIM, country=TESTLAND, art=dict(stretch=stretch)))
+
+
 def test_country_art_targets_its_viral_suppression_from_the_first_survey_back():
     # testland's first suppression survey, in 2000, found 70% of women and 60%
     # of men on ART suppressed

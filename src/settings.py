@@ -30,6 +30,7 @@ PARAMETERS = dict(
     hiv_beta_m2f=("hiv", "beta_m2f"),
     rel_init_prev=("hiv", "rel_init_prev"),
     seed_year=("hiv_seed", "year"),
+    art_stretch=("art", "stretch"),
     syph_beta_m2f=("syph", "beta_m2f"),
     ng_beta_m2f=("ng", "beta_m2f"),
     ct_beta_m2f=("ct", "beta_m2f"),
