@@ -9,30 +9,33 @@ incidence, 2003-2006 in Eswatini and 2008-2010 in Zimbabwe. The draws and both
 intervention years are in [ensembles.json](40.1_peak_year_ensembles/ensembles.json), for
 the decomposition track to run its arms on.
 
-Eswatini now has its own HIV `beta_m2f` range of 0.010-0.020, where 91 of 200 draws land
-at 22-28% HIV prevalence at 15-49 in 2026. Zimbabwe's draws are the landing draws of
-[38.3](38.3_seed_year_lower_sti_beta/SUMMARY.md), at HIV `beta_m2f` 0.0069-0.0113.
-
 The arrangement departs from the
 [settings decision](../../docs/pages/settings-prevalence-by-phase.md) on three points:
-phase is set by the intervention year, the expanding
-cells intervene before 2027, and HIV `beta_m2f` differs by country. The decision page is
-left unrevised while the arrangement is interim.
-
-At each draw's peak year (2003-2006 in Eswatini, 2008-2010 in Zimbabwe), seed-averaged
-prevalence at 15-49 is 15.6-24.3% in Eswatini and 10.4-14.9% in Zimbabwe, partly below
-the 2026 prevalence cells of 22-28% (Eswatini) and 12-18% (Zimbabwe), and the interventions start before
-or early in ART scale-up (both country tables are 0 in 2004). A country's peak-year cell
-therefore differs from its 2027 cell in prevalence and ART coverage as well as
+phase is set by the intervention year, the expanding cells intervene before 2027, and
+HIV `beta_m2f` differs by country (Eswatini 0.010-0.020, Zimbabwe 0.003-0.012). The
+decision page is left unrevised while the arrangement is interim. At each draw's peak
+year, prevalence is partly below its 2026 cell and ART is at or near 0, so a country's
+peak-year cell differs from its 2027 cell in prevalence and ART coverage as well as
 incidence.
 
-The next approach on the same question slows the ART ramp-up explicitly, with a scalar
-on the timing of each country's ART coverage table, and keeps the intervention in 2027.
-`sim_pars` has no such parameter yet: `art.coverage` only replaces the table.
+[40.2_slower_art_ramp](40.2_slower_art_ramp/SUMMARY.md) tried keeping the intervention
+in 2027 and slowing ART instead, stretching each country's ART table from 2004 by
+`art_stretch` (`sim_pars` `art.stretch`) over 1-3. The stretch raises 2026 incidence
+relative to the peak, to a seed-averaged 0.53-0.60 in Eswatini and 0.63-0.80 in Zimbabwe
+for the best landing draws, against 0.27-0.48 in 40.1. But seed-averaged peaks stay in
+2002-2007 and 2011-2016, so ART timing alone gives no expanding epidemic in 2027.
 
-Choices for the next approach's design:
+Issue 42 is the next experiment: what slows the epidemic's growth enough that incidence
+peaks near 2027, with 2026 prevalence in each cell. ART timing is settled as a lever by
+40.2. The draws with the highest 2026-to-peak proportion in 40.2 had low HIV `beta_m2f`
+for their country and flatter epidemics (peak incidence 2.81-3.22 per 100 person-years in
+Eswatini, 1.39-1.92 in Zimbabwe).
 
-- How the scalar stretches the table's years, and the year the stretch is anchored at.
-- Whether the scalar is drawn in a new batch or applied to 40.1's kept draws.
+Choices for issue 42's design:
+
+- Which levers to explore: HIV `beta_m2f`, `seed_year` later than 2000, the network's
+  high-risk proportions, and whether `art_stretch` stays drawn alongside them.
+- How a batch judges phase. Single-seed 2026-to-peak proportions overstated the seed
+  average by up to 0.15 in 40.2, so a selection on phase needs a few seeds per draw.
 
 Figures follow the `figN_` naming in [experiments/CLAUDE.md](../CLAUDE.md).
