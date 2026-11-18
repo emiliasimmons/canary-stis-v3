@@ -78,7 +78,11 @@ risk group. In the RCCS 29% of adults qualified, with HIV incidence of 0.91 per 
 person-years among them against 0.41 among the rest, which checks how many people the
 model's version qualifies and how much risk it concentrates. The screen is asked at
 background HIV testing visits and at STI clinic visits, the contacts where programmes
-offer PrEP. Offers run at the volume the screen produces.
+offer PrEP, of HIV-negative people aged 15 and over. HIV testing has no lower age limit,
+and without the age limit children would fill the count of people screened. The screen
+reports its counts for ages 15-49 as well, the RCCS age range. Offers run at the volume
+the screen produces. The screen and its PrEP start in 2027, the intervention year of the
+POC arms, so the two PrEP strategies run over the same years.
 
 In the model every genital ulcer is a syphilis chancre, since the non-syphilitic ulcer
 background (`gudp`) stays at zero. The ulcer item therefore marks a curable STI every time
@@ -124,7 +128,7 @@ attributable risk suited to etiology.
 ## Arms
 
 1. SOC
-2. SOC + behavioral PrEP
+2. SOC + behavioral PrEP, from 2027
 3. POC
 4. POC + partner notification
 5. POC + STI-triggered PrEP
