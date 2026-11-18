@@ -30,6 +30,10 @@ fertility, and mortality with HIV deaths removed, from UN WPP files in `src/data
 (`scripts/download_wpp.py`, `scripts/remove_hiv_mortality.py`). HIV is still seeded at the
 simulation start.
 
+Phase is judged from `sim.analyzers.hiv_incidence_15_49.annual()`: HIV incidence at ages
+15-49 per 100 person-years by year, pooled and by sex. Prevalence at 15-49 is stisim's
+`hiv.prevalence_15_49` result.
+
 Before the first exploration: the per-pathogen STI-to-HIV multipliers (issue 12), the
 model change that loads country ART and VMMC coverage and the four shared testing streams
 (issue 18), and Zimbabwe's coverage data (issue 17).
