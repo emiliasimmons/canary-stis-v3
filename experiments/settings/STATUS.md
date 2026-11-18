@@ -1,8 +1,8 @@
 # Settings status
 
 The first approach to the parameter exploration closed on its 60-draw pilot
-([38_explore_parameters](38_explore_parameters/SUMMARY.md)). On the network, HIV and STI
-ranges in its [config.yaml](38_explore_parameters/config.yaml), 9 of 30 Eswatini draws
+([38.1_explore_parameters](38.1_explore_parameters/SUMMARY.md)). On the network, HIV and STI
+ranges in its [config.yaml](38.1_explore_parameters/config.yaml), 9 of 30 Eswatini draws
 land in the high cell, all as mature epidemics, and no Zimbabwe draw falls below 18.9%
 HIV prevalence at 15-49 in 2026. Every draw carries 2026 syphilis prevalence at 15-49 of
 25-45%, including at the lowest syphilis beta. Issue 38 stays open for the next approach.

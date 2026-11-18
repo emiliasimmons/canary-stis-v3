@@ -2,8 +2,8 @@
 Exp 38: Latin hypercube draws over the 13 explored parameters, one run each, per
 country, appended to outputs/results.jsonl as each finishes.
 
-    uv run python experiments/settings/38_explore_parameters/run.py --stage pilot --n 30
-    uv run python experiments/settings/38_explore_parameters/run.py --plot-only
+    uv run python experiments/settings/38.1_explore_parameters/run.py --stage pilot --n 30
+    uv run python experiments/settings/38.1_explore_parameters/run.py --plot-only
 
 A stage's draws are fixed by its name, so rerunning a stage skips the draws
 already in the results and runs the rest.
