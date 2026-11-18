@@ -167,7 +167,7 @@ class CondomCounseling(ss.Intervention):
 
 
 class BehavioralScreen(ss.Intervention):
-    """Uganda's national PrEP eligibility tool, asked of HIV-negative people at a contact.
+    """Uganda's national PrEP eligibility tool, asked of HIV-negative people 15 and over at a contact.
 
     A person qualifies on any one item in the past 12 months: more than one
     partner (the model carries no disclosure, so every partner is of unknown
@@ -215,6 +215,8 @@ class BehavioralScreen(ss.Intervention):
         self.define_results(
             ss.Result("n_screened", dtype=int, label="Screened", auto_plot=False),
             ss.Result("n_qualified", dtype=int, label="Qualified", auto_plot=False),
+            ss.Result("n_screened_15_49", dtype=int, label="Screened, 15-49", auto_plot=False),
+            ss.Result("n_qualified_15_49", dtype=int, label="Qualified, 15-49", auto_plot=False),
         )
         return
 
@@ -256,13 +258,18 @@ class BehavioralScreen(ss.Intervention):
         if self.sim.now < self.start:
             return
         hiv = self.sim.diseases.hiv
+        age = self.sim.people.age
         uids = self.contacts(self.sim)
-        uids = uids[~hiv.infected[uids]]
+        # HIV testing has no lower age limit, and PrEP is not offered to children
+        uids = uids[~hiv.infected[uids] & (age[uids] >= 15)]
         qualified = uids[self._qualifies(net, uids)]
         self.ti_screened[uids] = self.ti
         self.ti_qualified[qualified] = self.ti
         self.results["n_screened"][self.ti] = len(uids)
         self.results["n_qualified"][self.ti] = len(qualified)
+        # the RCCS age range, for comparison with its 29% qualifying
+        self.results["n_screened_15_49"][self.ti] = (age[uids] < 50).sum()
+        self.results["n_qualified_15_49"][self.ti] = (age[qualified] < 50).sum()
         return
 
 
