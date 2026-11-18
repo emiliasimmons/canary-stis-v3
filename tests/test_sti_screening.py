@@ -23,7 +23,6 @@ def women():
 
 
 def hiv_tested(sim, ti, women_only=False):
-    """People at an HIV testing visit in step ti."""
     uids = set()
     for name in HIV_TEST_NAMES:
         if name in sim.interventions:
@@ -48,13 +47,17 @@ def test_screening_needs_the_poc_arm():
         build_sim(sim_pars(sim=dict(n_agents=500, start=2010, stop=2011), sti_screening=dict()))
 
 
-# the no-country HIV test keeps stisim's default stop and skips the final step,
-# and later visits overwrite earlier stamps, so tests read the second-last step
+# later visits overwrite earlier stamps, so tests read the last step
 def check_step(sim):
-    return sim.t.npts - 2
+    return sim.t.npts - 1
 
 
-def test_every_woman_at_an_hiv_testing_visit_is_screened_from_the_intervention_year(women):
+def discharge_symptomatic(sim):
+    return set((sim.diseases.ng.symptomatic | sim.diseases.ct.symptomatic
+                | sim.diseases.tv.symptomatic).uids.tolist())
+
+
+def test_every_woman_without_symptoms_at_an_hiv_testing_visit_is_screened(women):
     sim = women
     screening = sim.interventions.sti_screening
     stamped = np.asarray(screening.ti_tested.raw)
@@ -62,8 +65,9 @@ def test_every_woman_at_an_hiv_testing_visit_is_screened_from_the_intervention_y
     assert np.nanmin(stamped) >= first
     ti = check_step(sim)
     women = hiv_tested(sim, ti, women_only=True)
-    assert len(women) > 0
-    assert screened_at(sim, ti) == women
+    symptomatic = discharge_symptomatic(sim)
+    assert women & symptomatic and women - symptomatic
+    assert screened_at(sim, ti) == women - symptomatic
 
 
 def test_include_men_screens_men_too():
@@ -71,13 +75,13 @@ def test_include_men_screens_men_too():
     ti = check_step(sim)
     screened = screened_at(sim, ti)
     assert any(sim.people.male[u] for u in screened)
-    assert screened == hiv_tested(sim, ti)
+    assert screened == hiv_tested(sim, ti) - discharge_symptomatic(sim)
 
 
 def test_acceptance_sets_the_proportion_screened():
     sim = run(dict(acceptance=0.5))
     ti = check_step(sim)
-    offered = hiv_tested(sim, ti, women_only=True)
+    offered = hiv_tested(sim, ti, women_only=True) - discharge_symptomatic(sim)
     screened = screened_at(sim, ti)
     assert screened <= offered and len(offered) > 200
     assert 0.4 < len(screened) / len(offered) < 0.6
@@ -86,7 +90,7 @@ def test_acceptance_sets_the_proportion_screened():
 def test_screened_positives_are_treated_the_month_after(women):
     sim = women
     screening = sim.interventions.sti_screening
-    ti = check_step(sim)
+    ti = check_step(sim) - 1
     referred = (screening.ti_referred == ti).uids
     assert len(referred) > 0
     treated_next = np.zeros(len(referred), dtype=bool)

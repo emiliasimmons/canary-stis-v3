@@ -487,8 +487,8 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
         if pars.pn is not None:
             # notified partners are mostly in early syphilis, where the
             # non-treponemal RPR is sensitive, and it reads negative after a
-            # cure, where the treponemal dual test would re-treat; it tests
-            # only the attendees partner notification passes it
+            # cure, where the treponemal dual test would re-treat. It tests
+            # only the attendees partner notification passes it.
             pn_test = sti.SyphTest(
                 name="syph_pn_test", label="syph_pn_test",
                 product=product("rpr", label="syph_dx_rpr_pn"),
@@ -567,15 +567,21 @@ def build_sim(pars):
         outcome_tx_map=outcome_tx_map,
         pars=syndromic_pars,
     )
+    def poc_panel():
+        """Arguments every POC panel shares, fresh for each module."""
+        return dict(
+            diseases=["ng", "ct", "tv"],
+            treatments=[ng_tx, ct_tx, metronidazole],
+            disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
+            negative_treatments=[],
+            pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
+        )
+
     panel = sti.SymptomaticTesting(
         name="panel", label="POC panel",
-        diseases=["ng", "ct", "tv"],
         eligibility=gate_poc(seeking_care_any, use_poc, intv_year),
         stop=_NO_STOP,
-        treatments=[ng_tx, ct_tx, metronidazole],
-        disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
-        pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
-        negative_treatments=[],
+        **poc_panel(),
     )
 
     # Detection modules precede treatment modules so a treatment sees eligibility
@@ -591,11 +597,7 @@ def build_sim(pars):
             name="fsw_outreach", label="fsw_outreach",
             start=pars.fsw_outreach.start if pars.fsw_outreach.start is not None else lever_start,
             stop=fsw_stop if fsw_stop is not None else _NO_STOP,
-            diseases=["ng", "ct", "tv"],
-            treatments=[ng_tx, ct_tx, metronidazole],
-            disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
-            negative_treatments=[],
-            pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
+            **poc_panel(),
         )
         detection.insert(0, fsw)
 
@@ -610,7 +612,7 @@ def build_sim(pars):
         # syph_tx, so syphilis-positive attendees are treated this step
         interventions.append(NotificationVisit(
             name="pn", label="pn",
-            eligibility=gate_poc(notification_indexes, use_poc, intv_year),
+            eligibility=notification_indexes(intv_year),
             pars=dict(
                 p_notify_current=ss.bernoulli(p=sti.pn_rates(pars.pn["notify_rates"])),
                 p_attends_current=ss.bernoulli(p=sti.pn_rates(pars.pn["attendance_rates"])),
@@ -668,7 +670,9 @@ def build_sim(pars):
     country = pars.country
     art_coverage, vmmc_coverage = pars.art.coverage, pars.vmmc.coverage
     if country.name is None:
-        hiv_tests = [sti.HIVTest(name="hiv_test", **pars.hiv_test)]
+        hiv_test = sti.HIVTest(name="hiv_test", **pars.hiv_test)
+        hiv_test.stop = _NO_STOP
+        hiv_tests = [hiv_test]
         if art_coverage is None:
             art_coverage = NO_COUNTRY_ART_COVERAGE
     else:
@@ -696,11 +700,7 @@ def build_sim(pars):
             **pars.sti_screening,
             name="sti_screening", label="sti_screening",
             stop=_NO_STOP,
-            diseases=["ng", "ct", "tv"],
-            treatments=[ng_tx, ct_tx, metronidazole],
-            disease_treatment_map={"ng": ng_tx, "ct": ct_tx, "tv": metronidazole},
-            negative_treatments=[],
-            pars=dict(sens=dict(pars.poc.sens), spec=dict(pars.poc.spec)),
+            **poc_panel(),
         )
 
     # the screens read this step's HIV tests, PrEP reads the behavioral screen,

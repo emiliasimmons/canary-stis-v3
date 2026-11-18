@@ -78,8 +78,8 @@ def test_every_syphilis_channel_logs_its_treatments(intv_year, channels):
     assert channels <= set(syph.channel.str.split("+").explode())
     visible = syph[syph.channel.str.contains("syph_symp_test|syph_rash_test")]
     assert len(visible) > 0 and visible.syph.all()
-    # the ulcer and rash tests reach only visible symptoms; antenatal screening
-    # also finds latent syphilis
+    # the ulcer and rash tests reach only visible symptoms, and antenatal
+    # screening also finds latent syphilis
     assert visible.syph_symptomatic.all()
     antenatal_only = syph[~syph.channel.str.contains("syph_symp_test|syph_rash_test")]
     assert (antenatal_only.syph & ~antenatal_only.syph_symptomatic).any()

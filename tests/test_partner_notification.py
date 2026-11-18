@@ -28,6 +28,10 @@ def attendees(sim, ti):
     return (sim.interventions.pn.ti_notified == ti).uids
 
 
+def union(*arrays):
+    return np.unique(np.concatenate(arrays))
+
+
 def last_busy_step(sim):
     return int(np.flatnonzero(np.asarray(sim.interventions.pn.results.new_attending))[-1])
 
@@ -76,7 +80,7 @@ def test_only_current_stable_and_casual_partners_of_indexes_are_notified(notifie
     sim = notified
     ti = sim.t.npts - 1
     intvs = sim.interventions
-    index = ss_union(*[(intvs[n].ti_treated == ti).uids for n in ["ng_tx", "ct_tx", "metronidazole"]],
+    index = union(*[(intvs[n].ti_treated == ti).uids for n in ["ng_tx", "ct_tx", "metronidazole"]],
                      (intvs.syph_tx.ti_treated == ti - 1).uids)
     net = sim.networks.structuredsexual
     e = net.edges
@@ -90,16 +94,31 @@ def test_only_current_stable_and_casual_partners_of_indexes_are_notified(notifie
     assert len(got - partners) <= 0.02 * len(got)
 
 
-def ss_union(*arrays):
-    return np.unique(np.concatenate(arrays))
-
-
 def test_syphilis_treatments_notify_partners_the_month_after():
     no_discharge = dict(ng=dict(init_prev=0.0), ct=dict(init_prev=0.0), tv=dict(init_prev=0.0),
                         syph=dict(init_prev=0.1), syph_latent=dict(init_prev=0.2),
                         syph_test=dict(symp_test_prob=1.0))
-    sim = run(pn=EVERYONE, **no_discharge)
-    notified_steps = np.flatnonzero(np.asarray(sim.interventions.pn.results.new_notified))
+    # a perfect panel, so women presenting with BV are never treated as TV
+    perfect = dict(ng=[1.0, 1.0], ct=[1.0, 1.0], tv=[1.0, 1.0])
+    sim = run(pn=EVERYONE, poc=dict(sens=perfect, spec=perfect), **no_discharge)
+    notified = np.asarray(sim.interventions.pn.results.new_notified)
     treated = np.asarray(sim.interventions.syph_tx.results.new_treated)
+    first = int(np.flatnonzero(sim.t.yearvec >= INTV)[0])
+    # the month before is SOC, whose syphilis treatments notify nobody
+    assert treated[first - 1] > 0 and notified[first] == 0
+    notified_steps = np.flatnonzero(notified)
     assert len(notified_steps) > 0
     assert np.all(treated[notified_steps - 1] > 0)
+
+
+def test_attendees_positive_for_ng_ct_or_tv_are_treated_the_month_after(notified):
+    sim = notified
+    ti = sim.t.npts - 2
+    intvs = sim.interventions
+    uids = attendees(sim, ti)
+    referred = uids[intvs.panel.ti_referred[uids] == ti]
+    assert len(referred) >= 10
+    treated_next = np.zeros(len(referred), dtype=bool)
+    for name in ["ng_tx", "ct_tx", "metronidazole"]:
+        treated_next |= np.asarray(intvs[name].ti_treated[referred] == ti + 1)
+    assert treated_next.mean() > 0.9

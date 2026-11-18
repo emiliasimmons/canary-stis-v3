@@ -354,14 +354,18 @@ class CareSeekScaler(ss.Intervention):
 
 
 class STIScreeningAtHIVTesting(sti.SymptomaticTesting):
-    """The POC panel offered to women at an HIV testing visit, symptoms or not.
+    """The POC panel offered to women without discharge symptoms at an HIV testing visit.
 
     ``contacts`` returns the uids at an HIV testing visit this step. Women are
     offered the panel, men too with ``include_men``, and each offer is
-    accepted with probability ``acceptance``. Positives join the shared
+    accepted with probability ``acceptance``. People with NG, CT or TV
+    symptoms are left to the care-seeking door, which would otherwise test
+    and queue them for treatment a second time. Positives join the shared
     treatment queues, which have already run this step, so treatment follows
     the month after.
     """
+
+    DISCHARGE = ("ng", "ct", "tv")
 
     def __init__(self, contacts, include_men=False, acceptance=1.0, **kwargs):
         super().__init__(eligibility=self._offered, **kwargs)
@@ -373,6 +377,8 @@ class STIScreeningAtHIVTesting(sti.SymptomaticTesting):
         uids = self.contacts(sim)
         if not self.include_men:
             uids = uids[sim.people.female[uids]]
+        for name in self.DISCHARGE:
+            uids = uids[~sim.diseases[name].symptomatic[uids]]
         return self.pars.acceptance.filter(uids)
 
 

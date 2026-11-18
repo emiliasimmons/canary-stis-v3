@@ -157,7 +157,8 @@ def test_only_hiv_negative_people_15_and_over_at_a_testing_or_sti_clinic_visit_a
     hiv = sim.diseases.hiv
     # infections from this step's transmission come after the screen
     negative_at_screen = ~(hiv.infected & (hiv.ti_infected < last))
-    age = sim.people.age
+    # people age at the end of the step, after the screen
+    age = sim.people.age - sim.t.dt_year
     assert (at_visit & negative_at_screen & (age < 15)).count() > 0
     screened = sim.interventions.behavioral_screen.ti_screened == last
     assert screened.count() >= 50
@@ -168,7 +169,8 @@ def test_results_count_screened_and_qualified_at_15_49(behavioral):
     sim = behavioral
     last = sim.t.npts - 1
     screen = sim.interventions.behavioral_screen
-    age = sim.people.age
+    # people age at the end of the step, after the screen
+    age = sim.people.age - sim.t.dt_year
     adult = (age >= 15) & (age < 50)
     assert (screen.ti_screened == last).count() > (adult & (screen.ti_screened == last)).count() > 0
     assert screen.results.n_screened_15_49[last] == (adult & (screen.ti_screened == last)).count()
