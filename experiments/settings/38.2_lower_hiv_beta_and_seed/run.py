@@ -144,6 +144,25 @@ def plot(df):
 
     plot_curves(df, "hiv_incidence_all", 1, "HIV incidence at 15-49 per 100 PY", "incidence_curves.png")
     plot_curves(df, "hiv_prevalence", 100, "HIV prevalence at 15-49 (%)", "prevalence_curves.png", band=True)
+    plot_beta_prevalence(df)
+
+
+def plot_beta_prevalence(df):
+    """2026 prevalence against HIV beta_m2f, coloured by seeding since the seed decides take-off."""
+    countries, tol = CONFIG["countries"], CONFIG["tolerance"]
+    norm = matplotlib.colors.LogNorm(*CONFIG["ranges"]["rel_init_prev"])
+    fig, axes = plt.subplots(1, len(countries), figsize=(11, 4), sharey=True, layout="constrained")
+    for ax, (country, spec) in zip(axes, countries.items()):
+        sub = df[df.country == country]
+        sc = ax.scatter(sub.hiv_beta_m2f, sub.hiv_prevalence_2026 * 100, c=sub.rel_init_prev,
+                        norm=norm, cmap="viridis", s=12)
+        ax.axhspan(100 * (spec["target"] - tol), 100 * (spec["target"] + tol), color="tab:blue", alpha=0.15)
+        ax.set_title(f"{country.title()} (n = {len(sub)})")
+        ax.set_xlabel("HIV beta_m2f")
+    axes[0].set_ylabel("HIV prevalence at 15-49 in 2026 (%)")
+    fig.colorbar(sc, ax=axes, label="rel_init_prev")
+    fig.savefig(FIGURES / "beta_prevalence_2026.png", dpi=150)
+    plt.close(fig)
 
 
 def plot_curves(df, column, scale, ylabel, name, band=False):
