@@ -25,6 +25,7 @@ from .analyzers import (
     DemographicSnapshotAnalyzer,
     DiagnosisTracker,
     ExposureTracker,
+    HIVIncidence1549,
     HIVTransmissionLogger,
     InfectionTracker,
     NetworkPositionTracker,
@@ -652,6 +653,7 @@ def build_sim(pars):
         NetworkPositionTracker(),
         DemographicSnapshotAnalyzer(),
         HIVTransmissionLogger(),
+        HIVIncidence1549(),
         ss.infection_log(),
     ]
 

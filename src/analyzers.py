@@ -152,6 +152,51 @@ class TreatmentLog(ss.Intervention):
         return pd.DataFrame({c: np.concatenate([r[c] for r in self._rows]) for c in cols})
 
 
+class HIVIncidence1549(ss.Analyzer):
+    """
+    HIV incidence at ages 15-49 per 100 person-years, both sexes pooled and by sex.
+
+    stisim reports incidence in age bands but not the number at risk in each,
+    so its bands cannot be pooled into one 15-49 rate. Each step adds the new
+    infections at 15-49 and one step of person-time for every 15-49-year-old
+    who was HIV-negative at its start.
+    """
+
+    SEXES = ("all", "female", "male")
+
+    def __init__(self, name="hiv_incidence_15_49"):
+        super().__init__(name=name)
+        self._new = {}
+        self._py = {}
+
+    def init_results(self):
+        super().init_results()
+        npts = self.t.npts
+        self._new = {s: np.zeros(npts, dtype=int) for s in self.SEXES}
+        self._py = {s: np.zeros(npts) for s in self.SEXES}
+
+    def step(self):
+        ppl, hiv, ti = self.sim.people, self.sim.diseases.hiv, self.ti
+        age = ppl.age
+        adult = ppl.alive & (age >= 15) & (age < 50)
+        new = hiv.ti_infected == ti
+        at_risk = adult & (~hiv.infected | new)
+        for sex, mask in zip(self.SEXES, (adult, adult & ppl.female, adult & ppl.male)):
+            self._new[sex][ti] = (new & mask).count()
+            self._py[sex][ti] = (at_risk & mask).count() * self.t.dt_year
+
+    def annual(self):
+        """One row per calendar year and sex: new infections, person-years, incidence per 100."""
+        year = np.floor(self.t.yearvec).astype(int)
+        rows = []
+        for sex in self.SEXES:
+            for y in np.unique(year):
+                n, py = self._new[sex][year == y].sum(), self._py[sex][year == y].sum()
+                rows.append(dict(year=y, sex=sex, new_infections=n, person_years=py,
+                                 incidence=100 * n / py if py else np.nan))
+        return pd.DataFrame(rows)
+
+
 class InfectionTracker(ss.Analyzer):
     """
     Track per-agent STI infections for incidence analysis.
