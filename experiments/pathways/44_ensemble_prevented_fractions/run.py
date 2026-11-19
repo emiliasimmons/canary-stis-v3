@@ -184,7 +184,8 @@ def boxes(ax, table, rng):
 def plot_prevented(n, cell, pf, comp):
     lo, hi = CONFIG["horizon"]
     rng = np.random.default_rng(0)
-    fig, (top, bottom) = plt.subplots(2, 1, figsize=(10, 7), sharex=True, layout="constrained",
+    rows = len(pf.columns) + len(comp.columns)
+    fig, (top, bottom) = plt.subplots(2, 1, figsize=(11, 2 + 0.36 * rows), sharex=True, layout="constrained",
                                       gridspec_kw=dict(height_ratios=[len(pf.columns), len(comp.columns)]))
     boxes(top, pf, rng)
     top.set_yticks(range(len(pf.columns)), [CONFIG["labels"][a] for a in pf])
