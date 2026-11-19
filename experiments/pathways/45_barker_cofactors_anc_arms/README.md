@@ -5,19 +5,24 @@ prevent in the HPrev mature setting when the HIV acquisition cofactors are
 [Barker 2022](../../../docs/pages/barker-2022-hiv-risk-nonviral-stis-meta-analysis.md)'s
 pooled risk ratios for women, and ANC testing is an intervention from 2027 rather than
 a baseline service? [44](../44_ensemble_prevented_fractions/SUMMARY.md) found that every
-arm's prevented fraction scales with the Magic cure's, which the cofactors set. The model
-ran stisim's defaults: gonorrhoea 1.2, chlamydia 1.2, trichomoniasis 1.5, syphilis 2.67.
-Barker gives 2.81, 1.49, 1.54 and 1.67. This experiment answers issue 45.
+arm's prevented fraction scales with the Magic cure's, which the cofactors set. The
+acquisition cofactors, `connectors.hiv_ng.rel_sus_hiv_ng`, `hiv_ct.rel_sus_hiv_ct`,
+`hiv_tv.rel_sus_hiv_tv` and `hiv_syph.rel_sus_hiv_syph`, were 1.2, 1.2, 1.5 and 2.67 in 44
+(stisim defaults, with chlamydia raised from 1). Barker's pooled risk ratios of HIV
+acquisition in women are gonorrhoea 2.81, chlamydia 1.49, trichomoniasis 1.54 and syphilis
+1.67. This experiment answers issue 45.
 
 **Plan.** The baseline changes in two ways for every arm. The acquisition cofactors take
-Barker's values in both sexes (Barker pools a value for men only for syphilis, 1.77), and
-the transmission cofactors for gonorrhoea and syphilis stay at 1.2. ANC HIV testing and
+Barker's values for women in both sexes (Barker's only pooled risk ratio for men is
+syphilis's 1.77), and the transmission cofactors `hiv_ng.rel_trans_hiv_ng` and
+`hiv_syph.rel_trans_hiv_syph` stay at 1.2. ANC HIV testing and
 ANC syphilis screening are off for the whole run. Both changes move the epidemic before
 2027, so stage 1 redraws the setting: 120 Eswatini draws from
 [43](../../settings/43_delayed_epidemic_ensembles/SUMMARY.md)'s mature-cell ranges, each run
 as SOC to the end of 2040 on 10,000 agents and one seed. The members are the first 30 draws
-by index whose 2026 HIV prevalence at 15-49 lands within 25% ± 3, as 43 chose its own. At
-43's landing fraction of 0.47 about 56 draws land. Stage 2 runs ten more arms on each
+by index whose 2026 HIV prevalence at 15-49 lands within 3 points of 25%, as 43 chose its own. 43
+landed 66 of its 140 mature Eswatini draws (0.47), and at that proportion about 56 of 120
+land. Stage 2 runs ten more arms on each
 member:
 
 - the POC panel
