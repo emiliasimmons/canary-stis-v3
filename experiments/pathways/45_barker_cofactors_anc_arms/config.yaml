@@ -79,6 +79,7 @@ arms:
     sti_screening: {include_men: false, acceptance: 1.0}
   magic_cure: {magic_cure: {year: 2027}}
   magic_prep: {prep: {eligibility: infected, start: 2027, coverage: 1.0, dur_months: 3}}
+  magic_prep_12m: {prep: {eligibility: infected, start: 2027, coverage: 1.0, dur_months: 12}}
 
 # every arm's prevented fraction shares this arm's infections as denominator,
 # so differences between arms add
@@ -94,6 +95,7 @@ labels:
   poc_anc_hiv_testing: Panel + ANC testing from 2027, panel at every HIV test
   magic_cure: "Magic cure: four STIs cleared in 2027"
   magic_prep: "Magic PrEP: everyone newly STI-infected starts PrEP, 3 months"
+  magic_prep_12m: "Magic PrEP: everyone newly STI-infected starts PrEP, 12 months"
 
 # pathway contributions as sums of arms' prevented fractions
 components:
