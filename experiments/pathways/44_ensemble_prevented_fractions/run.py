@@ -188,7 +188,7 @@ def boxes(ax, table, rng):
     ax.invert_yaxis()
 
 
-def plot_cell(n, name, cell, arms, comp, xlim, xlabel, measure):
+def plot_cell(n, name, cell, arms, comp, xlim, xlabel, measure, stage):
     rng = np.random.default_rng(0)
     rows = len(arms.columns) + len(comp.columns)
     fig, (top, bottom) = plt.subplots(2, 1, figsize=(11, 2 + 0.36 * rows), sharex=True, layout="constrained",
@@ -201,7 +201,8 @@ def plot_cell(n, name, cell, arms, comp, xlim, xlabel, measure):
     bottom.set_title("Pathway contributions: differences between the arms above")
     bottom.set_xlabel(xlabel)
     bottom.set_xlim(xlim)
-    fig.suptitle(f"Fig {n}: {CONFIG['cells'][cell]}, {measure} against SOC over {len(arms)} ensemble members")
+    fig.suptitle(f"Fig {n}: {CONFIG['cells'][cell]}, {measure} against SOC over {len(arms)} ensemble members"
+                 + (", stage 2 arms" if stage == 2 else ""))
     fig.savefig(FIGURES / f"fig{n}_{name}_{cell}.png", dpi=150)
     plt.close(fig)
 
@@ -231,18 +232,25 @@ def plot():
         print(f"\n{CONFIG['cells'][cell]}")
         for table in tables[cell]["pf"]:
             print(table.describe().loc[["50%", "25%", "75%", "min", "max"]].T.round(1).to_string())
-    figures = [
-        ("pf", 1, "prevented", f"HIV infections at 15-49 prevented, {lo}-{hi} (% of SOC's)",
-         "prevented fraction"),
-        ("averted", 1 + len(CONFIG["cells"]), "averted",
+    measures = [
+        ("pf", "prevented", f"HIV infections at 15-49 prevented, {lo}-{hi} (% of SOC's)", "prevented fraction"),
+        ("averted", "averted",
          f"HIV infections at 15-49 averted, {lo}-{hi} (agents, of {CONFIG['n_agents']:,} at the 1985 start)",
          "HIV infections averted"),
     ]
-    for key, first, name, xlabel, measure in figures:
-        xlim = shared_xlim([t for cell in cells for t in tables[cell][key]])
-        for n, cell in enumerate(CONFIG["cells"], first):
-            if cell in tables:
-                plot_cell(n, name, cell, *tables[cell][key], xlim, xlabel, measure)
+    stage_1 = set(CONFIG["stage_1_arms"])
+    # Figs 1-8 keep stage 1's arms; Fig 9 is ratio_to_magic_cure.py's; stage 2's start at 10
+    stages = [(1, 1, "", lambda t: t[[a for a in t if a in stage_1]]),
+              (2, 10, "stage2_", lambda t: t)]
+    n_cells = len(CONFIG["cells"])
+    for stage, first, prefix, pick in stages:
+        for i, (key, name, xlabel, measure) in enumerate(measures):
+            panels = {cell: (pick(tables[cell][key][0]), components(pick(tables[cell][key][0])))
+                      for cell in cells}
+            xlim = shared_xlim([t for pair in panels.values() for t in pair])
+            for n, cell in enumerate(CONFIG["cells"], first + i * n_cells):
+                if cell in panels:
+                    plot_cell(n, prefix + name, cell, *panels[cell], xlim, xlabel, measure, stage)
 
 
 def main():

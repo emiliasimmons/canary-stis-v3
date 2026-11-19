@@ -16,6 +16,7 @@ pn: &pn
 # sim_pars overrides per arm. Stage 1 ran the arms without a _u or _m suffix, with
 # STI-triggered PrEP at sim_pars' default 30% uptake and 3-month courses; stage 2 adds
 # the rest. Arm names are the results' keys, so stage 1's are kept.
+stage_1_arms: [soc, poc, poc_pn, poc_sti_prep, poc_sti_prep_pn, poc_screening, magic_cure, magic_prep]
 arms:
   soc: {}
   poc: {intv_year: 2027}

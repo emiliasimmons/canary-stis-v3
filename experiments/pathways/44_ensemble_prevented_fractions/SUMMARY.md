@@ -1,6 +1,6 @@
 # Exp 44: Prevented fractions of HIV infections on the four settings' ensembles
 
-**Date:** 2026-11-18 (stage 1).
+**Date:** 2026-11-18 (stages 1 and 2).
 
 **Question.** How much of SOC's HIV infections at 15-49 over 2027-2040 does each arm
 prevent in each of the four settings, and how wide is the spread across each setting's 30
@@ -17,7 +17,10 @@ every arm on its exp 43 seed: 10,000 agents, 1985 to the end of
 ones, and more in MPrev than in HPrev. The full POC package (panel, PrEP offered on
 STI treatment, partner notification) prevents a median 3.1-8.7% of SOC's infections
 across the four settings. Screening women at HIV testing on top of the panel prevents
-2.9-9.2%. Magic PrEP prevents 11.7-30.0% and the Magic cure 17.5-40.5%.
+2.9-9.2%. Magic PrEP prevents 11.7-30.0% and the Magic cure 17.5-40.5%. These stage 1
+figures have STI-triggered PrEP at 30% uptake and 3-month courses. In stage 2, at 90%
+uptake and 6-month courses, the full package prevents 7.9-24.6%, and Magic PrEP with
+6-month courses prevents 19.9-45.1%, above the Magic cure in every setting.
 
 Prevented fraction of SOC's HIV infections at 15-49 over 2027-2040, median (interquartile
 range) over 30 members, in percent:
@@ -129,9 +132,65 @@ SOC, in agents. Per-member values are in one pair of CSVs per setting, such as
 
 ## Stage 2
 
-Placeholder. In both STI-triggered PrEP arms, stage 2 crosses uptake (`prep.coverage` at
-0.10, 0.30 and 0.90) with course length (`prep.dur_months` at 3 and 6). It adds Magic PrEP
-at `prep.dur_months` 6. That makes 11 new arms and 1,320 simulations.
+In both STI-triggered PrEP arms, stage 2 crosses uptake (`prep.coverage` at 0.10, 0.30
+and 0.90) with course length (`prep.dur_months` at 3 and 6), and it adds Magic PrEP at
+`prep.dur_months` 6. All 1,320 stage 2 simulations finished on zebra at 80 workers, with
+no failures, on the same members and seeds as stage 1. Figs 10-17 show all 18 arms against
+SOC, the four settings on one axis per measure: Figs 10-13 as prevented fractions, Figs
+14-17 as HIV infections averted in agents.
+
+PrEP's contribution rises with uptake in every setting, and 6-month courses prevent more
+than 3-month ones at each uptake. PrEP offered on STI treatment, against the panel alone,
+as the median over 30 members of the percentage of SOC's HIV infections at 15-49
+prevented over 2027-2040:
+
+| PrEP on STI treatment | HPrev, high incidence | HPrev, mature | MPrev, high incidence | MPrev, mature |
+|---|---|---|---|---|
+| 10% uptake, 3 months | 0.2 | 0.4 | 0.4 | 0.9 |
+| 30% uptake, 3 months | 0.8 | 2.3 | 1.5 | 2.4 |
+| 90% uptake, 3 months | 3.3 | 6.2 | 4.9 | 9.7 |
+| 10% uptake, 6 months | 0.3 | 0.5 | 0.8 | 1.4 |
+| 30% uptake, 6 months | 1.6 | 3.5 | 2.6 | 4.5 |
+| 90% uptake, 6 months | 6.0 | 10.7 | 7.8 | 15.4 |
+
+The full package (panel, PrEP on STI treatment and partner notification) at 90% uptake and
+6-month courses prevents 7.9% (HPrev high incidence), 17.5% (HPrev mature), 12.0% (MPrev
+high incidence) and 24.6% (MPrev mature) of SOC's infections, against stage 1's 3.1%,
+7.4%, 3.9% and 8.7% at 30% uptake and 3-month courses.
+
+![HPrev high-incidence setting: prevented fraction against SOC for all 18 arms and 15 pathway contributions, per member over box plots](figures/fig10_stage2_prevented_eswatini_high.png)
+
+![HPrev mature setting: prevented fraction against SOC, all stage 2 arms](figures/fig11_stage2_prevented_eswatini_mature.png)
+
+![MPrev high-incidence setting: prevented fraction against SOC, all stage 2 arms](figures/fig12_stage2_prevented_zimbabwe_high.png)
+
+![MPrev mature setting: prevented fraction against SOC, all stage 2 arms](figures/fig13_stage2_prevented_zimbabwe_mature.png)
+
+![HPrev high-incidence setting: HIV infections at 15-49 averted over 2027-2040 against SOC, in agents, all stage 2 arms](figures/fig14_stage2_averted_eswatini_high.png)
+
+![HPrev mature setting: HIV infections averted against SOC, in agents, all stage 2 arms](figures/fig15_stage2_averted_eswatini_mature.png)
+
+![MPrev high-incidence setting: HIV infections averted against SOC, in agents, all stage 2 arms](figures/fig16_stage2_averted_zimbabwe_high.png)
+
+![MPrev mature setting: HIV infections averted against SOC, in agents, all stage 2 arms](figures/fig17_stage2_averted_zimbabwe_mature.png)
+
+### Stage 2 observations
+
+7. Doubling the course from 3 to 6 months multiplies the median contribution of PrEP on STI
+   treatment by 1.20-1.93 across the 12 combinations of setting and uptake. The ratio has
+   no consistent order by uptake: at 90% uptake it is 1.83 (HPrev high incidence), 1.71
+   (HPrev mature), 1.59 (MPrev high incidence) and 1.59 (MPrev mature).
+
+8. Magic PrEP with 6-month courses prevents a median 19.9% (HPrev high incidence), 32.8%
+   (HPrev mature), 25.7% (MPrev high incidence) and 45.1% (MPrev mature) of SOC's
+   infections, above the Magic cure's 17.5%, 31.8%, 23.5% and 40.5%. It exceeds the Magic
+   cure in 27, 21, 27 and 20 of each setting's 30 members. PrEP lowers HIV susceptibility
+   at every partnership whether or not an STI is present, so the Magic cure, which removes
+   only the STI cofactor, does not bound it.
+
+9. The notification x PrEP interaction stays small at every uptake and course length. Its
+   setting medians run from -0.5% (MPrev mature, 10% uptake, 3 months) to 2.5% (HPrev
+   mature, 90% uptake, 6 months), and it is largest at 90% uptake in all four settings.
 
 ## Next
 
