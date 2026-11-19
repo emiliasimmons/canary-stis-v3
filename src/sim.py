@@ -132,8 +132,11 @@ HIV_TEST_ANC_PROB = 0.9
 HIV_TEST_NAMES = ["hiv_test", *(f"hiv_test_{stream}" for stream in HIV_TEST_RAMPS), "hiv_test_anc"]
 
 
-def country_hiv_tests(delay=0.0):
-    """The four HIV testing streams every country setup shares, ramps moved later by delay."""
+def country_hiv_tests(delay=0.0, anc_start=None):
+    """The four HIV testing streams every country setup shares, ramps moved later by delay.
+
+    The ANC stream starts in anc_start (None from the run's start).
+    """
     ramp_years = np.add(HIV_TEST_RAMP_YEARS, delay)
     # HIVTest takes the listed year nearest the current one, so the ramps go in
     # annually
@@ -147,16 +150,18 @@ def country_hiv_tests(delay=0.0):
         )
         for stream, ramp in HIV_TEST_RAMPS.items()
     ]
-    tests.append(sti.HIVTest(
+    anc = sti.HIVTest(
         name="hiv_test_anc", label="hiv_test_anc",
         test_prob_data=HIV_TEST_ANC_PROB,
         eligibility=_antenatal_undiagnosed,
         dt_scale=False,
-    ))
+    )
+    tests.append(anc)
     # set after construction: HIVTest builds its timeline from a stop passed to
     # the constructor, which fails on infinity
     for test in tests:
         test.stop = _NO_STOP
+    anc.start = anc_start
     return tests
 
 
@@ -261,6 +266,7 @@ def sim_pars(**kwargs):
     ``care_seek_mult=1.0``, ``bundled_prevention=None``,
     ``fsw_outreach.rate=0.0``, ``prep.eligibility='none'``, ``magic_cure.year=None``,
     ``hiv_seed.year=None`` (HIV seeded at the start), ``hiv_delay.years=0``,
+    ``anc.start=np.inf`` (no ANC HIV test or ANC syphilis screening),
     ``country.name=None`` (scalar birth and death rates, and the HIV programmes
     in ``hiv_test``, ``art`` and ``vmmc``), ``art.coverage=None`` and
     ``vmmc.coverage=None`` (the setup's coverage).
@@ -325,6 +331,10 @@ def sim_pars(**kwargs):
     # the nearest listed year). anc_low/high bound the gestational visit week.
     pars.syph_anc = sc.objdict(screen_prob=0.47, screen_years=None,
                                anc_low=8, anc_high=32)
+    # the year the ANC HIV test and ANC syphilis screening begin: None from the
+    # run's start, np.inf never. The ANC visit schedule runs regardless, so the
+    # visit weeks drawn match across arms that start ANC testing in different years.
+    pars.anc = sc.objdict(start=None)
 
     # Demand-side levers, off at identity / sentinel.
     pars.care_seek_mult = 1.0                 # scalar or [female, male]; CareSeekScaler
@@ -369,8 +379,9 @@ def sim_pars(**kwargs):
     # notified.
     pars.pn = None
     # STI screening at HIV testing, POC arm only, from intv_year: None (off), or
-    # dict(include_men=False, acceptance=1.0). Offers the POC panel at every
-    # background HIV testing visit.
+    # dict(include_men=False, acceptance=1.0, anc_only=False). Offers the POC
+    # panel at every background HIV testing visit, or with anc_only at the ANC
+    # HIV test alone.
     pars.sti_screening = None
 
     pars.connectors = sc.objdict(
@@ -486,7 +497,8 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
         eligibility=syph_anc_eligibility,
         dt_scale=False,
     )
-    anc_rpr.start = None
+    anc_start = pars.anc.start
+    anc_rpr.start = anc_start
     anc_rpr.stop = pars.rdt_year
     anc_rdt = sti.SyphTest(
         name="syph_anc_rdt", label="syph_anc_rdt",
@@ -496,7 +508,7 @@ def _syphilis_pipeline(pars, use_poc, intv_year):
         eligibility=syph_anc_eligibility,
         dt_scale=False,
     )
-    anc_rdt.start = pars.rdt_year
+    anc_rdt.start = pars.rdt_year if anc_start is None else max(pars.rdt_year, anc_start)
     anc_rdt.stop = _NO_STOP
 
     intvs = [timer, symp_test, rash_test, anc_rpr, anc_rdt]
@@ -739,7 +751,7 @@ def build_sim(pars):
     else:
         if pars.hiv_test != sim_pars().hiv_test:
             raise ValueError("'hiv_test' is set by the country setup; leave it at its default when country.name is set")
-        hiv_tests = country_hiv_tests(delay)
+        hiv_tests = country_hiv_tests(delay, pars.anc.start)
         art_coverage = (country_coverage(country, "art") if art_coverage is None
                         else proportion_coverage(art_coverage, "art", "art.coverage"))
         vmmc_coverage = (country_coverage(country, "vmmc") if vmmc_coverage is None
@@ -761,9 +773,14 @@ def build_sim(pars):
     if pars.sti_screening is not None:
         if not use_poc:
             raise ValueError("STI screening at HIV testing uses the POC panel; set intv_year")
+        screening = dict(pars.sti_screening)
+        anc_only = screening.pop("anc_only", False)
+        if anc_only and pars.country.name is None:
+            raise ValueError("the ANC HIV test comes with a country setup; set country.name for anc_only")
+        visits = ["hiv_test_anc"] if anc_only else HIV_TEST_NAMES
         sti_screening = STIScreeningAtHIVTesting(
-            contacts=gate_poc(tested_this_step(HIV_TEST_NAMES), use_poc, intv_year),
-            **pars.sti_screening,
+            contacts=gate_poc(tested_this_step(visits), use_poc, intv_year),
+            **screening,
             name="sti_screening", label="sti_screening",
             stop=_NO_STOP,
             **poc_panel(),
