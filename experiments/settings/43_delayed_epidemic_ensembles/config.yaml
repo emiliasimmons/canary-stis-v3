@@ -1,0 +1,42 @@
+n_agents: 10000
+
+# HIV prevalence at ages 15-49 in 2026 that a country's draws land in
+countries:
+  eswatini: {target: 0.25}
+  zimbabwe: {target: 0.15}
+tolerance: 0.03
+
+intv_year: 2027
+ensemble_size: 30
+
+# draws leaving the middle risk group (1 - prop_x0 - prop_x2) below this, for
+# either sex, are resampled
+min_middle_group: 0.05
+
+# batch draws per cell; a cell with hiv_delay draws it, in years, alongside the ranges
+cells:
+  eswatini_mature: {country: eswatini, n: 140}
+  zimbabwe_mature: {country: zimbabwe, n: 180}
+  eswatini_high: {country: eswatini, n: 235, hiv_delay: [17, 23]}
+  zimbabwe_high: {country: zimbabwe, n: 245, hiv_delay: [17, 23]}
+
+# 40.1's ranges
+ranges:
+  prop_f0: [0.40, 0.94]
+  prop_m0: [0.36, 0.88]
+  prop_f2: [0.009, 0.11]
+  prop_m2: [0.018, 0.22]
+  f1_conc: [0.009, 0.17]
+  f2_conc: [0.09, 0.28]
+  m1_conc: [0.13, 0.22]
+  rel_init_prev: [0.3, 1.5]
+  seed_year: [1993, 2000]
+  syph_beta_m2f: [0.01, 0.12]
+  ng_beta_m2f: [0.019, 0.33]
+  ct_beta_m2f: [0.03, 0.16]
+  tv_beta_m2f: [0.005, 0.08]
+log_ranges: [rel_init_prev]
+
+country_ranges:
+  eswatini: {hiv_beta_m2f: [0.010, 0.020]}
+  zimbabwe: {hiv_beta_m2f: [0.003, 0.012]}

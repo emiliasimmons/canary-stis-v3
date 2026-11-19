@@ -47,6 +47,42 @@ def test_art_stretch_draw_slows_the_country_art_table():
     assert [coverage[np.argmin(np.abs(years - y))] for y in (2011, 2018)] == pytest.approx([0.16, 0.32])
 
 
+def delayed(years, stop):
+    sim = build_sim(setting_pars(dict(hiv_delay=years), "eswatini", sim=dict(n_agents=500, stop=stop)))
+    sim.init(verbose=0)
+    return sim
+
+
+def at_years(values, sim, years):
+    yearvec = np.asarray(sim.t.yearvec)
+    return [values[np.argmin(np.abs(yearvec - y))] for y in years]
+
+
+def test_hiv_delay_moves_the_country_art_table_later():
+    # Eswatini's women aged 25-34 are at 0 in 2004 and 0.32 in 2011, and 0.918
+    # of women 15 and over on ART are suppressed in 2016 against 0.959 in 2021
+    sim = delayed(10, stop=2027)
+    art = sim.interventions.art
+    assert at_years(art.coverage[("[25,35)", 0)], sim, (2014, 2021)) == pytest.approx([0, 0.32])
+    assert at_years(art.vls_coverage[("[15,100)", 0)], sim, (2026,)) == pytest.approx([0.918])
+
+
+def test_hiv_delay_moves_the_country_vmmc_table_later():
+    # Eswatini's boys aged 10-14 are circumcised at 0.44 in 2016
+    sim = delayed(10, stop=2027)
+    coverage = sim.interventions.vmmc.coverage[("[10,15)", 1)]
+    assert at_years(coverage, sim, (2026,)) == pytest.approx([0.44])
+
+
+def test_hiv_delay_moves_the_hiv_testing_ramps_later():
+    # the general stream ramps from 0 in 1990 to 0.5 in 2020; HIVTest takes the
+    # listed year nearest the current one
+    test = delayed(10, stop=2031).interventions.hiv_test_general
+    years = np.asarray(test.years)
+    probs = [test.test_prob_data[np.argmin(np.abs(years - y))] for y in (2000, 2030)]
+    assert probs == pytest.approx([0, 0.5])
+
+
 def run(draw, **sim):
     built = build_sim(setting_pars(draw, "eswatini", sim=dict(n_agents=1000, stop=1990, **sim)))
     built.run(verbose=0)
@@ -77,6 +113,16 @@ def test_summary_has_no_hiv_before_seed_year(summarized):
     prevalence = dict(zip(summarized["years"], summarized["hiv_prevalence"]))
     assert prevalence[1995] == 0
     assert prevalence[1997] > 0
+
+
+def test_hiv_delay_moves_the_seed_year_later():
+    draw = dict(rel_init_prev=10.0, seed_year=1996.4, hiv_delay=10)
+    sim = build_sim(setting_pars(draw, "eswatini", sim=dict(n_agents=500)))
+    sim.run(verbose=0)
+    summary = summarize(sim)
+    prevalence = dict(zip(summary["years"], summary["hiv_prevalence"]))
+    assert prevalence[2005] == 0
+    assert prevalence[2007] > 0
 
 
 def test_before_seed_year_there_is_no_hiv():
