@@ -81,7 +81,7 @@ components:
   - ["Screening of women at HIV testing", {poc_screening: 1, poc: -1}]
 
 cells:
-  eswatini_high: Eswatini, high incidence
-  eswatini_mature: Eswatini, mature
-  zimbabwe_high: Zimbabwe, high incidence
-  zimbabwe_mature: Zimbabwe, mature
+  eswatini_high: HPrev, high incidence
+  eswatini_mature: HPrev, mature
+  zimbabwe_high: MPrev, high incidence
+  zimbabwe_mature: MPrev, mature
