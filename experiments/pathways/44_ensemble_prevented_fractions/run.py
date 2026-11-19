@@ -156,23 +156,30 @@ def run(workers):
             print(f"{i}/{len(todo)} {row['sim_id']} {status} ({time.perf_counter() - t0:.0f} s elapsed)", flush=True)
 
 
-def prevented_fractions(df, years):
-    """Members x arms: 1 - HIV infections at 15-49 in the arm / in the comparator, over the horizon."""
+def infections(df, years):
+    """Members x arms: HIV infections at 15-49 over the horizon, in agents."""
     lo, hi = CONFIG["horizon"]
     window = (years >= lo) & (years <= hi)
-    infections = df.hiv.map(lambda t: np.asarray(t["all"]["new_infections"])[window].sum())
-    totals = df.assign(n=infections).pivot(index="member", columns="arm", values="n")
-    return 1 - totals[list(CONFIG["labels"])].div(totals[CONFIG["comparator"]], axis=0)
+    n = df.hiv.map(lambda t: np.asarray(t["all"]["new_infections"])[window].sum())
+    return df.assign(n=n).pivot(index="member", columns="arm", values="n")
 
 
-def components(pf):
-    """Members x pathway contributions, in the same units as the prevented fractions."""
-    return pd.DataFrame({label: sum(c * pf[arm] for arm, c in coefs.items())
-                         for label, coefs in CONFIG["components"]})
+def against_comparator(totals):
+    """Members x arms, as (prevented fraction, infections averted in agents)."""
+    # arms still to run in a later stage are left out
+    arms = [a for a in CONFIG["labels"] if a in totals]
+    soc = totals[CONFIG["comparator"]]
+    return 1 - totals[arms].div(soc, axis=0), -totals[arms].sub(soc, axis=0)
+
+
+def components(table):
+    """Members x pathway contributions, in the units of table."""
+    return pd.DataFrame({label: sum(c * table[arm] for arm, c in coefs.items())
+                         for label, coefs in CONFIG["components"] if set(coefs) <= set(table)})
 
 
 def boxes(ax, table, rng):
-    values = [100 * table[col].dropna() for col in table]
+    values = [table[col].dropna() for col in table]
     ax.boxplot(values, positions=range(len(values)), orientation="horizontal", widths=0.6,
                showfliers=False, medianprops=dict(color="tab:blue", lw=1.5))
     for i, v in enumerate(values):
@@ -181,41 +188,61 @@ def boxes(ax, table, rng):
     ax.invert_yaxis()
 
 
-def plot_prevented(n, cell, pf, comp):
-    lo, hi = CONFIG["horizon"]
+def plot_cell(n, name, cell, arms, comp, xlim, xlabel, measure):
     rng = np.random.default_rng(0)
-    rows = len(pf.columns) + len(comp.columns)
+    rows = len(arms.columns) + len(comp.columns)
     fig, (top, bottom) = plt.subplots(2, 1, figsize=(11, 2 + 0.36 * rows), sharex=True, layout="constrained",
-                                      gridspec_kw=dict(height_ratios=[len(pf.columns), len(comp.columns)]))
-    boxes(top, pf, rng)
-    top.set_yticks(range(len(pf.columns)), [CONFIG["labels"][a] for a in pf])
+                                      gridspec_kw=dict(height_ratios=[len(arms.columns), len(comp.columns)]))
+    boxes(top, arms, rng)
+    top.set_yticks(range(len(arms.columns)), [CONFIG["labels"][a] for a in arms])
     top.set_title("Each arm against SOC")
     boxes(bottom, comp, rng)
     bottom.set_yticks(range(len(comp.columns)), comp.columns)
     bottom.set_title("Pathway contributions: differences between the arms above")
-    bottom.set_xlabel(f"HIV infections at 15-49 prevented, {lo}-{hi} (% of SOC's)")
-    fig.suptitle(f"Fig {n}: {CONFIG['cells'][cell]}, prevented fraction against SOC "
-                 f"over {len(pf)} ensemble members")
-    fig.savefig(FIGURES / f"fig{n}_prevented_{cell}.png", dpi=150)
+    bottom.set_xlabel(xlabel)
+    bottom.set_xlim(xlim)
+    fig.suptitle(f"Fig {n}: {CONFIG['cells'][cell]}, {measure} against SOC over {len(arms)} ensemble members")
+    fig.savefig(FIGURES / f"fig{n}_{name}_{cell}.png", dpi=150)
     plt.close(fig)
+
+
+def shared_xlim(tables):
+    """One x range covering every table, so the settings' figures read on the same axis."""
+    lo = min(t.min().min() for t in tables)
+    hi = max(t.max().max() for t in tables)
+    pad = 0.03 * (hi - lo)
+    return lo - pad, hi + pad
 
 
 def plot():
     FIGURES.mkdir(exist_ok=True)
     df = pd.read_json(RESULTS, lines=True)
     years = np.asarray(df.years.iloc[0])
-    for n, cell in enumerate(CONFIG["cells"], 1):
-        sub = df[df.cell == cell]
-        if sub.empty:
-            continue
-        pf = prevented_fractions(sub, years)
-        comp = components(pf)
-        plot_prevented(n, cell, pf, comp)
+    lo, hi = CONFIG["horizon"]
+    cells = [c for c in CONFIG["cells"] if (df.cell == c).any()]
+    tables = {}
+    for cell in cells:
+        pf, averted = against_comparator(infections(df[df.cell == cell], years))
+        tables[cell] = dict(pf=(100 * pf, components(100 * pf)), averted=(averted, components(averted)))
         pf.to_csv(OUTPUTS / f"prevented_fractions_{cell}.csv")
-        comp.to_csv(OUTPUTS / f"pathway_components_{cell}.csv")
+        components(pf).to_csv(OUTPUTS / f"pathway_components_{cell}.csv")
+        averted.to_csv(OUTPUTS / f"infections_averted_{cell}.csv")
+        components(averted).to_csv(OUTPUTS / f"pathway_components_averted_{cell}.csv")
         print(f"\n{CONFIG['cells'][cell]}")
-        for table in (pf, comp):
-            print((100 * table).describe().loc[["50%", "25%", "75%", "min", "max"]].T.round(1).to_string())
+        for table in tables[cell]["pf"]:
+            print(table.describe().loc[["50%", "25%", "75%", "min", "max"]].T.round(1).to_string())
+    figures = [
+        ("pf", 1, "prevented", f"HIV infections at 15-49 prevented, {lo}-{hi} (% of SOC's)",
+         "prevented fraction"),
+        ("averted", 1 + len(CONFIG["cells"]), "averted",
+         f"HIV infections at 15-49 averted, {lo}-{hi} (agents, of {CONFIG['n_agents']:,} at the 1985 start)",
+         "HIV infections averted"),
+    ]
+    for key, first, name, xlabel, measure in figures:
+        xlim = shared_xlim([t for cell in cells for t in tables[cell][key]])
+        for n, cell in enumerate(CONFIG["cells"], first):
+            if cell in tables:
+                plot_cell(n, name, cell, *tables[cell][key], xlim, xlabel, measure)
 
 
 def main():
