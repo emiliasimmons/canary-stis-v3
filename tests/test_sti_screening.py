@@ -1,5 +1,7 @@
 """STI screening at HIV testing: the POC panel for people at a background HIV testing visit."""
 
+from pathlib import Path
+
 import numpy as np
 import pytest
 
@@ -99,3 +101,23 @@ def test_screened_positives_are_treated_the_month_after(women):
     assert treated_next.mean() > 0.9
     log = sim.interventions.treatment_log.to_df()
     assert "sti_screening" in set(log.channel.str.split("+").explode())
+
+
+@pytest.mark.parametrize("anc_only, offered", [(False, HIV_TEST_NAMES[1:]), (True, ["hiv_test_anc"])])
+def test_anc_only_screens_at_the_anc_hiv_test_alone(anc_only, offered):
+    country = dict(name="testland", datafolder=Path(__file__).parent / "data")
+    sim = build_sim(sim_pars(sim=dict(n_agents=2000, start=1985, stop=1986), country=country,
+                             intv_year=1985, sti_screening=dict(anc_only=anc_only)))
+    sim.init(verbose=0)
+    streams = HIV_TEST_NAMES[1:]
+    agents = sim.people.auids[:len(streams)].tolist()
+    for name, uid in zip(streams, agents):
+        sim.interventions[name].ti_tested[uid] = sim.ti
+    contacts = sim.interventions.sti_screening.contacts(sim)
+    assert set(contacts.tolist()) == {uid for name, uid in zip(streams, agents) if name in offered}
+
+
+def test_anc_only_needs_a_country_setup():
+    with pytest.raises(ValueError, match="country"):
+        build_sim(sim_pars(sim=dict(n_agents=500, start=2010, stop=2011), intv_year=2010,
+                           sti_screening=dict(anc_only=True)))

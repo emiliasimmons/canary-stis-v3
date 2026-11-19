@@ -1,0 +1,87 @@
+ensembles: ../../settings/43_delayed_epidemic_ensembles/ensembles.json
+# exp 43's members ran on crc32("43-<cell>-<index>")
+seed_prefix: "43"
+n_agents: 10000
+# end of 2040, so 2027-2040 are whole years
+stop: 2041
+intv_year: 2027
+horizon: [2027, 2040]
+
+# notify: Alam 2010 median for STI notification in LMICs; attend: about half of
+# notified contacts reach a testing door (partner notification synthesis)
+pn: &pn
+  notify_rates: {stable: 0.54, casual: 0.54}
+  attendance_rates: {stable: 0.5, casual: 0.5}
+
+# sim_pars overrides per arm. Stage 1 ran the arms without a _u or _m suffix, with
+# STI-triggered PrEP at sim_pars' default 30% uptake and 3-month courses; stage 2 adds
+# the rest. Arm names are the results' keys, so stage 1's are kept.
+arms:
+  soc: {}
+  poc: {intv_year: 2027}
+  poc_pn: {intv_year: 2027, pn: *pn}
+  poc_sti_prep: {intv_year: 2027, prep: {eligibility: dx}}
+  poc_sti_prep_u10_3m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.10, dur_months: 3}}
+  poc_sti_prep_u90_3m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.90, dur_months: 3}}
+  poc_sti_prep_u10_6m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.10, dur_months: 6}}
+  poc_sti_prep_u30_6m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.30, dur_months: 6}}
+  poc_sti_prep_u90_6m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.90, dur_months: 6}}
+  poc_sti_prep_pn: {intv_year: 2027, prep: {eligibility: dx}, pn: *pn}
+  poc_sti_prep_pn_u10_3m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.10, dur_months: 3}, pn: *pn}
+  poc_sti_prep_pn_u90_3m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.90, dur_months: 3}, pn: *pn}
+  poc_sti_prep_pn_u10_6m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.10, dur_months: 6}, pn: *pn}
+  poc_sti_prep_pn_u30_6m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.30, dur_months: 6}, pn: *pn}
+  poc_sti_prep_pn_u90_6m: {intv_year: 2027, prep: {eligibility: dx, coverage: 0.90, dur_months: 6}, pn: *pn}
+  poc_screening: {intv_year: 2027, sti_screening: {include_men: false, acceptance: 1.0}}
+  magic_cure: {magic_cure: {year: 2027}}
+  magic_prep: {prep: {eligibility: infected, start: 2027, coverage: 1.0}}
+  magic_prep_6m: {prep: {eligibility: infected, start: 2027, coverage: 1.0, dur_months: 6}}
+
+# every arm's prevented fraction shares this arm's infections as denominator,
+# so differences between arms add
+comparator: soc
+labels:
+  poc: Point-of-care STI panel
+  poc_pn: Panel + partner notification
+  poc_sti_prep_u10_3m: Panel + PrEP on STI treatment, 10% uptake, 3 months
+  poc_sti_prep: Panel + PrEP on STI treatment, 30% uptake, 3 months
+  poc_sti_prep_u90_3m: Panel + PrEP on STI treatment, 90% uptake, 3 months
+  poc_sti_prep_u10_6m: Panel + PrEP on STI treatment, 10% uptake, 6 months
+  poc_sti_prep_u30_6m: Panel + PrEP on STI treatment, 30% uptake, 6 months
+  poc_sti_prep_u90_6m: Panel + PrEP on STI treatment, 90% uptake, 6 months
+  poc_sti_prep_pn_u10_3m: Panel + PrEP + notification, 10% uptake, 3 months
+  poc_sti_prep_pn: Panel + PrEP + notification, 30% uptake, 3 months
+  poc_sti_prep_pn_u90_3m: Panel + PrEP + notification, 90% uptake, 3 months
+  poc_sti_prep_pn_u10_6m: Panel + PrEP + notification, 10% uptake, 6 months
+  poc_sti_prep_pn_u30_6m: Panel + PrEP + notification, 30% uptake, 6 months
+  poc_sti_prep_pn_u90_6m: Panel + PrEP + notification, 90% uptake, 6 months
+  poc_screening: Panel + STI screening of women at HIV testing
+  magic_cure: "Magic cure: four STIs cleared in 2027"
+  magic_prep: "Magic PrEP: everyone newly STI-infected starts PrEP, 3 months"
+  magic_prep_6m: "Magic PrEP: everyone newly STI-infected starts PrEP, 6 months"
+
+# pathway contributions as sums of arms' prevented fractions; direct treatment,
+# notification, one PrEP row and its interaction row add to that PrEP version's
+# panel + PrEP + notification arm
+components:
+  - ["Direct treatment (panel against SOC)", {poc: 1}]
+  - ["Partner notification", {poc_pn: 1, poc: -1}]
+  - ["PrEP on STI treatment, 10% uptake, 3 months", {poc_sti_prep_u10_3m: 1, poc: -1}]
+  - ["PrEP on STI treatment, 30% uptake, 3 months", {poc_sti_prep: 1, poc: -1}]
+  - ["PrEP on STI treatment, 90% uptake, 3 months", {poc_sti_prep_u90_3m: 1, poc: -1}]
+  - ["PrEP on STI treatment, 10% uptake, 6 months", {poc_sti_prep_u10_6m: 1, poc: -1}]
+  - ["PrEP on STI treatment, 30% uptake, 6 months", {poc_sti_prep_u30_6m: 1, poc: -1}]
+  - ["PrEP on STI treatment, 90% uptake, 6 months", {poc_sti_prep_u90_6m: 1, poc: -1}]
+  - ["Notification x PrEP, 10% uptake, 3 months", {poc_sti_prep_pn_u10_3m: 1, poc_pn: -1, poc_sti_prep_u10_3m: -1, poc: 1}]
+  - ["Notification x PrEP, 30% uptake, 3 months", {poc_sti_prep_pn: 1, poc_pn: -1, poc_sti_prep: -1, poc: 1}]
+  - ["Notification x PrEP, 90% uptake, 3 months", {poc_sti_prep_pn_u90_3m: 1, poc_pn: -1, poc_sti_prep_u90_3m: -1, poc: 1}]
+  - ["Notification x PrEP, 10% uptake, 6 months", {poc_sti_prep_pn_u10_6m: 1, poc_pn: -1, poc_sti_prep_u10_6m: -1, poc: 1}]
+  - ["Notification x PrEP, 30% uptake, 6 months", {poc_sti_prep_pn_u30_6m: 1, poc_pn: -1, poc_sti_prep_u30_6m: -1, poc: 1}]
+  - ["Notification x PrEP, 90% uptake, 6 months", {poc_sti_prep_pn_u90_6m: 1, poc_pn: -1, poc_sti_prep_u90_6m: -1, poc: 1}]
+  - ["Screening of women at HIV testing", {poc_screening: 1, poc: -1}]
+
+cells:
+  eswatini_high: HPrev, high incidence
+  eswatini_mature: HPrev, mature
+  zimbabwe_high: MPrev, high incidence
+  zimbabwe_mature: MPrev, mature
