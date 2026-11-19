@@ -1,0 +1,52 @@
+ensembles: ../../settings/43_delayed_epidemic_ensembles/ensembles.json
+# exp 43's members ran on crc32("43-<cell>-<index>")
+seed_prefix: "43"
+n_agents: 10000
+# end of 2040, so 2027-2040 are whole years
+stop: 2041
+intv_year: 2027
+horizon: [2027, 2040]
+
+# notify: Alam 2010 median for STI notification in LMICs; attend: about half of
+# notified contacts reach a testing door (partner notification synthesis)
+pn: &pn
+  notify_rates: {stable: 0.54, casual: 0.54}
+  attendance_rates: {stable: 0.5, casual: 0.5}
+
+# sim_pars overrides per arm
+arms:
+  soc: {}
+  poc: {intv_year: 2027}
+  poc_pn: {intv_year: 2027, pn: *pn}
+  poc_sti_prep: {intv_year: 2027, prep: {eligibility: dx}}
+  poc_sti_prep_pn: {intv_year: 2027, prep: {eligibility: dx}, pn: *pn}
+  poc_screening: {intv_year: 2027, sti_screening: {include_men: false, acceptance: 1.0}}
+  magic_cure: {magic_cure: {year: 2027}}
+  magic_prep: {prep: {eligibility: infected, start: 2027, coverage: 1.0}}
+
+# every arm's prevented fraction shares this arm's infections as denominator,
+# so differences between arms add
+comparator: soc
+labels:
+  poc: Point-of-care STI panel
+  poc_pn: Panel + partner notification
+  poc_sti_prep: Panel + PrEP offered on STI treatment
+  poc_sti_prep_pn: Panel + PrEP on STI treatment + notification
+  poc_screening: Panel + STI screening of women at HIV testing
+  magic_cure: "Magic cure: four STIs cleared in 2027"
+  magic_prep: "Magic PrEP: everyone newly STI-infected starts PrEP"
+
+# pathway contributions as sums of arms' prevented fractions; the first four
+# add to the panel + PrEP on STI treatment + notification arm
+components:
+  - [Direct treatment (panel against SOC), {poc: 1}]
+  - [Partner notification, {poc_pn: 1, poc: -1}]
+  - [PrEP offered on STI treatment, {poc_sti_prep: 1, poc: -1}]
+  - [Notification x PrEP interaction, {poc_sti_prep_pn: 1, poc_pn: -1, poc_sti_prep: -1, poc: 1}]
+  - [Screening of women at HIV testing, {poc_screening: 1, poc: -1}]
+
+cells:
+  eswatini_high: Eswatini, high incidence
+  eswatini_mature: Eswatini, mature
+  zimbabwe_high: Zimbabwe, high incidence
+  zimbabwe_mature: Zimbabwe, mature

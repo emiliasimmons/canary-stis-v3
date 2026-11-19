@@ -351,7 +351,9 @@ def sim_pars(**kwargs):
     # Daily oral PrEP cascade, sti.Prep. Eligibility is who is offered PrEP this
     # step: 'none' (off), 'dx' (STI treatment fired this step, pathway D), or
     # 'behavioral' (qualified on the national eligibility screen at an HIV
-    # testing or STI clinic visit this step). From start (None follows
+    # testing or STI clinic visit this step), or 'infected' (acquired
+    # gonorrhoea, chlamydia, trichomoniasis or syphilis last step, diagnosed or
+    # not: Magic PrEP). From start (None follows
     # lever_start), each step's offered group is topped up until coverage of
     # it is on PrEP, chosen by a fixed per-person willingness score. Offered
     # people already on a course count toward it, so fewer than that start.
@@ -701,6 +703,14 @@ def build_sim(pars):
             # looked up by name: the sim runs a copy of the screen object built here
             def prep_elig(sim):
                 return (sim.interventions.behavioral_screen.ti_qualified == sim.ti).uids
+        elif pars.prep.eligibility == "infected":
+            # interventions run before transmission, so last step's infections
+            # are the newest this step can see
+            def prep_elig(sim):
+                uids = ss.uids()
+                for name in ("ng", "ct", "tv", "syph"):
+                    uids = uids | (sim.diseases[name].ti_infected == sim.ti - 1).uids
+                return uids
         else:
             raise ValueError(f"unknown prep.eligibility '{pars.prep.eligibility}'")
         # sti.Prep extends the first coverage value back to the sim start, so a
